@@ -1,7 +1,5 @@
-# Minecraft Reconstruction
-
 **Minecraft Reconstruction (mcr)** is a project focused on reconstructing the 3D block-level geometry of Minecraft structures from 2D images.
 
-The project is currently in the **research and planning phase**. I'm exploring theory, identifying key challenges, and developing methodology before implementation begins.
+Right now, I'm still figuring out the best way to approach the problem and exploring the theory behind it before I start implementing anything.
 
-The project will be implemented primarily in **C++**.
+The project will be written primarily in C++.
