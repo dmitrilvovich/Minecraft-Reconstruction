@@ -14,10 +14,12 @@ add_library(mcr
     src/grid/traversal.cpp
     src/camera/pinhole.cpp
     src/experiments/cameras.cpp
+    src/experiments/a0.cpp
     src/model/a0.cpp
     src/render/a0.cpp
     src/inference/constraint.cpp
-    src/inference/gac.cpp)
+    src/inference/gac.cpp
+    src/inference/a0_solver.cpp)
 target_include_directories(mcr PUBLIC include)
 target_compile_features(mcr PUBLIC cxx_std_20)
 if(MSVC)
@@ -36,12 +38,14 @@ endif()
 if(BUILD_TESTING)
     function(mcr_test name source)
         add_executable(${name} ${source})
+        target_include_directories(${name} PRIVATE tests)
         target_link_libraries(${name} PRIVATE mcr)
         add_test(NAME ${name} COMMAND ${name})
     endfunction()
     mcr_test(geometry_tests tests/geometry_tests.cpp)
     mcr_test(render_tests tests/render_tests.cpp)
     mcr_test(constraint_tests tests/constraint_tests.cpp)
+    mcr_test(inference_tests tests/inference_tests.cpp)
     option(MCR_ENABLE_PYTHON_ORACLE "Validate C++ against the frozen Python/NumPy oracle" ON)
     if(MCR_ENABLE_PYTHON_ORACLE)
         find_package(Python3 3.10 COMPONENTS Interpreter REQUIRED)
@@ -56,5 +60,11 @@ if(BUILD_TESTING)
         set_tests_properties(python_oracle_export PROPERTIES FIXTURES_SETUP python_a0)
         add_test(NAME python_render_agreement COMMAND render_tests "${MCR_ORACLE_DIR}")
         set_tests_properties(python_render_agreement PROPERTIES FIXTURES_REQUIRED python_a0)
+        add_executable(a0_acceptance tests/a0_acceptance.cpp)
+        target_include_directories(a0_acceptance PRIVATE tests)
+        target_link_libraries(a0_acceptance PRIVATE mcr)
+        add_test(NAME a0_acceptance COMMAND a0_acceptance "${MCR_ORACLE_DIR}"
+                 "${CMAKE_CURRENT_BINARY_DIR}/a0_acceptance.json")
+        set_tests_properties(a0_acceptance PROPERTIES FIXTURES_REQUIRED python_a0)
     endif()
 endif()
