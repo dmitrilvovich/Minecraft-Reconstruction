@@ -13,8 +13,6 @@ add_library(mcr
     src/grid/grid.cpp
     src/grid/traversal.cpp
     src/camera/pinhole.cpp
-    src/experiments/cameras.cpp
-    src/experiments/a0.cpp
     src/model/a0.cpp
     src/render/a0.cpp
     src/inference/constraint.cpp
@@ -35,17 +33,26 @@ if(MCR_ENABLE_SANITIZERS)
     target_link_options(mcr PUBLIC -fsanitize=address,undefined)
 endif()
 
+add_library(mcr_experiments src/experiments/cameras.cpp src/experiments/a0.cpp)
+target_link_libraries(mcr_experiments PUBLIC mcr)
+add_executable(mcr_a0_benchmark experiments/a0_benchmark.cpp)
+target_link_libraries(mcr_a0_benchmark PRIVATE mcr_experiments)
+target_compile_definitions(mcr_a0_benchmark PRIVATE
+    MCR_COMPILER="${CMAKE_CXX_COMPILER_ID}-${CMAKE_CXX_COMPILER_VERSION}"
+    MCR_BUILD_TYPE="$<CONFIG>")
+
 if(BUILD_TESTING)
     function(mcr_test name source)
         add_executable(${name} ${source})
         target_include_directories(${name} PRIVATE tests)
-        target_link_libraries(${name} PRIVATE mcr)
+        target_link_libraries(${name} PRIVATE mcr_experiments)
         add_test(NAME ${name} COMMAND ${name})
     endfunction()
     mcr_test(geometry_tests tests/geometry_tests.cpp)
     mcr_test(render_tests tests/render_tests.cpp)
     mcr_test(constraint_tests tests/constraint_tests.cpp)
     mcr_test(inference_tests tests/inference_tests.cpp)
+    mcr_test(adversarial_tests tests/adversarial_tests.cpp)
     option(MCR_ENABLE_PYTHON_ORACLE "Validate C++ against the frozen Python/NumPy oracle" ON)
     if(MCR_ENABLE_PYTHON_ORACLE)
         find_package(Python3 3.10 COMPONENTS Interpreter REQUIRED)
@@ -62,7 +69,7 @@ if(BUILD_TESTING)
         set_tests_properties(python_render_agreement PROPERTIES FIXTURES_REQUIRED python_a0)
         add_executable(a0_acceptance tests/a0_acceptance.cpp)
         target_include_directories(a0_acceptance PRIVATE tests)
-        target_link_libraries(a0_acceptance PRIVATE mcr)
+        target_link_libraries(a0_acceptance PRIVATE mcr_experiments)
         add_test(NAME a0_acceptance COMMAND a0_acceptance "${MCR_ORACLE_DIR}"
                  "${CMAKE_CURRENT_BINARY_DIR}/a0_acceptance.json")
         set_tests_properties(a0_acceptance PROPERTIES FIXTURES_REQUIRED python_a0)
