@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "model": "A0",
+  "status": "pass",
+  "compiler": "GNU-13.3.0",
+  "build_type": "Release",
+  "worlds": 6561,
+  "classes": 29032,
+  "repetitions": 5,
+  "root_stage": "fixed_geometry_then_gac",
+  "timing_scope": "complete_support_query_without_oracle_or_audit",
+  "sampling": "all_classes; identifiability weighted uniformly over all worlds",
+  "oracle_setup_seconds": 0.005519321,
+  "peak_rss_kib_whole_process": 5088,
+  "memory_scope": "whole C++ process including exhaustive corpus; not solver-only",
+  "search_branches": 0,
+  "search_nodes": 0,
+  "suites": [
+    {"name": "axis_1", "views": 1, "classes": 81, "identifiable_cell_fraction": 0.1111111111, "freely_variable_cell_fraction": 0, "unique_world_fraction": 0.0001524157903, "mean_removed_by_root": 8, "literal_queries": 648, "factor_updates": 4266, "median_solver_us": 1.853, "p95_solver_us": 1.982, "max_solver_us": 3.745},
+    {"name": "axis_2", "views": 2, "classes": 1225, "identifiable_cell_fraction": 0.462962963, "freely_variable_cell_fraction": 0.01851851852, "unique_world_fraction": 0.09525986892, "mean_removed_by_root": 13.82857143, "literal_queries": 6300, "factor_updates": 89810, "median_solver_us": 2.213, "p95_solver_us": 2.594, "max_solver_us": 3.986},
+    {"name": "axis_3", "views": 3, "classes": 3239, "identifiable_cell_fraction": 0.7385688157, "freely_variable_cell_fraction": 0.005258344765, "unique_world_fraction": 0.3382106386, "mean_removed_by_root": 15.25470824, "literal_queries": 12328, "factor_updates": 283010, "median_solver_us": 2.764, "p95_solver_us": 3.335, "max_solver_us": 5.558},
+    {"name": "axis_4", "views": 4, "classes": 4157, "identifiable_cell_fraction": 0.8475080018, "freely_variable_cell_fraction": 0, "unique_world_fraction": 0.4424630392, "mean_removed_by_root": 15.53235506, "literal_queries": 13924, "factor_updates": 430880, "median_solver_us": 3.005, "p95_solver_us": 3.435, "max_solver_us": 7.862},
+    {"name": "axis_5", "views": 5, "classes": 4929, "identifiable_cell_fraction": 0.90260631, "freely_variable_cell_fraction": 0, "unique_world_fraction": 0.6000609663, "mean_removed_by_root": 15.72408196, "literal_queries": 15104, "factor_updates": 592164, "median_solver_us": 3.415, "p95_solver_us": 3.956, "max_solver_us": 7.511},
+    {"name": "axis_6", "views": 6, "classes": 5453, "identifiable_cell_fraction": 0.9387288523, "freely_variable_cell_fraction": 0, "unique_world_fraction": 0.7137631459, "mean_removed_by_root": 15.82395012, "literal_queries": 15896, "factor_updates": 749452, "median_solver_us": 3.836, "p95_solver_us": 4.347, "max_solver_us": 7.952},
+    {"name": "oblique_1", "views": 1, "classes": 3601, "identifiable_cell_fraction": 0.9114083219, "freely_variable_cell_fraction": 0.08058984911, "unique_world_fraction": 0.328456028, "mean_removed_by_root": 15.18800333, "literal_queries": 12230, "factor_updates": 463692, "median_solver_us": 3.835, "p95_solver_us": 4.317, "max_solver_us": 7.041},
+    {"name": "oblique_2", "views": 2, "classes": 6347, "identifiable_cell_fraction": 0.9915409236, "freely_variable_cell_fraction": 0, "unique_world_fraction": 0.9362901997, "mean_removed_by_root": 15.96659839, "literal_queries": 17172, "factor_updates": 1153924, "median_solver_us": 6.47, "p95_solver_us": 7.611, "max_solver_us": 30.986}
+  ]
+}
