@@ -1,0 +1,13 @@
+{
+  "Phase_A_protocol.md": "8d83cfd0374b775196fe4d2c92ea40098237496ed159c6af891a5cd12e0e4af6",
+  "README.md": "844de84f2f10abb5978159323090503a90da2af818fe9786289f6e648961f3f7",
+  "adversarial_fixtures.py": "7e2f27baa31eb84f6e531372df2d4a8a7febd66d820e449f4ac7e94fd2c12a04",
+  "adversarial_results.json": "001909415fe62e2de2789eee5872d47cf87c103b2e7cc4a32a8f9b559b1af428",
+  "baseline_search/results.json": "d0f0ad25dbabe6e6740b046e7160589031a12791d39c0282440047a20281d680",
+  "phase_a.py": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f",
+  "phase_a_results.json": "da4d6ccd9c02b9303fdc709f89cd4545a703786f60c940b3d53c0dab7b01b3cf",
+  "resolution16/cases.csv": "adf972bd0ccfb84f12743e5f5e90066a0ff991b5b4acdb292a8a6f57ff3ab464",
+  "resolution16/results.json": "2cca4b1b98fbde13b4bc299955361c425cd515eb9609703cac96626d0022d1b2",
+  "results/cases.csv": "5ea72a6cc9ca11606706c241e7659f2a78055ee45ee5eabd74c1735594de200a",
+  "results/results.json": "e791654e21a5709ca0aba49c9cca1f6f34e902dc74818ecb7c503d6392e446b4"
+}

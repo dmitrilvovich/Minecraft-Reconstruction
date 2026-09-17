@@ -1,0 +1,957 @@
+{
+  "status": "PASS",
+  "arguments": {
+    "output": "results",
+    "resolution": 8,
+    "samples": 128,
+    "seed": 20260917,
+    "all_a0": true,
+    "all_a1": true
+  },
+  "python": "3.12.14",
+  "logical_regressions": {
+    "correlation_vs_freedom": "passed",
+    "deliberately_unsound_prune_detected": "passed",
+    "boundary_conventions": "passed"
+  },
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "peak_process_rss_kib": 162472,
+  "measurement_note": "Solver timings exclude exhaustive reference and pruning audit; peak RSS includes the entire process and oracle.",
+  "phases": [
+    {
+      "phase": "A0",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "palette": [
+        [
+          "air",
+          0,
+          false
+        ],
+        [
+          "stone_cube",
+          1,
+          false
+        ],
+        [
+          "oak_cube",
+          2,
+          false
+        ]
+      ],
+      "worlds_enumerated": 6561,
+      "raw_rays": 512,
+      "distinct_ray_factors": 47,
+      "renderer_equalities_checked": 3359232,
+      "audited_pruning_steps": 135787,
+      "render_seconds": 0.28735397599984935,
+      "total_seconds": 7.529126915000006,
+      "suites": [
+        {
+          "suite": "axis_1",
+          "views": 1,
+          "distinct_observation_classes": 81,
+          "tested_classes": 81,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.1111111111111111,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.00015241579027587258,
+          "max_feasible_worlds": 256,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 2,
+          "solver_seconds_median": 8.750100005272543e-05,
+          "solver_seconds_max": 0.00015747699990242836,
+          "suite_validation_seconds": 0.05962879599996995,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_2",
+          "views": 2,
+          "distinct_observation_classes": 1225,
+          "tested_classes": 149,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.46296296296296297,
+          "oracle_freely_variable_fraction_uniform_world": 0.018518518518518517,
+          "oracle_unique_world_fraction": 0.09525986892242036,
+          "max_feasible_worlds": 81,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 4,
+          "solver_seconds_median": 0.00012423700013641792,
+          "solver_seconds_max": 0.001250927999990381,
+          "suite_validation_seconds": 0.09539039299988872,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_3",
+          "views": 3,
+          "distinct_observation_classes": 3239,
+          "tested_classes": 3239,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.7385688157293095,
+          "oracle_freely_variable_fraction_uniform_world": 0.005258344764517604,
+          "oracle_unique_world_fraction": 0.3382106386221613,
+          "max_feasible_worlds": 44,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0001538510000500537,
+          "solver_seconds_max": 0.0021731229999204515,
+          "suite_validation_seconds": 2.0146347480001623,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_4",
+          "views": 4,
+          "distinct_observation_classes": 4157,
+          "tested_classes": 150,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.8475080018289894,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.4424630391708581,
+          "max_feasible_worlds": 35,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0001860039999428409,
+          "solver_seconds_max": 0.0007365260000824492,
+          "suite_validation_seconds": 0.10565514799986886,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_5",
+          "views": 5,
+          "distinct_observation_classes": 4929,
+          "tested_classes": 152,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.9026063100137174,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.6000609663161104,
+          "max_feasible_worlds": 35,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0002178570000523905,
+          "solver_seconds_max": 0.0006330799999432202,
+          "suite_validation_seconds": 0.12010606199987706,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_6",
+          "views": 6,
+          "distinct_observation_classes": 5453,
+          "tested_classes": 5453,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.9387288523090992,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.7137631458619113,
+          "max_feasible_worlds": 35,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.00025179900012517464,
+          "solver_seconds_max": 0.003080005000128949,
+          "suite_validation_seconds": 4.042557146000036,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "oblique_1",
+          "views": 1,
+          "distinct_observation_classes": 3601,
+          "tested_classes": 150,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.911408321902149,
+          "oracle_freely_variable_fraction_uniform_world": 0.08058984910836763,
+          "oracle_unique_world_fraction": 0.3284560280445054,
+          "max_feasible_worlds": 6,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 0,
+          "solver_seconds_median": 0.00023551399988264166,
+          "solver_seconds_max": 0.00033351999991282355,
+          "suite_validation_seconds": 0.1153833680000389,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "oblique_2",
+          "views": 2,
+          "distinct_observation_classes": 6347,
+          "tested_classes": 151,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.991540923639689,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.9362901996646853,
+          "max_feasible_worlds": 4,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 0,
+          "solver_seconds_median": 0.0003658489999907033,
+          "solver_seconds_max": 0.0024206349999076338,
+          "suite_validation_seconds": 0.15564241900005982,
+          "oracle_by_true_slab_count": {}
+        }
+      ],
+      "infeasible_duplicate_ray_test": "passed"
+    },
+    {
+      "phase": "A1",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "palette": [
+        [
+          "air",
+          0,
+          false
+        ],
+        [
+          "stone_cube",
+          1,
+          false
+        ],
+        [
+          "oak_cube",
+          2,
+          false
+        ],
+        [
+          "oak_bottom_slab",
+          2,
+          true
+        ]
+      ],
+      "worlds_enumerated": 65536,
+      "raw_rays": 512,
+      "distinct_ray_factors": 73,
+      "renderer_equalities_checked": 33554432,
+      "audited_pruning_steps": 1206471,
+      "render_seconds": 0.9428975169998921,
+      "total_seconds": 99.97106245199984,
+      "suites": [
+        {
+          "suite": "axis_1",
+          "views": 1,
+          "distinct_observation_classes": 625,
+          "tested_classes": 625,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.125,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.000244140625,
+          "max_feasible_worlds": 1296,
+          "tested_max_branches": 51,
+          "tested_max_search_nodes": 119,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 2,
+          "solver_seconds_median": 0.001031559000011839,
+          "solver_seconds_max": 0.005695602000059807,
+          "suite_validation_seconds": 2.6156188109998766,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.1111111111111111,
+              "unique_world_fraction": 0.00015241579027587258
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.125,
+              "unique_world_fraction": 0.00022862368541380886
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.13095238095238096,
+              "unique_world_fraction": 0.00029394473838918284
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.12896825396825398,
+              "unique_world_fraction": 0.00029394473838918284
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.11904761904761904,
+              "unique_world_fraction": 0.0001763668430335097
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.10119047619047619,
+              "unique_world_fraction": 0.0
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.07539682539682539,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.041666666666666664,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "axis_2",
+          "views": 2,
+          "distinct_observation_classes": 5625,
+          "tested_classes": 162,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.369140625,
+          "oracle_freely_variable_fraction_uniform_world": 0.0078125,
+          "oracle_unique_world_fraction": 0.0282135009765625,
+          "max_feasible_worlds": 729,
+          "tested_max_branches": 45,
+          "tested_max_search_nodes": 90,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 4,
+          "solver_seconds_median": 0.0002743315000088842,
+          "solver_seconds_max": 0.005675091000057364,
+          "suite_validation_seconds": 0.2594352189998972,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.41975308641975306,
+              "unique_world_fraction": 0.06721536351165981
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.4054783950617284,
+              "unique_world_fraction": 0.038408779149519894
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.37896825396825395,
+              "unique_world_fraction": 0.02488732118361748
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.33901014109347444,
+              "unique_world_fraction": 0.014109347442680775
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.2858906525573192,
+              "unique_world_fraction": 0.006349206349206349
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.22139550264550265,
+              "unique_world_fraction": 0.0
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.1488095238095238,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.07291666666666667,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "axis_3",
+          "views": 3,
+          "distinct_observation_classes": 24705,
+          "tested_classes": 24705,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.6924972534179688,
+          "oracle_freely_variable_fraction_uniform_world": 0.00437164306640625,
+          "oracle_unique_world_fraction": 0.2175140380859375,
+          "max_feasible_worlds": 295,
+          "tested_max_branches": 21,
+          "tested_max_search_nodes": 33,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.00032935500007624796,
+          "solver_seconds_max": 0.008121073999973305,
+          "suite_validation_seconds": 27.707452138999997,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.6999123609205914,
+              "unique_world_fraction": 0.2728242645938119
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.7211648376771833,
+              "unique_world_fraction": 0.2638317329675354
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.7175742210464433,
+              "unique_world_fraction": 0.24123064863805604
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.6822916666666666,
+              "unique_world_fraction": 0.17746913580246915
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.6050485008818343,
+              "unique_world_fraction": 0.08624338624338625
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.48115079365079366,
+              "unique_world_fraction": 0.013888888888888888
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.3194444444444444,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.14583333333333334,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "axis_4",
+          "views": 4,
+          "distinct_observation_classes": 32738,
+          "tested_classes": 162,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.78094482421875,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.3131561279296875,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 15,
+          "tested_max_search_nodes": 26,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0003757540000606241,
+          "solver_seconds_max": 0.0054072509999514295,
+          "suite_validation_seconds": 0.20674802500002443,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.8153863740283493,
+              "unique_world_fraction": 0.3846974546563024
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.8191729538180156,
+              "unique_world_fraction": 0.37974394147233653
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.8046859690378209,
+              "unique_world_fraction": 0.34636488340192045
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.7603064373897708,
+              "unique_world_fraction": 0.25808348030570255
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.6735008818342152,
+              "unique_world_fraction": 0.12998236331569665
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.5376984126984127,
+              "unique_world_fraction": 0.023809523809523808
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.3601190476190476,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.16666666666666666,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "axis_5",
+          "views": 5,
+          "distinct_observation_classes": 38514,
+          "tested_classes": 162,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.824554443359375,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.416900634765625,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 15,
+          "tested_max_search_nodes": 26,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.00042490800001360185,
+          "solver_seconds_max": 0.006153070999971533,
+          "suite_validation_seconds": 0.22706587800007583,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.8614540466392319,
+              "unique_world_fraction": 0.4790428288370675
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.8611111111111112,
+              "unique_world_fraction": 0.4851394604481024
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.8463648834019204,
+              "unique_world_fraction": 0.46580442876739175
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.805298353909465,
+              "unique_world_fraction": 0.36743092298647856
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.7222222222222222,
+              "unique_world_fraction": 0.19735449735449737
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.5856481481481481,
+              "unique_world_fraction": 0.042328042328042326
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.39880952380952384,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.1875,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "axis_6",
+          "views": 6,
+          "distinct_observation_classes": 45270,
+          "tested_classes": 45270,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.87060546875,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.5432281494140625,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 15,
+          "tested_max_search_nodes": 26,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0005112070000450331,
+          "solver_seconds_max": 0.025075478000189833,
+          "suite_validation_seconds": 62.56135640499997,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.9103795153177869,
+              "unique_world_fraction": 0.6107300716354215
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.9076931870141747,
+              "unique_world_fraction": 0.6310013717421125
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.8912894375857339,
+              "unique_world_fraction": 0.6035665294924554
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.8507495590828924,
+              "unique_world_fraction": 0.48148148148148145
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.7693121693121693,
+              "unique_world_fraction": 0.2747795414462081
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.6316137566137566,
+              "unique_world_fraction": 0.07936507936507936
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.4365079365079365,
+              "unique_world_fraction": 0.015873015873015872
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.20833333333333334,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.0,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "oblique_1",
+          "views": 1,
+          "distinct_observation_classes": 11353,
+          "tested_classes": 161,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.6694240570068359,
+          "oracle_freely_variable_fraction_uniform_world": 0.08504486083984375,
+          "oracle_unique_world_fraction": 0.0467681884765625,
+          "max_feasible_worlds": 192,
+          "tested_max_branches": 4,
+          "tested_max_search_nodes": 10,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 3,
+          "solver_seconds_median": 0.0004988590001175908,
+          "solver_seconds_max": 0.0016856910001479264,
+          "suite_validation_seconds": 0.23844217800001388,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.7640794086267337,
+              "unique_world_fraction": 0.12604785855814662
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.7202074759945131,
+              "unique_world_fraction": 0.07435985368084133
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.6719209288653734,
+              "unique_world_fraction": 0.03625318440133255
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.6200580540858318,
+              "unique_world_fraction": 0.013300999412110524
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.5656084656084656,
+              "unique_world_fraction": 0.0028218694885361554
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.5104993386243386,
+              "unique_world_fraction": 0.0
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.45783730158730157,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.4114583333333333,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.375,
+              "unique_world_fraction": 0.0
+            }
+          }
+        },
+        {
+          "suite": "oblique_2",
+          "views": 2,
+          "distinct_observation_classes": 36790,
+          "tested_classes": 163,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.8584823608398438,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.3197784423828125,
+          "max_feasible_worlds": 36,
+          "tested_max_branches": 3,
+          "tested_max_search_nodes": 9,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 3,
+          "solver_seconds_median": 0.0005692639999779203,
+          "solver_seconds_max": 0.0024425569999948493,
+          "suite_validation_seconds": 0.2638766800000667,
+          "oracle_by_true_slab_count": {
+            "0": {
+              "worlds": 6561,
+              "identifiable_fraction": 0.9296410608139003,
+              "unique_world_fraction": 0.575369608291419
+            },
+            "1": {
+              "worlds": 17496,
+              "identifiable_fraction": 0.9027992112482853,
+              "unique_world_fraction": 0.4541037951531779
+            },
+            "2": {
+              "worlds": 20412,
+              "identifiable_fraction": 0.8655692729766804,
+              "unique_world_fraction": 0.31182637664119145
+            },
+            "3": {
+              "worlds": 13608,
+              "identifiable_fraction": 0.8187555114638448,
+              "unique_world_fraction": 0.17746913580246915
+            },
+            "4": {
+              "worlds": 5670,
+              "identifiable_fraction": 0.7629850088183422,
+              "unique_world_fraction": 0.07566137566137567
+            },
+            "5": {
+              "worlds": 1512,
+              "identifiable_fraction": 0.6996527777777778,
+              "unique_world_fraction": 0.018518518518518517
+            },
+            "6": {
+              "worlds": 252,
+              "identifiable_fraction": 0.6314484126984127,
+              "unique_world_fraction": 0.0
+            },
+            "7": {
+              "worlds": 24,
+              "identifiable_fraction": 0.5625,
+              "unique_world_fraction": 0.0
+            },
+            "8": {
+              "worlds": 1,
+              "identifiable_fraction": 0.5,
+              "unique_world_fraction": 0.0
+            }
+          }
+        }
+      ],
+      "infeasible_duplicate_ray_test": "passed"
+    },
+    {
+      "phase": "Amono",
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "palette": [
+        [
+          "air",
+          0,
+          false
+        ],
+        [
+          "oak_bottom_slab",
+          1,
+          true
+        ],
+        [
+          "oak_cube",
+          1,
+          false
+        ]
+      ],
+      "worlds_enumerated": 6561,
+      "raw_rays": 512,
+      "distinct_ray_factors": 73,
+      "renderer_equalities_checked": 3359232,
+      "audited_pruning_steps": 14809,
+      "render_seconds": 0.28829645099995105,
+      "total_seconds": 2.062846760999946,
+      "suites": [
+        {
+          "suite": "axis_1",
+          "views": 1,
+          "distinct_observation_classes": 81,
+          "tested_classes": 81,
+          "all_classes_tested": true,
+          "oracle_identifiable_fraction_uniform_world": 0.1111111111111111,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.00015241579027587258,
+          "max_feasible_worlds": 625,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 2,
+          "solver_seconds_median": 0.0004906270000901714,
+          "solver_seconds_max": 0.001553732000047603,
+          "suite_validation_seconds": 0.13545808499998202,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_2",
+          "views": 2,
+          "distinct_observation_classes": 625,
+          "tested_classes": 146,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.2716049382716049,
+          "oracle_freely_variable_fraction_uniform_world": 0.0,
+          "oracle_unique_world_fraction": 0.05502210028959,
+          "max_feasible_worlds": 529,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 4,
+          "solver_seconds_median": 0.00017642949990204215,
+          "solver_seconds_max": 0.0015599820001170883,
+          "suite_validation_seconds": 0.12222483799996553,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_3",
+          "views": 3,
+          "distinct_observation_classes": 2373,
+          "tested_classes": 151,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.5916780978509374,
+          "oracle_freely_variable_fraction_uniform_world": 0.00594421582075903,
+          "oracle_unique_world_fraction": 0.20591373266270385,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0002452480000556534,
+          "solver_seconds_max": 0.0026860619998387847,
+          "suite_validation_seconds": 0.12173423099989122,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_4",
+          "views": 4,
+          "distinct_observation_classes": 2373,
+          "tested_classes": 149,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.5916780978509374,
+          "oracle_freely_variable_fraction_uniform_world": 0.00594421582075903,
+          "oracle_unique_world_fraction": 0.20591373266270385,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0003153339998789306,
+          "solver_seconds_max": 0.0034889680000560475,
+          "suite_validation_seconds": 0.1643066330000238,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_5",
+          "views": 5,
+          "distinct_observation_classes": 2373,
+          "tested_classes": 149,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.5916780978509374,
+          "oracle_freely_variable_fraction_uniform_world": 0.00594421582075903,
+          "oracle_unique_world_fraction": 0.20591373266270385,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0003557239999736339,
+          "solver_seconds_max": 0.0038006859999768494,
+          "suite_validation_seconds": 0.1899976009999591,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "axis_6",
+          "views": 6,
+          "distinct_observation_classes": 2373,
+          "tested_classes": 150,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.5916780978509374,
+          "oracle_freely_variable_fraction_uniform_world": 0.00594421582075903,
+          "oracle_unique_world_fraction": 0.20591373266270385,
+          "max_feasible_worlds": 255,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 8,
+          "solver_seconds_median": 0.0003854384999613103,
+          "solver_seconds_max": 0.004752435000000332,
+          "suite_validation_seconds": 0.20305649700003414,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "oblique_1",
+          "views": 1,
+          "distinct_observation_classes": 968,
+          "tested_classes": 150,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.5819615912208504,
+          "oracle_freely_variable_fraction_uniform_world": 0.07338820301783265,
+          "oracle_unique_world_fraction": 0.034141137021795456,
+          "max_feasible_worlds": 144,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 4,
+          "solver_seconds_median": 0.0004201509999575137,
+          "solver_seconds_max": 0.0012916889997995895,
+          "suite_validation_seconds": 0.18277224100006606,
+          "oracle_by_true_slab_count": {}
+        },
+        {
+          "suite": "oblique_2",
+          "views": 2,
+          "distinct_observation_classes": 1990,
+          "tested_classes": 151,
+          "all_classes_tested": false,
+          "oracle_identifiable_fraction_uniform_world": 0.730871818320378,
+          "oracle_freely_variable_fraction_uniform_world": 0.04355281207133059,
+          "oracle_unique_world_fraction": 0.11324493217497333,
+          "max_feasible_worlds": 36,
+          "tested_max_branches": 0,
+          "tested_max_search_nodes": 0,
+          "tested_max_root_unsupported_survivors": 0,
+          "tested_max_component": 3,
+          "solver_seconds_median": 0.0006171160000576492,
+          "solver_seconds_max": 0.002432592999866756,
+          "suite_validation_seconds": 0.2404339140000502,
+          "oracle_by_true_slab_count": {}
+        }
+      ],
+      "infeasible_duplicate_ray_test": "passed"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "description": "Exact one-pixel pinhole-ray observations of three cells; all other cells fixed air.",
+  "fixtures": [
+    {
+      "fixture": "satisfiable_path",
+      "reference_worlds": 27,
+      "feasible_worlds": 2,
+      "root_domains": [
+        7,
+        7,
+        7
+      ],
+      "exact_supported_domains": [
+        6,
+        6,
+        6
+      ],
+      "unsupported_survivors": 3,
+      "component_sizes": [
+        3
+      ],
+      "global_feasibility_search_nodes": 3,
+      "global_feasibility_branches": 2,
+      "support_query_nodes": 5,
+      "support_query_infeasible": 3,
+      "max_unsat_support_query_nodes": 1,
+      "audited_pruning_steps": 10
+    },
+    {
+      "fixture": "infeasible_triangle",
+      "reference_worlds": 27,
+      "feasible_worlds": 0,
+      "root_domains": [
+        7,
+        7,
+        7
+      ],
+      "exact_supported_domains": null,
+      "unsupported_survivors": 9,
+      "component_sizes": [
+        3
+      ],
+      "global_feasibility_search_nodes": 4,
+      "global_feasibility_branches": 3,
+      "support_query_nodes": 9,
+      "support_query_infeasible": 9,
+      "max_unsat_support_query_nodes": 1,
+      "audited_pruning_steps": 20
+    }
+  ]
+}
