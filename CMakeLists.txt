@@ -15,7 +15,9 @@ add_library(mcr
     src/camera/pinhole.cpp
     src/experiments/cameras.cpp
     src/model/a0.cpp
-    src/render/a0.cpp)
+    src/render/a0.cpp
+    src/inference/constraint.cpp
+    src/inference/gac.cpp)
 target_include_directories(mcr PUBLIC include)
 target_compile_features(mcr PUBLIC cxx_std_20)
 if(MSVC)
@@ -39,6 +41,7 @@ if(BUILD_TESTING)
     endfunction()
     mcr_test(geometry_tests tests/geometry_tests.cpp)
     mcr_test(render_tests tests/render_tests.cpp)
+    mcr_test(constraint_tests tests/constraint_tests.cpp)
     option(MCR_ENABLE_PYTHON_ORACLE "Validate C++ against the frozen Python/NumPy oracle" ON)
     if(MCR_ENABLE_PYTHON_ORACLE)
         find_package(Python3 3.10 COMPONENTS Interpreter REQUIRED)

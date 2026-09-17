@@ -1,6 +1,7 @@
 #include "test.hpp"
 #include "mcr/experiments/cameras.hpp"
 #include "mcr/render/a0.hpp"
+#include "mcr/inference/constraint.hpp"
 #include <filesystem>
 #include <fstream>
 
@@ -38,10 +39,15 @@ int main(int argc,char** argv) { return run_tests([&] {
             }
             const AabbReferenceRay reference(grid,ray);
             const TraversalRay traversal(grid,ray);
+            std::vector<FirstHitConstraint> automata;
+            for(unsigned label=0;label<3;++label)
+                automata.emplace_back(std::vector<CellId>(traversal.cells().begin(),traversal.cells().end()),
+                                      static_cast<PixelLabel>(label));
             for(std::uint64_t id=0;id<6561;++id) {
                 const auto world=a0_world(grid.size(),id);
                 const auto a=reference.sample(world),b=traversal.sample(world);
                 CHECK(a==b);
+                for(unsigned label=0;label<3;++label) CHECK(automata[label].accepts(world)==(code(a)==label));
                 if(argc==2) {
                     const int expected=images.get();
                     CHECK(expected!=std::char_traits<char>::eof());
@@ -58,4 +64,3 @@ int main(int argc,char** argv) { return run_tests([&] {
     if(argc==2) std::cout << ", exact Python rays and image labels";
     std::cout << '\n';
 }); }
-
