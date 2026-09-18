@@ -1,0 +1,120 @@
+{
+  "checkpoint": "cpp-milestone-2a",
+  "status": "pass",
+  "recorded_utc": "2026-09-18T04:09:24.926907+00:00",
+  "github_repository": "dmitrilvovich/Minecraft-Reconstruction",
+  "github_default_branch": "main",
+  "github_base_commit": "93fbbcd9789b7ebc41eb5187dd65edf696de6fe3",
+  "working_branch": "milestone-2a",
+  "milestone_1_tag_commit": "235971a41287e3e97ea058c5211912953886c67e",
+  "recovered_commits": [
+    "37bd50ab56e48912b863491637d555fff2dc5a80",
+    "8373a776fc4ceb0523a0ecb013a85d07e2c9464c"
+  ],
+  "recovered_commits_were_published": false,
+  "identity": {
+    "github_login": "dmitrilvovich",
+    "author_and_committer_name": "Dmitri Lvovich",
+    "author_and_committer_email": "dmitri.lvovich@yahoo.ca"
+  },
+  "scope": "A1 geometry and forward rendering only; no A1 inference or benchmarks",
+  "worlds": 65536,
+  "raw_camera_rays": 512,
+  "ray_world_comparisons": 33554432,
+  "boundary_rays": 8918,
+  "boundary_placements_per_ray": 32,
+  "focused_geometry_cases": 153,
+  "a0_compatibility_worlds": 6561,
+  "a0_inference_regression": "complete existing acceptance suite",
+  "tests": {
+    "release": {
+      "status": "pass",
+      "tests_passed": 12,
+      "tests_failed": 0,
+      "seconds": 13.41
+    },
+    "sanitize": {
+      "status": "pass",
+      "tests_passed": 12,
+      "tests_failed": 0,
+      "seconds": 150.79
+    }
+  },
+  "sanitizers": [
+    "AddressSanitizer",
+    "UndefinedBehaviorSanitizer"
+  ],
+  "sanitizer_environment": {
+    "ASAN_OPTIONS": "detect_leaks=0",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "leak_detection_claimed": false,
+  "frozen_python_changed": false,
+  "production_geometry_reused_unchanged": true,
+  "toolchain": {
+    "compiler": "GCC 13.3.0",
+    "cmake": "4.4.3",
+    "ninja": "1.13.2",
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "source_sha256": {
+    "CMakeLists.txt": "b59f90a4e73f910001b409b712bb1e588db3444c4df5c8857e0fa2c3228c12c6",
+    "CMakePresets.json": "7ce2841c7c25b543ac023c91a15c4f667e7b53b97ea7d7501a560cdf898948c2",
+    "experiments/a0_benchmark.cpp": "c950e4dd4b2e5cfc1b6e754ff8671a9fd53c4b5bbf7b52b58bf3aa00deb6a2d2",
+    "include/mcr/camera/pinhole.hpp": "cff274e85bdce4afdbe24e38f829f7c5721f65218854ad1b5ca7c22724869300",
+    "include/mcr/experiments/a0.hpp": "ab0bfdd9b294b5f3640b84af743f8a2862184e5185289c400b3eb2750b454819",
+    "include/mcr/experiments/cameras.hpp": "18d48d1e0a4e2870a48d8d05d79a18ad07b381d35ceb3785cf24780ec0e6ec3b",
+    "include/mcr/geometry/aabb.hpp": "64de74a69bdbb4c3656ac9d9f771610313ab87df4abf1467627e476264c4faa6",
+    "include/mcr/geometry/ray.hpp": "717cc85f58c7298c657a91aef3326584a1c656ad8dd2321b0db29606b12caa24",
+    "include/mcr/grid/grid.hpp": "9285d03cfa09801456a13fd19af08c51371b43eac911e75d91d35256c6c66e17",
+    "include/mcr/grid/traversal.hpp": "7d66764866220dda177f785c6f4300628e6542d3b9e2d94d63983456aff01cd2",
+    "include/mcr/inference/a0_solver.hpp": "e8021af0036beaeb8fdff40059715882ceff4239b10457d3d12aa96bd6b12dec",
+    "include/mcr/inference/constraint.hpp": "11a1a1e435a3787881752025dec511f18c259440819034aedbc7fc4e176ec9b7",
+    "include/mcr/inference/gac.hpp": "a6930685acd1fdb4d694b565730d0c51f613bde3d15a0efd7defb49562f3a77e",
+    "include/mcr/inference/observer.hpp": "81d2c092129fe9a0ce3e006bc9b875cffd26cede927e616bfdb1e5f049fd6f21",
+    "include/mcr/math/rational.hpp": "810ab08eac4502201a03d5885e7db6923d616873e5974344583f9c2cb0ad0299",
+    "include/mcr/math/vec3.hpp": "6ed73f6e66b6c6e2ec1488c8a492b517960c0d5acc49bc9f1a03953eaa5c9b0e",
+    "include/mcr/model/a0.hpp": "c4b94d3d80f5366fe72c06141b0f18bb882872124bc43179db4d61a879ca5f80",
+    "include/mcr/model/a1.hpp": "7bcfc78a2eddf53cb203405c3c06f044035a94c0797d6976a5ff14ec5f14e941",
+    "include/mcr/model/domain.hpp": "a2b07cac3312f035b5f996dafaf2b88edc9416a20ebb52946efcbe739a54d35f",
+    "include/mcr/model/observation.hpp": "63bddd0ce2a8ac46080cd299d7f5d3c137784947292806d2f703d0cb1261d381",
+    "include/mcr/render/a0.hpp": "059852c03ac14e7f9e80d19af349e88d19ffbd5843c7c094f309e9f5ac8f248f",
+    "include/mcr/render/a1.hpp": "490f83bd9920483b476107c531ffd843ad53afedafd66da2df232aeb66a374c5",
+    "src/camera/pinhole.cpp": "58a059a22850e0ad8c6247987fe6d11b7e96a4cd7acc3a88bc6e55bcc994df14",
+    "src/experiments/a0.cpp": "a95391dfb44855eb352d7e37258208b81c0a34c6ce6cc3183c0ed1ce3b6c7328",
+    "src/experiments/cameras.cpp": "b6cc596b29f042b89bb4fa91fbffaf0d0a1e04e114ca894a79672f6b9fe1f18c",
+    "src/geometry/aabb.cpp": "3f4d4f2da7ed34827da55f7de6bb09e0b82143aad74fba6b888e7bc19b7aafd7",
+    "src/grid/grid.cpp": "fb67beb9e9a2d579f62346701dbf6c705ea4cc169bbf3bc3c95b31471e6cede9",
+    "src/grid/traversal.cpp": "6a463a4cf82c6824a6ebf4e75cafdfb28de061d993c79e24767e367a55b495a1",
+    "src/inference/a0_solver.cpp": "b5de17f8351330fb44ee2dbbfa175e1e999f2db7e2d6912d5dac89198e95b90a",
+    "src/inference/constraint.cpp": "e80bb94560c41627120fe7c0b12b48b31ebf35fb3a4176fb4026335c3debe658",
+    "src/inference/gac.cpp": "134938121c99d1d2ba9e4035a4deaeb8a552bfde5c7453b3c9974c85f3a78d9f",
+    "src/inference/work_queue.hpp": "ffdfa9dbf860b77b3a69da6fcb58cdbd8be47e937507c933d2d669d5031a742c",
+    "src/math/rational.cpp": "ff35737b6085cb3e3f2e355dff9f08d4eafc57b0371b7aa3e4fa441718f251bf",
+    "src/model/a0.cpp": "014517887405f5b32cb35f2769e41e845d4e07f4afbf14582ae862996c6a7ea7",
+    "src/model/a1.cpp": "34b4ac3cc8259037c96ec71fa2ff82fd8d6f0441505ff84fa883f7bf967576e3",
+    "src/render/a0.cpp": "86798e146738bd24dd35eed053f9fff3533f84a7eab3564ec81a4faacec24df0",
+    "src/render/a1.cpp": "745b6679aaa5d07d9150a50070cca87dc2d4b509fa6c9532666bd6ebf7ef2848",
+    "tests/a0_acceptance.cpp": "6e13d40f388643b496b681ac94de7833e767e9249e055f20433858c1ce171d1d",
+    "tests/a1_geometry_tests.cpp": "da068b772d7d06e64465b99084edd2798e0db9ece6f623b6281b1e915b37603d",
+    "tests/a1_render_tests.cpp": "5a40245b41cef4b4e377eb0851f6048c4957238c33b58fce60a43e3d3c0587ab",
+    "tests/adversarial_tests.cpp": "45acc739bdf6f68b49368a745d1dedeb235981b11b548ce4644a8a8ca8cbf3f4",
+    "tests/constraint_tests.cpp": "61cd2e5024d8f9db98e3a35292e2b86ba7ab0e3d72096ac386f68ca4edd25624",
+    "tests/fixtures/a0_scenes.hpp": "5e86b160ede1fc4a1f81ae456fb86205cfd012d125c30d6b59610c737a91f4f9",
+    "tests/geometry_tests.cpp": "ec5d44fdeec95f31ddbf1959e783c4caee20e0e5d03cd97dbc0fa6ae33d87e35",
+    "tests/inference_tests.cpp": "1ac6931b34e6f5bf919f43859acb078cb510d28293d3671cd47b4e631de9e89a",
+    "tests/oracle/README.md": "e1dd58d9c9563dabbec644503c474206e1efde6c3f41fbe81e0d22baf92bbf8b",
+    "tests/oracle/audit.hpp": "6bc4c6cd0aca2d2615ea10e14f5e38b64dc281d28f0971e8fe5c8616e4e7a417",
+    "tests/oracle/export_a0.py": "1c24e42f05b30510ce8150f4701d536d55c3e061431d839c2a3dbbc214d52c55",
+    "tests/oracle/export_a1.py": "c7acadf5bca4ff1c6e4a8150bd660767cc4bf4d311e7ff30916ea6f1d88564e6",
+    "tests/render_tests.cpp": "7f8e54133aff67589c42945482cf508c9328bd28e442345bc275030c47c25149",
+    "tests/test.hpp": "1b0c138d004bdd6931b30f2e3c8ba27301bf3cdf1ef117b21cbc626576bb344c"
+  },
+  "oracle_payload_sha256": {
+    "rays.txt": "b87d4deb289b9f977af8690d7ef7c82db417cadbf8ed95679da88d814b1c4aea",
+    "images.bin": "efaaf73cc9112b3a5f459b8f44b056c1ff6f6225e6129f173ab7a8ab3ceaa545"
+  },
+  "push_performed": false,
+  "milestone_2_tag_created": false
+}

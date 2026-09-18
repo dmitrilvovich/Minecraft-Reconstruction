@@ -20,6 +20,8 @@ For that milestone, every one of the 6,561 possible worlds is tested against an 
 
 The detailed acceptance record is in [docs/milestone-1.md](docs/milestone-1.md), and the higher-level C++ design notes are in [docs/design.md](docs/design.md).
 
+The next checkpoint, [Milestone 2A](docs/milestone-2a.md), adds the geometry foundation for oak bottom slabs. Both independent C++ rendering paths are checked against the frozen Python renderer on all 65,536 four-state worlds. A1 inference is the next checkpoint; it is not part of 2A.
+
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
 ## What I'm exploring
@@ -40,7 +42,7 @@ cmake --build --preset release --parallel 2
 ctest --preset release --parallel 2
 ```
 
-The full Milestone 1 validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
+The full A0 and A1 geometry validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
 
 For address/undefined-behavior sanitizer checks with GCC or Clang:
 
@@ -59,4 +61,4 @@ ctest --preset sanitize --parallel 2
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The next milestones are adding nested partial-block geometry, then handling incomparable geometry with exact residual search, then doing a real scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
+The next checkpoint is nested-geometry inference for A1, then handling incomparable geometry with exact residual search, then doing a real scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.

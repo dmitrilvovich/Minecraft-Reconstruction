@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Frozen oracle bytes include original CSV line endings. Never transform them.
+reference/python/** -text

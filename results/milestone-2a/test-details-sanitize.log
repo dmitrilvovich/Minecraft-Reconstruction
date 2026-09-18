@@ -1,0 +1,221 @@
+Start testing: Sep 18 09:35 IST
+----------------------------------------------------------
+1/12 Testing: geometry_tests
+1/12 Test: geometry_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/geometry_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"geometry_tests" start time: Sep 18 09:35 IST
+Output:
+----------------------------------------------------------
+8,918 boundary rays and 512 camera rays checked
+PASS
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"geometry_tests" end time: Sep 18 09:35 IST
+"geometry_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/12 Testing: render_tests
+2/12 Test: render_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/render_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"render_tests" start time: Sep 18 09:35 IST
+Output:
+----------------------------------------------------------
+6561 worlds, 3359232 ray/world comparisons
+PASS
+<end of output>
+Test time =   6.49 sec
+----------------------------------------------------------
+Test Passed.
+"render_tests" end time: Sep 18 09:35 IST
+"render_tests" time elapsed: 00:00:06
+----------------------------------------------------------
+
+3/12 Testing: a1_render_tests
+3/12 Test: a1_render_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a1_render_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"a1_render_tests" start time: Sep 18 09:35 IST
+Output:
+----------------------------------------------------------
+65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+PASS
+<end of output>
+Test time =  41.02 sec
+----------------------------------------------------------
+Test Passed.
+"a1_render_tests" end time: Sep 18 09:36 IST
+"a1_render_tests" time elapsed: 00:00:41
+----------------------------------------------------------
+
+4/12 Testing: a1_geometry_tests
+4/12 Test: a1_geometry_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a1_geometry_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"a1_geometry_tests" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+153 named A1 geometry samples checked in both renderers; exact intervals and traversal order checked
+PASS
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"a1_geometry_tests" end time: Sep 18 09:36 IST
+"a1_geometry_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/12 Testing: constraint_tests
+5/12 Test: constraint_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/constraint_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"constraint_tests" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+7,203 exhaustive four-cell local support cases checked
+PASS
+<end of output>
+Test time =   0.65 sec
+----------------------------------------------------------
+Test Passed.
+"constraint_tests" end time: Sep 18 09:36 IST
+"constraint_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/12 Testing: inference_tests
+6/12 Test: inference_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/inference_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"inference_tests" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+<end of output>
+Test time =   1.14 sec
+----------------------------------------------------------
+Test Passed.
+"inference_tests" end time: Sep 18 09:36 IST
+"inference_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+7/12 Testing: adversarial_tests
+7/12 Test: adversarial_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/adversarial_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"adversarial_tests" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+24 named adversarial scenes across eight view suites, duplicates and order reversal checked
+PASS
+<end of output>
+Test time =   1.16 sec
+----------------------------------------------------------
+Test Passed.
+"adversarial_tests" end time: Sep 18 09:36 IST
+"adversarial_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+8/12 Testing: python_oracle_export
+8/12 Test: python_oracle_export
+Command: "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/tests/oracle/export_a0.py" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"python_oracle_export" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+Python oracle: axis_1: 81 complete classes
+Python oracle: axis_2: 1225 complete classes
+Python oracle: axis_3: 3239 complete classes
+Python oracle: axis_4: 4157 complete classes
+Python oracle: axis_5: 4929 complete classes
+Python oracle: axis_6: 5453 complete classes
+Python oracle: oblique_1: 3601 complete classes
+Python oracle: oblique_2: 6347 complete classes
+{"worlds": 6561, "raw_rays": 512, "ray_world_comparisons": 3359232, "observation_classes": 29032, "classes_by_suite": {"axis_1": 81, "axis_2": 1225, "axis_3": 3239, "axis_4": 4157, "axis_5": 4929, "axis_6": 5453, "oblique_1": 3601, "oblique_2": 6347}, "conditioned_queries": 512, "infeasible_conditioned_queries": 409, "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]", "numpy": "2.3.5", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f", "export_seconds": 9.529030231999968, "payload_sha256": {"rays.txt": "ef99e173093f27b7b0ab606b1fe74323dfef959f75e54af8fba93ba0d7c372cd", "images.bin": "5e8eb2d9420d83cd119c003406e15cc0457c1b65b59b2a7b9d8bb61fd50d8a86", "cases.bin": "2551bbd775591b16cd34ddfac955ae2d478dfed9f3aa37716e50a0ae460b1612"}}
+<end of output>
+Test time =   9.70 sec
+----------------------------------------------------------
+Test Passed.
+"python_oracle_export" end time: Sep 18 09:36 IST
+"python_oracle_export" time elapsed: 00:00:09
+----------------------------------------------------------
+
+9/12 Testing: python_render_agreement
+9/12 Test: python_render_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/render_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"python_render_agreement" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+6561 worlds, 3359232 ray/world comparisons, exact Python rays and image labels
+PASS
+<end of output>
+Test time =   6.70 sec
+----------------------------------------------------------
+Test Passed.
+"python_render_agreement" end time: Sep 18 09:36 IST
+"python_render_agreement" time elapsed: 00:00:06
+----------------------------------------------------------
+
+10/12 Testing: a0_acceptance
+10/12 Test: a0_acceptance
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a0_acceptance" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a0_acceptance.json"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"a0_acceptance" start time: Sep 18 09:36 IST
+Output:
+----------------------------------------------------------
+axis_1: 81 complete feasible families checked
+axis_2: 1225 complete feasible families checked
+axis_3: 3239 complete feasible families checked
+axis_4: 4157 complete feasible families checked
+axis_5: 4929 complete feasible families checked
+axis_6: 5453 complete feasible families checked
+oblique_1: 3601 complete feasible families checked
+oblique_2: 6347 complete feasible families checked
+29032 classes, 512 conditioned queries, 694321 audited reductions; zero mismatches
+PASS
+<end of output>
+Test time =  41.33 sec
+----------------------------------------------------------
+Test Passed.
+"a0_acceptance" end time: Sep 18 09:37 IST
+"a0_acceptance" time elapsed: 00:00:41
+----------------------------------------------------------
+
+11/12 Testing: python_a1_oracle_export
+11/12 Test: python_a1_oracle_export
+Command: "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/tests/oracle/export_a1.py" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"python_a1_oracle_export" start time: Sep 18 09:37 IST
+Output:
+----------------------------------------------------------
+{"worlds": 65536, "raw_rays": 512, "ray_world_comparisons": 33554432, "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]", "numpy": "2.3.5", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f", "export_seconds": 0.849470909000047}
+<end of output>
+Test time =   0.96 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_oracle_export" end time: Sep 18 09:37 IST
+"python_a1_oracle_export" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/12 Testing: python_a1_render_agreement
+12/12 Test: python_a1_render_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a1_render_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+"python_a1_render_agreement" start time: Sep 18 09:37 IST
+Output:
+----------------------------------------------------------
+65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+PASS
+<end of output>
+Test time =  41.26 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_render_agreement" end time: Sep 18 09:38 IST
+"python_a1_render_agreement" time elapsed: 00:00:41
+----------------------------------------------------------
+
+End testing: Sep 18 09:38 IST

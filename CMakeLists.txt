@@ -14,7 +14,9 @@ add_library(mcr
     src/grid/traversal.cpp
     src/camera/pinhole.cpp
     src/model/a0.cpp
+    src/model/a1.cpp
     src/render/a0.cpp
+    src/render/a1.cpp
     src/inference/constraint.cpp
     src/inference/gac.cpp
     src/inference/a0_solver.cpp)
@@ -50,6 +52,8 @@ if(BUILD_TESTING)
     endfunction()
     mcr_test(geometry_tests tests/geometry_tests.cpp)
     mcr_test(render_tests tests/render_tests.cpp)
+    mcr_test(a1_render_tests tests/a1_render_tests.cpp)
+    mcr_test(a1_geometry_tests tests/a1_geometry_tests.cpp)
     mcr_test(constraint_tests tests/constraint_tests.cpp)
     mcr_test(inference_tests tests/inference_tests.cpp)
     mcr_test(adversarial_tests tests/adversarial_tests.cpp)
@@ -73,5 +77,11 @@ if(BUILD_TESTING)
         add_test(NAME a0_acceptance COMMAND a0_acceptance "${MCR_ORACLE_DIR}"
                  "${CMAKE_CURRENT_BINARY_DIR}/a0_acceptance.json")
         set_tests_properties(a0_acceptance PROPERTIES FIXTURES_REQUIRED python_a0)
+        set(MCR_A1_ORACLE_DIR "${CMAKE_CURRENT_BINARY_DIR}/oracle_a1" CACHE PATH "A1 oracle fixture directory")
+        add_test(NAME python_a1_oracle_export COMMAND "${Python3_EXECUTABLE}"
+                 "${CMAKE_CURRENT_SOURCE_DIR}/tests/oracle/export_a1.py" "${MCR_A1_ORACLE_DIR}")
+        set_tests_properties(python_a1_oracle_export PROPERTIES FIXTURES_SETUP python_a1)
+        add_test(NAME python_a1_render_agreement COMMAND a1_render_tests "${MCR_A1_ORACLE_DIR}")
+        set_tests_properties(python_a1_render_agreement PROPERTIES FIXTURES_REQUIRED python_a1)
     endif()
 endif()
