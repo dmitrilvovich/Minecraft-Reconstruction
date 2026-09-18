@@ -1,0 +1,12 @@
+{
+  "cases": 12288,
+  "consistent": 2624,
+  "inconsistent": 9664,
+  "scene_names": [
+    "cascade",
+    "cycle",
+    "slab_occlusion"
+  ],
+  "fixture_sha256": "290e9fa3cca329463c0d94be3f16a711ec61e5745c02b12e58bc4531dbbbd9d8",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+}

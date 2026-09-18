@@ -3,9 +3,9 @@
 #include <deque>
 
 namespace mcr::detail {
-class WorkQueue {
+template<class ProblemType> class WorkQueue {
 public:
-    explicit WorkQueue(const Problem& problem) : problem_(problem),queued_(problem.constraints().size(),true) {
+    explicit WorkQueue(const ProblemType& problem) : problem_(problem),queued_(problem.constraints().size(),true) {
         for(std::size_t r=0;r<queued_.size();++r) queue_.push_back(r);
     }
     [[nodiscard]] bool empty() const { return queue_.empty(); }
@@ -16,9 +16,8 @@ public:
         for(auto r:problem_.incident(v)) if(!queued_[r]) { queued_[r]=true; queue_.push_back(r); }
     }
 private:
-    const Problem& problem_;
+    const ProblemType& problem_;
     std::deque<std::size_t> queue_;
     std::vector<bool> queued_;
 };
 } // namespace mcr::detail
-

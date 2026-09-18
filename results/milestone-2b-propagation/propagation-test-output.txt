@@ -1,0 +1,5 @@
+cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
