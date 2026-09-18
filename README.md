@@ -1,21 +1,38 @@
-# mcr — exact reconstruction core
+# Minecraft Reconstruction (mcr)
 
-C++20 implementation of the known-camera reconstruction mathematics.
-Current scope: **Milestone 1 / A0**, eight lattice cells and three states:
-air, stone full cube, oak full cube.
+Minecraft Reconstruction is a personal project I'm working on to reconstruct Minecraft structures from one or more 2D images and eventually export the result as an actual Minecraft build/schematic.
 
-See [the C++ design](docs/design.md) and the
-[frozen research reference](reference/README.md). Python remains an independent
-oracle; new solver work belongs in C++.
+I originally thought the problem would mostly be about figuring out where blocks are in 3D, but it gets complicated pretty quickly once you have occlusion, partial blocks like slabs and stairs, ambiguous camera angles, hidden geometry, and multiple block states that can explain the same pixels.
 
-Milestone 1 reproduces all 6,561 worlds and exact state supports. The C++ core
-contains no A1/A2 shape solver yet. See [the acceptance record](docs/milestone-1.md).
+Because Minecraft already lives on a discrete grid with a finite set of legal block states, I'm trying to take advantage of that directly instead of first reconstructing a generic mesh or point cloud and converting it back into blocks afterward. The project is mainly a mix of computer vision, inverse graphics, computational geometry, and constraint solving.
+
+The main implementation is in C++20.
+
+## Where the project is at
+
+This is still early-stage work, so it is **not** an end-to-end screenshot-to-schematic tool yet.
+
+Right now I'm building the reconstruction side under known cameras first. The idea is to get the geometry, visibility, ambiguity handling, and solver behavior right in small controlled cases before adding camera recovery and real Minecraft screenshots on top.
+
+The first C++ milestone is complete. It uses a tiny 2 x 2 x 2 world where each cell can be air, a stone cube, or an oak cube. That sounds small, but the point of the milestone was to build a reconstruction core that I can actually check exhaustively rather than immediately scaling up something I don't fully trust.
+
+For that milestone, every one of the 6,561 possible worlds is tested against an independent Python reference implementation. The C++ renderer, ray traversal, constraint propagation, feasible-world decisions, and supported block states all have to agree with the reference.
+
+The detailed acceptance record is in [docs/milestone-1.md](docs/milestone-1.md), and the higher-level C++ design notes are in [docs/design.md](docs/design.md).
+
+The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
+
+## What I'm exploring
+
+The reconstruction is being treated as a discrete inverse-rendering problem: the unknown object is the actual Minecraft scene itself, not an intermediate mesh.
+
+A screenshot gives evidence about which block states could be present along each camera ray. Foreground blocks can hide deeper blocks, so the constraints are coupled through visibility rather than being independent per voxel. When the images don't determine something, I'd rather keep that part of the reconstruction ambiguous than make up a block just to force a single answer.
+
+I'm currently working through the problem in stages: full cubes first, then partial/nested geometry such as slabs, then block shapes whose geometry can compete in more complicated ways. After that I want to measure how the exact solver scales before moving on to recovering the camera and Minecraft lattice directly from images.
 
 ## Build and test
 
-Requirements: C++20 compiler, CMake 3.20+, Ninja. The core has no third-party
-C++ dependency. Cross-language acceptance additionally needs Python 3.10+ and
-NumPy (the recorded run uses Python 3.12.14 and NumPy 2.3.5).
+Requirements for the C++ project are a C++20 compiler, CMake 3.20+, and Ninja.
 
 ```sh
 cmake --preset release
@@ -23,13 +40,9 @@ cmake --build --preset release --parallel 2
 ctest --preset release --parallel 2
 ```
 
-The full test run regenerates oracle fixtures from the frozen Python files,
-checks their hashes, compares both C++ renderers with Python on all worlds,
-and audits complete feasible families and every pruning operation. Acceptance
-requires all tests; `MCR_ENABLE_PYTHON_ORACLE=OFF` is only a local development
-option and does not constitute full Milestone 1 validation.
+The full Milestone 1 validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
 
-For address/undefined-behavior checks with GCC or Clang:
+For address/undefined-behavior sanitizer checks with GCC or Clang:
 
 ```sh
 cmake --preset sanitize
@@ -37,64 +50,13 @@ cmake --build --preset sanitize --parallel 2
 ctest --preset sanitize --parallel 2
 ```
 
-In this managed workspace, LeakSanitizer cannot run under process tracing. The
-recorded sanitizer command therefore prefixes CTest with
-`ASAN_OPTIONS=detect_leaks=0`; address and undefined-behavior instrumentation
-remain enabled. Leak detection is not claimed for that run. The default preset
-and CI do not disable it.
+## Repository layout
 
-Other generators work with ordinary CMake commands, for example:
+- `include/mcr/` and `src/` — C++ geometry, cameras, grid traversal, rendering, and inference
+- `tests/` — unit, adversarial, and cross-language correctness tests
+- `experiments/` and `src/experiments/` — experiment and benchmark code
+- `reference/python/` — frozen Python research implementation
+- `docs/` — design notes and milestone acceptance records
+- `results/` — recorded experiment/benchmark evidence
 
-```sh
-cmake -S . -B build/local -DCMAKE_BUILD_TYPE=Release
-cmake --build build/local --config Release
-ctest --test-dir build/local -C Release --output-on-failure
-```
-
-Only GCC/Linux is validated in the recorded run. The CI workflow is prepared
-for release and sanitizer checks on pushes and pull requests; it has not yet
-run on a GitHub remote.
-
-## C++ benchmark
-
-```sh
-./build/release/mcr_a0_benchmark --output out/a0 --repetitions 5
-```
-
-This runs only the fixed 2 x 2 x 2 A0 experiment. It writes a per-class CSV and
-JSON summary, including feasible-world counts, root pruning, exact candidates,
-identifiability, true freedom, support queries, propagation work, and timings.
-The measured calls exclude oracle lookup, audit callbacks, and problem setup.
-Memory is whole-process peak RSS, including the exhaustive C++ corpus.
-There is no scaling study or cross-language speedup claim in this milestone.
-
-## Layout and API
-
-| Path | Purpose |
-|---|---|
-| `include/mcr/`, `src/` | Geometry, camera, grid, states, renderers and inference |
-| `src/experiments/`, `experiments/` | Separate C++ experiment support and benchmark executable |
-| `tests/fixtures/` | Named adversarial A0 scenes |
-| `tests/oracle/` | Python export adapter and read-only exhaustive pruning audit |
-| `reference/python/` | Original Python source, protocol and results, unchanged |
-| `results/milestone-1/` | Recorded acceptance and benchmark evidence |
-| `docs/` | Design, proof assumptions, and acceptance scope |
-
-`mcr` is the solver/geometry CMake target. `mcr_experiments` depends on it and
-contains exhaustive experiment utilities; the core never depends on the oracle.
-
-The public inference entry points are `fixed_geometry(problem, domains, stats)`
-and `exact_supports(problem, domains, stats)`. Optional audit observers return
-no inference decisions. Domain bit `1 << state` indicates membership; A0 state
-codes are air=0, stone=1, oak=2. Feasible results include an actual witness;
-infeasible support results have no witness and no supported-domain array.
-Input errors and arithmetic overflow throw exceptions, never `infeasible`.
-
-Rays have exact rational coordinates, unnormalized directions and positive-length
-half-open-cell intersections. The numeric backend deliberately fails on checked
-integer overflow; it is not an arbitrary-precision type. All declared cameras
-and boundary tests fit its range and agree exactly with Python fractions.
-
-Future milestones are A1 nested-geometry envelopes, then A2 propagation and exact
-residual search, then C++ scaling measurements. Each must retain the frozen
-reference and pass its own correctness gate before the next stage.
+The next milestones are adding nested partial-block geometry, then handling incomparable geometry with exact residual search, then doing a real scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
