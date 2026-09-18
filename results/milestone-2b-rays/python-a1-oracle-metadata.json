@@ -1,0 +1,11 @@
+{
+  "worlds": 65536,
+  "raw_rays": 512,
+  "ray_world_comparisons": 33554432,
+  "local_support_cases": 98304,
+  "local_support_sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f",
+  "export_seconds": 2.9145158910000646
+}

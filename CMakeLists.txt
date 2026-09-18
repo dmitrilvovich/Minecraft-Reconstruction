@@ -18,6 +18,8 @@ add_library(mcr
     src/render/a0.cpp
     src/render/a1.cpp
     src/inference/constraint.cpp
+    src/inference/automaton.cpp
+    src/inference/a1_constraint.cpp
     src/inference/gac.cpp
     src/inference/a0_solver.cpp)
 target_include_directories(mcr PUBLIC include)
@@ -55,6 +57,7 @@ if(BUILD_TESTING)
     mcr_test(a1_render_tests tests/a1_render_tests.cpp)
     mcr_test(a1_geometry_tests tests/a1_geometry_tests.cpp)
     mcr_test(constraint_tests tests/constraint_tests.cpp)
+    mcr_test(a1_constraint_tests tests/a1_constraint_tests.cpp)
     mcr_test(inference_tests tests/inference_tests.cpp)
     mcr_test(adversarial_tests tests/adversarial_tests.cpp)
     option(MCR_ENABLE_PYTHON_ORACLE "Validate C++ against the frozen Python/NumPy oracle" ON)
@@ -83,5 +86,7 @@ if(BUILD_TESTING)
         set_tests_properties(python_a1_oracle_export PROPERTIES FIXTURES_SETUP python_a1)
         add_test(NAME python_a1_render_agreement COMMAND a1_render_tests "${MCR_A1_ORACLE_DIR}")
         set_tests_properties(python_a1_render_agreement PROPERTIES FIXTURES_REQUIRED python_a1)
+        add_test(NAME python_a1_constraint_agreement COMMAND a1_constraint_tests "${MCR_A1_ORACLE_DIR}")
+        set_tests_properties(python_a1_constraint_agreement PROPERTIES FIXTURES_REQUIRED python_a1)
     endif()
 endif()

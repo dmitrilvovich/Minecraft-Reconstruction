@@ -4,13 +4,7 @@
 
 namespace mcr {
 std::optional<RayMode> transition(RayMode mode,A0State state,PixelLabel target) {
-    const auto e=emission(state);
-    if(code(target)>2) throw std::invalid_argument("invalid pixel label");
-    if(mode==RayMode::done) return RayMode::done;
-    if(mode!=RayMode::alive) throw std::invalid_argument("invalid automaton mode");
-    if(e==PixelLabel::background) return RayMode::alive;
-    if(e==target && target!=PixelLabel::background) return RayMode::done;
-    return {};
+    return transition(mode,emission(state),target);
 }
 FirstHitConstraint::FirstHitConstraint(std::vector<CellId> cells,PixelLabel target)
     : cells_(std::move(cells)),target_(target) {
@@ -46,34 +40,9 @@ void Problem::validate_domains(std::span<const Domain> domains) const {
     if(domains.size()!=cell_count_) throw std::invalid_argument("wrong domain count");
 }
 LocalSupport factor_supports(const FirstHitConstraint& factor,std::span<const Domain> domains) {
-    const auto cells=factor.cells();
-    const auto m=cells.size();
-    std::vector<unsigned> forward(m+1,0),backward(m+1,0);
-    forward[0]=1U; // alive
-    for(std::size_t j=0;j<m;++j) {
-        if(cells[j]>=domains.size()) throw std::invalid_argument("constraint exceeds domain count");
-        for(unsigned q=0;q<2;++q) if(forward[j] & (1U<<q))
-            for(auto s:a0_states) if(domains[cells[j]].contains(s))
-                if(auto next=transition(static_cast<RayMode>(q),s,factor.target()))
-                    forward[j+1] |= 1U<<static_cast<unsigned>(*next);
-    }
-    const unsigned terminal=factor.target()==PixelLabel::background ? 1U : 2U;
-    if(!(forward[m] & terminal)) return {false,{}};
-    backward[m]=terminal;
-    std::vector<Domain> support(m,Domain(0));
-    for(std::size_t j=m;j-- >0;) {
-        unsigned supported=0;
-        for(unsigned q=0;q<2;++q)
-            for(auto s:a0_states) if(domains[cells[j]].contains(s)) {
-                const auto next=transition(static_cast<RayMode>(q),s,factor.target());
-                if(next && (backward[j+1] & (1U<<static_cast<unsigned>(*next)))) {
-                    backward[j] |= 1U<<q;
-                    if(forward[j] & (1U<<q)) supported |= 1U<<code(s);
-                }
-            }
-        support[j]=Domain(supported);
-    }
-    return {true,std::move(support)};
+    auto masks=detail::automaton_supports(factor.cells(),domains,factor.target(),
+        [](std::size_t,unsigned s){return emission(static_cast<A0State>(s));});
+    if(!masks) return {false,{}};
+    return {true,std::move(*masks)};
 }
 } // namespace mcr
-

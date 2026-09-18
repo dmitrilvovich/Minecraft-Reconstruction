@@ -17,7 +17,7 @@ jobs:
         run: cmake --preset ${{ matrix.preset }}
       - name: Build
         run: cmake --build --preset ${{ matrix.preset }} --parallel 2
-      - name: Test A0 inference and A1 geometry
+      - name: Test A0 inference and A1 geometry and ray constraints
         env:
           UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
         run: ctest --preset ${{ matrix.preset }} --parallel 2

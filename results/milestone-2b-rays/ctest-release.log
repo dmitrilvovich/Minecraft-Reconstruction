@@ -1,0 +1,33 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+      Start  1: geometry_tests
+ 1/14 Test  #1: geometry_tests ...................   Passed    0.10 sec
+      Start  2: render_tests
+ 2/14 Test  #2: render_tests .....................   Passed    0.32 sec
+      Start  3: a1_render_tests
+ 3/14 Test  #3: a1_render_tests ..................   Passed    1.97 sec
+      Start  4: a1_geometry_tests
+ 4/14 Test  #4: a1_geometry_tests ................   Passed    0.02 sec
+      Start  5: constraint_tests
+ 5/14 Test  #5: constraint_tests .................   Passed    0.04 sec
+      Start  6: a1_constraint_tests
+ 6/14 Test  #6: a1_constraint_tests ..............   Passed    0.19 sec
+      Start  7: inference_tests
+ 7/14 Test  #7: inference_tests ..................   Passed    0.07 sec
+      Start  8: adversarial_tests
+ 8/14 Test  #8: adversarial_tests ................   Passed    0.07 sec
+      Start  9: python_oracle_export
+ 9/14 Test  #9: python_oracle_export .............   Passed   19.29 sec
+      Start 10: python_render_agreement
+10/14 Test #10: python_render_agreement ..........   Passed    0.35 sec
+      Start 11: a0_acceptance
+11/14 Test #11: a0_acceptance ....................   Passed    1.80 sec
+      Start 12: python_a1_oracle_export
+12/14 Test #12: python_a1_oracle_export ..........   Passed    3.37 sec
+      Start 13: python_a1_render_agreement
+13/14 Test #13: python_a1_render_agreement .......   Passed    2.33 sec
+      Start 14: python_a1_constraint_agreement
+14/14 Test #14: python_a1_constraint_agreement ...   Passed    0.19 sec
+
+100% tests passed out of 14
+
+Total Test time (real) =  30.13 sec

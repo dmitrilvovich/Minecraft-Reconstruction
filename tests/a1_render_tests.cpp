@@ -2,6 +2,8 @@
 #include "mcr/experiments/cameras.hpp"
 #include "mcr/render/a1.hpp"
 #include "mcr/render/a0.hpp"
+#include "mcr/inference/a1_constraint.hpp"
+#include <set>
 #include <fstream>
 #include <filesystem>
 
@@ -31,6 +33,8 @@ int main(int argc,char** argv) { return run_tests([&] {
     for(unsigned mask=1;mask<16;++mask) for(auto s:a1_states)
         if(A1Domain(mask).contains(s)) CHECK(geometry_rank(s)<=geometry_rank(maximal_geometry(A1Domain(mask))));
     std::uint64_t comparisons=0;
+    std::uint64_t automaton_checks=0;
+    std::set<std::vector<A1RayCell>> programs;
     for(const auto& camera:experiments::phase_a_cameras(grid))
         for(int row=0;row<8;++row) for(int column=0;column<8;++column) {
             const auto ray=camera.pixel(column,row);
@@ -39,9 +43,17 @@ int main(int argc,char** argv) { return run_tests([&] {
             }
             const A1AabbReferenceRay reference(grid,ray);
             const A1TraversalRay traversal(grid,ray);
+            const std::vector<A1RayCell> steps(traversal.steps().begin(),traversal.steps().end());
+            const bool new_program=programs.insert(steps).second;
+            std::vector<A1Constraint> automata;
+            if(new_program) for(unsigned target=0;target<3;++target) automata.emplace_back(steps,static_cast<PixelLabel>(target));
             for(const auto& world:worlds) {
                 const auto label=reference.sample(world);
                 CHECK(label==traversal.sample(world));
+                if(new_program) for(unsigned target=0;target<3;++target) {
+                    CHECK(automata[target].accepts(world)==(code(label)==target));
+                    ++automaton_checks;
+                }
                 if(argc==2) CHECK(image.get()==static_cast<int>(code(label)));
                 ++comparisons;
             }
@@ -70,4 +82,6 @@ int main(int argc,char** argv) { return run_tests([&] {
     CHECK(A1TraversalRay(grid,Ray({-1,Rational(1,2),Rational(1,2)},{1,0,0})).sample(slab)==PixelLabel::background);
     CHECK(A1TraversalRay(grid,Ray({-1,Rational(1,4),Rational(1,2)},{1,0,0})).sample(slab)==PixelLabel::oak);
     std::cout << "65536 A1 worlds, " << comparisons << " ray/world comparisons, 8918 boundary rays; A0 compatibility checked\n";
+    CHECK(programs.size()==73);
+    std::cout << automaton_checks << " exact A1 automaton decisions checked\n";
 }); }

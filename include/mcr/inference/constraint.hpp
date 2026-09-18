@@ -1,10 +1,10 @@
 #pragma once
+#include "mcr/inference/automaton.hpp"
 #include "mcr/grid/grid.hpp"
 #include "mcr/model/a0.hpp"
 #include <optional>
 
 namespace mcr {
-enum class RayMode : unsigned { alive=0, done=1 };
 [[nodiscard]] std::optional<RayMode> transition(RayMode,A0State,PixelLabel);
 
 class FirstHitConstraint {
@@ -37,4 +37,3 @@ struct LocalSupport {
 };
 [[nodiscard]] LocalSupport factor_supports(const FirstHitConstraint&,std::span<const Domain>);
 } // namespace mcr
-
