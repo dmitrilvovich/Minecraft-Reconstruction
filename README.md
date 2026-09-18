@@ -10,7 +10,7 @@ The main implementation is in C++20.
 
 ## Where the project is at
 
-This is still early-stage work, so it is **not** an end-to-end screenshot-to-schematic tool yet.
+This is still early-stage work, so it is not an end-to-end screenshot-to-schematic tool yet.
 
 Right now I'm building the reconstruction side under known cameras first. The idea is to get the geometry, visibility, ambiguity handling, and solver behavior right in small controlled cases before adding camera recovery and real Minecraft screenshots on top.
 
