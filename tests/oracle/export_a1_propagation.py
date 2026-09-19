@@ -8,8 +8,7 @@ import struct
 from export_a0 import ROOT, oracle, check_frozen_reference, REFERENCE
 
 
-def export(output):
-    check_frozen_reference()
+def load_scenes():
     tokens = iter((ROOT / "tests/fixtures/a1_propagation.txt").read_text().split())
     assert next(tokens) == "MCRA1P1"
     scenes = []
@@ -28,6 +27,12 @@ def export(output):
         assert {v for f in factors for v in f.cells} == set(range(n))
         scenes.append((name, n, factors, labels))
     assert next(tokens, None) is None
+    return scenes
+
+
+def export(output):
+    check_frozen_reference()
+    scenes = load_scenes()
     output.mkdir(parents=True, exist_ok=True)
     count = sum(16**n for _, n, _, _ in scenes)
     consistent = 0

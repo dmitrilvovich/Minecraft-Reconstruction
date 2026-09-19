@@ -1,0 +1,45 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+      Start  1: geometry_tests
+ 1/20 Test  #1: geometry_tests ....................   Passed    0.04 sec
+      Start  2: render_tests
+ 2/20 Test  #2: render_tests ......................   Passed    0.15 sec
+      Start  3: a1_render_tests
+ 3/20 Test  #3: a1_render_tests ...................   Passed    1.04 sec
+      Start  4: a1_geometry_tests
+ 4/20 Test  #4: a1_geometry_tests .................   Passed    0.00 sec
+      Start  5: constraint_tests
+ 5/20 Test  #5: constraint_tests ..................   Passed    0.02 sec
+      Start  6: a1_constraint_tests
+ 6/20 Test  #6: a1_constraint_tests ...............   Passed    0.09 sec
+      Start  7: a1_propagation_tests
+ 7/20 Test  #7: a1_propagation_tests ..............   Passed    0.16 sec
+      Start  8: a1_feasibility_tests
+ 8/20 Test  #8: a1_feasibility_tests ..............   Passed    0.07 sec
+      Start  9: inference_tests
+ 9/20 Test  #9: inference_tests ...................   Passed    0.03 sec
+      Start 10: adversarial_tests
+10/20 Test #10: adversarial_tests .................   Passed    0.03 sec
+      Start 11: python_oracle_export
+11/20 Test #11: python_oracle_export ..............   Passed    9.32 sec
+      Start 12: python_render_agreement
+12/20 Test #12: python_render_agreement ...........   Passed    0.17 sec
+      Start 13: a0_acceptance
+13/20 Test #13: a0_acceptance .....................   Passed    0.91 sec
+      Start 14: python_a1_oracle_export
+14/20 Test #14: python_a1_oracle_export ...........   Passed    1.43 sec
+      Start 15: python_a1_render_agreement
+15/20 Test #15: python_a1_render_agreement ........   Passed    1.27 sec
+      Start 16: python_a1_constraint_agreement
+16/20 Test #16: python_a1_constraint_agreement ....   Passed    0.09 sec
+      Start 17: python_a1_propagation_export
+17/20 Test #17: python_a1_propagation_export ......   Passed    0.33 sec
+      Start 18: python_a1_propagation_agreement
+18/20 Test #18: python_a1_propagation_agreement ...   Passed    0.01 sec
+      Start 19: python_a1_feasibility_export
+19/20 Test #19: python_a1_feasibility_export ......   Passed    0.21 sec
+      Start 20: python_a1_feasibility_agreement
+20/20 Test #20: python_a1_feasibility_agreement ...   Passed    0.01 sec
+
+100% tests passed out of 20
+
+Total Test time (real) =  15.37 sec

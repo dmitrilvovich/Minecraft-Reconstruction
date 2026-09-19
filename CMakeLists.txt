@@ -22,6 +22,7 @@ add_library(mcr
     src/inference/a1_constraint.cpp
     src/inference/a1_problem.cpp
     src/inference/a1_gac.cpp
+    src/inference/a1_feasibility.cpp
     src/inference/gac.cpp
     src/inference/a0_solver.cpp)
 target_include_directories(mcr PUBLIC include)
@@ -63,6 +64,9 @@ if(BUILD_TESTING)
     mcr_test(a1_propagation_tests tests/a1_propagation_tests.cpp)
     target_compile_definitions(a1_propagation_tests PRIVATE
         MCR_A1_PROPAGATION_FIXTURE="${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/a1_propagation.txt")
+    mcr_test(a1_feasibility_tests tests/a1_feasibility_tests.cpp)
+    target_compile_definitions(a1_feasibility_tests PRIVATE
+        MCR_A1_PROPAGATION_FIXTURE="${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures/a1_propagation.txt")
     mcr_test(inference_tests tests/inference_tests.cpp)
     mcr_test(adversarial_tests tests/adversarial_tests.cpp)
     option(MCR_ENABLE_PYTHON_ORACLE "Validate C++ against the frozen Python/NumPy oracle" ON)
@@ -98,5 +102,10 @@ if(BUILD_TESTING)
         set_tests_properties(python_a1_propagation_export PROPERTIES FIXTURES_SETUP python_a1_propagation)
         add_test(NAME python_a1_propagation_agreement COMMAND a1_propagation_tests "${MCR_A1_ORACLE_DIR}")
         set_tests_properties(python_a1_propagation_agreement PROPERTIES FIXTURES_REQUIRED python_a1_propagation)
+        add_test(NAME python_a1_feasibility_export COMMAND "${Python3_EXECUTABLE}"
+                 "${CMAKE_CURRENT_SOURCE_DIR}/tests/oracle/export_a1_feasibility.py" "${MCR_A1_ORACLE_DIR}")
+        set_tests_properties(python_a1_feasibility_export PROPERTIES FIXTURES_SETUP python_a1_feasibility)
+        add_test(NAME python_a1_feasibility_agreement COMMAND a1_feasibility_tests "${MCR_A1_ORACLE_DIR}")
+        set_tests_properties(python_a1_feasibility_agreement PROPERTIES FIXTURES_REQUIRED python_a1_feasibility)
     endif()
 endif()
