@@ -1,0 +1,9 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+    Start 12: python_oracle_export
+1/2 Test #12: python_oracle_export .............   Passed    9.66 sec
+    Start 13: python_render_agreement
+2/2 Test #13: python_render_agreement ..........   Passed    0.17 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   9.83 sec

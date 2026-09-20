@@ -1,0 +1,28 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+    Start  4: a1_geometry_tests
+1/8 Test  #4: a1_geometry_tests ...................   Passed    0.02 sec
+    Start  7: a1_propagation_tests
+2/8 Test  #7: a1_propagation_tests ................   Passed    7.15 sec
+    Start  8: a1_feasibility_tests
+Process not started
+ /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/a1_feasibility_tests
+[permission denied]
+3/8 Test  #8: a1_feasibility_tests ................***Not Run   0.00 sec
+    Start  9: a1_support_query_tests
+4/8 Test  #9: a1_support_query_tests ..............   Passed    7.19 sec
+    Start 10: inference_tests
+5/8 Test #10: inference_tests .....................   Passed    1.12 sec
+    Start 11: adversarial_tests
+6/8 Test #11: adversarial_tests ...................   Passed    1.15 sec
+    Start 22: python_a1_support_query_export
+7/8 Test #22: python_a1_support_query_export ......   Passed    0.55 sec
+    Start 23: python_a1_support_query_agreement
+8/8 Test #23: python_a1_support_query_agreement ...   Passed    0.73 sec
+
+88% tests passed, 1 tests failed out of 8
+
+Total Test time (real) =  17.92 sec
+
+The following tests FAILED:
+	  8 - a1_feasibility_tests (BAD_COMMAND)
+Errors while running CTest

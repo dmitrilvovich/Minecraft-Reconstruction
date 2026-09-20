@@ -1,0 +1,6 @@
+cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS

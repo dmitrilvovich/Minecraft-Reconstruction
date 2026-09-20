@@ -1,0 +1,16 @@
+{
+  "queries": 64800,
+  "supported": 9856,
+  "unsupported": 54944,
+  "scene_names": [
+    "cascade",
+    "cycle",
+    "slab_occlusion"
+  ],
+  "scope": "all nonempty domain triples, all cells, every allowed state",
+  "envelope_calls": 64800,
+  "branches": 0,
+  "search_nodes": 0,
+  "fixture_sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+}
