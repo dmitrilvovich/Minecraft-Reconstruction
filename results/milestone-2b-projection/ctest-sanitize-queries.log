@@ -1,0 +1,9 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+    Start 8: a1_feasibility_tests
+1/2 Test #8: a1_feasibility_tests .............   Passed    8.19 sec
+    Start 9: a1_support_query_tests
+2/2 Test #9: a1_support_query_tests ...........   Passed   17.76 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =  25.96 sec

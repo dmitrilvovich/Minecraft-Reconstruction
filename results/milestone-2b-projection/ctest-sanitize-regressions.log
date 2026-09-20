@@ -1,0 +1,20 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+    Start  4: a1_geometry_tests
+1/4 Test  #4: a1_geometry_tests ................   Passed    0.10 sec
+    Start  7: a1_propagation_tests
+2/4 Test  #7: a1_propagation_tests .............   Passed   15.83 sec
+    Start 11: inference_tests
+3/4 Test #11: inference_tests ..................   Passed    2.73 sec
+    Start 12: adversarial_tests
+Process not started
+ /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/adversarial_tests
+[permission denied]
+4/4 Test #12: adversarial_tests ................***Not Run   0.00 sec
+
+75% tests passed, 1 tests failed out of 4
+
+Total Test time (real) =  18.68 sec
+
+The following tests FAILED:
+	 12 - adversarial_tests (BAD_COMMAND)
+Errors while running CTest

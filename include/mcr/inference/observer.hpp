@@ -3,7 +3,7 @@
 
 namespace mcr {
 enum class QueryKind { gac, fixed_geometry, support_projection, nested_envelope };
-enum class PruneReason { ray_arc_support, first_active_material, unsupported_air, envelope_first_hit };
+enum class PruneReason { ray_arc_support, first_active_material, unsupported_air, envelope_first_hit, unsupported_state };
 enum class ContradictionReason { empty_domain, no_ray_support, foreground_escapes, required_cell_empty, envelope_empty };
 template<class DomainType> struct BasicPruneEvent {
     CellId cell;

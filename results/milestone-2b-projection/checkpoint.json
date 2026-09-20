@@ -1,0 +1,292 @@
+{
+  "checkpoint": "Milestone 2B checkpoint 5: exact A1 supported-domain projection",
+  "status": "pass",
+  "base_commit": "914730f13470df0fc3f51f777014867a2285b64e",
+  "date": "2026-09-20",
+  "scope": "Exact marginal support masks and witness coverage only. No final Milestone 2 acceptance, performance benchmarks, tag, A2, camera recovery or vocabulary expansion.",
+  "api": "exact_supports(A1Problem, domains, stats, observer) -> A1SupportResult { feasible, supported, witnesses }",
+  "method": "Complete root envelope feasibility; certify root and query witnesses; query_support for uncertified root literals; audit final exclusions in the restored unconditioned root context.",
+  "infeasibility": "One empty supported mask per input cell, no witnesses. A feasible zero-cell scene has one empty witness.",
+  "audited_counts": {
+    "physical_worlds": 65536,
+    "observation_vectors": 729,
+    "domain_variants": 2,
+    "physical_projections": 1458,
+    "audited_projections": 13760,
+    "feasible": 3113,
+    "infeasible": 10647,
+    "verified_witnesses": 8602,
+    "witnessed_literals": 17498,
+    "single_query_checks": 194192,
+    "kernel_prunes": 31575,
+    "kernel_deletions": 40524,
+    "projection_prunes": 4290,
+    "projection_deletions": 5270,
+    "literal_queries": 10759,
+    "infeasible_queries": 5270,
+    "envelope_calls": 24519,
+    "branches": 0,
+    "search_nodes": 0
+  },
+  "count_scope": "Primary observed native projections; excludes identical plain runs, Python comparisons and standalone audit/idempotence controls. Single-query agreement count is listed separately.",
+  "abstract_corpus": {
+    "scenes": 3,
+    "domain_triples_per_scene": 4096,
+    "projections": 12288,
+    "empty_masks_included": true,
+    "oracle": "independent scalar first-hit exhaustive families, restricted by original input domains"
+  },
+  "physical_corpus": {
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "worlds": 65536,
+    "rays": 6,
+    "observation_vectors": 729,
+    "domain_variants": 2,
+    "projections": 1458,
+    "oracle": "independent ray/AABB exhaustive families and witness re-rendering"
+  },
+  "named_projections": 14,
+  "python_comparison": {
+    "cases": 10125,
+    "feasible": 2624,
+    "infeasible": 7501,
+    "supported_literals": 9856,
+    "source_single_queries": 64800,
+    "unrestricted_nested_supports_comparisons": 3,
+    "scope": "all nonempty domain triples in three shared-ray fixtures",
+    "source_fixture_sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d",
+    "fixture_sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8",
+    "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+  },
+  "python_scope": "Aggregate the existing frozen-Python single-query fixture; also compare the original nested_supports on the three unrestricted scenes. No new Python solver.",
+  "witness_verification": [
+    "every returned witness belongs to the original restricted exhaustive family",
+    "union of witnessed literals equals all reported masks",
+    "every physical witness re-rendered by independent AABB intersections",
+    "single-query results on original domains agree for every cell/state, including excluded candidates"
+  ],
+  "zero_search": {
+    "branches": 0,
+    "search_nodes": 0,
+    "per_call_bound": "envelope_calls = 1 + literal_queries; on feasible roots literal_queries <= root_candidates - cell_count; infeasible roots use zero queries",
+    "witness_bound": "one root witness plus one per successful query"
+  },
+  "validation": {
+    "release": {
+      "unique_tests_passed": 26,
+      "initial_passed": 23,
+      "initial_failed": 1,
+      "initial_not_run": 2,
+      "targeted_recheck_passed": 5
+    },
+    "sanitize": {
+      "unique_tests_passed": 10,
+      "initial_passed": 9,
+      "initial_not_run": 1,
+      "targeted_recheck_passed": 1,
+      "address": true,
+      "undefined_behavior": true,
+      "leak_detection": false,
+      "ASAN_OPTIONS": "detect_leaks=0",
+      "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1",
+      "scope": "Projection/Python, A1 query/feasibility/propagation/geometry, A0 inference, adversarial regressions. Full renderer sanitizer suite not rerun."
+    },
+    "logs": {
+      "ctest-release-initial.log": {
+        "passed": [
+          "a0_acceptance",
+          "a1_constraint_tests",
+          "a1_geometry_tests",
+          "a1_projection_tests",
+          "a1_propagation_tests",
+          "a1_render_tests",
+          "a1_support_query_tests",
+          "adversarial_tests",
+          "constraint_tests",
+          "geometry_tests",
+          "inference_tests",
+          "python_a1_constraint_agreement",
+          "python_a1_feasibility_export",
+          "python_a1_oracle_export",
+          "python_a1_projection_agreement",
+          "python_a1_projection_export",
+          "python_a1_propagation_agreement",
+          "python_a1_propagation_export",
+          "python_a1_render_agreement",
+          "python_a1_support_query_agreement",
+          "python_a1_support_query_export",
+          "python_oracle_export",
+          "render_tests"
+        ],
+        "seconds": 32.27
+      },
+      "ctest-release-recheck.log": {
+        "passed": [
+          "a1_feasibility_tests",
+          "python_a1_feasibility_agreement",
+          "python_a1_feasibility_export",
+          "python_oracle_export",
+          "python_render_agreement"
+        ],
+        "seconds": 19.12
+      },
+      "ctest-sanitize-projection.log": {
+        "passed": [
+          "a1_projection_tests",
+          "python_a1_projection_agreement",
+          "python_a1_projection_export",
+          "python_a1_support_query_export"
+        ],
+        "seconds": 10.54
+      },
+      "ctest-sanitize-queries.log": {
+        "passed": [
+          "a1_feasibility_tests",
+          "a1_support_query_tests"
+        ],
+        "seconds": 25.96
+      },
+      "ctest-sanitize-recheck.log": {
+        "passed": [
+          "adversarial_tests"
+        ],
+        "seconds": 2.69
+      },
+      "ctest-sanitize-regressions.log": {
+        "passed": [
+          "a1_geometry_tests",
+          "a1_propagation_tests",
+          "inference_tests"
+        ],
+        "seconds": 18.68
+      }
+    }
+  },
+  "artifact_recovery": [
+    "Release a1_feasibility_tests was empty and non-executable, preventing native and Python agreement checks. Removed only this generated binary and relinked it.",
+    "Release A0 rays.txt had only 298 of 513 required lines; regenerated the unchanged Python fixture and reran affected tests. All five fixture/dependent rechecks passed.",
+    "Sanitized adversarial_tests was empty and non-executable. Removed only that build output, relinked it and reran its single test; passed. No source changes for any repair."
+  ],
+  "evidence_sha256": {
+    "ctest-release-initial.log": "b07b11fdf9ff3738e5e40538bfafcb150e3b1bf3ec72326fbbf3a52a83ea6a39",
+    "ctest-release-recheck.log": "27b91889a2530a9be309f14541a028cfa4dc22a67916db1fa4c7065e92ae6773",
+    "ctest-sanitize-projection.log": "6cd528a3be40f48ebf5a217b79f14efad0d1861dcae75fb6410ee6c5cd0d65e3",
+    "ctest-sanitize-queries.log": "a19b333a3a512536815033c51352ad55068d11e8e4d253da0c73f46d7a777c69",
+    "ctest-sanitize-recheck.log": "47202d4237af800f317e71fffefe1f3cc3527934e1cb01266d89b79af8257c29",
+    "ctest-sanitize-regressions.log": "2592b8150ac8af49fcc1b212a89ceecd7453eb00278e8be966c75e1d28611fcc",
+    "projection-test-output.txt": "d5c66fd044b38ad6ac03ca96025cfea641896acec7a202ae67da9c49b87aedcf",
+    "python-agreement-output.txt": "37b842c97b8baed868569c9f37fca69aea65758449ec92265e02afe2b24bce5b",
+    "python-projection-metadata.json": "549c577856abfc00a4fecf01cccff10e776e721d2c673c9810880e7820fa730a"
+  },
+  "tested_source_sha256": {
+    ".github/workflows/ci.yml": "df6093da7a116327c90b967fe8cf93932be697ee908ca59279605c8feda79481",
+    "CMakeLists.txt": "3392ba4111dcde0fd539c6655a51f02bc7d2c13d4b4e1d876c8c9371ce3dc110",
+    "CMakePresets.json": "7ce2841c7c25b543ac023c91a15c4f667e7b53b97ea7d7501a560cdf898948c2",
+    "include/mcr/camera/pinhole.hpp": "cff274e85bdce4afdbe24e38f829f7c5721f65218854ad1b5ca7c22724869300",
+    "include/mcr/experiments/a0.hpp": "ab0bfdd9b294b5f3640b84af743f8a2862184e5185289c400b3eb2750b454819",
+    "include/mcr/experiments/cameras.hpp": "18d48d1e0a4e2870a48d8d05d79a18ad07b381d35ceb3785cf24780ec0e6ec3b",
+    "include/mcr/geometry/aabb.hpp": "64de74a69bdbb4c3656ac9d9f771610313ab87df4abf1467627e476264c4faa6",
+    "include/mcr/geometry/ray.hpp": "717cc85f58c7298c657a91aef3326584a1c656ad8dd2321b0db29606b12caa24",
+    "include/mcr/grid/grid.hpp": "9285d03cfa09801456a13fd19af08c51371b43eac911e75d91d35256c6c66e17",
+    "include/mcr/grid/traversal.hpp": "7d66764866220dda177f785c6f4300628e6542d3b9e2d94d63983456aff01cd2",
+    "include/mcr/inference/a0_solver.hpp": "e8021af0036beaeb8fdff40059715882ceff4239b10457d3d12aa96bd6b12dec",
+    "include/mcr/inference/a1_constraint.hpp": "704b4a38131875e200e4e0f08dc5b3b06a529a3ead5c4e5670680dc46404fb6a",
+    "include/mcr/inference/a1_feasibility.hpp": "29f92adf6be8115c6ebad7194bba4bed4f2982b6c43f513b97b57e233cbca13d",
+    "include/mcr/inference/a1_gac.hpp": "70d4c2ef88643ed2d2e1b3abee6a113ceba576ebf74308c4e25f57c46b34dd39",
+    "include/mcr/inference/a1_problem.hpp": "413d641aecf8ee68644c8091585f660cc672a82245a84752504ae4a256531da4",
+    "include/mcr/inference/a1_support_query.hpp": "f5d813761df21935879a9b962d44354c8611b525ea7f3f7f3b272401e8d2c378",
+    "include/mcr/inference/a1_supports.hpp": "001e4943a923550a985ced6646cfb93c9667fa4e8d697005e77275bbb20cbe45",
+    "include/mcr/inference/automaton.hpp": "0626ea28371b025db41ba302f969eab9e1466049953bee7a5d43871bec12657d",
+    "include/mcr/inference/constraint.hpp": "e545b891343dbc155113675df7613ab0c7233aef7ff33956256179bc900ef695",
+    "include/mcr/inference/gac.hpp": "a6930685acd1fdb4d694b565730d0c51f613bde3d15a0efd7defb49562f3a77e",
+    "include/mcr/inference/observer.hpp": "e76736973caefe68da3a8185db7dcb75c498d98d4489d442744dcbe510970776",
+    "include/mcr/math/rational.hpp": "810ab08eac4502201a03d5885e7db6923d616873e5974344583f9c2cb0ad0299",
+    "include/mcr/math/vec3.hpp": "6ed73f6e66b6c6e2ec1488c8a492b517960c0d5acc49bc9f1a03953eaa5c9b0e",
+    "include/mcr/model/a0.hpp": "c4b94d3d80f5366fe72c06141b0f18bb882872124bc43179db4d61a879ca5f80",
+    "include/mcr/model/a1.hpp": "7bcfc78a2eddf53cb203405c3c06f044035a94c0797d6976a5ff14ec5f14e941",
+    "include/mcr/model/domain.hpp": "a2b07cac3312f035b5f996dafaf2b88edc9416a20ebb52946efcbe739a54d35f",
+    "include/mcr/model/observation.hpp": "63bddd0ce2a8ac46080cd299d7f5d3c137784947292806d2f703d0cb1261d381",
+    "include/mcr/render/a0.hpp": "059852c03ac14e7f9e80d19af349e88d19ffbd5843c7c094f309e9f5ac8f248f",
+    "include/mcr/render/a1.hpp": "490f83bd9920483b476107c531ffd843ad53afedafd66da2df232aeb66a374c5",
+    "src/camera/pinhole.cpp": "58a059a22850e0ad8c6247987fe6d11b7e96a4cd7acc3a88bc6e55bcc994df14",
+    "src/experiments/a0.cpp": "a95391dfb44855eb352d7e37258208b81c0a34c6ce6cc3183c0ed1ce3b6c7328",
+    "src/experiments/cameras.cpp": "b6cc596b29f042b89bb4fa91fbffaf0d0a1e04e114ca894a79672f6b9fe1f18c",
+    "src/geometry/aabb.cpp": "3f4d4f2da7ed34827da55f7de6bb09e0b82143aad74fba6b888e7bc19b7aafd7",
+    "src/grid/grid.cpp": "fb67beb9e9a2d579f62346701dbf6c705ea4cc169bbf3bc3c95b31471e6cede9",
+    "src/grid/traversal.cpp": "6a463a4cf82c6824a6ebf4e75cafdfb28de061d993c79e24767e367a55b495a1",
+    "src/inference/a0_solver.cpp": "b5de17f8351330fb44ee2dbbfa175e1e999f2db7e2d6912d5dac89198e95b90a",
+    "src/inference/a1_constraint.cpp": "e74ba1dcc4034e174998d06aec9b58506bf20ba582342fe7d1732858552de0c2",
+    "src/inference/a1_feasibility.cpp": "a97f8000e92c234da705bf3b075658edf6c4fcded9c5b88e02c32005a4428818",
+    "src/inference/a1_gac.cpp": "1603974b99f9a2784fecd04464452657921ddaaed051f25a8ddda16d19f689e6",
+    "src/inference/a1_problem.cpp": "39093253c52ed0ae8353546397a7ce754aa868765c43fba6dbd8a5c57ca4b4e5",
+    "src/inference/a1_support_query.cpp": "6c7f04ccc015d8aba1292a1dcc47578e3d28eedb4e4a0aa73a5845fc281c7950",
+    "src/inference/a1_supports.cpp": "99af8179495f85860c05ca20d3f61ce3b4a6906eba8953e7d4c884ecc77f7a00",
+    "src/inference/automaton.cpp": "9ebceac6d9b5126d268811d588b43007cd5f60aa42d15705680396172330f9fd",
+    "src/inference/constraint.cpp": "18797d154ca8e7025d7e075ab01b8b7cf383226c844fa3847ec03fdac70c3799",
+    "src/inference/gac.cpp": "a1d4ed110f1e738dd980d6d150a57e4f4cbdf28e77dd45771714194a83f0a238",
+    "src/inference/gac_impl.hpp": "16ca2a9bcde536bde0bddc40c97188e620f0b82cea507dce06daa0e558ae29b8",
+    "src/inference/work_queue.hpp": "95f6a81b180874eaf7870a8ae6526fb682a2e9bf87a0614a5bdf5fe161306890",
+    "src/math/rational.cpp": "ff35737b6085cb3e3f2e355dff9f08d4eafc57b0371b7aa3e4fa441718f251bf",
+    "src/model/a0.cpp": "014517887405f5b32cb35f2769e41e845d4e07f4afbf14582ae862996c6a7ea7",
+    "src/model/a1.cpp": "34b4ac3cc8259037c96ec71fa2ff82fd8d6f0441505ff84fa883f7bf967576e3",
+    "src/render/a0.cpp": "86798e146738bd24dd35eed053f9fff3533f84a7eab3564ec81a4faacec24df0",
+    "src/render/a1.cpp": "745b6679aaa5d07d9150a50070cca87dc2d4b509fa6c9532666bd6ebf7ef2848",
+    "tests/a0_acceptance.cpp": "6e13d40f388643b496b681ac94de7833e767e9249e055f20433858c1ce171d1d",
+    "tests/a1_constraint_tests.cpp": "4de3539c9ed840174dc5eaefe7f8349ef48b54cac0aa317c720f664bf762951f",
+    "tests/a1_feasibility_tests.cpp": "bb3b8b2a015fb70900668dfd5393444b7523ed533169d55a818000168d277fc4",
+    "tests/a1_geometry_tests.cpp": "da068b772d7d06e64465b99084edd2798e0db9ece6f623b6281b1e915b37603d",
+    "tests/a1_projection_tests.cpp": "82e97601608da1c01bd565a43a489e2785464610a76d1727ce255b5b64f6e9da",
+    "tests/a1_propagation_tests.cpp": "b7f73a14fda5d63623f1635371490e880628bb5a606990fdd32e1501af56c40d",
+    "tests/a1_render_tests.cpp": "34371d76eb89f238edb8e6ad10d6f33274ab2a819609dff3b54f23aa2d8cd4d6",
+    "tests/a1_support_query_tests.cpp": "fe78bbf5bfe0c6b23a160c83452b49fac23f82a7b50835b62b62c72596a37510",
+    "tests/adversarial_tests.cpp": "45acc739bdf6f68b49368a745d1dedeb235981b11b548ce4644a8a8ca8cbf3f4",
+    "tests/constraint_tests.cpp": "61cd2e5024d8f9db98e3a35292e2b86ba7ab0e3d72096ac386f68ca4edd25624",
+    "tests/fixtures/a0_scenes.hpp": "5e86b160ede1fc4a1f81ae456fb86205cfd012d125c30d6b59610c737a91f4f9",
+    "tests/fixtures/a1_problems.hpp": "3289fb3056a9ac759dfb8320f8fa077f9ee01a16b9f60d5497a157b792eae61f",
+    "tests/fixtures/a1_propagation.txt": "7ef64fe7e6d3090a7c5feb380269dc7edca7bc01afc04d7dd385849cb911cabd",
+    "tests/geometry_tests.cpp": "ec5d44fdeec95f31ddbf1959e783c4caee20e0e5d03cd97dbc0fa6ae33d87e35",
+    "tests/inference_tests.cpp": "1ac6931b34e6f5bf919f43859acb078cb510d28293d3671cd47b4e631de9e89a",
+    "tests/oracle/README.md": "e1dd58d9c9563dabbec644503c474206e1efde6c3f41fbe81e0d22baf92bbf8b",
+    "tests/oracle/a1_feasibility_audit.hpp": "c61ee156c44894419eb1a0a4d4c78cc6e7b396a49d4d6002a9347a9c0f8682c5",
+    "tests/oracle/a1_projection_audit.hpp": "6ff9bcaefdb1975dbe0e071d146d4853b5f58ae7016fa348d776695a2e8d69c4",
+    "tests/oracle/a1_propagation_audit.hpp": "1b026cfa6330386bded40457fd046d18a74a155762f694e5a82d64bb8146e55e",
+    "tests/oracle/audit.hpp": "6bc4c6cd0aca2d2615ea10e14f5e38b64dc281d28f0971e8fe5c8616e4e7a417",
+    "tests/oracle/export_a0.py": "1c24e42f05b30510ce8150f4701d536d55c3e061431d839c2a3dbbc214d52c55",
+    "tests/oracle/export_a1.py": "199ff816324626d1ae558de00504487537308536a51f8faf1825893b2d3a4d6d",
+    "tests/oracle/export_a1_feasibility.py": "10c808eeaca623849ff8f41796d79e76243dba58e2d15ba74581de75062703a5",
+    "tests/oracle/export_a1_projection.py": "981b2b02aafdae9456d3f6d9f421c3375f4b752747db809fe0eaafa3a1b568a6",
+    "tests/oracle/export_a1_propagation.py": "c63b0d784839d0f562d1e0341f5edb9e20d0064c73a7d81c5ffd114ddb53751c",
+    "tests/oracle/export_a1_support_query.py": "7809f864d794c92035a1af6a8a18a4a99a0be03df66c0f1e8e427c4fbc1bef41",
+    "tests/render_tests.cpp": "7f8e54133aff67589c42945482cf508c9328bd28e442345bc275030c47c25149",
+    "tests/test.hpp": "1b0c138d004bdd6931b30f2e3c8ba27301bf3cdf1ef117b21cbc626576bb344c"
+  },
+  "frozen_reference_manifest_sha256": "735026f3854c67e87b08869c02a822958db6bca6a04f9d8254bf56318b182346",
+  "frozen_reference_files_verified": 11,
+  "prior_tested_files_unchanged": 72,
+  "toolchain": {
+    "cmake": "cmake version 4.4.3",
+    "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+  },
+  "commands": [
+    "cmake --preset release -DCMAKE_MAKE_PROGRAM=/root/.local/bin/ninja",
+    "cmake --build --preset release --parallel 2",
+    "build/release/a1_projection_tests",
+    "ctest --preset release --output-on-failure",
+    "cmake --build --preset release --target a1_feasibility_tests --parallel 2",
+    "ctest --preset release --output-on-failure -R '^(a1_feasibility_tests|python_a1_feasibility_agreement|python_render_agreement)$'",
+    "cmake --preset sanitize -DCMAKE_MAKE_PROGRAM=/root/.local/bin/ninja",
+    "cmake --build --preset sanitize --target a1_projection_tests --parallel 2",
+    "ctest --preset sanitize --output-on-failure -R '^(a1_projection_tests|python_a1_projection_(export|agreement))$'",
+    "cmake --build --preset sanitize --target a1_feasibility_tests a1_support_query_tests a1_propagation_tests inference_tests adversarial_tests a1_geometry_tests --parallel 2",
+    "ctest --preset sanitize --output-on-failure -R '^(a1_feasibility_tests|a1_support_query_tests)$'",
+    "ctest --preset sanitize --output-on-failure -R '^(a1_propagation_tests|a1_geometry_tests|inference_tests|adversarial_tests)$'",
+    "cmake --build --preset sanitize --target adversarial_tests --parallel 2",
+    "ctest --preset sanitize --output-on-failure -R '^adversarial_tests$'"
+  ],
+  "environment_note": "Used /root/.local/bin/cmake and ctest. All sanitizer runs set ASAN_OPTIONS=detect_leaks=0 and UBSAN_OPTIONS=halt_on_error=1:print_stacktrace=1. Validation timings are not benchmarks.",
+  "next_checkpoint": "Final Milestone 2 acceptance: complete A1 camera/view and adversarial suites, exact supports and restrictions, witness/pruning audits, full sanitizer gate, time/memory/view-identifiability benchmarks, then final acceptance record and cpp-milestone-2 tag."
+}

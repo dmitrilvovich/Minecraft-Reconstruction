@@ -1,0 +1,15 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+    Start  8: a1_feasibility_tests
+1/5 Test  #8: a1_feasibility_tests ..............   Passed    0.18 sec
+    Start 13: python_oracle_export
+2/5 Test #13: python_oracle_export ..............   Passed   18.00 sec
+    Start 14: python_render_agreement
+3/5 Test #14: python_render_agreement ...........   Passed    0.33 sec
+    Start 21: python_a1_feasibility_export
+4/5 Test #21: python_a1_feasibility_export ......   Passed    0.58 sec
+    Start 22: python_a1_feasibility_agreement
+5/5 Test #22: python_a1_feasibility_agreement ...   Passed    0.02 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =  19.12 sec

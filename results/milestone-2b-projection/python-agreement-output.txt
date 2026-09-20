@@ -1,0 +1,2 @@
+python_projections=10125 feasible=2624 infeasible=7501 supported_literals=9856; exact masks agree; zero search
+PASS
