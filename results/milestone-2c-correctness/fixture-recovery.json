@@ -1,0 +1,15 @@
+{
+  "test": "python_a1_constraint_agreement",
+  "failure": "unexpected EOF in generated local_supports.bin",
+  "expected_bytes": 393228,
+  "observed_bytes": 118784,
+  "observed_is_exact_prefix": true,
+  "expected_sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b",
+  "observed_sha256": "a63bd12927444a7c217853e5496bddb7c55da2abf91d28a78f7076ba600f4bf0",
+  "exporter_recorded_sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b",
+  "source_changes": false,
+  "remedy": "regenerate fixture with unchanged exporter; rerun affected CTest and its setup fixture",
+  "recovered_bytes": 393228,
+  "recovered_sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b",
+  "affected_tests_passed": true
+}

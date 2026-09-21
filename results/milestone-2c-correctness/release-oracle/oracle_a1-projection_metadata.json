@@ -1,0 +1,12 @@
+{
+  "cases": 10125,
+  "feasible": 2624,
+  "infeasible": 7501,
+  "supported_literals": 9856,
+  "source_single_queries": 64800,
+  "unrestricted_nested_supports_comparisons": 3,
+  "scope": "all nonempty domain triples in three shared-ray fixtures",
+  "source_fixture_sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d",
+  "fixture_sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+}

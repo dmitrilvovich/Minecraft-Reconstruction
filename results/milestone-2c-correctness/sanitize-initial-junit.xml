@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="28"
+	failures="1"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="381"
+	timestamp="2026-09-21T10:30:16"
+	>
+	<testcase name="geometry_tests" classname="geometry_tests" time="0.336325" status="run">
+		<properties/>
+		<system-out>8,918 boundary rays and 512 camera rays checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="render_tests" classname="render_tests" time="6.78985" status="run">
+		<properties/>
+		<system-out>6561 worlds, 3359232 ray/world comparisons
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_render_tests" classname="a1_render_tests" time="49.9231" status="run">
+		<properties/>
+		<system-out>65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+14352384 exact A1 automaton decisions checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_geometry_tests" classname="a1_geometry_tests" time="0.0203949" status="run">
+		<properties/>
+		<system-out>153 named A1 geometry samples checked in both renderers; exact intervals and traversal order checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="constraint_tests" classname="constraint_tests" time="0.704793" status="run">
+		<properties/>
+		<system-out>7,203 exhaustive four-cell local support cases checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_constraint_tests" classname="a1_constraint_tests" time="4.12584" status="run">
+		<properties/>
+		<system-out>98304 exhaustive A1 local-support cases; restricted/empty domains, contradictions and ambiguity checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_propagation_tests" classname="a1_propagation_tests" time="7.69054" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_feasibility_tests" classname="a1_feasibility_tests" time="3.39128" status="run">
+		<properties/>
+		<system-out>cascade: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+cycle: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+slab_occlusion: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+physical_worlds=65536 physical_observations=729 physical_feasible_observations=450 physical_domain_variants=2
+feasibility_calls=75747 feasible=16584 infeasible=59163 verified_witnesses=16584 audited_reductions=120459 deleted_states=145441 factor_updates=227843 envelope_advances=71696 branches=0 search_nodes=0 support_queries=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_support_query_tests" classname="a1_support_query_tests" time="7.59177" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_projection_tests" classname="a1_projection_tests" time="3.33828" status="run">
+		<properties/>
+		<system-out>cascade: exact projection and witness coverage for all 4096 domain triples
+cycle: exact projection and witness coverage for all 4096 domain triples
+slab_occlusion: exact projection and witness coverage for all 4096 domain triples
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_projections=1458
+audited_projections=13760 feasible=3113 infeasible=10647 verified_witnesses=8602 witnessed_literals=17498 single_query_checks=194192 kernel_prunes=31575 kernel_deletions=40524 projection_prunes=4290 projection_deletions=5270 literal_queries=10759 infeasible_queries=5270 envelope_calls=24519 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="inference_tests" classname="inference_tests" time="1.25981" status="run">
+		<properties/>
+		<system-out>A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="adversarial_tests" classname="adversarial_tests" time="1.196" status="run">
+		<properties/>
+		<system-out>24 named adversarial scenes across eight view suites, duplicates and order reversal checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_oracle_export" classname="python_oracle_export" time="10.0722" status="run">
+		<properties/>
+		<system-out>Python oracle: axis_1: 81 complete classes
+Python oracle: axis_2: 1225 complete classes
+Python oracle: axis_3: 3239 complete classes
+Python oracle: axis_4: 4157 complete classes
+Python oracle: axis_5: 4929 complete classes
+Python oracle: axis_6: 5453 complete classes
+Python oracle: oblique_1: 3601 complete classes
+Python oracle: oblique_2: 6347 complete classes
+{"worlds": 6561, "raw_rays": 512, "ray_world_comparisons": 3359232, "observation_classes": 29032, "classes_by_suite": {"axis_1": 81, "axis_2": 1225, "axis_3": 3239, "axis_4": 4157, "axis_5": 4929, "axis_6": 5453, "oblique_1": 3601, "oblique_2": 6347}, "conditioned_queries": 512, "infeasible_conditioned_queries": 409, "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]", "numpy": "2.3.5", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f", "export_seconds": 9.893245557, "payload_sha256": {"rays.txt": "ef99e173093f27b7b0ab606b1fe74323dfef959f75e54af8fba93ba0d7c372cd", "images.bin": "5e8eb2d9420d83cd119c003...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="python_render_agreement" classname="python_render_agreement" time="6.57339" status="run">
+		<properties/>
+		<system-out>6561 worlds, 3359232 ray/world comparisons, exact Python rays and image labels
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a0_acceptance" classname="a0_acceptance" time="44.0117" status="run">
+		<properties/>
+		<system-out>axis_1: 81 complete feasible families checked
+axis_2: 1225 complete feasible families checked
+axis_3: 3239 complete feasible families checked
+axis_4: 4157 complete feasible families checked
+axis_5: 4929 complete feasible families checked
+axis_6: 5453 complete feasible families checked
+oblique_1: 3601 complete feasible families checked
+oblique_2: 6347 complete feasible families checked
+29032 classes, 512 conditioned queries, 694321 audited reductions; zero mismatches
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_oracle_export" classname="python_a1_oracle_export" time="1.50527" status="run">
+		<properties/>
+		<system-out>{"worlds": 65536, "raw_rays": 512, "ray_world_comparisons": 33554432, "local_support_cases": 98304, "local_support_sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b", "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]", "numpy": "2.3.5", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f", "export_seconds": 1.33486931799996}
+</system-out>
+	</testcase>
+	<testcase name="python_a1_render_agreement" classname="python_a1_render_agreement" time="48.7142" status="run">
+		<properties/>
+		<system-out>65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+14352384 exact A1 automaton decisions checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_constraint_agreement" classname="python_a1_constraint_agreement" time="1.35292" status="fail">
+		<failure message="Failed"/>
+		<properties/>
+		<system-out>/workspace/scratch/6ba1826515f8/mcr-milestone-2a/tests/a1_constraint_tests.cpp:10: b!=std::char_traits&lt;char&gt;::eof()
+</system-out>
+	</testcase>
+	<testcase name="python_a1_propagation_export" classname="python_a1_propagation_export" time="0.301099" status="run">
+		<properties/>
+		<system-out>{"cases": 12288, "consistent": 2624, "inconsistent": 9664, "scene_names": ["cascade", "cycle", "slab_occlusion"], "fixture_sha256": "290e9fa3cca329463c0d94be3f16a711ec61e5745c02b12e58bc4531dbbbd9d8", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"}
+</system-out>
+	</testcase>
+	<testcase name="python_a1_propagation_agreement" classname="python_a1_propagation_agreement" time="0.275956" status="run">
+		<properties/>
+		<system-out>12288 multi-ray cases agree with frozen Python GAC
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_feasibility_export" classname="python_a1_feasibility_export" time="0.273349" status="run">
+		<properties/>
+		<system-out>{"cases": 10125, "feasible": 2624, "infeasible": 7501, "scene_names": ["cascade", "cycle", "slab_occlusion"], "domain_masks": "all nonempty triples", "branches": 0, "search_nodes": 0, "support_queries": 0, "fixture_sha256": "2f394b4ee785f19aabac1c7cfd2e6b23f1a0287981acf77dafcc18c90bac2383", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"}
+</system-out>
+	</testcase>
+	<testcase name="python_a1_feasibility_agreement" classname="python_a1_feasibility_agreement" time="0.212876" status="run">
+		<properties/>
+		<system-out>10125 decisions and deterministic witnesses agree with frozen Python; zero search
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_support_query_export" classname="python_a1_support_query_export" time="0.602194" status="run">
+		<properties/>
+		<system-out>{"queries": 64800, "supported": 9856, "unsupported": 54944, "scene_names": ["cascade", "cycle", "slab_occlusion"], "scope": "all nonempty domain triples, all cells, every allowed state", "envelope_calls": 64800, "branches": 0, "search_nodes": 0, "fixture_sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"}
+</system-out>
+	</testcase>
+	<testcase name="python_a1_support_query_agreement" classname="python_a1_support_query_agreement" time="0.72266" status="run">
+		<properties/>
+		<system-out>python_queries=64800 supported=9856 unsupported=54944; exact decisions and witnesses agree; zero search
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_projection_export" classname="python_a1_projection_export" time="0.203928" status="run">
+		<properties/>
+		<system-out>{"cases": 10125, "feasible": 2624, "infeasible": 7501, "supported_literals": 9856, "source_single_queries": 64800, "unrestricted_nested_supports_comparisons": 3, "scope": "all nonempty domain triples in three shared-ray fixtures", "source_fixture_sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d", "fixture_sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8", "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"}
+</system-out>
+	</testcase>
+	<testcase name="python_a1_projection_agreement" classname="python_a1_projection_agreement" time="0.229748" status="run">
+		<properties/>
+		<system-out>python_projections=10125 feasible=2624 infeasible=7501 supported_literals=9856; exact masks agree; zero search
+PASS
+</system-out>
+	</testcase>
+	<testcase name="python_a1_acceptance_export" classname="python_a1_acceptance_export" time="0.202791" status="run">
+		<properties/>
+		<system-out>Verified cached A1 acceptance fixture: 65,536 worlds, 195,620 complete families
+</system-out>
+	</testcase>
+	<testcase name="a1_acceptance" classname="a1_acceptance" time="281.209" status="run">
+		<properties/>
+		<system-out>axis_1: 625 complete A1 families checked
+axis_2: 5625 complete A1 families checked
+axis_3: 24705 complete A1 families checked
+axis_4: 32738 complete A1 families checked
+axis_5: 38514 complete A1 families checked
+axis_6: 45270 complete A1 families checked
+oblique_1: 11353 complete A1 families checked
+oblique_2: 36790 complete A1 families checked
+195620 A1 families; 10909842 audited reductions; zero search and zero mismatches
+PASS
+</system-out>
+	</testcase>
+</testsuite>

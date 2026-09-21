@@ -1,0 +1,30 @@
+{
+  "observation_classes": 195620,
+  "classes_by_suite": {
+    "axis_1": 625,
+    "axis_2": 5625,
+    "axis_3": 24705,
+    "axis_4": 32738,
+    "axis_5": 38514,
+    "axis_6": 45270,
+    "oblique_1": 11353,
+    "oblique_2": 36790
+  },
+  "distinct_factors": 73,
+  "conditioned_queries": 512,
+  "infeasible_conditioned_queries": 421,
+  "maximum_python_branches": 0,
+  "maximum_python_search_nodes": 0,
+  "worlds": 65536,
+  "schema": "MCRA1C1",
+  "input_sha256": {
+    "export_a1_acceptance.py": "eeef88ddfea41d7001665e0c7e21fe2c9812eb211f944fa6f552178198331294",
+    "export_a0.py": "1c24e42f05b30510ce8150f4701d536d55c3e061431d839c2a3dbbc214d52c55",
+    "phase_a.py": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f",
+  "export_seconds": 81.94100042100001,
+  "fixture_sha256": "44d96bd735875da137f8776f9ba6dc430061a8c14dc6a1591a79f1fec19c5076"
+}

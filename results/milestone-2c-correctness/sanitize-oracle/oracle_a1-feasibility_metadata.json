@@ -1,0 +1,16 @@
+{
+  "cases": 10125,
+  "feasible": 2624,
+  "infeasible": 7501,
+  "scene_names": [
+    "cascade",
+    "cycle",
+    "slab_occlusion"
+  ],
+  "domain_masks": "all nonempty triples",
+  "branches": 0,
+  "search_nodes": 0,
+  "support_queries": 0,
+  "fixture_sha256": "2f394b4ee785f19aabac1c7cfd2e6b23f1a0287981acf77dafcc18c90bac2383",
+  "reference_sha256": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+}

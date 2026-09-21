@@ -1,0 +1,94 @@
+{
+  "release": {
+    "oracle/cases.bin": {
+      "bytes": 3905222,
+      "sha256": "2551bbd775591b16cd34ddfac955ae2d478dfed9f3aa37716e50a0ae460b1612"
+    },
+    "oracle/images.bin": {
+      "bytes": 3359232,
+      "sha256": "5e8eb2d9420d83cd119c003406e15cc0457c1b65b59b2a7b9d8bb61fd50d8a86"
+    },
+    "oracle/rays.txt": {
+      "bytes": 14546,
+      "sha256": "ef99e173093f27b7b0ab606b1fe74323dfef959f75e54af8fba93ba0d7c372cd"
+    },
+    "oracle_a1/acceptance_cases.bin": {
+      "bytes": 32902417,
+      "sha256": "44d96bd735875da137f8776f9ba6dc430061a8c14dc6a1591a79f1fec19c5076"
+    },
+    "oracle_a1/feasibility.bin": {
+      "bytes": 40512,
+      "sha256": "2f394b4ee785f19aabac1c7cfd2e6b23f1a0287981acf77dafcc18c90bac2383"
+    },
+    "oracle_a1/images.bin": {
+      "bytes": 33554432,
+      "sha256": "efaaf73cc9112b3a5f459b8f44b056c1ff6f6225e6129f173ab7a8ab3ceaa545"
+    },
+    "oracle_a1/local_supports.bin": {
+      "bytes": 393228,
+      "sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b"
+    },
+    "oracle_a1/projection.bin": {
+      "bytes": 40512,
+      "sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8"
+    },
+    "oracle_a1/propagation.bin": {
+      "bytes": 49164,
+      "sha256": "290e9fa3cca329463c0d94be3f16a711ec61e5745c02b12e58bc4531dbbbd9d8"
+    },
+    "oracle_a1/rays.txt": {
+      "bytes": 14547,
+      "sha256": "b87d4deb289b9f977af8690d7ef7c82db417cadbf8ed95679da88d814b1c4aea"
+    },
+    "oracle_a1/support_query.bin": {
+      "bytes": 259212,
+      "sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d"
+    }
+  },
+  "sanitize": {
+    "oracle/cases.bin": {
+      "bytes": 3905222,
+      "sha256": "2551bbd775591b16cd34ddfac955ae2d478dfed9f3aa37716e50a0ae460b1612"
+    },
+    "oracle/images.bin": {
+      "bytes": 3359232,
+      "sha256": "5e8eb2d9420d83cd119c003406e15cc0457c1b65b59b2a7b9d8bb61fd50d8a86"
+    },
+    "oracle/rays.txt": {
+      "bytes": 14546,
+      "sha256": "ef99e173093f27b7b0ab606b1fe74323dfef959f75e54af8fba93ba0d7c372cd"
+    },
+    "oracle_a1/acceptance_cases.bin": {
+      "bytes": 32902417,
+      "sha256": "44d96bd735875da137f8776f9ba6dc430061a8c14dc6a1591a79f1fec19c5076"
+    },
+    "oracle_a1/feasibility.bin": {
+      "bytes": 40512,
+      "sha256": "2f394b4ee785f19aabac1c7cfd2e6b23f1a0287981acf77dafcc18c90bac2383"
+    },
+    "oracle_a1/images.bin": {
+      "bytes": 33554432,
+      "sha256": "efaaf73cc9112b3a5f459b8f44b056c1ff6f6225e6129f173ab7a8ab3ceaa545"
+    },
+    "oracle_a1/local_supports.bin": {
+      "bytes": 393228,
+      "sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b"
+    },
+    "oracle_a1/projection.bin": {
+      "bytes": 40512,
+      "sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8"
+    },
+    "oracle_a1/propagation.bin": {
+      "bytes": 49164,
+      "sha256": "290e9fa3cca329463c0d94be3f16a711ec61e5745c02b12e58bc4531dbbbd9d8"
+    },
+    "oracle_a1/rays.txt": {
+      "bytes": 14547,
+      "sha256": "b87d4deb289b9f977af8690d7ef7c82db417cadbf8ed95679da88d814b1c4aea"
+    },
+    "oracle_a1/support_query.bin": {
+      "bytes": 259212,
+      "sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d"
+    }
+  }
+}

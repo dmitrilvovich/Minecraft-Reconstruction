@@ -22,7 +22,7 @@ The detailed acceptance record is in [docs/milestone-1.md](docs/milestone-1.md),
 
 The next checkpoint, [Milestone 2A](docs/milestone-2a.md), adds the geometry foundation for oak bottom slabs. Both independent C++ rendering paths are checked against the frozen Python renderer on all 65,536 four-state worlds. A1 inference is the next checkpoint; it is not part of 2A.
 
-The [first 2B checkpoint](docs/milestone-2b-rays.md) adds A1 ray constraints and exact supported states for a single ray. The [second checkpoint](docs/milestone-2b-propagation.md) combines these into A1 scene problems with audited multi-ray propagation. The [third checkpoint](docs/milestone-2b-feasibility.md) adds complete nested-envelope feasibility and one simultaneous witness. The [fourth checkpoint](docs/milestone-2b-support-query.md) exposes one exact cell/state support query with a witness. The [fifth checkpoint](docs/milestone-2b-projection.md) computes exact whole-scene supported domains with witness coverage. Final A1 acceptance and benchmarks remain to come.
+The [first 2B checkpoint](docs/milestone-2b-rays.md) adds A1 ray constraints and exact supported states for a single ray. The [second checkpoint](docs/milestone-2b-propagation.md) combines these into A1 scene problems with audited multi-ray propagation. The [third checkpoint](docs/milestone-2b-feasibility.md) adds complete nested-envelope feasibility and one simultaneous witness. The [fourth checkpoint](docs/milestone-2b-support-query.md) exposes one exact cell/state support query with a witness. The [fifth checkpoint](docs/milestone-2b-projection.md) computes exact whole-scene supported domains with witness coverage. The [Milestone 2C correctness gate](docs/milestone-2c-correctness.md) validates the complete pipeline against every observation family in all eight camera/view suites. Final performance/identifiability benchmarks, the Milestone 2 record, and the tag remain to come.
 
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
@@ -44,7 +44,7 @@ cmake --build --preset release --parallel 2
 ctest --preset release --parallel 2
 ```
 
-The full A0 and A1 geometry validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
+The full A0 and A1 correctness validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
 
 For address/undefined-behavior sanitizer checks with GCC or Clang:
 
@@ -63,4 +63,4 @@ ctest --preset sanitize --parallel 2
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The next checkpoint is nested-geometry inference for A1, then handling incomparable geometry with exact residual search, then doing a real scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
+The next checkpoint is the final A1 benchmark/record/tag closeout. Later work will handle incomparable geometry with exact residual search and a scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.

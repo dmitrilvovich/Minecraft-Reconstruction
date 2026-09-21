@@ -1,0 +1,9 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize
+    Start 16: python_a1_oracle_export
+1/2 Test #16: python_a1_oracle_export ..........   Passed    1.46 sec
+    Start 18: python_a1_constraint_agreement
+2/2 Test #18: python_a1_constraint_agreement ...   Passed    4.00 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   5.46 sec

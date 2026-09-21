@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "worlds": 6561,
+  "observation_classes": 29032,
+  "conditioned_queries": 512,
+  "infeasible_conditioned_queries": 409,
+  "audited_domain_reductions": 694321,
+  "audited_literal_deletions": 769711,
+  "audited_contradictions": 818,
+  "verified_witnesses": 29135,
+  "supported_literals": 246506,
+  "root_unsupported_survivors_total": 0,
+  "search_branches": 0,
+  "acceptance_seconds_including_oracle": 43.9511
+}

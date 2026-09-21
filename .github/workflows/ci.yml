@@ -17,7 +17,7 @@ jobs:
         run: cmake --preset ${{ matrix.preset }}
       - name: Build
         run: cmake --build --preset ${{ matrix.preset }} --parallel 2
-      - name: Test A0 inference and A1 geometry, feasibility and exact support
+      - name: Test complete A0 and A1 correctness gates
         env:
           UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
         run: ctest --preset ${{ matrix.preset }} --parallel 2
@@ -28,8 +28,10 @@ jobs:
           name: a0-and-a1-${{ matrix.preset }}
           path: |
             build/${{ matrix.preset }}/a0_acceptance.json
+            build/${{ matrix.preset }}/a1_acceptance.json
             build/${{ matrix.preset }}/oracle/metadata.json
             build/${{ matrix.preset }}/oracle_a1/metadata.json
+            build/${{ matrix.preset }}/oracle_a1/acceptance_metadata.json
             build/${{ matrix.preset }}/oracle_a1/propagation_metadata.json
             build/${{ matrix.preset }}/oracle_a1/feasibility_metadata.json
             build/${{ matrix.preset }}/oracle_a1/support_query_metadata.json
