@@ -1,0 +1,20 @@
+{
+  "reason": "Truncated parts; whole attempt excluded. Use temporary memory-backed collection and atomic closed-file publication.",
+  "bad_parts": [
+    {
+      "file": "axis_3_part1.csv",
+      "observed_rows": 1052,
+      "last_row_columns": 42,
+      "expected_columns": 61,
+      "sha256": "92c2f26b8650f820c040e3cd1260831fa7deefa46704e68b327228f8a3bc5e81"
+    },
+    {
+      "file": "axis_6_part2.csv",
+      "observed_rows": 4475,
+      "last_row_columns": 38,
+      "expected_columns": 61,
+      "sha256": "75ba34175ea64c51a2bc54489982938829de7953ef501306e9efb6414c951196"
+    }
+  ],
+  "solver_changes": false
+}

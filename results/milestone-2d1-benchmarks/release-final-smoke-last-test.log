@@ -1,0 +1,26 @@
+Start testing: Sep 21 22:25 EDT
+----------------------------------------------------------
+1/29 Testing: a1_benchmark_smoke
+1/29 Test: a1_benchmark_smoke
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/mcr_a1_benchmark" "--output" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_benchmark_smoke" "--repetitions" "1" "--limit-per-suite" "2" "--csv-rows-per-file" "1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_benchmark_smoke" start time: Sep 21 22:25 EDT
+Output:
+----------------------------------------------------------
+axis_1: 2 observation families measured
+axis_2: 2 observation families measured
+axis_3: 2 observation families measured
+axis_4: 2 observation families measured
+axis_5: 2 observation families measured
+axis_6: 2 observation families measured
+oblique_1: 2 observation families measured
+oblique_2: 2 observation families measured
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"a1_benchmark_smoke" end time: Sep 21 22:25 EDT
+"a1_benchmark_smoke" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 21 22:25 EDT

@@ -1,0 +1,11 @@
+{
+  "reason": "Offline validation found truncated axis_6.csv; entire first dataset excluded from reported measurements.",
+  "expected_rows": 45270,
+  "observed_rows": 41472,
+  "last_row_columns": 30,
+  "expected_columns": 61,
+  "observed_bytes": 7750348,
+  "observed_sha256": "01707d839409f08aecef01864a56f4fe9fbbfbf713cc665794e82fc16e9e3412",
+  "collector_reported_success": true,
+  "solver_changes": false
+}

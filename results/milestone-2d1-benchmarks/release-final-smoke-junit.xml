@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-09-21T22:25:02"
+	>
+	<testcase name="a1_benchmark_smoke" classname="a1_benchmark_smoke" time="0.261766" status="run">
+		<properties/>
+		<system-out>axis_1: 2 observation families measured
+axis_2: 2 observation families measured
+axis_3: 2 observation families measured
+axis_4: 2 observation families measured
+axis_5: 2 observation families measured
+axis_6: 2 observation families measured
+oblique_1: 2 observation families measured
+oblique_2: 2 observation families measured
+</system-out>
+	</testcase>
+</testsuite>

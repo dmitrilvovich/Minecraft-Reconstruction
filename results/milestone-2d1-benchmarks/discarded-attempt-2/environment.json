@@ -1,0 +1,30 @@
+{
+  "utc_start": "2026-09-22T02:16:17.867157+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cpu": {
+    "cpu family": "25",
+    "model": "17",
+    "model name": "AMD EPYC 9V74 80-Core Processor",
+    "stepping": "1"
+  },
+  "logical_cpus": 9,
+  "affinity_cpu_count": 9,
+  "affinity_pinned_by_benchmark": false,
+  "cgroup": {
+    "cpu.max": "800000 100000",
+    "memory.max": "15032385536"
+  },
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "cmake": "cmake version 4.4.3",
+  "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+  "build_flags": [
+    "CMAKE_BUILD_TYPE:STRING=Release",
+    "CMAKE_CXX_FLAGS:STRING=",
+    "CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG",
+    "MCR_ENABLE_SANITIZERS:BOOL=OFF"
+  ],
+  "base_commit": "f4bb6210c376dcd258321fea825d338e566fb691",
+  "measurement_note": "Sequential A0 then A1 in the same execution environment; single threaded C++ Release; no concurrent validation/build; no CPU pinning, governor control or clock-overhead subtraction.",
+  "measurement_attempt": 2
+}

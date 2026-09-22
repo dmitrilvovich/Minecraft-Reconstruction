@@ -1,0 +1,10 @@
+{
+  "reason": "Same largest-CSV truncation; entire attempt excluded. Collector will write bounded-size raw parts.",
+  "expected_rows": 45270,
+  "observed_rows": 40337,
+  "last_row_columns": 16,
+  "expected_columns": 61,
+  "observed_bytes": 7537334,
+  "observed_sha256": "e0ed847c4cda48f18a82d3cc7ce19ab4a5851bcf3adfbe40d866258c235e00ba",
+  "solver_changes": false
+}

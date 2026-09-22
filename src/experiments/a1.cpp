@@ -1,13 +1,13 @@
-#include "a1_corpus.hpp"
+#include "mcr/experiments/a1.hpp"
 #include <set>
 #include <utility>
 
-namespace mcr::test {
+namespace mcr::experiments {
 A1Rig::A1Rig() {
     const Grid grid;
     std::map<std::vector<A1RayCell>,std::size_t> interned;
     std::vector<std::vector<std::size_t>> camera_factors;
-    for(const auto& camera:experiments::phase_a_cameras(grid)) {
+    for(const auto& camera:phase_a_cameras(grid)) {
         std::vector<std::size_t> indices;
         for(int row=0;row<8;++row) for(int col=0;col<8;++col) {
             const auto ray=camera.pixel(col,row);
@@ -65,4 +65,4 @@ Families A1Corpus::families(const ViewSuite& suite) const {
     for(std::uint32_t id=0;id<worlds_.size();++id) result[observation(id,suite.factors)].push_back(id);
     return result;
 }
-} // namespace mcr::test
+} // namespace mcr::experiments

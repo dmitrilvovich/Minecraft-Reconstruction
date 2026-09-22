@@ -1,0 +1,120 @@
+Start testing: Sep 21 22:10 EDT
+----------------------------------------------------------
+1/29 Testing: a1_benchmark_smoke
+1/29 Test: a1_benchmark_smoke
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/mcr_a1_benchmark" "--output" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_benchmark_smoke" "--repetitions" "1" "--limit-per-suite" "2"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_benchmark_smoke" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+axis_1: 2 observation families measured
+axis_2: 2 observation families measured
+axis_3: 2 observation families measured
+axis_4: 2 observation families measured
+axis_5: 2 observation families measured
+axis_6: 2 observation families measured
+oblique_1: 2 observation families measured
+oblique_2: 2 observation families measured
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"a1_benchmark_smoke" end time: Sep 21 22:10 EDT
+"a1_benchmark_smoke" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/29 Testing: a1_propagation_tests
+8/29 Test: a1_propagation_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_propagation_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_propagation_tests" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"a1_propagation_tests" end time: Sep 21 22:10 EDT
+"a1_propagation_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/29 Testing: a1_feasibility_tests
+9/29 Test: a1_feasibility_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_feasibility_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_feasibility_tests" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+cascade: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+cycle: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+slab_occlusion: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+physical_worlds=65536 physical_observations=729 physical_feasible_observations=450 physical_domain_variants=2
+feasibility_calls=75747 feasible=16584 infeasible=59163 verified_witnesses=16584 audited_reductions=120459 deleted_states=145441 factor_updates=227843 envelope_advances=71696 branches=0 search_nodes=0 support_queries=0
+PASS
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"a1_feasibility_tests" end time: Sep 21 22:10 EDT
+"a1_feasibility_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/29 Testing: a1_support_query_tests
+10/29 Test: a1_support_query_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_support_query_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_support_query_tests" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"a1_support_query_tests" end time: Sep 21 22:10 EDT
+"a1_support_query_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/29 Testing: a1_projection_tests
+11/29 Test: a1_projection_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_projection_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_projection_tests" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"a1_projection_tests" end time: Sep 21 22:10 EDT
+"a1_projection_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/29 Testing: inference_tests
+12/29 Test: inference_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/inference_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"inference_tests" start time: Sep 21 22:10 EDT
+Output:
+----------------------------------------------------------
+A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"inference_tests" end time: Sep 21 22:10 EDT
+"inference_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 21 22:10 EDT

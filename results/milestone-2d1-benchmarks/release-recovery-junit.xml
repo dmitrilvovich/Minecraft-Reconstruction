@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-09-21T22:11:02"
+	>
+	<testcase name="a1_projection_tests" classname="a1_projection_tests" time="0.0772759" status="run">
+		<properties/>
+		<system-out>cascade: exact projection and witness coverage for all 4096 domain triples
+cycle: exact projection and witness coverage for all 4096 domain triples
+slab_occlusion: exact projection and witness coverage for all 4096 domain triples
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_projections=1458
+audited_projections=13760 feasible=3113 infeasible=10647 verified_witnesses=8602 witnessed_literals=17498 single_query_checks=194192 kernel_prunes=31575 kernel_deletions=40524 projection_prunes=4290 projection_deletions=5270 literal_queries=10759 infeasible_queries=5270 envelope_calls=24519 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+</testsuite>

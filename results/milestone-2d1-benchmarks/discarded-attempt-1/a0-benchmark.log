@@ -1,0 +1,8 @@
+axis_1: 81 classes, median 2.203 us
+axis_2: 1225 classes, median 2.694 us
+axis_3: 3239 classes, median 3.265 us
+axis_4: 4157 classes, median 3.745 us
+axis_5: 4929 classes, median 4.297 us
+axis_6: 5453 classes, median 4.838 us
+oblique_1: 3601 classes, median 4.907 us
+oblique_2: 6347 classes, median 8.153 us

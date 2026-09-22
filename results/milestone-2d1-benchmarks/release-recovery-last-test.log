@@ -1,0 +1,24 @@
+Start testing: Sep 21 22:11 EDT
+----------------------------------------------------------
+11/29 Testing: a1_projection_tests
+11/29 Test: a1_projection_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release/a1_projection_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+"a1_projection_tests" start time: Sep 21 22:11 EDT
+Output:
+----------------------------------------------------------
+cascade: exact projection and witness coverage for all 4096 domain triples
+cycle: exact projection and witness coverage for all 4096 domain triples
+slab_occlusion: exact projection and witness coverage for all 4096 domain triples
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_projections=1458
+audited_projections=13760 feasible=3113 infeasible=10647 verified_witnesses=8602 witnessed_literals=17498 single_query_checks=194192 kernel_prunes=31575 kernel_deletions=40524 projection_prunes=4290 projection_deletions=5270 literal_queries=10759 infeasible_queries=5270 envelope_calls=24519 branches=0 search_nodes=0
+PASS
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"a1_projection_tests" end time: Sep 21 22:11 EDT
+"a1_projection_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 21 22:11 EDT

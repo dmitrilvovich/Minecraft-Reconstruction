@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="6"
+	failures="1"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-09-21T22:10:25"
+	>
+	<testcase name="a1_benchmark_smoke" classname="a1_benchmark_smoke" time="0.263086" status="run">
+		<properties/>
+		<system-out>axis_1: 2 observation families measured
+axis_2: 2 observation families measured
+axis_3: 2 observation families measured
+axis_4: 2 observation families measured
+axis_5: 2 observation families measured
+axis_6: 2 observation families measured
+oblique_1: 2 observation families measured
+oblique_2: 2 observation families measured
+</system-out>
+	</testcase>
+	<testcase name="a1_propagation_tests" classname="a1_propagation_tests" time="0.156722" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_feasibility_tests" classname="a1_feasibility_tests" time="0.0701066" status="run">
+		<properties/>
+		<system-out>cascade: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+cycle: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+slab_occlusion: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+physical_worlds=65536 physical_observations=729 physical_feasible_observations=450 physical_domain_variants=2
+feasibility_calls=75747 feasible=16584 infeasible=59163 verified_witnesses=16584 audited_reductions=120459 deleted_states=145441 factor_updates=227843 envelope_advances=71696 branches=0 search_nodes=0 support_queries=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_support_query_tests" classname="a1_support_query_tests" time="0.145491" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_projection_tests" classname="a1_projection_tests" time="0" status="fail">
+		<failure message="BAD_COMMAND"/>
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="inference_tests" classname="inference_tests" time="0.0271651" status="run">
+		<properties/>
+		<system-out>A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+</system-out>
+	</testcase>
+</testsuite>

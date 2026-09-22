@@ -1,0 +1,41 @@
+{
+  "a0": {
+    "archives": 1,
+    "rows": 29032,
+    "suites": {
+      "axis_1": 81,
+      "axis_2": 1225,
+      "axis_3": 3239,
+      "axis_4": 4157,
+      "axis_5": 4929,
+      "axis_6": 5453,
+      "oblique_1": 3601,
+      "oblique_2": 6347
+    }
+  },
+  "a1": {
+    "archives": 25,
+    "rows": 196132,
+    "suites": {
+      "axis_1": 625,
+      "axis_2": 5625,
+      "axis_3": 24705,
+      "axis_4": 32738,
+      "axis_5": 38514,
+      "axis_6": 45270,
+      "oblique_1": 11353,
+      "oblique_2": 36790,
+      "restricted": 512
+    },
+    "timed_calls": 980660,
+    "verified_warmup_projection_witnesses": 344634,
+    "feasible_cases": 195711,
+    "search_branches": 0,
+    "search_nodes": 0
+  },
+  "status": "pass",
+  "staged_data_byte_identical": true,
+  "deliberately_truncated_archive_rejected": "compressed hash: cases.csv.gz",
+  "benchmark_rerun_on_resume": false,
+  "correctness_gate_rerun_on_resume": false
+}

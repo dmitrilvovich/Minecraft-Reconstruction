@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/experiments/analyze_a1_benchmark.py", line 256, in <module>
+    main(parser.parse_args())
+  File "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/experiments/analyze_a1_benchmark.py", line 104, in main
+    data, col = table(path, repetitions)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/experiments/analyze_a1_benchmark.py", line 57, in table
+    data = np.loadtxt(path, delimiter=",", skiprows=1, dtype=np.int64, ndmin=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 1397, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 1048, in _read
+    arr = _load_from_filelike(
+          ^^^^^^^^^^^^^^^^^^^^
+ValueError: the number of columns changed from 61 to 16 at row 40337; use `usecols` to select a subset and avoid this error

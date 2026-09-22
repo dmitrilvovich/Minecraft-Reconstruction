@@ -1,0 +1,4066 @@
+{
+  "status": "pass",
+  "repetitions": 5,
+  "validated_rows": 196132,
+  "timed_calls": 980660,
+  "timing_quantiles": "floor(p*(n-1)); across observation-class medians unless all_repetitions is stated",
+  "identifiability_weighting": "uniform over all 65,536 truth worlds; also stratified by true slab count; inference always uses full A1 vocabulary",
+  "root_stage": "envelope_from_input; standalone_gac_is_a_separate_diagnostic",
+  "run": {
+    "status": "pass",
+    "model": "A1",
+    "schema_version": 1,
+    "compiler": "GNU-13.3.0",
+    "build_type": "Release",
+    "repetitions": 5,
+    "limit_per_suite": 0,
+    "csv_rows_per_file": 10000,
+    "rendered_cases": 195620,
+    "restricted_cases": 512,
+    "feasible_cases": 195711,
+    "verified_warmup_projection_witnesses": 344634,
+    "steady_clock_is_steady": true,
+    "median_back_to_back_clock_ns": 20,
+    "corpus_setup_seconds": 0.062489293,
+    "family_partition_and_fixture_read_seconds": 0.282436664,
+    "oracle_metrics_seconds": 0.489705929,
+    "problem_setup_seconds": 0.757682155,
+    "diagnostics_warmup_validation_seconds": 2.91389799703,
+    "timed_projection_seconds": 4.132855399,
+    "whole_benchmark_seconds": 9.394666461,
+    "peak_rss_kib_at_start": 11648,
+    "peak_rss_kib_after_corpus": 13120,
+    "peak_rss_kib_whole_process": 21952,
+    "memory_scope": "whole process including corpus, families, allocator and output buffers; not solver-only; -1 means unavailable",
+    "timing_scope": "exact_supports from original domains, including input copy, allocations, witness construction and internal checks; excludes result destruction, compilation, oracle, external validation and CSV I/O",
+    "root_stage": "envelope_from_input; standalone_gac_is_a_separate_diagnostic",
+    "search_branches": 0,
+    "search_nodes": 0
+  },
+  "suites": [
+    {
+      "name": "axis_1",
+      "views": 1,
+      "cases": 625,
+      "feasible_cases": 625,
+      "projection_us_per_case_medians": {
+        "min": 0.641,
+        "median": 4.146,
+        "p95": 6.03,
+        "p99": 6.88,
+        "max": 8.073,
+        "mean": 4.099976
+      },
+      "projection_us_all_repetitions": {
+        "min": 0.601,
+        "median": 4.177,
+        "p95": 6.299,
+        "p99": 9.404,
+        "max": 171.228,
+        "mean": 4.46667168
+      },
+      "median_within_case_min_us": 4.086,
+      "median_within_case_max_us": 4.417,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 625
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 13.0,
+            "median": 15.0,
+            "p95": 18.0,
+            "p99": 19.0,
+            "max": 21.0,
+            "mean": 15.4,
+            "sum": 9625
+          },
+          "deletions": {
+            "min": 4.0,
+            "median": 15.0,
+            "p95": 22.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 15.2,
+            "sum": 9500
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 13.0,
+            "median": 19.0,
+            "p95": 24.0,
+            "p99": 25.0,
+            "max": 25.0,
+            "mean": 19.4,
+            "sum": 12125
+          },
+          "deletions": {
+            "min": 4.0,
+            "median": 13.0,
+            "p95": 19.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 12.8,
+            "sum": 8000
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 625
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 5.0,
+            "p95": 11.0,
+            "p99": 13.0,
+            "max": 16.0,
+            "mean": 5.6,
+            "sum": 3500
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 21.0,
+            "median": 112.0,
+            "p95": 151.0,
+            "p99": 165.0,
+            "max": 169.0,
+            "mean": 110.2,
+            "sum": 68875
+          },
+          "deletions": {
+            "min": 12.0,
+            "median": 19.0,
+            "p95": 24.0,
+            "p99": 26.0,
+            "max": 28.0,
+            "mean": 19.2,
+            "sum": 12000
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 11.0,
+            "p95": 15.0,
+            "p99": 16.0,
+            "max": 16.0,
+            "mean": 10.4,
+            "sum": 6500
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 3.0,
+            "p95": 6.0,
+            "p99": 9.0,
+            "max": 12.0,
+            "mean": 2.4,
+            "sum": 1500
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 12.0,
+            "p95": 16.0,
+            "p99": 17.0,
+            "max": 17.0,
+            "mean": 11.4,
+            "sum": 7125
+          },
+          "envelope_advances": {
+            "min": 8.0,
+            "median": 60.0,
+            "p95": 77.0,
+            "p99": 78.0,
+            "max": 79.0,
+            "mean": 58.32,
+            "sum": 36450
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 17.0,
+          "p95": 23.0,
+          "p99": 26.0,
+          "max": 28.0,
+          "mean": 16.8
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 19.0,
+          "p95": 25.0,
+          "p99": 26.0,
+          "max": 28.0,
+          "mean": 19.2
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 17.0,
+          "p95": 23.0,
+          "p99": 26.0,
+          "max": 28.0,
+          "mean": 16.8
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.125,
+      "freely_variable_cell_fraction": 0.0,
+      "identifiable_geometry_fraction": 0.125,
+      "cube_slab_ambiguous_cell_fraction": 0.53125,
+      "unique_world_fraction": 0.000244140625,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 36.0,
+        "p95": 450.0,
+        "p99": 900.0,
+        "max": 1296.0,
+        "mean": 104.8576
+      },
+      "identified_cells_class_weighted_histogram": [
+        81,
+        0,
+        216,
+        0,
+        216,
+        0,
+        96,
+        0,
+        16
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.1111111111111111,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.1111111111111111,
+          "cube_slab_ambiguous_cell_fraction": 0.6666666666666666,
+          "unique_world_fraction": 0.00015241579027587258
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.125,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.125,
+          "cube_slab_ambiguous_cell_fraction": 0.6041666666666666,
+          "unique_world_fraction": 0.00022862368541380886
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.13095238095238096,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.13095238095238096,
+          "cube_slab_ambiguous_cell_fraction": 0.5357142857142857,
+          "unique_world_fraction": 0.00029394473838918284
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.12896825396825398,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.12896825396825398,
+          "cube_slab_ambiguous_cell_fraction": 0.46130952380952384,
+          "unique_world_fraction": 0.00029394473838918284
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.11904761904761904,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.11904761904761904,
+          "cube_slab_ambiguous_cell_fraction": 0.38095238095238093,
+          "unique_world_fraction": 0.0001763668430335097
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.10119047619047619,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.10119047619047619,
+          "cube_slab_ambiguous_cell_fraction": 0.29464285714285715,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.07539682539682539,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.07539682539682539,
+          "cube_slab_ambiguous_cell_fraction": 0.20238095238095238,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.041666666666666664,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.041666666666666664,
+          "cube_slab_ambiguous_cell_fraction": 0.10416666666666667,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 1500
+    },
+    {
+      "name": "axis_2",
+      "views": 2,
+      "cases": 5625,
+      "feasible_cases": 5625,
+      "projection_us_per_case_medians": {
+        "min": 0.791,
+        "median": 2.795,
+        "p95": 5.748,
+        "p99": 7.041,
+        "max": 11.918,
+        "mean": 3.018264177777778
+      },
+      "projection_us_all_repetitions": {
+        "min": 0.711,
+        "median": 2.844,
+        "p95": 6.009,
+        "p99": 8.874,
+        "max": 784.983,
+        "mean": 3.54656192
+      },
+      "median_within_case_min_us": 2.734,
+      "median_within_case_max_us": 3.065,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 5625
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 17.0,
+            "median": 26.0,
+            "p95": 30.0,
+            "p99": 31.0,
+            "max": 33.0,
+            "mean": 25.826666666666668,
+            "sum": 145275
+          },
+          "deletions": {
+            "min": 6.0,
+            "median": 22.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 20.85333333333333,
+            "sum": 117300
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 21.0,
+            "median": 27.0,
+            "p95": 32.0,
+            "p99": 34.0,
+            "max": 37.0,
+            "mean": 27.32,
+            "sum": 153675
+          },
+          "deletions": {
+            "min": 6.0,
+            "median": 17.0,
+            "p95": 21.0,
+            "p99": 22.0,
+            "max": 24.0,
+            "mean": 16.586666666666666,
+            "sum": 93300
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 5625
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 8.0,
+            "p95": 15.0,
+            "p99": 18.0,
+            "max": 24.0,
+            "mean": 8.613333333333333,
+            "sum": 48450
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 25.0,
+            "median": 95.0,
+            "p95": 168.0,
+            "p99": 196.0,
+            "max": 241.0,
+            "mean": 97.84,
+            "sum": 550350
+          },
+          "deletions": {
+            "min": 12.0,
+            "median": 24.0,
+            "p95": 27.0,
+            "p99": 29.0,
+            "max": 32.0,
+            "mean": 23.76,
+            "sum": 133650
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 12.0,
+            "p99": 13.0,
+            "max": 16.0,
+            "mean": 7.1466666666666665,
+            "sum": 40200
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 4.0,
+            "p95": 7.0,
+            "p99": 8.0,
+            "max": 10.0,
+            "mean": 4.266666666666667,
+            "sum": 24000
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 8.0,
+            "p95": 13.0,
+            "p99": 14.0,
+            "max": 17.0,
+            "mean": 8.146666666666667,
+            "sum": 45825
+          },
+          "envelope_advances": {
+            "min": 12.0,
+            "median": 52.0,
+            "p95": 83.0,
+            "p99": 95.0,
+            "max": 116.0,
+            "mean": 52.668977777777776,
+            "sum": 296263
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 10.0,
+          "p95": 17.0,
+          "p99": 21.0,
+          "max": 26.0,
+          "mean": 11.146666666666667
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 15.0,
+          "p95": 21.0,
+          "p99": 23.0,
+          "max": 26.0,
+          "mean": 15.413333333333334
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 10.0,
+          "p95": 17.0,
+          "p99": 21.0,
+          "max": 26.0,
+          "mean": 11.146666666666667
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.369140625,
+      "freely_variable_cell_fraction": 0.0078125,
+      "identifiable_geometry_fraction": 0.369140625,
+      "cube_slab_ambiguous_cell_fraction": 0.3994140625,
+      "unique_world_fraction": 0.0282135009765625,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 3.0,
+        "p95": 48.0,
+        "p99": 144.0,
+        "max": 729.0,
+        "mean": 11.650844444444445
+      },
+      "identified_cells_class_weighted_histogram": [
+        36,
+        84,
+        157,
+        246,
+        737,
+        782,
+        874,
+        860,
+        1849
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.41975308641975306,
+          "freely_variable_cell_fraction": 0.009259259259259259,
+          "identifiable_geometry_fraction": 0.41975308641975306,
+          "cube_slab_ambiguous_cell_fraction": 0.39814814814814814,
+          "unique_world_fraction": 0.06721536351165981
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.4054783950617284,
+          "freely_variable_cell_fraction": 0.009259259259259259,
+          "identifiable_geometry_fraction": 0.4054783950617284,
+          "cube_slab_ambiguous_cell_fraction": 0.41898148148148145,
+          "unique_world_fraction": 0.038408779149519894
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.37896825396825395,
+          "freely_variable_cell_fraction": 0.008267195767195767,
+          "identifiable_geometry_fraction": 0.37896825396825395,
+          "cube_slab_ambiguous_cell_fraction": 0.416005291005291,
+          "unique_world_fraction": 0.02488732118361748
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.33901014109347444,
+          "freely_variable_cell_fraction": 0.006613756613756613,
+          "identifiable_geometry_fraction": 0.33901014109347444,
+          "cube_slab_ambiguous_cell_fraction": 0.390542328042328,
+          "unique_world_fraction": 0.014109347442680775
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.2858906525573192,
+          "freely_variable_cell_fraction": 0.004629629629629629,
+          "identifiable_geometry_fraction": 0.2858906525573192,
+          "cube_slab_ambiguous_cell_fraction": 0.3443121693121693,
+          "unique_world_fraction": 0.006349206349206349
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.22139550264550265,
+          "freely_variable_cell_fraction": 0.0026455026455026454,
+          "identifiable_geometry_fraction": 0.22139550264550265,
+          "cube_slab_ambiguous_cell_fraction": 0.2794312169312169,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.1488095238095238,
+          "freely_variable_cell_fraction": 0.000992063492063492,
+          "identifiable_geometry_fraction": 0.1488095238095238,
+          "cube_slab_ambiguous_cell_fraction": 0.1984126984126984,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.07291666666666667,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.07291666666666667,
+          "cube_slab_ambiguous_cell_fraction": 0.10416666666666667,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 24000
+    },
+    {
+      "name": "axis_3",
+      "views": 3,
+      "cases": 24705,
+      "feasible_cases": 24705,
+      "projection_us_per_case_medians": {
+        "min": 0.971,
+        "median": 2.754,
+        "p95": 5.889,
+        "p99": 7.752,
+        "max": 12.82,
+        "mean": 3.137967901234568
+      },
+      "projection_us_all_repetitions": {
+        "min": 0.931,
+        "median": 2.784,
+        "p95": 6.119,
+        "p99": 8.773,
+        "max": 1748.727,
+        "mean": 3.4370093179518317
+      },
+      "median_within_case_min_us": 2.714,
+      "median_within_case_max_us": 2.924,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 24705
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 25.0,
+            "median": 40.0,
+            "p95": 47.0,
+            "p99": 50.0,
+            "max": 57.0,
+            "mean": 40.12163529649868,
+            "sum": 991205
+          },
+          "deletions": {
+            "min": 7.0,
+            "median": 24.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 22.971260878364703,
+            "sum": 567505
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 31.0,
+            "median": 38.0,
+            "p95": 45.0,
+            "p99": 48.0,
+            "max": 54.0,
+            "mean": 38.748067192875936,
+            "sum": 957271
+          },
+          "deletions": {
+            "min": 7.0,
+            "median": 17.0,
+            "p95": 20.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 16.636348917223234,
+            "sum": 411001
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 24705
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 12.0,
+            "p95": 22.0,
+            "p99": 27.0,
+            "max": 40.0,
+            "mean": 12.240113337381096,
+            "sum": 302392
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 34.0,
+            "median": 114.0,
+            "p95": 216.0,
+            "p99": 266.0,
+            "max": 382.0,
+            "mean": 122.73596437968023,
+            "sum": 3032192
+          },
+          "deletions": {
+            "min": 12.0,
+            "median": 25.0,
+            "p95": 31.0,
+            "p99": 34.0,
+            "max": 41.0,
+            "mean": 25.70208459825946,
+            "sum": 634970
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 11.0,
+            "p99": 13.0,
+            "max": 16.0,
+            "mean": 7.331714227889091,
+            "sum": 181130
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 6.0,
+            "p95": 9.0,
+            "p99": 10.0,
+            "max": 13.0,
+            "mean": 6.3349119611414695,
+            "sum": 156504
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 8.0,
+            "p95": 12.0,
+            "p99": 14.0,
+            "max": 17.0,
+            "mean": 8.33171422788909,
+            "sum": 205835
+          },
+          "envelope_advances": {
+            "min": 19.0,
+            "median": 60.0,
+            "p95": 100.0,
+            "p99": 120.0,
+            "max": 168.0,
+            "mean": 62.34798623760373,
+            "sum": 1540307
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 13.0,
+          "p99": 16.0,
+          "max": 25.0,
+          "mean": 9.028739121635297
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 15.0,
+          "p95": 19.0,
+          "p99": 21.0,
+          "max": 25.0,
+          "mean": 15.363651082776766
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 13.0,
+          "p99": 16.0,
+          "max": 25.0,
+          "mean": 9.028739121635297
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.6924972534179688,
+      "freely_variable_cell_fraction": 0.00437164306640625,
+      "identifiable_geometry_fraction": 0.6924972534179688,
+      "cube_slab_ambiguous_cell_fraction": 0.15203857421875,
+      "unique_world_fraction": 0.2175140380859375,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 1.0,
+        "p95": 9.0,
+        "p99": 21.0,
+        "max": 295.0,
+        "mean": 2.652742359846185
+      },
+      "identified_cells_class_weighted_histogram": [
+        6,
+        29,
+        104,
+        316,
+        700,
+        1112,
+        2454,
+        5729,
+        14255
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.6999123609205914,
+          "freely_variable_cell_fraction": 0.004229538180155464,
+          "identifiable_geometry_fraction": 0.6999123609205914,
+          "cube_slab_ambiguous_cell_fraction": 0.19932174973327238,
+          "unique_world_fraction": 0.2728242645938119
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.7211648376771833,
+          "freely_variable_cell_fraction": 0.0049439871970736165,
+          "identifiable_geometry_fraction": 0.7211648376771833,
+          "cube_slab_ambiguous_cell_fraction": 0.18787151348879744,
+          "unique_world_fraction": 0.2638317329675354
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.7175742210464433,
+          "freely_variable_cell_fraction": 0.005009308250048991,
+          "identifiable_geometry_fraction": 0.7175742210464433,
+          "cube_slab_ambiguous_cell_fraction": 0.15882201646090535,
+          "unique_world_fraction": 0.24123064863805604
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.6822916666666666,
+          "freely_variable_cell_fraction": 0.004050925925925926,
+          "identifiable_geometry_fraction": 0.6822916666666666,
+          "cube_slab_ambiguous_cell_fraction": 0.11926807760141094,
+          "unique_world_fraction": 0.17746913580246915
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.6050485008818343,
+          "freely_variable_cell_fraction": 0.0024029982363315697,
+          "identifiable_geometry_fraction": 0.6050485008818343,
+          "cube_slab_ambiguous_cell_fraction": 0.07749118165784832,
+          "unique_world_fraction": 0.08624338624338625
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.48115079365079366,
+          "freely_variable_cell_fraction": 0.0008267195767195767,
+          "identifiable_geometry_fraction": 0.48115079365079366,
+          "cube_slab_ambiguous_cell_fraction": 0.040674603174603176,
+          "unique_world_fraction": 0.013888888888888888
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.3194444444444444,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.3194444444444444,
+          "cube_slab_ambiguous_cell_fraction": 0.013888888888888888,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.14583333333333334,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.14583333333333334,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 156504
+    },
+    {
+      "name": "axis_4",
+      "views": 4,
+      "cases": 32738,
+      "feasible_cases": 32738,
+      "projection_us_per_case_medians": {
+        "min": 1.191,
+        "median": 3.224,
+        "p95": 6.38,
+        "p99": 8.543,
+        "max": 22.193,
+        "mean": 3.5881008308387803
+      },
+      "projection_us_all_repetitions": {
+        "min": 1.142,
+        "median": 3.255,
+        "p95": 6.63,
+        "p99": 10.226,
+        "max": 1000.028,
+        "mean": 3.8899833282424097
+      },
+      "median_within_case_min_us": 3.175,
+      "median_within_case_max_us": 3.425,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 32738
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 33.0,
+            "median": 50.0,
+            "p95": 59.0,
+            "p99": 63.0,
+            "max": 70.0,
+            "mean": 50.48466613721058,
+            "sum": 1652767
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 24.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 23.288655385179304,
+            "sum": 762424
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 42.0,
+            "median": 46.0,
+            "p95": 53.0,
+            "p99": 56.0,
+            "max": 63.0,
+            "mean": 46.86905125542184,
+            "sum": 1534399
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 17.0,
+            "p95": 20.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 16.50491783248824,
+            "sum": 540338
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 32738
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 15.0,
+            "p95": 30.0,
+            "p99": 37.0,
+            "max": 56.0,
+            "mean": 15.780805180524162,
+            "sum": 516632
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 42.0,
+            "median": 132.0,
+            "p95": 253.0,
+            "p99": 314.0,
+            "max": 506.0,
+            "mean": 142.91419756857474,
+            "sum": 4678725
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 26.0,
+            "p95": 34.0,
+            "p99": 39.0,
+            "max": 52.0,
+            "mean": 26.764952043496855,
+            "sum": 876231
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 11.0,
+            "p99": 12.0,
+            "max": 16.0,
+            "mean": 7.49508216751176,
+            "sum": 245374
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 10.0,
+            "p99": 11.0,
+            "max": 12.0,
+            "mean": 6.783737552691062,
+            "sum": 222086
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 8.0,
+            "p95": 12.0,
+            "p99": 13.0,
+            "max": 17.0,
+            "mean": 8.49508216751176,
+            "sum": 278112
+          },
+          "envelope_advances": {
+            "min": 25.0,
+            "median": 65.0,
+            "p95": 111.0,
+            "p99": 135.0,
+            "max": 232.0,
+            "mean": 68.78508155660089,
+            "sum": 2251886
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 11.0,
+          "p99": 14.0,
+          "max": 24.0,
+          "mean": 8.711344614820698
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 15.0,
+          "p95": 19.0,
+          "p99": 20.0,
+          "max": 24.0,
+          "mean": 15.49508216751176
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 11.0,
+          "p99": 14.0,
+          "max": 24.0,
+          "mean": 8.711344614820698
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.78094482421875,
+      "freely_variable_cell_fraction": 0.0,
+      "identifiable_geometry_fraction": 0.78094482421875,
+      "cube_slab_ambiguous_cell_fraction": 0.0941162109375,
+      "unique_world_fraction": 0.3131561279296875,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 1.0,
+        "p95": 5.0,
+        "p99": 13.0,
+        "max": 255.0,
+        "mean": 2.001832732604313
+      },
+      "identified_cells_class_weighted_histogram": [
+        6,
+        16,
+        65,
+        144,
+        577,
+        866,
+        2971,
+        7570,
+        20523
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.8153863740283493,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8153863740283493,
+          "cube_slab_ambiguous_cell_fraction": 0.1083676268861454,
+          "unique_world_fraction": 0.3846974546563024
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.8191729538180156,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8191729538180156,
+          "cube_slab_ambiguous_cell_fraction": 0.1131258573388203,
+          "unique_world_fraction": 0.37974394147233653
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.8046859690378209,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8046859690378209,
+          "cube_slab_ambiguous_cell_fraction": 0.10098226533411718,
+          "unique_world_fraction": 0.34636488340192045
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.7603064373897708,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.7603064373897708,
+          "cube_slab_ambiguous_cell_fraction": 0.07875881834215168,
+          "unique_world_fraction": 0.25808348030570255
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.6735008818342152,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.6735008818342152,
+          "cube_slab_ambiguous_cell_fraction": 0.05277777777777778,
+          "unique_world_fraction": 0.12998236331569665
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.5376984126984127,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.5376984126984127,
+          "cube_slab_ambiguous_cell_fraction": 0.028439153439153438,
+          "unique_world_fraction": 0.023809523809523808
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.3601190476190476,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.3601190476190476,
+          "cube_slab_ambiguous_cell_fraction": 0.00992063492063492,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.16666666666666666,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.16666666666666666,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 222086
+    },
+    {
+      "name": "axis_5",
+      "views": 5,
+      "cases": 38514,
+      "feasible_cases": 38514,
+      "projection_us_per_case_medians": {
+        "min": 1.292,
+        "median": 3.435,
+        "p95": 6.68,
+        "p99": 9.213,
+        "max": 19.84,
+        "mean": 3.8109409046061176
+      },
+      "projection_us_all_repetitions": {
+        "min": 1.252,
+        "median": 3.465,
+        "p95": 6.961,
+        "p99": 10.716,
+        "max": 1196.684,
+        "mean": 4.111698571947863
+      },
+      "median_within_case_min_us": 3.365,
+      "median_within_case_max_us": 3.666,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 38514
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 37.0,
+            "median": 56.0,
+            "p95": 66.0,
+            "p99": 71.0,
+            "max": 79.0,
+            "mean": 55.90245105675858,
+            "sum": 2153027
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 24.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 23.489847847535962,
+            "sum": 904688
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 46.0,
+            "median": 50.0,
+            "p95": 57.0,
+            "p99": 61.0,
+            "max": 69.0,
+            "mean": 51.04850184348548,
+            "sum": 1966082
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 16.0,
+            "p95": 20.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 16.46009243392013,
+            "sum": 633944
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 38514
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 16.0,
+            "p95": 33.0,
+            "p99": 40.0,
+            "max": 64.0,
+            "mean": 16.664277924910422,
+            "sum": 641808
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 46.0,
+            "median": 138.0,
+            "p95": 265.0,
+            "p99": 335.0,
+            "max": 574.0,
+            "mean": 149.9251700680272,
+            "sum": 5774218
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 26.0,
+            "p95": 35.0,
+            "p99": 40.0,
+            "max": 56.0,
+            "mean": 27.209326478683078,
+            "sum": 1047940
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 8.0,
+            "p95": 11.0,
+            "p99": 12.0,
+            "max": 16.0,
+            "mean": 7.539907566079867,
+            "sum": 290392
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 10.0,
+            "p99": 11.0,
+            "max": 12.0,
+            "mean": 7.0297554136158285,
+            "sum": 270744
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 9.0,
+            "p95": 12.0,
+            "p99": 13.0,
+            "max": 17.0,
+            "mean": 8.539907566079867,
+            "sum": 328906
+          },
+          "envelope_advances": {
+            "min": 27.0,
+            "median": 66.0,
+            "p95": 112.0,
+            "p99": 137.0,
+            "max": 236.0,
+            "mean": 69.84795139429818,
+            "sum": 2690124
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 13.0,
+          "max": 24.0,
+          "mean": 8.51015215246404
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 16.0,
+          "p95": 19.0,
+          "p99": 20.0,
+          "max": 24.0,
+          "mean": 15.539907566079867
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 13.0,
+          "max": 24.0,
+          "mean": 8.51015215246404
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.824554443359375,
+      "freely_variable_cell_fraction": 0.0,
+      "identifiable_geometry_fraction": 0.824554443359375,
+      "cube_slab_ambiguous_cell_fraction": 0.087890625,
+      "unique_world_fraction": 0.416900634765625,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 1.0,
+        "p95": 4.0,
+        "p99": 11.0,
+        "max": 255.0,
+        "mean": 1.7016149971438956
+      },
+      "identified_cells_class_weighted_histogram": [
+        5,
+        16,
+        48,
+        92,
+        493,
+        528,
+        2246,
+        7764,
+        27322
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.8614540466392319,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8614540466392319,
+          "cube_slab_ambiguous_cell_fraction": 0.08984910836762688,
+          "unique_world_fraction": 0.4790428288370675
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.8611111111111112,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8611111111111112,
+          "cube_slab_ambiguous_cell_fraction": 0.10322359396433471,
+          "unique_world_fraction": 0.4851394604481024
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.8463648834019204,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8463648834019204,
+          "cube_slab_ambiguous_cell_fraction": 0.09653635116598079,
+          "unique_world_fraction": 0.46580442876739175
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.805298353909465,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.805298353909465,
+          "cube_slab_ambiguous_cell_fraction": 0.07723398001175778,
+          "unique_world_fraction": 0.36743092298647856
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.7222222222222222,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.7222222222222222,
+          "cube_slab_ambiguous_cell_fraction": 0.05246913580246913,
+          "unique_world_fraction": 0.19735449735449737
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.5856481481481481,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.5856481481481481,
+          "cube_slab_ambiguous_cell_fraction": 0.028439153439153438,
+          "unique_world_fraction": 0.042328042328042326
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.39880952380952384,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.39880952380952384,
+          "cube_slab_ambiguous_cell_fraction": 0.00992063492063492,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.1875,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.1875,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 270744
+    },
+    {
+      "name": "axis_6",
+      "views": 6,
+      "cases": 45270,
+      "feasible_cases": 45270,
+      "projection_us_per_case_medians": {
+        "min": 1.582,
+        "median": 3.856,
+        "p95": 6.961,
+        "p99": 9.804,
+        "max": 30.396,
+        "mean": 4.210630395405346
+      },
+      "projection_us_all_repetitions": {
+        "min": 1.532,
+        "median": 3.905,
+        "p95": 7.231,
+        "p99": 12.499,
+        "max": 960.338,
+        "mean": 4.53129429644356
+      },
+      "median_within_case_min_us": 3.766,
+      "median_within_case_max_us": 4.157,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 45270
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 45.0,
+            "median": 65.0,
+            "p95": 78.0,
+            "p99": 83.0,
+            "max": 92.0,
+            "mean": 65.85219792356969,
+            "sum": 2981129
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 24.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 23.665650541197262,
+            "sum": 1071344
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 54.0,
+            "median": 59.0,
+            "p95": 66.0,
+            "p99": 69.0,
+            "max": 76.0,
+            "mean": 59.478330019880715,
+            "sum": 2692584
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 16.0,
+            "p95": 20.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 16.339650982990943,
+            "sum": 739696
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 45270
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 19.0,
+            "p95": 40.0,
+            "p99": 50.0,
+            "max": 80.0,
+            "mean": 20.340004417936825,
+            "sum": 920792
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 54.0,
+            "median": 151.0,
+            "p95": 291.0,
+            "p99": 379.0,
+            "max": 710.0,
+            "mean": 164.64532803180916,
+            "sum": 7453494
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 27.0,
+            "p95": 36.0,
+            "p99": 41.0,
+            "max": 58.0,
+            "mean": 27.756549591340843,
+            "sum": 1256539
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 8.0,
+            "p95": 11.0,
+            "p99": 12.0,
+            "max": 16.0,
+            "mean": 7.6603490170090565,
+            "sum": 346784
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 10.0,
+            "p99": 11.0,
+            "max": 12.0,
+            "mean": 7.325999558206318,
+            "sum": 331648
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 9.0,
+            "p95": 12.0,
+            "p99": 13.0,
+            "max": 17.0,
+            "mean": 8.660349017009057,
+            "sum": 392054
+          },
+          "envelope_advances": {
+            "min": 30.0,
+            "median": 71.0,
+            "p95": 122.0,
+            "p99": 153.0,
+            "max": 312.0,
+            "mean": 75.64861939474265,
+            "sum": 3424613
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 12.0,
+          "max": 24.0,
+          "mean": 8.33434945880274
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 16.0,
+          "p95": 19.0,
+          "p99": 20.0,
+          "max": 24.0,
+          "mean": 15.660349017009057
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 12.0,
+          "max": 24.0,
+          "mean": 8.33434945880274
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.87060546875,
+      "freely_variable_cell_fraction": 0.0,
+      "identifiable_geometry_fraction": 0.87060546875,
+      "cube_slab_ambiguous_cell_fraction": 0.0595703125,
+      "unique_world_fraction": 0.5432281494140625,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 1.0,
+        "p95": 3.0,
+        "p99": 9.0,
+        "max": 255.0,
+        "mean": 1.447669538325602
+      },
+      "identified_cells_class_weighted_histogram": [
+        5,
+        16,
+        32,
+        64,
+        424,
+        208,
+        1368,
+        7552,
+        35601
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.9103795153177869,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.9103795153177869,
+          "cube_slab_ambiguous_cell_fraction": 0.05898491083676269,
+          "unique_world_fraction": 0.6107300716354215
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.9076931870141747,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.9076931870141747,
+          "cube_slab_ambiguous_cell_fraction": 0.06772976680384088,
+          "unique_world_fraction": 0.6310013717421125
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.8912894375857339,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8912894375857339,
+          "cube_slab_ambiguous_cell_fraction": 0.06545169508132472,
+          "unique_world_fraction": 0.6035665294924554
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.8507495590828924,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8507495590828924,
+          "cube_slab_ambiguous_cell_fraction": 0.05452674897119342,
+          "unique_world_fraction": 0.48148148148148145
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.7693121693121693,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.7693121693121693,
+          "cube_slab_ambiguous_cell_fraction": 0.038624338624338624,
+          "unique_world_fraction": 0.2747795414462081
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.6316137566137566,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.6316137566137566,
+          "cube_slab_ambiguous_cell_fraction": 0.021825396825396824,
+          "unique_world_fraction": 0.07936507936507936
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.4365079365079365,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.4365079365079365,
+          "cube_slab_ambiguous_cell_fraction": 0.007936507936507936,
+          "unique_world_fraction": 0.015873015873015872
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.20833333333333334,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.20833333333333334,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.0,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.0,
+          "cube_slab_ambiguous_cell_fraction": 0.0,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 331648
+    },
+    {
+      "name": "oblique_1",
+      "views": 1,
+      "cases": 11353,
+      "feasible_cases": 11353,
+      "projection_us_per_case_medians": {
+        "min": 1.051,
+        "median": 3.855,
+        "p95": 7.311,
+        "p99": 8.443,
+        "max": 13.25,
+        "mean": 4.2624539769224
+      },
+      "projection_us_all_repetitions": {
+        "min": 1.031,
+        "median": 3.896,
+        "p95": 7.501,
+        "p99": 9.224,
+        "max": 230.918,
+        "mean": 4.414930432484806
+      },
+      "median_within_case_min_us": 3.795,
+      "median_within_case_max_us": 4.076,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 11353
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 33.0,
+            "median": 44.0,
+            "p95": 53.0,
+            "p99": 55.0,
+            "max": 58.0,
+            "mean": 44.58037523121642,
+            "sum": 506121
+          },
+          "deletions": {
+            "min": 15.0,
+            "median": 23.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 21.913503038844357,
+            "sum": 248784
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 34.0,
+            "median": 42.0,
+            "p95": 49.0,
+            "p99": 52.0,
+            "max": 56.0,
+            "mean": 42.58927155817845,
+            "sum": 483516
+          },
+          "deletions": {
+            "min": 7.0,
+            "median": 16.0,
+            "p95": 20.0,
+            "p99": 22.0,
+            "max": 24.0,
+            "mean": 16.074517748612703,
+            "sum": 182494
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 11353
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 16.0,
+            "p95": 30.0,
+            "p99": 36.0,
+            "max": 50.0,
+            "mean": 15.531313309257465,
+            "sum": 176327
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 35.0,
+            "median": 150.0,
+            "p95": 265.0,
+            "p99": 306.0,
+            "max": 386.0,
+            "mean": 158.33471329164098,
+            "sum": 1797574
+          },
+          "deletions": {
+            "min": 15.0,
+            "median": 24.0,
+            "p95": 27.0,
+            "p99": 29.0,
+            "max": 33.0,
+            "mean": 23.795736809653835,
+            "sum": 270153
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 8.0,
+            "p95": 13.0,
+            "p99": 14.0,
+            "max": 17.0,
+            "mean": 7.900290672069056,
+            "sum": 89692
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 6.0,
+            "p95": 8.0,
+            "p99": 9.0,
+            "max": 10.0,
+            "mean": 5.838985290231657,
+            "sum": 66290
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 9.0,
+            "p95": 14.0,
+            "p99": 15.0,
+            "max": 18.0,
+            "mean": 8.900290672069056,
+            "sum": 101045
+          },
+          "envelope_advances": {
+            "min": 13.0,
+            "median": 82.0,
+            "p95": 133.0,
+            "p99": 155.0,
+            "max": 210.0,
+            "mean": 82.26257376904783,
+            "sum": 933927
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 9.0,
+          "p95": 13.0,
+          "p99": 15.0,
+          "max": 17.0,
+          "mean": 10.086496961155643
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 16.0,
+          "p95": 21.0,
+          "p99": 22.0,
+          "max": 25.0,
+          "mean": 15.9254822513873
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 9.0,
+          "p95": 13.0,
+          "p99": 15.0,
+          "max": 17.0,
+          "mean": 10.086496961155643
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.6694240570068359,
+      "freely_variable_cell_fraction": 0.08504486083984375,
+      "identifiable_geometry_fraction": 0.6694240570068359,
+      "cube_slab_ambiguous_cell_fraction": 0.2922515869140625,
+      "unique_world_fraction": 0.0467681884765625,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 2.0,
+        "p95": 16.0,
+        "p99": 32.0,
+        "max": 192.0,
+        "mean": 5.772571126574474
+      },
+      "identified_cells_class_weighted_histogram": [
+        0,
+        0,
+        6,
+        61,
+        371,
+        1367,
+        2703,
+        3780,
+        3065
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.7640794086267337,
+          "freely_variable_cell_fraction": 0.07698902606310014,
+          "identifiable_geometry_fraction": 0.7640794086267337,
+          "cube_slab_ambiguous_cell_fraction": 0.2031130925163847,
+          "unique_world_fraction": 0.12604785855814662
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.7202074759945131,
+          "freely_variable_cell_fraction": 0.08164008916323731,
+          "identifiable_geometry_fraction": 0.7202074759945131,
+          "cube_slab_ambiguous_cell_fraction": 0.2438128715134888,
+          "unique_world_fraction": 0.07435985368084133
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.6719209288653734,
+          "freely_variable_cell_fraction": 0.08559303350970017,
+          "identifiable_geometry_fraction": 0.6719209288653734,
+          "cube_slab_ambiguous_cell_fraction": 0.28908240250832845,
+          "unique_world_fraction": 0.03625318440133255
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.6200580540858318,
+          "freely_variable_cell_fraction": 0.08867026748971193,
+          "identifiable_geometry_fraction": 0.6200580540858318,
+          "cube_slab_ambiguous_cell_fraction": 0.3386518959435626,
+          "unique_world_fraction": 0.013300999412110524
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.5656084656084656,
+          "freely_variable_cell_fraction": 0.09109347442680776,
+          "identifiable_geometry_fraction": 0.5656084656084656,
+          "cube_slab_ambiguous_cell_fraction": 0.3922178130511464,
+          "unique_world_fraction": 0.0028218694885361554
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.5104993386243386,
+          "freely_variable_cell_fraction": 0.09391534391534391,
+          "identifiable_geometry_fraction": 0.5104993386243386,
+          "cube_slab_ambiguous_cell_fraction": 0.44923941798941797,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.45783730158730157,
+          "freely_variable_cell_fraction": 0.0992063492063492,
+          "identifiable_geometry_fraction": 0.45783730158730157,
+          "cube_slab_ambiguous_cell_fraction": 0.5084325396825397,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.4114583333333333,
+          "freely_variable_cell_fraction": 0.109375,
+          "identifiable_geometry_fraction": 0.4114583333333333,
+          "cube_slab_ambiguous_cell_fraction": 0.5677083333333334,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.375,
+          "freely_variable_cell_fraction": 0.125,
+          "identifiable_geometry_fraction": 0.375,
+          "cube_slab_ambiguous_cell_fraction": 0.625,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 66290
+    },
+    {
+      "name": "oblique_2",
+      "views": 2,
+      "cases": 36790,
+      "feasible_cases": 36790,
+      "projection_us_per_case_medians": {
+        "min": 1.582,
+        "median": 4.317,
+        "p95": 7.261,
+        "p99": 9.094,
+        "max": 15.023,
+        "mean": 4.558096412068497
+      },
+      "projection_us_all_repetitions": {
+        "min": 1.552,
+        "median": 4.357,
+        "p95": 7.472,
+        "p99": 10.496,
+        "max": 914.919,
+        "mean": 4.825864914378908
+      },
+      "median_within_case_min_us": 4.267,
+      "median_within_case_max_us": 4.556,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 36790
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 49.0,
+            "median": 68.0,
+            "p95": 79.0,
+            "p99": 83.0,
+            "max": 86.0,
+            "mean": 68.11087251970645,
+            "sum": 2505799
+          },
+          "deletions": {
+            "min": 18.0,
+            "median": 24.0,
+            "p95": 24.0,
+            "p99": 24.0,
+            "max": 24.0,
+            "mean": 23.42106550693123,
+            "sum": 861661
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 50.0,
+            "median": 61.0,
+            "p95": 69.0,
+            "p99": 73.0,
+            "max": 91.0,
+            "mean": 61.344794781190544,
+            "sum": 2256875
+          },
+          "deletions": {
+            "min": 8.0,
+            "median": 16.0,
+            "p95": 20.0,
+            "p99": 21.0,
+            "max": 24.0,
+            "mean": 16.34612666485458,
+            "sum": 601374
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 36790
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 16.0,
+            "p95": 39.0,
+            "p99": 51.0,
+            "max": 90.0,
+            "mean": 17.663522696384888,
+            "sum": 649841
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 51.0,
+            "median": 174.0,
+            "p95": 294.0,
+            "p99": 351.0,
+            "max": 503.0,
+            "mean": 181.5155477031802,
+            "sum": 6677957
+          },
+          "deletions": {
+            "min": 18.0,
+            "median": 26.0,
+            "p95": 33.0,
+            "p99": 36.0,
+            "max": 43.0,
+            "mean": 26.917178581136177,
+            "sum": 990283
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 8.0,
+            "p95": 11.0,
+            "p99": 13.0,
+            "max": 16.0,
+            "mean": 7.65387333514542,
+            "sum": 281586
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 7.0,
+            "p95": 10.0,
+            "p99": 11.0,
+            "max": 13.0,
+            "mean": 7.0749388420766515,
+            "sum": 260287
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 9.0,
+            "p95": 12.0,
+            "p99": 14.0,
+            "max": 17.0,
+            "mean": 8.65387333514542,
+            "sum": 318376
+          },
+          "envelope_advances": {
+            "min": 19.0,
+            "median": 70.0,
+            "p95": 125.0,
+            "p99": 152.0,
+            "max": 260.0,
+            "mean": 74.07760260940474,
+            "sum": 2725315
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 32.0,
+          "median": 32.0,
+          "p95": 32.0,
+          "p99": 32.0,
+          "max": 32.0,
+          "mean": 32.0
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 12.0,
+          "max": 14.0,
+          "mean": 8.578934493068768
+        },
+        "envelope": {
+          "min": 8.0,
+          "median": 16.0,
+          "p95": 19.0,
+          "p99": 21.0,
+          "max": 24.0,
+          "mean": 15.65387333514542
+        },
+        "exact": {
+          "min": 8.0,
+          "median": 8.0,
+          "p95": 10.0,
+          "p99": 12.0,
+          "max": 14.0,
+          "mean": 8.578934493068768
+        }
+      },
+      "worlds": 65536,
+      "identifiable_cell_fraction": 0.8584823608398438,
+      "freely_variable_cell_fraction": 0.0,
+      "identifiable_geometry_fraction": 0.8584823608398438,
+      "cube_slab_ambiguous_cell_fraction": 0.13616180419921875,
+      "unique_world_fraction": 0.3197784423828125,
+      "feasible_family_size_class_weighted": {
+        "min": 1.0,
+        "median": 1.0,
+        "p95": 4.0,
+        "p99": 10.0,
+        "max": 36.0,
+        "mean": 1.781353628703452
+      },
+      "identified_cells_class_weighted_histogram": [
+        0,
+        0,
+        0,
+        0,
+        68,
+        694,
+        2930,
+        12141,
+        20957
+      ],
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identifiable_cell_fraction": 0.9296410608139003,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.9296410608139003,
+          "cube_slab_ambiguous_cell_fraction": 0.06407178783721994,
+          "unique_world_fraction": 0.575369608291419
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identifiable_cell_fraction": 0.9027992112482853,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.9027992112482853,
+          "cube_slab_ambiguous_cell_fraction": 0.09302840649291266,
+          "unique_world_fraction": 0.4541037951531779
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identifiable_cell_fraction": 0.8655692729766804,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8655692729766804,
+          "cube_slab_ambiguous_cell_fraction": 0.12996031746031747,
+          "unique_world_fraction": 0.31182637664119145
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identifiable_cell_fraction": 0.8187555114638448,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.8187555114638448,
+          "cube_slab_ambiguous_cell_fraction": 0.17520024985302762,
+          "unique_world_fraction": 0.17746913580246915
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identifiable_cell_fraction": 0.7629850088183422,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.7629850088183422,
+          "cube_slab_ambiguous_cell_fraction": 0.22885802469135802,
+          "unique_world_fraction": 0.07566137566137567
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identifiable_cell_fraction": 0.6996527777777778,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.6996527777777778,
+          "cube_slab_ambiguous_cell_fraction": 0.2906746031746032,
+          "unique_world_fraction": 0.018518518518518517
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identifiable_cell_fraction": 0.6314484126984127,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.6314484126984127,
+          "cube_slab_ambiguous_cell_fraction": 0.35962301587301587,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identifiable_cell_fraction": 0.5625,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.5625,
+          "cube_slab_ambiguous_cell_fraction": 0.4322916666666667,
+          "unique_world_fraction": 0.0
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identifiable_cell_fraction": 0.5,
+          "freely_variable_cell_fraction": 0.0,
+          "identifiable_geometry_fraction": 0.5,
+          "cube_slab_ambiguous_cell_fraction": 0.5,
+          "unique_world_fraction": 0.0
+        }
+      ],
+      "unsupported_after_standalone_gac_total": 0,
+      "unsupported_after_envelope_total": 260287
+    },
+    {
+      "name": "restricted",
+      "views": null,
+      "cases": 512,
+      "feasible_cases": 91,
+      "projection_us_per_case_medians": {
+        "min": 0.091,
+        "median": 0.24,
+        "p95": 3.676,
+        "p99": 4.997,
+        "max": 6.86,
+        "mean": 0.765853515625
+      },
+      "projection_us_all_repetitions": {
+        "min": 0.09,
+        "median": 0.241,
+        "p95": 3.896,
+        "p99": 6.119,
+        "max": 16.696,
+        "mean": 0.8056304687500001
+      },
+      "median_within_case_min_us": 0.23,
+      "median_within_case_max_us": 0.28,
+      "work_per_case": {
+        "gac": {
+          "gac_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 512
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 1.0,
+            "median": 6.0,
+            "p95": 48.0,
+            "p99": 55.0,
+            "max": 70.0,
+            "mean": 11.171875,
+            "sum": 5720
+          },
+          "deletions": {
+            "min": 0.0,
+            "median": 4.0,
+            "p95": 13.0,
+            "p99": 15.0,
+            "max": 17.0,
+            "mean": 4.41015625,
+            "sum": 2258
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "envelope": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 1.0,
+            "median": 8.0,
+            "p95": 45.0,
+            "p99": 53.0,
+            "max": 55.0,
+            "mean": 12.841796875,
+            "sum": 6575
+          },
+          "deletions": {
+            "min": 0.0,
+            "median": 4.0,
+            "p95": 10.0,
+            "p99": 12.0,
+            "max": 13.0,
+            "mean": 4.669921875,
+            "sum": 2391
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "sum": 512
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 2.0,
+            "p95": 16.0,
+            "p99": 25.0,
+            "max": 30.0,
+            "mean": 3.625,
+            "sum": 1856
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        },
+        "projection": {
+          "gac_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "fixed_calls": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "factor_updates": {
+            "min": 1.0,
+            "median": 8.0,
+            "p95": 113.0,
+            "p99": 181.0,
+            "max": 235.0,
+            "mean": 25.048828125,
+            "sum": 12825
+          },
+          "deletions": {
+            "min": 0.0,
+            "median": 5.0,
+            "p95": 13.0,
+            "p99": 17.0,
+            "max": 28.0,
+            "mean": 5.390625,
+            "sum": 2760
+          },
+          "literal_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 8.0,
+            "p99": 10.0,
+            "max": 12.0,
+            "mean": 1.080078125,
+            "sum": 553
+          },
+          "infeasible_queries": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 4.0,
+            "p99": 5.0,
+            "max": 9.0,
+            "mean": 0.447265625,
+            "sum": 229
+          },
+          "envelope_calls": {
+            "min": 1.0,
+            "median": 1.0,
+            "p95": 9.0,
+            "p99": 11.0,
+            "max": 13.0,
+            "mean": 2.080078125,
+            "sum": 1065
+          },
+          "envelope_advances": {
+            "min": 0.0,
+            "median": 2.0,
+            "p95": 45.0,
+            "p99": 74.0,
+            "max": 112.0,
+            "mean": 8.685546875,
+            "sum": 4447
+          },
+          "branches": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          },
+          "search_nodes": {
+            "min": 0.0,
+            "median": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "sum": 0
+          }
+        }
+      },
+      "candidates_per_case": {
+        "initial": {
+          "min": 11.0,
+          "median": 18.0,
+          "p95": 23.0,
+          "p99": 24.0,
+          "max": 26.0,
+          "mean": 18.001953125
+        },
+        "gac": {
+          "min": 8.0,
+          "median": 14.0,
+          "p95": 19.0,
+          "p99": 21.0,
+          "max": 24.0,
+          "mean": 13.591796875
+        },
+        "envelope": {
+          "min": 7.0,
+          "median": 13.0,
+          "p95": 18.0,
+          "p99": 20.0,
+          "max": 24.0,
+          "mean": 13.33203125
+        },
+        "exact": {
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 14.0,
+          "p99": 17.0,
+          "max": 21.0,
+          "mean": 2.091796875
+        }
+      },
+      "by_feasibility": [
+        {
+          "feasible": false,
+          "cases": 421,
+          "projection_us_per_case_medians": {
+            "min": 0.091,
+            "median": 0.21,
+            "p95": 0.47,
+            "p99": 0.611,
+            "max": 0.901,
+            "mean": 0.2406912114014252
+          }
+        },
+        {
+          "feasible": true,
+          "cases": 91,
+          "projection_us_per_case_medians": {
+            "min": 1.211,
+            "median": 3.055,
+            "p95": 5.118,
+            "p99": 6.54,
+            "max": 6.86,
+            "mean": 3.1954505494505496
+          }
+        }
+      ],
+      "identifiability_note": "No population fractions: these are seeded restricted/altered instances, not a truth prior. Empty-family row counts of zero are not identification claims."
+    }
+  ],
+  "comparison": [
+    {
+      "suite": "axis_1",
+      "cpp_a0_median_us": 2.193,
+      "cpp_a1_median_us": 4.146,
+      "a0_identifiable_fraction": 0.1111111111,
+      "a1_same_cube_truths_identifiable_fraction": 0.1111111111111111,
+      "python_nested_tested_cases": 625,
+      "python_nested_median_us": 273.91199955673073,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 51
+    },
+    {
+      "suite": "axis_2",
+      "cpp_a0_median_us": 2.694,
+      "cpp_a1_median_us": 2.795,
+      "a0_identifiable_fraction": 0.462962963,
+      "a1_same_cube_truths_identifiable_fraction": 0.41975308641975306,
+      "python_nested_tested_cases": 162,
+      "python_nested_median_us": 179.68499992093712,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 45
+    },
+    {
+      "suite": "axis_3",
+      "cpp_a0_median_us": 3.205,
+      "cpp_a1_median_us": 2.754,
+      "a0_identifiable_fraction": 0.7385688157,
+      "a1_same_cube_truths_identifiable_fraction": 0.6999123609205914,
+      "python_nested_tested_cases": 24705,
+      "python_nested_median_us": 222.38399969864986,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 21
+    },
+    {
+      "suite": "axis_4",
+      "cpp_a0_median_us": 3.725,
+      "cpp_a1_median_us": 3.224,
+      "a0_identifiable_fraction": 0.8475080018,
+      "a1_same_cube_truths_identifiable_fraction": 0.8153863740283493,
+      "python_nested_tested_cases": 162,
+      "python_nested_median_us": 252.2789998238295,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 15
+    },
+    {
+      "suite": "axis_5",
+      "cpp_a0_median_us": 4.397,
+      "cpp_a1_median_us": 3.435,
+      "a0_identifiable_fraction": 0.90260631,
+      "a1_same_cube_truths_identifiable_fraction": 0.8614540466392319,
+      "python_nested_tested_cases": 162,
+      "python_nested_median_us": 268.0974998838792,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 15
+    },
+    {
+      "suite": "axis_6",
+      "cpp_a0_median_us": 5.058,
+      "cpp_a1_median_us": 3.856,
+      "a0_identifiable_fraction": 0.9387288523,
+      "a1_same_cube_truths_identifiable_fraction": 0.9103795153177869,
+      "python_nested_tested_cases": 45270,
+      "python_nested_median_us": 323.94699996984855,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 15
+    },
+    {
+      "suite": "oblique_1",
+      "cpp_a0_median_us": 4.977,
+      "cpp_a1_median_us": 3.855,
+      "a0_identifiable_fraction": 0.9114083219,
+      "a1_same_cube_truths_identifiable_fraction": 0.7640794086267337,
+      "python_nested_tested_cases": 161,
+      "python_nested_median_us": 287.6819999073632,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 4
+    },
+    {
+      "suite": "oblique_2",
+      "cpp_a0_median_us": 8.232,
+      "cpp_a1_median_us": 4.317,
+      "a0_identifiable_fraction": 0.9915409236,
+      "a1_same_cube_truths_identifiable_fraction": 0.9296410608139003,
+      "python_nested_tested_cases": 163,
+      "python_nested_median_us": 399.8600000159058,
+      "python_nested_max_branches": 0,
+      "python_generic_max_branches": 3
+    }
+  ],
+  "comparison_limit": "A0/A1 timings use different populations and algorithms. Historical Python uses different sampling, implementation, repetitions and environment. No controlled language speedup or scalability claim.",
+  "reference_fixture_sha256": "44d96bd735875da137f8776f9ba6dc430061a8c14dc6a1591a79f1fec19c5076",
+  "historical_oracle_agreement": true
+}

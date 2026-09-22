@@ -42,11 +42,16 @@ if(MCR_ENABLE_SANITIZERS)
     target_link_options(mcr PUBLIC -fsanitize=address,undefined)
 endif()
 
-add_library(mcr_experiments src/experiments/cameras.cpp src/experiments/a0.cpp)
+add_library(mcr_experiments src/experiments/cameras.cpp src/experiments/a0.cpp src/experiments/a1.cpp)
 target_link_libraries(mcr_experiments PUBLIC mcr)
 add_executable(mcr_a0_benchmark experiments/a0_benchmark.cpp)
 target_link_libraries(mcr_a0_benchmark PRIVATE mcr_experiments)
 target_compile_definitions(mcr_a0_benchmark PRIVATE
+    MCR_COMPILER="${CMAKE_CXX_COMPILER_ID}-${CMAKE_CXX_COMPILER_VERSION}"
+    MCR_BUILD_TYPE="$<CONFIG>")
+add_executable(mcr_a1_benchmark experiments/a1_benchmark.cpp)
+target_link_libraries(mcr_a1_benchmark PRIVATE mcr_experiments)
+target_compile_definitions(mcr_a1_benchmark PRIVATE
     MCR_COMPILER="${CMAKE_CXX_COMPILER_ID}-${CMAKE_CXX_COMPILER_VERSION}"
     MCR_BUILD_TYPE="$<CONFIG>")
 
@@ -57,6 +62,8 @@ if(BUILD_TESTING)
         target_link_libraries(${name} PRIVATE mcr_experiments)
         add_test(NAME ${name} COMMAND ${name})
     endfunction()
+    add_test(NAME a1_benchmark_smoke COMMAND mcr_a1_benchmark
+        --output "${CMAKE_CURRENT_BINARY_DIR}/a1_benchmark_smoke" --repetitions 1 --limit-per-suite 2 --csv-rows-per-file 1)
     mcr_test(geometry_tests tests/geometry_tests.cpp)
     mcr_test(render_tests tests/render_tests.cpp)
     mcr_test(a1_render_tests tests/a1_render_tests.cpp)
@@ -129,7 +136,7 @@ if(BUILD_TESTING)
         add_test(NAME python_a1_acceptance_export COMMAND "${Python3_EXECUTABLE}"
                  "${CMAKE_CURRENT_SOURCE_DIR}/tests/oracle/export_a1_acceptance.py" "${MCR_A1_ORACLE_DIR}")
         set_tests_properties(python_a1_acceptance_export PROPERTIES FIXTURES_SETUP python_a1_acceptance)
-        add_executable(a1_acceptance tests/a1_acceptance.cpp tests/fixtures/a1_corpus.cpp)
+        add_executable(a1_acceptance tests/a1_acceptance.cpp)
         target_include_directories(a1_acceptance PRIVATE tests)
         target_link_libraries(a1_acceptance PRIVATE mcr_experiments)
         add_test(NAME a1_acceptance COMMAND a1_acceptance "${MCR_A1_ORACLE_DIR}"
