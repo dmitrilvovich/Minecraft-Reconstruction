@@ -1,0 +1,789 @@
+{
+  "status": "pass",
+  "base_commit": "d2eda1664ba0eeb7c7739e6efea6f0ea2d26da8b",
+  "operation": "Reaggregate saved supported-domain masks and truth-stratum weights; no rendering, inference, correctness suite or timing rerun.",
+  "conclusion": "91.04% is the zero-true-slab stratum; 87.06% is all A1 truth worlds. Same 8x8 six-axis observations, four-state inference domains and exact singleton-support definition.",
+  "definition": "For truth T, count cells with singleton support over the entire four-state feasible family F(R(T)); average uniformly over the declared truth population. The zero-slab condition filters only evaluation truths, never feasible alternatives.",
+  "all_camera_classes_checked": 195620,
+  "strata_checked": 72,
+  "historical_json_aggregate_copies_identical": true,
+  "python_cpp_all_suite_metrics_equal": true,
+  "resolution16_control": "Separate oracle experiment: all-world six-axis fraction 1.0 at 16x16, with sampled inference checks; not either disputed 8x8 metric and not a C++ Milestone 2 resolution benchmark.",
+  "suites": [
+    {
+      "suite": "axis_1",
+      "classes": 625,
+      "worlds": 65536,
+      "identified_cell_occurrences": 65536,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.125,
+      "exact_fraction": "1/8",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 5832,
+          "unique_worlds": 1,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.1111111111111111,
+          "exact_fraction": "1/9"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 17496,
+          "unique_worlds": 4,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.125,
+          "exact_fraction": "1/8"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 21384,
+          "unique_worlds": 6,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.13095238095238096,
+          "exact_fraction": "11/84"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 14040,
+          "unique_worlds": 4,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.12896825396825398,
+          "exact_fraction": "65/504"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 5400,
+          "unique_worlds": 1,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.11904761904761904,
+          "exact_fraction": "5/42"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 1224,
+          "unique_worlds": 0,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.10119047619047619,
+          "exact_fraction": "17/168"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 152,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.07539682539682539,
+          "exact_fraction": "19/252"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 8,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.041666666666666664,
+          "exact_fraction": "1/24"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "axis_2",
+      "classes": 5625,
+      "worlds": 65536,
+      "identified_cell_occurrences": 193536,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.369140625,
+      "exact_fraction": "189/512",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 22032,
+          "unique_worlds": 441,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.41975308641975306,
+          "exact_fraction": "34/81"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 56754,
+          "unique_worlds": 672,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.4054783950617284,
+          "exact_fraction": "1051/2592"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 61884,
+          "unique_worlds": 508,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.37896825396825395,
+          "exact_fraction": "191/504"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 36906,
+          "unique_worlds": 192,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.33901014109347444,
+          "exact_fraction": "6151/18144"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 12968,
+          "unique_worlds": 36,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.2858906525573192,
+          "exact_fraction": "1621/5670"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 2678,
+          "unique_worlds": 0,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.22139550264550265,
+          "exact_fraction": "1339/6048"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 300,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.1488095238095238,
+          "exact_fraction": "25/168"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 14,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.07291666666666667,
+          "exact_fraction": "7/96"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "axis_3",
+      "classes": 24705,
+      "worlds": 65536,
+      "identified_cell_occurrences": 363068,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.6924972534179688,
+      "exact_fraction": "90767/131072",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 36737,
+          "unique_worlds": 1790,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.6999123609205914,
+          "exact_fraction": "36737/52488"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 100940,
+          "unique_worlds": 4616,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.7211648376771833,
+          "exact_fraction": "25235/34992"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 117177,
+          "unique_worlds": 4924,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.7175742210464433,
+          "exact_fraction": "39059/54432"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 74277,
+          "unique_worlds": 2415,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.6822916666666666,
+          "exact_fraction": "131/192"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 27445,
+          "unique_worlds": 489,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.6050485008818343,
+          "exact_fraction": "5489/9072"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 5820,
+          "unique_worlds": 21,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.48115079365079366,
+          "exact_fraction": "485/1008"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 644,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.3194444444444444,
+          "exact_fraction": "23/72"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 28,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.14583333333333334,
+          "exact_fraction": "7/48"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "axis_4",
+      "classes": 32738,
+      "worlds": 65536,
+      "identified_cell_occurrences": 409440,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.78094482421875,
+      "exact_fraction": "12795/16384",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 42798,
+          "unique_worlds": 2524,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.8153863740283493,
+          "exact_fraction": "7133/8748"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 114658,
+          "unique_worlds": 6644,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.8191729538180156,
+          "exact_fraction": "57329/69984"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 131402,
+          "unique_worlds": 7070,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.8046859690378209,
+          "exact_fraction": "65701/81648"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 82770,
+          "unique_worlds": 3512,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.7603064373897708,
+          "exact_fraction": "13795/18144"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 30550,
+          "unique_worlds": 737,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.6735008818342152,
+          "exact_fraction": "3055/4536"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 6504,
+          "unique_worlds": 36,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.5376984126984127,
+          "exact_fraction": "271/504"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 726,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.3601190476190476,
+          "exact_fraction": "121/336"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 32,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.16666666666666666,
+          "exact_fraction": "1/6"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "axis_5",
+      "classes": 38514,
+      "worlds": 65536,
+      "identified_cell_occurrences": 432304,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.824554443359375,
+      "exact_fraction": "27019/32768",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 45216,
+          "unique_worlds": 3143,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.8614540466392319,
+          "exact_fraction": "628/729"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 120528,
+          "unique_worlds": 8488,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.8611111111111112,
+          "exact_fraction": "31/36"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 138208,
+          "unique_worlds": 9508,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.8463648834019204,
+          "exact_fraction": "617/729"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 87668,
+          "unique_worlds": 5000,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.805298353909465,
+          "exact_fraction": "3131/3888"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 32760,
+          "unique_worlds": 1119,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.7222222222222222,
+          "exact_fraction": "13/18"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 7084,
+          "unique_worlds": 64,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.5856481481481481,
+          "exact_fraction": "253/432"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 804,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.39880952380952384,
+          "exact_fraction": "67/168"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 36,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.1875,
+          "exact_fraction": "3/16"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "axis_6",
+      "classes": 45270,
+      "worlds": 65536,
+      "identified_cell_occurrences": 456448,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.87060546875,
+      "exact_fraction": "1783/2048",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 47784,
+          "unique_worlds": 4007,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.9103795153177869,
+          "exact_fraction": "1991/2187"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 127048,
+          "unique_worlds": 11040,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.9076931870141747,
+          "exact_fraction": "15881/17496"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 145544,
+          "unique_worlds": 12320,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.8912894375857339,
+          "exact_fraction": "2599/2916"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 92616,
+          "unique_worlds": 6552,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.8507495590828924,
+          "exact_fraction": "3859/4536"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 34896,
+          "unique_worlds": 1558,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.7693121693121693,
+          "exact_fraction": "727/945"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 7640,
+          "unique_worlds": 120,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.6316137566137566,
+          "exact_fraction": "955/1512"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 880,
+          "unique_worlds": 4,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.4365079365079365,
+          "exact_fraction": "55/126"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 40,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.20833333333333334,
+          "exact_fraction": "5/24"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 0,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.0,
+          "exact_fraction": "0"
+        }
+      ]
+    },
+    {
+      "suite": "oblique_1",
+      "classes": 11353,
+      "worlds": 65536,
+      "identified_cell_occurrences": 350971,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.6694240570068359,
+      "exact_fraction": "350971/524288",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 40105,
+          "unique_worlds": 827,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.7640794086267337,
+          "exact_fraction": "40105/52488"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 100806,
+          "unique_worlds": 1301,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.7202074759945131,
+          "exact_fraction": "16801/23328"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 109722,
+          "unique_worlds": 740,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.6719209288653734,
+          "exact_fraction": "18287/27216"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 67502,
+          "unique_worlds": 181,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.6200580540858318,
+          "exact_fraction": "33751/54432"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 25656,
+          "unique_worlds": 16,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.5656084656084656,
+          "exact_fraction": "1069/1890"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 6175,
+          "unique_worlds": 0,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.5104993386243386,
+          "exact_fraction": "6175/12096"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 923,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.45783730158730157,
+          "exact_fraction": "923/2016"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 79,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.4114583333333333,
+          "exact_fraction": "79/192"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 3,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.375,
+          "exact_fraction": "3/8"
+        }
+      ]
+    },
+    {
+      "suite": "oblique_2",
+      "classes": 36790,
+      "worlds": 65536,
+      "identified_cell_occurrences": 450092,
+      "cell_occurrences": 524288,
+      "identifiable_fraction": 0.8584823608398438,
+      "exact_fraction": "112523/131072",
+      "by_true_slab_count": [
+        {
+          "slabs": 0,
+          "worlds": 6561,
+          "identified_cell_occurrences": 48795,
+          "unique_worlds": 3775,
+          "cell_occurrences": 52488,
+          "identifiable_fraction": 0.9296410608139003,
+          "exact_fraction": "16265/17496"
+        },
+        {
+          "slabs": 1,
+          "worlds": 17496,
+          "identified_cell_occurrences": 126363,
+          "unique_worlds": 7945,
+          "cell_occurrences": 139968,
+          "identifiable_fraction": 0.9027992112482853,
+          "exact_fraction": "42121/46656"
+        },
+        {
+          "slabs": 2,
+          "worlds": 20412,
+          "identified_cell_occurrences": 141344,
+          "unique_worlds": 6365,
+          "cell_occurrences": 163296,
+          "identifiable_fraction": 0.8655692729766804,
+          "exact_fraction": "631/729"
+        },
+        {
+          "slabs": 3,
+          "worlds": 13608,
+          "identified_cell_occurrences": 89133,
+          "unique_worlds": 2415,
+          "cell_occurrences": 108864,
+          "identifiable_fraction": 0.8187555114638448,
+          "exact_fraction": "29711/36288"
+        },
+        {
+          "slabs": 4,
+          "worlds": 5670,
+          "identified_cell_occurrences": 34609,
+          "unique_worlds": 429,
+          "cell_occurrences": 45360,
+          "identifiable_fraction": 0.7629850088183422,
+          "exact_fraction": "34609/45360"
+        },
+        {
+          "slabs": 5,
+          "worlds": 1512,
+          "identified_cell_occurrences": 8463,
+          "unique_worlds": 28,
+          "cell_occurrences": 12096,
+          "identifiable_fraction": 0.6996527777777778,
+          "exact_fraction": "403/576"
+        },
+        {
+          "slabs": 6,
+          "worlds": 252,
+          "identified_cell_occurrences": 1273,
+          "unique_worlds": 0,
+          "cell_occurrences": 2016,
+          "identifiable_fraction": 0.6314484126984127,
+          "exact_fraction": "1273/2016"
+        },
+        {
+          "slabs": 7,
+          "worlds": 24,
+          "identified_cell_occurrences": 108,
+          "unique_worlds": 0,
+          "cell_occurrences": 192,
+          "identifiable_fraction": 0.5625,
+          "exact_fraction": "9/16"
+        },
+        {
+          "slabs": 8,
+          "worlds": 1,
+          "identified_cell_occurrences": 4,
+          "unique_worlds": 0,
+          "cell_occurrences": 8,
+          "identifiable_fraction": 0.5,
+          "exact_fraction": "1/2"
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "experiments/a1_benchmark.cpp": "b050098e0bc2806f684f45d810f74da67c4e8ca319c31e6065e204de6728511b",
+    "experiments/analyze_a1_benchmark.py": "9cd0547db33ad7958f43434ef65279598020e7f626733186934003f304e2cef4",
+    "reference/python/Phase_A_protocol.md": "8d83cfd0374b775196fe4d2c92ea40098237496ed159c6af891a5cd12e0e4af6",
+    "reference/python/baseline_search/results.json": "d0f0ad25dbabe6e6740b046e7160589031a12791d39c0282440047a20281d680",
+    "reference/python/phase_a.py": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f",
+    "reference/python/phase_a_results.json": "da4d6ccd9c02b9303fdc709f89cd4545a703786f60c940b3d53c0dab7b01b3cf",
+    "reference/python/resolution16/results.json": "2cca4b1b98fbde13b4bc299955361c425cd515eb9609703cac96626d0022d1b2",
+    "reference/python/results/results.json": "e791654e21a5709ca0aba49c9cca1f6f34e902dc74818ecb7c503d6392e446b4",
+    "results/milestone-2d1-benchmarks/a1/axis_1_part0.csv.gz": "73320ba1c7652248c82b8babca4b1a108e87ddfe307981c449c5a27ec468adda",
+    "results/milestone-2d1-benchmarks/a1/axis_2_part0.csv.gz": "b3f961a0022f61ca08c49bb0c1518b66fd8359c3ed206306c09520d1785aaacc",
+    "results/milestone-2d1-benchmarks/a1/axis_3_part0.csv.gz": "37cfd3fa5187f4712e9de425cfeb3fc54228bb64cbb083017fd9687b7a1b10d0",
+    "results/milestone-2d1-benchmarks/a1/axis_3_part1.csv.gz": "c74c43fb375ad64eff9b1f32b5a2d77a8491d0dafecfc87d3dad3c30558eeeb2",
+    "results/milestone-2d1-benchmarks/a1/axis_3_part2.csv.gz": "57d3c4383bdf01491ba2caafd2e4d769ce30b59b6e17d54c7940f8fca1c4dd35",
+    "results/milestone-2d1-benchmarks/a1/axis_4_part0.csv.gz": "f42fd2aef3bf6a011952b74c8098cd3ed49591b8ab140e40f8a81a55dc9c232a",
+    "results/milestone-2d1-benchmarks/a1/axis_4_part1.csv.gz": "29c921daabefb65e680d2c08e15feb64c914996352e5772a36b3725bf0c91796",
+    "results/milestone-2d1-benchmarks/a1/axis_4_part2.csv.gz": "414fc2f47f0a0644e0aaf8bd01fd944149c0d8fb1db53b6120777e598d4715cb",
+    "results/milestone-2d1-benchmarks/a1/axis_4_part3.csv.gz": "3eccd9899b8c1b4cbc0407dbc396d41e15b0505585c6c79e095efaababca6fca",
+    "results/milestone-2d1-benchmarks/a1/axis_5_part0.csv.gz": "da38cd35fd37ddf7e710e8737dc9b180b3cf1b81988239ca1af09acbfba7f456",
+    "results/milestone-2d1-benchmarks/a1/axis_5_part1.csv.gz": "c0bd8e97d54f611eb667a8b109480d11e1ac8c51045b02df2450807ea90af200",
+    "results/milestone-2d1-benchmarks/a1/axis_5_part2.csv.gz": "de09ed67212be13572ba430440316c0f795a4a842304855507853a1ff36e5768",
+    "results/milestone-2d1-benchmarks/a1/axis_5_part3.csv.gz": "8da0241e599982a96e74a0fd2e43556fecd4f22ee5710d854e4c2d468edb2e53",
+    "results/milestone-2d1-benchmarks/a1/axis_6_part0.csv.gz": "704a0d15262be12ad7e13f2082160ff1c8c312fe73ad6e4a18d1a9a150684230",
+    "results/milestone-2d1-benchmarks/a1/axis_6_part1.csv.gz": "6e5f8b1019b1e6c5ca8a6f4fab21f98a80662e5926c39ef5814280a23cc648ff",
+    "results/milestone-2d1-benchmarks/a1/axis_6_part2.csv.gz": "2f94ae25ebf152e82f4f831468b919af471303b5366be8ae9069bdc112ceb92f",
+    "results/milestone-2d1-benchmarks/a1/axis_6_part3.csv.gz": "638f0444396ee83e6a36b6ae994ca4827fedcc5071db86ad0dd6d4c3e4b43281",
+    "results/milestone-2d1-benchmarks/a1/axis_6_part4.csv.gz": "cef1e0c8c43b9014fc7b38684111366d7d970c4f1e1862646115a4163943cd12",
+    "results/milestone-2d1-benchmarks/a1/oblique_1_part0.csv.gz": "2027ddecb4c1a7199799f31784500f3cd933967b56501d4ab55ec41cec24edf5",
+    "results/milestone-2d1-benchmarks/a1/oblique_1_part1.csv.gz": "9814c9b024d8ecb3b656f06433dc7c41bd8964bacdd3c1ddec8b2aae3e608141",
+    "results/milestone-2d1-benchmarks/a1/oblique_2_part0.csv.gz": "4bd3637e2ed30ef543ca873172806cece644fe6209c7863f91345876fd19dc5f",
+    "results/milestone-2d1-benchmarks/a1/oblique_2_part1.csv.gz": "d9fccca1958cbf1e384b9bfac649db79a50a3b8c315184d390ea0e3c52e02082",
+    "results/milestone-2d1-benchmarks/a1/oblique_2_part2.csv.gz": "5cd29326719883105a681a09902ed0b8cf5ea215094db3682bbb4e090a7779c8",
+    "results/milestone-2d1-benchmarks/a1/oblique_2_part3.csv.gz": "6ef335f2d1507c61a0be0a39277a8dfa278b91cebba9853d1504babfb44ea7ea",
+    "results/milestone-2d1-benchmarks/a1/raw-sha256.json": "9dbfca165decc1b48035a79e37ed32c142c990ba6b1a944033e8f140d334ca69",
+    "results/milestone-2d1-benchmarks/a1/restricted_part0.csv.gz": "36a5154b61f9e3b3b1a4f08c21c0fcdacdda19e122c85d47a352cfe8a625ad19",
+    "results/milestone-2d1-benchmarks/a1/summary.json": "1e0e663c33836cc702721b0782aead054a50680393d28fd09ac70b8be4277d8b",
+    "src/experiments/a1.cpp": "8360c282e0b14b4e42ae3a699aae8817185914b14242d5e3ac453b358a4c0e09",
+    "src/experiments/cameras.cpp": "b6cc596b29f042b89bb4fa91fbffaf0d0a1e04e114ca894a79672f6b9fe1f18c"
+  }
+}

@@ -20,9 +20,11 @@ For that milestone, every one of the 6,561 possible worlds is tested against an 
 
 The detailed acceptance record is in [docs/milestone-1.md](docs/milestone-1.md), and the higher-level C++ design notes are in [docs/design.md](docs/design.md).
 
-The next checkpoint, [Milestone 2A](docs/milestone-2a.md), adds the geometry foundation for oak bottom slabs. Both independent C++ rendering paths are checked against the frozen Python renderer on all 65,536 four-state worlds. A1 inference is the next checkpoint; it is not part of 2A.
+The [second C++ milestone is complete](docs/milestone-2.md). It adds oak bottom slabs and exact A1 feasibility, simultaneous witnesses, requested state support and whole-scene supported domains, with zero combinatorial search. Both independent C++ rendering paths agree with frozen Python on all 65,536 four-state worlds.
 
-The [first 2B checkpoint](docs/milestone-2b-rays.md) adds A1 ray constraints and exact supported states for a single ray. The [second checkpoint](docs/milestone-2b-propagation.md) combines these into A1 scene problems with audited multi-ray propagation. The [third checkpoint](docs/milestone-2b-feasibility.md) adds complete nested-envelope feasibility and one simultaneous witness. The [fourth checkpoint](docs/milestone-2b-support-query.md) exposes one exact cell/state support query with a witness. The [fifth checkpoint](docs/milestone-2b-projection.md) computes exact whole-scene supported domains with witness coverage. The [Milestone 2C correctness gate](docs/milestone-2c-correctness.md) validates the complete pipeline against every observation family in all eight camera/view suites. The [Milestone 2D1 benchmarks](docs/milestone-2d1-benchmarks.md) record runtime, work, memory and identifiability for the accepted A1 solver. The final Milestone 2 record and tag remain to come.
+The implementation progressed through [geometry](docs/milestone-2a.md), [single-ray constraints](docs/milestone-2b-rays.md), [shared propagation](docs/milestone-2b-propagation.md), [complete feasibility](docs/milestone-2b-feasibility.md), [requested support](docs/milestone-2b-support-query.md), and [exact projection](docs/milestone-2b-projection.md). The [2C correctness gate](docs/milestone-2c-correctness.md) checks all 195,620 observation families across eight camera/view suites. The [2D1 benchmarks](docs/milestone-2d1-benchmarks.md) record runtime, work, memory and ambiguity.
+
+With six axis views at 8 x 8 pixels, 87.06% of cells are identifiable when averaging over all A1 truth worlds. The earlier 91.04% figure averages over cube-only truth worlds while still allowing slabs during inference. [The final record](docs/milestone-2.md#reconciliation-9104-versus-8706) reconciles these populations and explains the limits of the tiny experiment.
 
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
@@ -63,4 +65,4 @@ ctest --preset sanitize --parallel 2
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The next checkpoint is the final Milestone 2 evidence review, record and tag. Later work will handle incomparable geometry with exact residual search and a scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
+The next step is the minimal A2 incomparable-geometry foundation, followed by exact residual search and a scaling study in separate checkpoints. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
