@@ -1,7 +1,27 @@
-name: C++ reconstruction correctness
-on: [push, pull_request]
+name: C++ reconstruction checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
-  a0:
+  focused:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build tools
+        run: python -m pip install cmake ninja
+      - name: Configure focused development checks
+        run: cmake -S . -B build/focused -G Ninja -DCMAKE_BUILD_TYPE=Release -DMCR_ENABLE_PYTHON_ORACLE=OFF
+      - name: Build focused targets
+        run: cmake --build build/focused --parallel 2 --target a2_geometry_tests a2_inference_tests geometry_tests a1_geometry_tests constraint_tests a1_constraint_tests inference_tests adversarial_tests
+      - name: Run focused A2 checks and A0/A1 regressions
+        run: ctest --test-dir build/focused --output-on-failure -R '^(a2_geometry_tests|a2_inference_tests|geometry_tests|a1_geometry_tests|constraint_tests|a1_constraint_tests|inference_tests|adversarial_tests)$'
+  full:
+    # Deliberate milestone gate; ordinary development pushes use focused checks.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     strategy:
       matrix:

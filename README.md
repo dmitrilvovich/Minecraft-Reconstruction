@@ -26,6 +26,8 @@ The implementation progressed through [geometry](docs/milestone-2a.md), [single-
 
 With six axis views at 8 x 8 pixels, 87.06% of cells are identifiable when averaging over all A1 truth worlds. The earlier 91.04% figure averages over cube-only truth worlds while still allowing slabs during inference. [The final record](docs/milestone-2.md#reconciliation-9104-versus-8706) reconciles these populations and explains the limits of the tiny experiment.
 
+The [A2 development foundation](docs/a2-foundation.md) adds incomparable bottom/top slab geometry, both the original oak/stone palette and a same-material oak control, and exact branch-and-propagate inference. Physical path and triangle fixtures expose the gap between local consistency and global feasibility in both palettes. This is focused development progress; full A2 acceptance and scaling are still ahead.
+
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
 ## What I'm exploring
@@ -65,4 +67,4 @@ ctest --preset sanitize --parallel 2
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The next step is the minimal A2 incomparable-geometry foundation, followed by exact residual search and a scaling study in separate checkpoints. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.
+The next A2 chunk will add residual-component decomposition and a checked fixed-hit shortcut, then compare both palettes across the tiny camera-family corpus before a full correctness gate and scaling study. After that I'll move into camera/grid recovery and start connecting the solver to actual Minecraft screenshots.

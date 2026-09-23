@@ -15,8 +15,10 @@ add_library(mcr
     src/camera/pinhole.cpp
     src/model/a0.cpp
     src/model/a1.cpp
+    src/model/a2.cpp
     src/render/a0.cpp
     src/render/a1.cpp
+    src/render/a2.cpp
     src/inference/constraint.cpp
     src/inference/automaton.cpp
     src/inference/a1_constraint.cpp
@@ -25,6 +27,8 @@ add_library(mcr
     src/inference/a1_feasibility.cpp
     src/inference/a1_support_query.cpp
     src/inference/a1_supports.cpp
+    src/inference/a2_problem.cpp
+    src/inference/a2_solver.cpp
     src/inference/gac.cpp
     src/inference/a0_solver.cpp)
 target_include_directories(mcr PUBLIC include)
@@ -68,6 +72,8 @@ if(BUILD_TESTING)
     mcr_test(render_tests tests/render_tests.cpp)
     mcr_test(a1_render_tests tests/a1_render_tests.cpp)
     mcr_test(a1_geometry_tests tests/a1_geometry_tests.cpp)
+    mcr_test(a2_geometry_tests tests/a2_geometry_tests.cpp)
+    mcr_test(a2_inference_tests tests/a2_inference_tests.cpp)
     mcr_test(constraint_tests tests/constraint_tests.cpp)
     mcr_test(a1_constraint_tests tests/a1_constraint_tests.cpp)
     mcr_test(a1_propagation_tests tests/a1_propagation_tests.cpp)
