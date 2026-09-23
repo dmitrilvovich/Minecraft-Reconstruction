@@ -2,8 +2,7 @@
 
 This checkpoint accepts the complete A1 correctness pipeline at the declared
 2 x 2 x 2, 8 x 8 pixel camera setup. It is **not the final Milestone 2 acceptance
-record**. Performance/identifiability benchmarks and the milestone tag remain
-pending. The base is `61ac426b26b905feb507819b8673ae4f1dcae96a`.
+record**. Performance/identifiability benchmarks remained pending at this checkpoint. The base is `61ac426b26b905feb507819b8673ae4f1dcae96a`.
 
 No correctness bug was found. Production headers/sources, the frozen Python
 reference, and the existing 26 tests are unchanged. The added test-only camera
@@ -176,4 +175,4 @@ to the tested source/configuration and frozen-reference hashes. CI now runs and
 uploads the full-camera A1 acceptance report and its metadata as well.
 
 The remaining checkpoint is the final C++ performance/identifiability benchmark
-study, evidence review and final Milestone 2 record/tag. None was started here.
+study, evidence review and final Milestone 2 record. None was started here.

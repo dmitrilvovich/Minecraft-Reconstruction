@@ -3,7 +3,7 @@
 One complete, integrity-checked dataset is recorded in
 [`results/milestone-2d1-benchmarks/`](../results/milestone-2d1-benchmarks/).
 This is a benchmark checkpoint, **not the final Milestone 2 acceptance record**.
-The milestone record and `cpp-milestone-2` tag remain pending.
+The final [Milestone 2 acceptance record](milestone-2.md) is now published; no tag is required.
 
 The base is `f4bb6210c376dcd258321fea825d338e566fb691`, including the README-only
 commit after accepted correctness gate `7b93b8e`. No production solver, geometry,
@@ -221,5 +221,5 @@ must equal the saved summary. `checkpoint.json` ties source/configuration hashes
 and evidence files to this checkpoint; `integrity-resume.json` records the
 successful post-interruption archive check.
 
-Only the final evidence review, final Milestone 2 record and milestone tag remain
-for closeout. No A2 implementation or scaling study is part of this checkpoint.
+At this checkpoint, only the final evidence review and final Milestone 2 record
+remained for closeout. No A2 implementation or scaling study is part of this checkpoint.

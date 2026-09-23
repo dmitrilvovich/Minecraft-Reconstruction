@@ -131,5 +131,5 @@ oracle generation and audits and are not inference benchmark measurements.
 Add an exact query for one requested `(cell, state)` by conditioning its domain
 and calling this complete feasibility kernel with a fresh audit context. Return
 a supporting witness or prove that literal unsupported. Full supported-domain
-projection, final A1 acceptance/benchmarks and milestone tagging remain later work.
+projection and final A1 acceptance/benchmarks remain later work.
 No A2 code is included.

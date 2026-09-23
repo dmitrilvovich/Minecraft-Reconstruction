@@ -9,8 +9,8 @@ This record closes the milestone from published benchmark checkpoint
 `d2eda1664ba0eeb7c7739e6efea6f0ea2d26da8b`. The full correctness gate was published
 as `7b93b8e7b32ee22ef40583903da185b87dcd658b`. This closeout changes documentation
 and reconciliation evidence only. Production code, tests, benchmark code, raw
-measurements and the frozen reference remain unchanged. The release marker is
-`cpp-milestone-2`, targeting the final documentation commit containing this record.
+measurements and the frozen reference remain unchanged. Milestone 2 is complete without a Git tag. The optional
+`cpp-milestone-2` tag was not published and is not required for completion.
 
 ## Mathematical scope
 

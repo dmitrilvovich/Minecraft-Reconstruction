@@ -2,7 +2,7 @@
 
 Scope: the geometry, traversal and rendering needed for air, stone full cube,
 oak full cube and oak bottom slab on the existing 2 x 2 x 2 lattice. A1
-inference and the full Milestone 2 acceptance/tag are separate checkpoints.
+inference and the full Milestone 2 acceptance are separate checkpoints.
 
 ## Canonical source and recovered work
 
@@ -108,5 +108,5 @@ compact first-hit constraints, GAC, complete nested-envelope feasibility and
 exact supported-state queries against every exhaustive family, including
 contradictions and restricted domains. Audit every deletion under its proper
 query assumptions and require zero search branches. Only after that should A1
-benchmarks, the full Milestone 2 acceptance record and tag be completed. A2 is
+benchmarks and the full Milestone 2 acceptance record be completed. A2 is
 outside both this checkpoint and that A1 work.

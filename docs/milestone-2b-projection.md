@@ -134,6 +134,5 @@ The next checkpoint should consolidate final A1 acceptance: exercise the complet
 predefined camera/view and adversarial suites on all 65,536 worlds; verify exact
 supports, restricted-domain contradictions, witness coverage and pruning soundness;
 run the full sanitizer regression gate; collect the planned time, memory and
-view-identifiability benchmarks; and only then write final acceptance and create
-`cpp-milestone-2`. This checkpoint performs none of that final benchmarking or
-tagging, and adds no A2, camera recovery or wider block vocabulary.
+view-identifiability benchmarks; and only then write final acceptance. This checkpoint performs none of that final benchmarking or
+acceptance, and adds no A2, camera recovery or wider block vocabulary.

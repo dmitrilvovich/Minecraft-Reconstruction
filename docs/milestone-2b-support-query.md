@@ -105,7 +105,7 @@ Validation times are not solver benchmarks. This is checkpoint acceptance only.
 
 ## Remaining scope
 
-No whole-scene support masks, batch query API, final A1 benchmarks/acceptance/tag,
+No whole-scene support masks, batch query API, final A1 benchmarks/acceptance,
 or A2 implementation is included. The next small checkpoint is exact whole-scene
 supported-domain projection built on this operation, audited against exhaustive
 families; keep final acceptance and benchmarking separate.

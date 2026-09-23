@@ -64,7 +64,7 @@ witnesses are checked independently; unaudited runs must return the same domains
 5. Record zero branches/search nodes, all pruning audits, complete Release and
    address/undefined-behavior checks, and C++ benchmark CSV/JSON. Timed solver
    calls exclude oracle, audit and problem construction; state memory scope.
-6. Record acceptance, tag cpp-milestone-2 only after passing, and stop before A2.
+6. Record acceptance after passing, and stop before A2. A milestone tag is optional and has been skipped.
 
 Python source and its existing manifests/results remain frozen. New Python code
 is limited to fixture export adapters calling existing oracle functions.
