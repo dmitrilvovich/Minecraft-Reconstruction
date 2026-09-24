@@ -4,6 +4,18 @@
 
 namespace mcr {
 using A2InferenceObserver=BasicInferenceObserver<A2Domain>;
+struct A2SearchDiagnostics {
+    std::uint64_t decompositions=0,component_solves=0;
+    std::uint64_t fixed_hit_checks=0,fixed_hit_rejections=0;
+};
+struct A2SearchOptions {
+    // fixed_hit also restricts branching to cells with differing relevant hit
+    // patterns among occupied states. Their residual fixed-hit siblings need
+    // no separate shape decision. With both flags false, use the original policy.
+    bool decompose=true,fixed_hit=true;
+    // Optional cumulative A2-only instrumentation; never supplies solver decisions.
+    A2SearchDiagnostics* diagnostics=nullptr;
+};
 struct A2PropagationResult {
     // Local consistency only. Even all nonempty domains can be globally infeasible.
     bool consistent;
@@ -25,7 +37,9 @@ struct A2SupportResult {
 // Each search node begins a fresh GAC audit context with its branch assumptions;
 // branching is conditioning, not an unconditional deletion. Observer events
 // cover propagation and final projection, not a separate search proof trace.
-[[nodiscard]] A2FeasibilityResult exact_feasible(const A2Problem&,A2Domains,InferenceStats&,A2InferenceObserver* = nullptr);
-[[nodiscard]] A2SupportQueryResult query_support(const A2Problem&,A2Domains,CellId,A2State,InferenceStats&,A2InferenceObserver* = nullptr);
-[[nodiscard]] A2SupportResult exact_supports(const A2Problem&,A2Domains,InferenceStats&,A2InferenceObserver* = nullptr);
+// Component events retain original cell/factor IDs. Disabling both optimizations
+// retains the initial A2 branching policy for controlled correctness comparisons.
+[[nodiscard]] A2FeasibilityResult exact_feasible(const A2Problem&,A2Domains,InferenceStats&,A2InferenceObserver* = nullptr,A2SearchOptions = {});
+[[nodiscard]] A2SupportQueryResult query_support(const A2Problem&,A2Domains,CellId,A2State,InferenceStats&,A2InferenceObserver* = nullptr,A2SearchOptions = {});
+[[nodiscard]] A2SupportResult exact_supports(const A2Problem&,A2Domains,InferenceStats&,A2InferenceObserver* = nullptr,A2SearchOptions = {});
 } // namespace mcr

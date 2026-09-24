@@ -15,7 +15,7 @@ A2Domains supports(const std::vector<A2World>& family,std::size_t n) {
 }
 class Audit final : public A2InferenceObserver {
 public:
-    explicit Audit(const std::vector<A2World>& worlds) : family(worlds) {}
+    explicit Audit(const std::vector<A2World>& worlds,const A2Problem* p=nullptr) : family(worlds),problem(p) {}
     void begin(QueryKind,std::span<const A2Domain> assumptions) override {
         current.assign(assumptions.begin(),assumptions.end());
         std::vector<A2World> matching;
@@ -26,13 +26,23 @@ public:
         CHECK(current.at(event.cell)==event.before);
         CHECK((event.after & event.before)==event.after);
         CHECK((event.after & expected.at(event.cell))==expected[event.cell]);
+        if(problem && event.factor) {
+            CHECK(*event.factor<problem->constraints().size());
+            const auto cells=problem->constraints()[*event.factor].cells();
+            CHECK(std::find(cells.begin(),cells.end(),event.cell)!=cells.end());
+        }
         current[event.cell]=event.after; ++prunes;
     }
-    void contradiction(ContradictionReason,std::optional<std::size_t>) override {
+    void contradiction(ContradictionReason,std::optional<std::size_t> factor) override {
         CHECK(!nonempty); ++contradictions;
+        if(problem && factor) {
+            CHECK(*factor<problem->constraints().size());
+            CHECK(!factor_supports(problem->constraints()[*factor],current).feasible);
+        }
     }
 private:
     const std::vector<A2World>& family;
+    const A2Problem* problem;
     A2Domains current,expected;
     bool nonempty=false;
 };
@@ -41,17 +51,17 @@ void check_witness(const A2Problem& problem,const A2Domains& domains,const std::
     CHECK(std::find(family.begin(),family.end(),w)!=family.end());
     ++witnesses;
 }
-void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<A2World>& family) {
+void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<A2World>& family,A2SearchOptions options={}) {
     std::vector<A2World> conditioned;
     for(const auto& w:family) if(contains(domains,w)) conditioned.push_back(w);
     const auto expected=supports(conditioned,domains.size());
-    Audit audit(family);
+    Audit audit(family,&problem);
     InferenceStats stats;
-    const auto decision=exact_feasible(problem,domains,stats,&audit);
+    const auto decision=exact_feasible(problem,domains,stats,&audit,options);
     CHECK(decision.feasible==!conditioned.empty());
     CHECK(decision.feasible==decision.witness.has_value());
     if(decision.witness) check_witness(problem,domains,conditioned,*decision.witness);
-    const auto result=exact_supports(problem,domains,stats,&audit);
+    const auto result=exact_supports(problem,domains,stats,&audit,options);
     CHECK(result.feasible==decision.feasible && result.supported==expected);
     if(result.feasible) {
         CHECK(!result.witnesses.empty());
@@ -59,7 +69,7 @@ void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<
         CHECK(supports(result.witnesses,domains.size())==result.supported);
     } else CHECK(result.witnesses.empty());
     for(CellId v=0;v<domains.size();++v) for(auto s:a2_states) {
-        const auto query=query_support(problem,domains,v,s,stats,&audit);
+        const auto query=query_support(problem,domains,v,s,stats,&audit,options);
         CHECK(query.supported==expected[v].contains(s));
         CHECK(query.supported==query.witness.has_value());
         if(query.witness) {
@@ -69,7 +79,7 @@ void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<
         ++queries;
     }
     // Keep A1-specific counters honest; this solver never invokes its envelope.
-    CHECK(stats.envelope_calls==0 && stats.envelope_advances==0 && stats.fixed_calls==0);
+    CHECK(stats.envelope_calls==0 && stats.envelope_advances==0);
     ++cases;
 }
 std::vector<A2World> physical_family(const test::A2Fixture& fixture) {
@@ -182,7 +192,7 @@ void edge_cases() {
     const A2Problem disconnected(7,paths);
     stats={};
     CHECK(exact_feasible(disconnected,A2Domains(7),stats).feasible);
-    CHECK(stats.search_nodes==5 && stats.branches==4);
+    CHECK(stats.search_nodes==7 && stats.branches==4); // includes both component entry nodes
     verify(disconnected,A2Domains(7),abstract_family(disconnected));
     check_throws<std::invalid_argument>([]{ (void)A2Constraint({{0,true,false},{0,false,true}},PixelLabel::oak); });
     check_throws<std::invalid_argument>([]{ (void)A2Constraint({},static_cast<PixelLabel>(3)); });
@@ -215,6 +225,136 @@ void mixed_factors() {
         verify(problem,domains,abstract_family(problem));
     }
 }
+struct Measurement { InferenceStats work; A2SearchDiagnostics diagnostics; };
+std::array<Measurement,4> compare_modes(const std::string& name,const A2Problem& problem,const A2Domains& domains) {
+    const auto family=abstract_family(problem);
+    std::array<Measurement,4> measurements{};
+    for(unsigned mode=0;mode<4;++mode) {
+        auto& m=measurements[mode];
+        const A2SearchOptions options{(mode & 1U)!=0,(mode & 2U)!=0,&m.diagnostics};
+        const auto decision=exact_feasible(problem,domains,m.work,nullptr,options);
+        const bool expected=std::any_of(family.begin(),family.end(),[&](const auto& w){return contains(domains,w);});
+        CHECK(decision.feasible==expected);
+        if(decision.witness) check_witness(problem,domains,family,*decision.witness);
+        // Full masks, every conditioned query, witness coverage and pruning must
+        // agree with independent enumeration in every optimization configuration.
+        verify(problem,domains,family,{options.decompose,options.fixed_hit});
+    }
+    CHECK(measurements[0].diagnostics.decompositions==0 && measurements[0].work.fixed_calls==0);
+    CHECK(measurements[1].work.fixed_calls==0 && measurements[2].diagnostics.decompositions==0);
+    std::cout << name << " branches [baseline, decomposition, fixed-hit, both] = [";
+    for(unsigned i=0;i<4;++i) std::cout << (i ? ", " : "") << measurements[i].work.branches;
+    std::cout << "]; optimized nodes=" << measurements[3].work.search_nodes
+              << ", splits=" << measurements[3].diagnostics.decompositions
+              << ", component solves=" << measurements[3].diagnostics.component_solves
+              << ", fixed calls=" << measurements[3].work.fixed_calls << '\n';
+    return measurements;
+}
+void opposite_pair(std::vector<A2Constraint>& factors,CellId a,CellId b,A2Palette palette) {
+    factors.emplace_back(std::vector<A2RayCell>{{a,true,false},{b,true,false}},PixelLabel::oak,palette);
+    factors.emplace_back(std::vector<A2RayCell>{{a,false,true},{b,false,true}},material(A2State::top_slab,palette),palette);
+}
+void graph(std::vector<A2Constraint>& factors,CellId base,bool triangle,A2Palette palette) {
+    opposite_pair(factors,base,base+1,palette); opposite_pair(factors,base,base+2,palette);
+    if(triangle) opposite_pair(factors,base+1,base+2,palette);
+}
+void optimizations() {
+    for(auto palette:{A2Palette::split_material,A2Palette::same_material}) {
+        const std::string label=palette==A2Palette::split_material ? "split: " : "same: ";
+        const A2Problem fixed(2,{{{{0,true,true},{1,true,true}},PixelLabel::oak,palette}},palette);
+        const auto fixed_run=compare_modes(label+"fixed-hit ray",fixed,A2Domains(2));
+        CHECK(fixed_run[0].work.branches==1 && fixed_run[3].work.branches==0);
+        CHECK(fixed_run[3].work.fixed_calls==1 && fixed_run[3].diagnostics.fixed_hit_rejections==0);
+
+        std::vector<A2Constraint> factors;
+        graph(factors,0,false,palette); graph(factors,3,false,palette);
+        const auto two_paths=compare_modes(label+"two paths",A2Problem(6,factors,palette),A2Domains(6));
+        CHECK(two_paths[3].diagnostics.decompositions==1 && two_paths[3].diagnostics.component_solves==2);
+        CHECK(two_paths[0].work.branches==4 && two_paths[3].work.branches==4);
+        // Interleave factors so a component observer must translate noncontiguous IDs.
+        std::rotate(factors.begin()+1,factors.begin()+4,factors.end());
+        opposite_pair(factors,4,5,palette);
+        const auto impossible=compare_modes(label+"path plus triangle",A2Problem(6,factors,palette),A2Domains(6));
+        CHECK(impossible[0].work.branches==9 && impossible[3].work.branches==5);
+        CHECK(impossible[3].diagnostics.decompositions==1);
+        CHECK(impossible[3].diagnostics.component_solves==2);
+
+        factors.clear(); graph(factors,0,true,palette); graph(factors,3,false,palette);
+        const auto early=compare_modes(label+"triangle before path",A2Problem(6,factors,palette),A2Domains(6));
+        CHECK(early[3].diagnostics.component_solves==1); // never solve a sibling after failure
+
+        factors={A2Constraint({{0,true,true},{1,true,true}},PixelLabel::oak,palette)};
+        graph(factors,2,false,palette);
+        const auto mixed=compare_modes(label+"fixed region plus path",A2Problem(5,factors,palette),A2Domains(5));
+        CHECK(mixed[3].work.fixed_calls==1 && mixed[3].diagnostics.component_solves==2);
+        CHECK(mixed[3].work.branches<mixed[0].work.branches);
+
+        // A raw shared variable whose allowed states both miss cannot couple regions.
+        factors.clear(); graph(factors,1,false,palette); graph(factors,4,false,palette);
+        std::vector<A2Constraint> with_context;
+        for(const auto& f:factors) {
+            std::vector<A2RayCell> steps{{0,false,true}};
+            steps.insert(steps.end(),f.steps().begin(),f.steps().end());
+            with_context.emplace_back(steps,f.target(),palette);
+        }
+        A2Domains domains(7); domains[0]=A2Domain(3);
+        const auto shared=compare_modes(label+"shared invariant context",A2Problem(7,with_context,palette),domains);
+        CHECK(shared[3].diagnostics.decompositions==1 && shared[3].diagnostics.component_solves==2);
+
+        // A ray spanning both paths is entailed by a required correct-color end.
+        factors.clear(); graph(factors,0,false,palette); graph(factors,3,false,palette);
+        factors.emplace_back(std::vector<A2RayCell>{{0,true,false},{3,true,false},{6,true,true}},PixelLabel::oak,palette);
+        domains=A2Domains(7); domains[6]=A2Domain(palette==A2Palette::same_material ? 6 : 2);
+        const auto entailed=compare_modes(label+"entailed bridge",A2Problem(7,factors,palette),domains);
+        CHECK(entailed[3].diagnostics.decompositions==1 && entailed[3].diagnostics.component_solves==2);
+
+        // Without that guarantee, the same two paths are truly coupled. An oak
+        // label on each slab does not make lower/upper hit geometry equivalent.
+        factors.pop_back();
+        factors.emplace_back(std::vector<A2RayCell>{{0,true,false},{3,true,false}},PixelLabel::oak,palette);
+        const auto coupled=compare_modes(label+"non-entailed bridge",A2Problem(6,factors,palette),A2Domains(6));
+        CHECK(coupled[3].diagnostics.decompositions==0 && coupled[3].diagnostics.fixed_hit_rejections>0);
+        CHECK(coupled[3].work.branches>0);
+
+        // Conditioning a guard must recompute the graph; three edges become
+        // independent only when the guard is guaranteed to cover their bridge.
+        factors.clear();
+        for(CellId a:{0U,2U,4U}) opposite_pair(factors,a,a+1,palette);
+        factors.emplace_back(std::vector<A2RayCell>{{6,true,true},{0,true,false},{2,true,false},{4,true,false}},PixelLabel::oak,palette);
+        const A2Problem guarded(7,factors,palette);
+        domains=A2Domains(7); domains[6]=A2Domain(3);
+        InferenceStats stats; A2SearchDiagnostics diagnostics;
+        const auto query=query_support(guarded,domains,6,A2State::bottom_slab,stats,nullptr,{true,true,&diagnostics});
+        CHECK(query.supported && query.witness->at(6)==A2State::bottom_slab && guarded.accepts(*query.witness));
+        CHECK(diagnostics.decompositions==1 && diagnostics.component_solves==3);
+        compare_modes(label+"conditional guard",guarded,domains);
+
+        // A six-cell region is initially coupled by a lower-ray bridge, while
+        // another edge is independent. Inside that region, one branch entails
+        // the bridge and exposes two new components. Exercise observer mappings
+        // through two component levels, with interleaved original factor IDs.
+        factors.clear();
+        for(CellId a:{0U,2U,4U,6U}) opposite_pair(factors,a,a+1,palette);
+        factors.emplace_back(std::vector<A2RayCell>{{0,true,false},{2,true,false},{4,true,false}},PixelLabel::oak,palette);
+        std::rotate(factors.begin()+1,factors.begin()+5,factors.end());
+        const auto nested=compare_modes(label+"nested component split",A2Problem(8,factors,palette),A2Domains(8));
+        CHECK(nested[3].diagnostics.decompositions==2 && nested[3].diagnostics.component_solves==4);
+    }
+    // A guaranteed opaque middle cell hides a raw cross-component reference.
+    // Making it optional must restore that dependency. The wrong-color state
+    // at cell 1 keeps this factor non-entailed despite its guaranteed oak end.
+    const auto palette=A2Palette::split_material;
+    std::vector<A2Constraint> factors{
+        A2Constraint({{0,true,true},{1,true,true},{2,true,true},{3,true,false}},PixelLabel::oak,palette)};
+    graph(factors,3,false,palette);
+    const A2Problem hidden(6,factors,palette);
+    A2Domains domains(6); domains[0]=A2Domain(3); domains[2]=A2Domain(2);
+    const auto opaque=compare_modes("split: guaranteed hit hides bridge",hidden,domains);
+    CHECK(opaque[3].diagnostics.decompositions==1);
+    domains[2]=A2Domain(3);
+    const auto optional=compare_modes("split: optional hit preserves bridge",hidden,domains);
+    CHECK(optional[3].diagnostics.decompositions==0);
+}
 void a1_regression() {
     // The accepted nested kernel remains independently callable with its own
     // four-state domains after linking the A2 overloads into the same library.
@@ -232,7 +372,7 @@ void a1_regression() {
 }
 }
 int main() { return run_tests([] {
-    fixtures(); edge_cases(); mixed_factors(); a1_regression();
+    fixtures(); edge_cases(); mixed_factors(); optimizations(); a1_regression();
     std::cout << cases << " exact projection/feasibility cases; " << queries << " direct support queries; "
               << witnesses << " verified witnesses; " << prunes << " audited reductions; "
               << contradictions << " audited propagation contradictions\n";
