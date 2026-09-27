@@ -1,0 +1,9 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+    Start 32: python_a2_acceptance_export
+1/2 Test #32: python_a2_acceptance_export ......   Passed    0.45 sec
+    Start 33: a2_acceptance
+2/2 Test #33: a2_acceptance ....................   Passed   77.73 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =  78.19 sec

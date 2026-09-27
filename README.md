@@ -26,7 +26,7 @@ The implementation progressed through [geometry](docs/milestone-2a.md), [single-
 
 With six axis views at 8 x 8 pixels, 87.06% of cells are identifiable when averaging over all A1 truth worlds. The earlier 91.04% figure averages over cube-only truth worlds while still allowing slabs during inference. [The final record](docs/milestone-2.md#reconciliation-9104-versus-8706) reconciles these populations and explains the limits of the tiny experiment.
 
-The [A2 development foundation](docs/a2-foundation.md) adds incomparable bottom/top slab geometry, both the original oak/stone palette and a same-material oak control, and exact branch-and-propagate inference. The solver now separates independent residual components and checks actual ray hit patterns before using a fixed-hit shortcut. Physical path and triangle fixtures retain the gap between local consistency and global feasibility in both palettes. This is focused development progress; full A2 acceptance and scaling are still ahead.
+The [A2 development foundation](docs/a2-foundation.md) adds incomparable bottom/top slab geometry, both the original oak/stone palette and a same-material oak control, and exact branch-and-propagate inference. The solver now separates independent residual components and checks actual ray hit patterns before using a fixed-hit shortcut. Physical path and triangle fixtures retain the gap between local consistency and global feasibility in both palettes. The [A2 correctness gate](docs/a2-correctness.md) is complete for both palettes: every tiny-world camera family, all four optimization configurations, exact supports and witnesses, and Release/ASan/UBSan coverage. Scaling has not started.
 
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
@@ -48,14 +48,14 @@ cmake --build --preset release --parallel 2
 ctest --preset release --parallel 2
 ```
 
-The full A0 and A1 correctness validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
+The full A0, A1 and A2 correctness validation also uses Python 3.10+ and NumPy because it compares the C++ implementation against the frozen Python oracle.
 
 For address/undefined-behavior sanitizer checks with GCC or Clang:
 
 ```sh
-cmake --preset sanitize
-cmake --build --preset sanitize --parallel 2
-ctest --preset sanitize --parallel 2
+cmake --preset a2-sanitize
+cmake --build --preset a2-sanitize --parallel 2
+ctest --preset a2-sanitize --parallel 2
 ```
 
 ## Repository layout
@@ -67,4 +67,4 @@ ctest --preset sanitize --parallel 2
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The next A2 checkpoint is the full tiny-world camera/reference/sanitizer correctness gate for both palettes and all optimization configurations. Scaling comes after that gate. Later work will move into camera/grid recovery and connect the solver to actual Minecraft screenshots.
+The next A2 chunk is a paired scaling harness, starting with a controlled sweep of cells that allow both slab orientations. The completed correctness gate establishes the tiny model; it does not establish larger-volume performance. Later work will move into camera/grid recovery and connect the solver to actual Minecraft screenshots.

@@ -1,0 +1,103 @@
+{
+  "schema": "MCRA2C1",
+  "input_sha256": {
+    "export_a2_acceptance.py": "c219fd51d1fdcf62a001ad5922b57b7870768dbdd13fad2ad37fab1f611519b3",
+    "export_a0.py": "1c24e42f05b30510ce8150f4701d536d55c3e061431d839c2a3dbbc214d52c55",
+    "phase_a.py": "204af7f3adc9c9e09e1475cfdacb49621ce1d1e1ea3d6e92031c007c3d01126f"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "frozen_empty_domain_regression": {
+    "domains": [
+      2,
+      0
+    ],
+    "factor_cells": [
+      0
+    ],
+    "emissions": [
+      [
+        0,
+        2,
+        1
+      ]
+    ],
+    "target": 2,
+    "raw_python_witness": [
+      1,
+      0
+    ],
+    "exhaustive_feasible_worlds": 0,
+    "adapter_handling": "Reject any empty input domain before calling the frozen inference routines."
+  },
+  "palettes": {
+    "split": {
+      "cases": 35144,
+      "infeasible": 1748,
+      "witnesses": 80068,
+      "direct_queries": 49152,
+      "prunes": 1450849,
+      "maximum_case_nodes": 91,
+      "maximum_case_branches": 38,
+      "empty_domain_inputs": 366,
+      "empty_domain_query_inputs": 27702,
+      "worlds": 6561,
+      "raw_rays": 512,
+      "distinct_factors": 83,
+      "classes_by_suite": {
+        "axis_1": 256,
+        "axis_2": 2025,
+        "axis_3": 4913,
+        "axis_4": 4913,
+        "axis_5": 5453,
+        "axis_6": 5453,
+        "oblique_1": 3600,
+        "oblique_2": 6483
+      },
+      "camera_families": 33096,
+      "restricted_camera_cases": 1024,
+      "physical_domain_cases": 1024
+    },
+    "same": {
+      "cases": 27502,
+      "infeasible": 1739,
+      "witnesses": 67513,
+      "direct_queries": 49152,
+      "prunes": 1168066,
+      "maximum_case_nodes": 91,
+      "maximum_case_branches": 38,
+      "empty_domain_inputs": 366,
+      "empty_domain_query_inputs": 27702,
+      "worlds": 6561,
+      "raw_rays": 512,
+      "distinct_factors": 83,
+      "classes_by_suite": {
+        "axis_1": 256,
+        "axis_2": 1024,
+        "axis_3": 4400,
+        "axis_4": 4400,
+        "axis_5": 4400,
+        "axis_6": 4400,
+        "oblique_1": 2154,
+        "oblique_2": 4420
+      },
+      "camera_families": 25454,
+      "restricted_camera_cases": 1024,
+      "physical_domain_cases": 1024
+    }
+  },
+  "boundaries": {
+    "rays_per_palette": 4550,
+    "ray_world_palette_comparisons": 27300
+  },
+  "local_support_cases": 196608,
+  "fixtures_sha256": {
+    "split_cases.bin": "45d966080bc6de1ed2b03dab98bba0bf7f4c578d7ddcc4221001ee27617177a7",
+    "split_images.bin": "339634cf64e09fef56ff7287793c97b9dc674b2ecfce73a14ef804c84887d396",
+    "same_cases.bin": "8c49e2bc2c6ff34500ee705a138a02ba439b509e9f22316163deeebbf751fe12",
+    "same_images.bin": "8c830741de389cfb491ec8835a86bafc88f2b22c259cf9142309ef2046f22d88",
+    "boundaries.txt": "50527c8ab190bf6692f4b9d038898303e2b4b81d716a9e81000056e6134b54ac",
+    "local_supports.bin": "119650210caa9409b532d50846720f9240526a2c9d323bf14ce271bdde3116f8"
+  },
+  "export_seconds": 156.6146612419999
+}

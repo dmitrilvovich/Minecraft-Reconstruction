@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "solver_base_commit": "371da8938be8edf4d0664f2a7d38ca34271431de",
+  "production_and_frozen_reference_unchanged": true,
+  "cpp_solver_defects_found": 0,
+  "release": {
+    "suite_entries_passed": 33,
+    "resumed_without_rerun": true,
+    "a2_status": "PASS"
+  },
+  "sanitizer": {
+    "native_tests_executed": 25,
+    "native_tests_passed": 25,
+    "failed_or_incomplete": [],
+    "reused_python_setup_entries": [
+      "python_oracle_export",
+      "python_a1_oracle_export",
+      "python_a1_propagation_export",
+      "python_a1_feasibility_export",
+      "python_a1_support_query_export",
+      "python_a1_projection_export",
+      "python_a1_acceptance_export",
+      "python_a2_acceptance_export"
+    ],
+    "suite_entries_covered": 33,
+    "a2_report_identical_to_release": true,
+    "configuration": "sanitizer-configuration.json",
+    "unoptimized_debug_a2": "superseded; partial log retained; not counted as a full pass"
+  },
+  "coverage_per_completed_a2_build": {
+    "palettes": 2,
+    "worlds_per_palette": 6561,
+    "raw_rays": 512,
+    "suites": 8,
+    "camera_families": {
+      "split": 33096,
+      "same": 25454
+    },
+    "world_suite_palette_memberships": 104976,
+    "render_comparisons": 6718464,
+    "boundary_comparisons": 27300,
+    "local_support_cases": 196608,
+    "restricted_camera_cases": 2048,
+    "physical_domain_cases": 2048,
+    "configurations": 4,
+    "api_and_audit_totals": {
+      "cases": 250584,
+      "infeasible": 13948,
+      "direct_queries": 6014016,
+      "supported_queries": 2010528,
+      "witnesses": 2571804,
+      "audited_prunes": 55507506,
+      "audited_deletions": 62214610,
+      "audited_contradictions": 4119832,
+      "audited_factor_ids": 59380962
+    }
+  },
+  "focused_matrix": {
+    "cases": 9620,
+    "direct_queries": 214152,
+    "witnesses": 15416,
+    "audited_reductions": 75949,
+    "audited_contradictions": 222544,
+    "overlaps_main_physical_cases": true
+  },
+  "agreement": "All four modes match exhaustive feasibility and supported masks; every returned witness is valid, but witness choices need not be identical.",
+  "frozen_python_exception": "An isolated empty domain is not rejected by raw frozen solve. Minimal reproducer and explicit adapter guard are recorded in python-a2-metadata.json; no frozen source changed.",
+  "artifact_recoveries": [
+    {
+      "artifact": "release/oracle_a1/local_supports.bin",
+      "observed_bytes": 253952,
+      "expected_bytes": 393228,
+      "recovery": "Exact truncated prefix restored to metadata hash; affected comparison passed."
+    },
+    {
+      "artifact": "oracle_a2/local_supports.bin",
+      "observed_bytes": 614400,
+      "expected_bytes": 786444,
+      "recovery": "Regenerated in memory-backed scratch and matched recorded hash; Release gate passed."
+    },
+    {
+      "artifact": "sanitize/oracle_a1/images.bin",
+      "observed_bytes": 33095680,
+      "expected_bytes": 33554432,
+      "recovery": "Exact truncated prefix restored from validated Release fixture; renderer comparison passed."
+    },
+    {
+      "artifacts": [
+        "sanitize/a1_feasibility_tests",
+        "sanitize/a1_geometry_tests"
+      ],
+      "recovery": "Persisted ELF executables lacked execute bits (0644); relinked unchanged sources and reran successfully."
+    },
+    {
+      "artifact": "a2-sanitize/CMakeFiles/render_tests.dir/tests/render_tests.cpp.o",
+      "observed_bytes": 0,
+      "recovery": "Rebuilt only empty object after undefined-main link failure; render tests and Python agreement passed."
+    }
+  ],
+  "gate_source_sha256": {
+    "CMakeLists.txt": "6f530a4579f8873ab44a97b3fa88f09bb146a611a9068360b27f54b630ddefca",
+    "CMakePresets.json": "a763ebe0f7480ccf7358577038d8f587534255629034dfdb87fb3a9eb609d529",
+    ".github/workflows/ci.yml": "595ff99e975dd6df697330c7c8adb4d2dbadf3983efe93b65c03a9eb8bcc5e2b",
+    "tests/a2_acceptance.cpp": "feaaa98769d238f72673f91552d0ba15cafe17dbfa7336130d9e9fffd2acbdfd",
+    "tests/a2_inference_tests.cpp": "414d74bd8a9cd1ed01e55731abb65434a965a1aa90199115b513a944c0c61303",
+    "tests/oracle/export_a2_acceptance.py": "c219fd51d1fdcf62a001ad5922b57b7870768dbdd13fad2ad37fab1f611519b3",
+    "reference/SHA256.json": "735026f3854c67e87b08869c02a822958db6bca6a04f9d8254bf56318b182346"
+  },
+  "scaling_started": false,
+  "evidence_sha256": {
+    "python-a2-export.log": "af085f62bb7f1dd1a754683e28c8a8c8ba7b4dd060834066714ad287240770ee",
+    "python-a2-metadata.json": "d650bc26b8fb049feb59f632e547567b3e17e3e76ca011cafd5ebde81086de49",
+    "release-a0.json": "4fbd81fb7a76ef359901195dbe0408a750fa697cf8d8a765585e932f849c8f06",
+    "release-a1-fixture-recovery.log": "2d17ece622d83131c81cda69bae33151c6362e479c8156fc4c53de25fee6d5ed",
+    "release-a1.json": "29aabb9286a71b622decdf1b5d6b26303ca7af6919c463755e75850a76727dd8",
+    "release-a2-truncated-fixture.log": "1e5e991cc9f0abc0f6c9ec3a384272455d16d576496962686261ea3d2a5ebfdf",
+    "release-a2.json": "f3de3f9307f2c1cef6394dcd62c91294b4d79be934b9d64edce66de5617eea9a",
+    "release-a2.log": "9cdd152826d6462cd1df4c92b8edd87a2409c6ec8cce20282c690dd121ca3a11",
+    "release-adversarial-matrix.log": "f5c756af5b4644555ec9d348b5e4e2083fcf7d882f5176bd46272ddf7a5328bf",
+    "release-regressions.log": "9873a5256298cf895daa18319548592911130529d36a4d70d37378c6c7194c32",
+    "reused-fixtures.json": "893ba7e21a36cc0b792d9a7c445bd79efa953732c399996b8ba838a5158687ea",
+    "sanitize-a0.json": "670e175fdad9f774410730427d4ed5dcba0d8e918c9871af89c3a1da829fbcb1",
+    "sanitize-a1.json": "29aabb9286a71b622decdf1b5d6b26303ca7af6919c463755e75850a76727dd8",
+    "sanitize-debug-a2-partial.log": "8f66032e71cf89c79c6b308891913477d6989caeda3f679d157538a2e0193502",
+    "sanitize-linked-libraries.log": "dcafdd11ebd3d2a94bef2448a6b42901dbbd7541c87d990ac2baa2e9e643bff4",
+    "sanitize-o1-a0.json": "df1f20ae8075a8bba732a5077293b2eacfcdf40536245cf64e1fd05fc154c952",
+    "sanitize-o1-a1.json": "29aabb9286a71b622decdf1b5d6b26303ca7af6919c463755e75850a76727dd8",
+    "sanitize-o1-a2.json": "f3de3f9307f2c1cef6394dcd62c91294b4d79be934b9d64edce66de5617eea9a",
+    "sanitize-o1-build-first.log": "a1f3ba9ae6a1a401e82cc0093de974b2164e7d31ef69205cb91448624bace53e",
+    "sanitize-o1-build-recovery.log": "87fe5986d399ef1760775a3fdc6babfced452d36fc1147ffc12a288c07c4aa7d",
+    "sanitize-o1-junit.xml": "4644e3e9fe366657fcc39350866ec31828277fe6b0169afb0511c2cf7432d944",
+    "sanitize-o1-suite.log": "2014a5fbe2d691fa4198027ce30ba8ad15b9b8854e2e42ef1645739d09ccec20",
+    "sanitize-o1-tests.log": "b1d4345a4c68594aef5b5c54b224aa53ece101f98daea7ababff9cd213b4401b",
+    "sanitize-object-recovery.json": "87a3921a9b5a2b8fef840676bf3a388e6599c8b22b6e20ca45a740ebfee26a10",
+    "sanitize-recovery-a1_feasibility_tests.log": "844c531884d93c6c4401bbea3fd5faec16fb26df88bcdf33c26e0f0a198ae2c9",
+    "sanitize-recovery-a1_geometry_tests.log": "1d4d84e1580880c5796c0b61be0c176bb42f54bbdd2c3ca506ed1c633b77b475",
+    "sanitize-recovery-a2_inference_tests.log": "f5c756af5b4644555ec9d348b5e4e2083fcf7d882f5176bd46272ddf7a5328bf",
+    "sanitize-recovery-python_a1_render_agreement.log": "421e09b834e0ca438d1d8b26aa90ff9f46b248cafc7d15b6ebf95b05349759eb",
+    "sanitize-recovery-python_a2_acceptance_export.log": "64b0950f693caceabfac78fce03c5c038085ef5f454a9c25a078a3125636b0a5",
+    "sanitize-recovery.json": "b8d25de96279dc498e13174b7ec1dde064e602216c149b61232c779872c0869a",
+    "sanitize-regressions.log": "093cdba8cf7cc73e1b7d23f7c7ee81aff00ee8b8f87fe012857acf79ebb6901e",
+    "sanitizer-configuration.json": "ca4e5a5343440a66923c4b50453e90e275deb6cd3d49776c835a79ba81aa6d8a"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "object": "build/a2-sanitize/CMakeFiles/render_tests.dir/tests/render_tests.cpp.o",
+  "bytes_before": 0,
+  "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "failure": "Linker found no main symbol in generated render_tests object. Rebuild only this object from unchanged source."
+}

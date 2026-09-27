@@ -1,5 +1,9 @@
 # A2 incomparable geometry: development foundation
 
+This records the two development checkpoints through `371da89`. The subsequent
+[full A2 correctness gate](a2-correctness.md) is complete. The focused counts and
+"next checkpoint" section below describe the historical development boundary.
+
 This A2 development line establishes geometry, local propagation, complete finite
 search, and checked reductions to independent or fixed-hit regions. It is not
 full A2 certification or a scaling experiment. Accepted A0/A1 production code

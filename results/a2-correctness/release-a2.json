@@ -1,0 +1,3258 @@
+{
+  "status": "PASS",
+  "schema": "MCRA2G1",
+  "worlds_per_palette": 6561,
+  "raw_rays": 512,
+  "suites": 8,
+  "render_comparisons": 6718464,
+  "boundary_comparisons": 27300,
+  "local_support_cases": 196608,
+  "split": {
+    "classes_by_suite": {
+      "axis_1": 256,
+      "axis_2": 2025,
+      "axis_3": 4913,
+      "axis_4": 4913,
+      "axis_5": 5453,
+      "axis_6": 5453,
+      "oblique_1": 3600,
+      "oblique_2": 6483
+    },
+    "camera": {
+      "search": {
+        "cases": 33096,
+        "infeasible": 0,
+        "direct_queries": 794304,
+        "supported_queries": 276972,
+        "witnesses": 351953,
+        "supported_literals": 276972,
+        "gac_unsupported_survivors": 1360,
+        "audit_contexts": 1003015,
+        "audited_prunes": 7680980,
+        "audited_deletions": 8763874,
+        "audited_contradictions": 524220,
+        "audited_factor_ids": 8203840,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 33096,
+          "sum": 36035,
+          "median": 1,
+          "p95": 2,
+          "maximum": 9,
+          "histogram": {
+            "1": 31270,
+            "2": 1283,
+            "3": 280,
+            "4": 96,
+            "5": 74,
+            "6": 56,
+            "7": 28,
+            "8": 8,
+            "9": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 33096,
+          "sum": 2939,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 31270,
+            "1": 1283,
+            "2": 280,
+            "3": 96,
+            "4": 74,
+            "5": 56,
+            "6": 28,
+            "7": 8,
+            "8": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 33096,
+          "sum": 49463,
+          "median": 1,
+          "p95": 3,
+          "maximum": 45,
+          "histogram": {
+            "1": 26666,
+            "2": 3459,
+            "3": 1846,
+            "4": 187,
+            "5": 224,
+            "6": 239,
+            "7": 84,
+            "8": 28,
+            "9": 24,
+            "10": 60,
+            "11": 48,
+            "13": 48,
+            "14": 8,
+            "15": 18,
+            "18": 48,
+            "21": 16,
+            "23": 24,
+            "27": 32,
+            "28": 4,
+            "33": 24,
+            "39": 8,
+            "45": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 33096,
+          "sum": 6218,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 31270,
+            "1": 900,
+            "2": 475,
+            "3": 40,
+            "4": 76,
+            "5": 24,
+            "6": 84,
+            "7": 16,
+            "8": 14,
+            "9": 40,
+            "12": 48,
+            "15": 24,
+            "16": 16,
+            "18": 4,
+            "20": 32,
+            "24": 24,
+            "28": 8,
+            "32": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 794304,
+          "sum": 818229,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 779619,
+            "2": 9685,
+            "3": 2456,
+            "4": 1296,
+            "5": 856,
+            "6": 336,
+            "7": 56
+          }
+        },
+        "query_branches": {
+          "calls": 794304,
+          "sum": 23925,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 779619,
+            "1": 9685,
+            "2": 2456,
+            "3": 1296,
+            "4": 856,
+            "5": 336,
+            "6": 56
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 517332,
+          "sum": 517332,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 517332
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 33096,
+        "infeasible": 0,
+        "direct_queries": 794304,
+        "supported_queries": 276972,
+        "witnesses": 351953,
+        "supported_literals": 276972,
+        "gac_unsupported_survivors": 1360,
+        "audit_contexts": 1015819,
+        "audited_prunes": 7680980,
+        "audited_deletions": 8763874,
+        "audited_contradictions": 524220,
+        "audited_factor_ids": 8203840,
+        "fixed_calls": 0,
+        "decompositions": 5214,
+        "component_solves": 12804,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 33096,
+          "sum": 37079,
+          "median": 1,
+          "p95": 2,
+          "maximum": 13,
+          "histogram": {
+            "1": 31270,
+            "2": 1283,
+            "3": 156,
+            "5": 124,
+            "6": 64,
+            "7": 42,
+            "8": 48,
+            "9": 40,
+            "10": 36,
+            "11": 24,
+            "12": 8,
+            "13": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 33096,
+          "sum": 2939,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 31270,
+            "1": 1283,
+            "2": 280,
+            "3": 96,
+            "4": 74,
+            "5": 56,
+            "6": 28,
+            "7": 8,
+            "8": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 33096,
+          "sum": 52319,
+          "median": 1,
+          "p95": 3,
+          "maximum": 61,
+          "histogram": {
+            "1": 26666,
+            "2": 3459,
+            "3": 1846,
+            "4": 187,
+            "5": 224,
+            "6": 239,
+            "7": 24,
+            "8": 28,
+            "9": 84,
+            "10": 12,
+            "13": 48,
+            "14": 48,
+            "17": 10,
+            "18": 8,
+            "19": 24,
+            "22": 32,
+            "27": 48,
+            "32": 24,
+            "37": 20,
+            "43": 32,
+            "49": 24,
+            "55": 8,
+            "61": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 33096,
+          "sum": 6218,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 31270,
+            "1": 900,
+            "2": 475,
+            "3": 40,
+            "4": 76,
+            "5": 24,
+            "6": 84,
+            "7": 16,
+            "8": 14,
+            "9": 40,
+            "12": 48,
+            "15": 24,
+            "16": 16,
+            "18": 4,
+            "20": 32,
+            "24": 24,
+            "28": 8,
+            "32": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 794304,
+          "sum": 827133,
+          "median": 1,
+          "p95": 1,
+          "maximum": 10,
+          "histogram": {
+            "1": 779619,
+            "2": 9685,
+            "3": 1304,
+            "5": 1152,
+            "6": 848,
+            "7": 632,
+            "8": 672,
+            "9": 336,
+            "10": 56
+          }
+        },
+        "query_branches": {
+          "calls": 794304,
+          "sum": 23925,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 779619,
+            "1": 9685,
+            "2": 2456,
+            "3": 1296,
+            "4": 856,
+            "5": 336,
+            "6": 56
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 517332,
+          "sum": 517332,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 517332
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 33096,
+        "infeasible": 0,
+        "direct_queries": 794304,
+        "supported_queries": 276972,
+        "witnesses": 353615,
+        "supported_literals": 276972,
+        "gac_unsupported_survivors": 1360,
+        "audit_contexts": 1003875,
+        "audited_prunes": 7661521,
+        "audited_deletions": 8745148,
+        "audited_contradictions": 526484,
+        "audited_factor_ids": 8186645,
+        "fixed_calls": 16522,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 24488,
+        "fixed_hit_rejections": 7966,
+        "decision_nodes": {
+          "calls": 33096,
+          "sum": 34413,
+          "median": 1,
+          "p95": 1,
+          "maximum": 9,
+          "histogram": {
+            "1": 32524,
+            "2": 21,
+            "3": 468,
+            "5": 70,
+            "7": 12,
+            "9": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 33096,
+          "sum": 1317,
+          "median": 0,
+          "p95": 0,
+          "maximum": 8,
+          "histogram": {
+            "0": 32524,
+            "1": 21,
+            "2": 468,
+            "4": 70,
+            "6": 12,
+            "8": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 33096,
+          "sum": 48691,
+          "median": 1,
+          "p95": 3,
+          "maximum": 45,
+          "histogram": {
+            "1": 26666,
+            "2": 3459,
+            "3": 2054,
+            "4": 215,
+            "5": 64,
+            "6": 181,
+            "7": 56,
+            "8": 84,
+            "9": 52,
+            "10": 4,
+            "11": 10,
+            "12": 72,
+            "13": 2,
+            "14": 14,
+            "15": 15,
+            "17": 6,
+            "18": 48,
+            "19": 1,
+            "24": 32,
+            "25": 24,
+            "28": 4,
+            "35": 24,
+            "42": 8,
+            "45": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 33096,
+          "sum": 3784,
+          "median": 0,
+          "p95": 0,
+          "maximum": 32,
+          "histogram": {
+            "0": 32524,
+            "1": 18,
+            "2": 207,
+            "4": 88,
+            "6": 96,
+            "8": 15,
+            "10": 54,
+            "12": 1,
+            "14": 32,
+            "16": 24,
+            "18": 4,
+            "24": 24,
+            "30": 8,
+            "32": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 794304,
+          "sum": 804961,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 789591,
+            "2": 129,
+            "3": 3960,
+            "5": 568,
+            "7": 56
+          }
+        },
+        "query_branches": {
+          "calls": 794304,
+          "sum": 10657,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 789591,
+            "1": 129,
+            "2": 3960,
+            "4": 568,
+            "6": 56
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 517332,
+          "sum": 517332,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 517332
+          }
+        }
+      },
+      "both": {
+        "cases": 33096,
+        "infeasible": 0,
+        "direct_queries": 794304,
+        "supported_queries": 276972,
+        "witnesses": 353585,
+        "supported_literals": 276972,
+        "gac_unsupported_survivors": 1360,
+        "audit_contexts": 1013811,
+        "audited_prunes": 7661431,
+        "audited_deletions": 8745014,
+        "audited_contradictions": 526500,
+        "audited_factor_ids": 8186571,
+        "fixed_calls": 17676,
+        "decompositions": 3462,
+        "component_solves": 8780,
+        "fixed_hit_checks": 29120,
+        "fixed_hit_rejections": 11444,
+        "decision_nodes": {
+          "calls": 33096,
+          "sum": 35121,
+          "median": 1,
+          "p95": 1,
+          "maximum": 13,
+          "histogram": {
+            "1": 32524,
+            "2": 21,
+            "3": 300,
+            "5": 88,
+            "6": 48,
+            "7": 54,
+            "8": 24,
+            "9": 24,
+            "10": 4,
+            "11": 8,
+            "13": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 33096,
+          "sum": 1317,
+          "median": 0,
+          "p95": 0,
+          "maximum": 8,
+          "histogram": {
+            "0": 32524,
+            "1": 21,
+            "2": 468,
+            "4": 70,
+            "6": 12,
+            "8": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 33096,
+          "sum": 51189,
+          "median": 1,
+          "p95": 3,
+          "maximum": 61,
+          "histogram": {
+            "1": 26666,
+            "2": 3459,
+            "3": 2054,
+            "4": 215,
+            "5": 64,
+            "6": 181,
+            "7": 56,
+            "8": 84,
+            "9": 52,
+            "10": 4,
+            "11": 10,
+            "14": 72,
+            "17": 15,
+            "18": 16,
+            "21": 6,
+            "25": 1,
+            "29": 48,
+            "36": 24,
+            "37": 4,
+            "46": 32,
+            "57": 24,
+            "61": 9
+          }
+        },
+        "projection_branches": {
+          "calls": 33096,
+          "sum": 3816,
+          "median": 0,
+          "p95": 0,
+          "maximum": 32,
+          "histogram": {
+            "0": 32524,
+            "1": 18,
+            "2": 207,
+            "4": 88,
+            "6": 80,
+            "8": 31,
+            "10": 54,
+            "12": 1,
+            "14": 32,
+            "16": 24,
+            "18": 4,
+            "24": 24,
+            "30": 8,
+            "32": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 794304,
+          "sum": 810537,
+          "median": 1,
+          "p95": 1,
+          "maximum": 10,
+          "histogram": {
+            "1": 789591,
+            "2": 129,
+            "3": 2328,
+            "5": 960,
+            "6": 672,
+            "7": 232,
+            "8": 336,
+            "10": 56
+          }
+        },
+        "query_branches": {
+          "calls": 794304,
+          "sum": 10657,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 789591,
+            "1": 129,
+            "2": 3960,
+            "4": 568,
+            "6": 56
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 517332,
+          "sum": 517332,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 517332
+          }
+        }
+      }
+    },
+    "restricted_camera": {
+      "search": {
+        "cases": 1024,
+        "infeasible": 844,
+        "direct_queries": 24576,
+        "supported_queries": 1744,
+        "witnesses": 2306,
+        "supported_literals": 1744,
+        "gac_unsupported_survivors": 28,
+        "audit_contexts": 29502,
+        "audited_prunes": 42286,
+        "audited_deletions": 46936,
+        "audited_contradictions": 25482,
+        "audited_factor_ids": 57572,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1132,
+          "median": 1,
+          "p95": 2,
+          "maximum": 5,
+          "histogram": {
+            "1": 959,
+            "2": 33,
+            "3": 23,
+            "4": 7,
+            "5": 2
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 108,
+          "median": 0,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "0": 959,
+            "1": 33,
+            "2": 23,
+            "3": 7,
+            "4": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 672,
+          "median": 0,
+          "p95": 4,
+          "maximum": 19,
+          "histogram": {
+            "0": 844,
+            "1": 76,
+            "2": 23,
+            "3": 27,
+            "4": 3,
+            "5": 10,
+            "6": 3,
+            "7": 12,
+            "8": 4,
+            "9": 2,
+            "10": 7,
+            "11": 2,
+            "12": 1,
+            "13": 5,
+            "15": 2,
+            "18": 1,
+            "19": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 262,
+          "median": 0,
+          "p95": 1,
+          "maximum": 12,
+          "histogram": {
+            "0": 959,
+            "1": 14,
+            "2": 13,
+            "3": 6,
+            "4": 12,
+            "6": 10,
+            "8": 3,
+            "9": 4,
+            "12": 3
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25470,
+          "median": 1,
+          "p95": 1,
+          "maximum": 5,
+          "histogram": {
+            "1": 23951,
+            "2": 397,
+            "3": 193,
+            "4": 29,
+            "5": 6
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 894,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 23951,
+            "1": 397,
+            "2": 193,
+            "3": 29,
+            "4": 6
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22832,
+          "sum": 22832,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22832
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 1024,
+        "infeasible": 844,
+        "direct_queries": 24576,
+        "supported_queries": 1744,
+        "witnesses": 2306,
+        "supported_literals": 1744,
+        "gac_unsupported_survivors": 28,
+        "audit_contexts": 30094,
+        "audited_prunes": 42286,
+        "audited_deletions": 46936,
+        "audited_contradictions": 25482,
+        "audited_factor_ids": 57572,
+        "fixed_calls": 0,
+        "decompositions": 282,
+        "component_solves": 592,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1196,
+          "median": 1,
+          "p95": 2,
+          "maximum": 8,
+          "histogram": {
+            "1": 959,
+            "2": 33,
+            "3": 3,
+            "5": 20,
+            "6": 2,
+            "7": 6,
+            "8": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 108,
+          "median": 0,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "0": 959,
+            "1": 33,
+            "2": 23,
+            "3": 7,
+            "4": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 804,
+          "median": 0,
+          "p95": 4,
+          "maximum": 31,
+          "histogram": {
+            "0": 844,
+            "1": 76,
+            "2": 23,
+            "3": 27,
+            "4": 3,
+            "5": 10,
+            "6": 3,
+            "7": 5,
+            "8": 1,
+            "9": 9,
+            "10": 3,
+            "12": 1,
+            "13": 1,
+            "14": 7,
+            "15": 1,
+            "17": 1,
+            "19": 3,
+            "22": 3,
+            "27": 1,
+            "31": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 262,
+          "median": 0,
+          "p95": 1,
+          "maximum": 12,
+          "histogram": {
+            "0": 959,
+            "1": 14,
+            "2": 13,
+            "3": 6,
+            "4": 12,
+            "6": 10,
+            "8": 3,
+            "9": 4,
+            "12": 3
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25866,
+          "median": 1,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "1": 23951,
+            "2": 397,
+            "3": 37,
+            "5": 156,
+            "6": 17,
+            "7": 16,
+            "8": 2
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 894,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 23951,
+            "1": 397,
+            "2": 193,
+            "3": 29,
+            "4": 6
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22832,
+          "sum": 22832,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22832
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 1024,
+        "infeasible": 844,
+        "direct_queries": 24576,
+        "supported_queries": 1744,
+        "witnesses": 2356,
+        "supported_literals": 1744,
+        "gac_unsupported_survivors": 28,
+        "audit_contexts": 29437,
+        "audited_prunes": 41617,
+        "audited_deletions": 46276,
+        "audited_contradictions": 25485,
+        "audited_factor_ids": 56906,
+        "fixed_calls": 689,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 1056,
+        "fixed_hit_rejections": 367,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1061,
+          "median": 1,
+          "p95": 1,
+          "maximum": 5,
+          "histogram": {
+            "1": 1001,
+            "2": 13,
+            "3": 7,
+            "4": 2,
+            "5": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 37,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 1001,
+            "1": 13,
+            "2": 7,
+            "3": 2,
+            "4": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 568,
+          "median": 0,
+          "p95": 3,
+          "maximum": 19,
+          "histogram": {
+            "0": 844,
+            "1": 76,
+            "2": 23,
+            "3": 38,
+            "4": 8,
+            "5": 7,
+            "6": 8,
+            "7": 4,
+            "8": 5,
+            "9": 2,
+            "11": 1,
+            "12": 3,
+            "13": 1,
+            "15": 1,
+            "18": 1,
+            "19": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 108,
+          "median": 0,
+          "p95": 0,
+          "maximum": 12,
+          "histogram": {
+            "0": 1001,
+            "1": 3,
+            "2": 3,
+            "3": 6,
+            "4": 2,
+            "5": 1,
+            "6": 3,
+            "8": 2,
+            "10": 1,
+            "12": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24891,
+          "median": 1,
+          "p95": 1,
+          "maximum": 5,
+          "histogram": {
+            "1": 24371,
+            "2": 109,
+            "3": 86,
+            "4": 6,
+            "5": 4
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 315,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 24371,
+            "1": 109,
+            "2": 86,
+            "3": 6,
+            "4": 4
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22832,
+          "sum": 22832,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22832
+          }
+        }
+      },
+      "both": {
+        "cases": 1024,
+        "infeasible": 844,
+        "direct_queries": 24576,
+        "supported_queries": 1744,
+        "witnesses": 2357,
+        "supported_literals": 1744,
+        "gac_unsupported_survivors": 28,
+        "audit_contexts": 29781,
+        "audited_prunes": 41619,
+        "audited_deletions": 46280,
+        "audited_contradictions": 25486,
+        "audited_factor_ids": 56909,
+        "fixed_calls": 698,
+        "decompositions": 154,
+        "component_solves": 332,
+        "fixed_hit_checks": 1220,
+        "fixed_hit_rejections": 522,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1094,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 1001,
+            "2": 6,
+            "3": 3,
+            "4": 6,
+            "5": 3,
+            "6": 2,
+            "7": 3
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 37,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 1001,
+            "1": 13,
+            "2": 7,
+            "3": 2,
+            "4": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 650,
+          "median": 0,
+          "p95": 3,
+          "maximum": 31,
+          "histogram": {
+            "0": 844,
+            "1": 76,
+            "2": 23,
+            "3": 38,
+            "4": 8,
+            "5": 7,
+            "6": 8,
+            "7": 3,
+            "8": 1,
+            "9": 2,
+            "10": 4,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "17": 1,
+            "19": 1,
+            "22": 1,
+            "24": 1,
+            "29": 1,
+            "31": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 110,
+          "median": 0,
+          "p95": 0,
+          "maximum": 12,
+          "histogram": {
+            "0": 1001,
+            "1": 3,
+            "2": 3,
+            "3": 6,
+            "4": 2,
+            "5": 1,
+            "6": 2,
+            "8": 3,
+            "10": 1,
+            "12": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25111,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 24371,
+            "2": 64,
+            "3": 37,
+            "4": 43,
+            "5": 47,
+            "6": 4,
+            "7": 10
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 315,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 24371,
+            "1": 109,
+            "2": 86,
+            "3": 6,
+            "4": 4
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22832,
+          "sum": 22832,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22832
+          }
+        }
+      }
+    },
+    "physical_restrictions": {
+      "search": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 112,
+        "fixed_hit_rejections": 112,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "both": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 112,
+        "fixed_hit_rejections": 112,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      }
+    }
+  },
+  "same": {
+    "classes_by_suite": {
+      "axis_1": 256,
+      "axis_2": 1024,
+      "axis_3": 4400,
+      "axis_4": 4400,
+      "axis_5": 4400,
+      "axis_6": 4400,
+      "oblique_1": 2154,
+      "oblique_2": 4420
+    },
+    "camera": {
+      "search": {
+        "cases": 25454,
+        "infeasible": 0,
+        "direct_queries": 610896,
+        "supported_queries": 220094,
+        "witnesses": 281925,
+        "supported_literals": 220094,
+        "gac_unsupported_survivors": 2556,
+        "audit_contexts": 797149,
+        "audited_prunes": 6117490,
+        "audited_deletions": 6694698,
+        "audited_contradictions": 399426,
+        "audited_factor_ids": 6514360,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 25454,
+          "sum": 29436,
+          "median": 1,
+          "p95": 2,
+          "maximum": 9,
+          "histogram": {
+            "1": 22984,
+            "2": 1726,
+            "3": 394,
+            "4": 104,
+            "5": 132,
+            "6": 68,
+            "7": 36,
+            "8": 8,
+            "9": 2
+          }
+        },
+        "decision_branches": {
+          "calls": 25454,
+          "sum": 3982,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 22984,
+            "1": 1726,
+            "2": 394,
+            "3": 104,
+            "4": 132,
+            "5": 68,
+            "6": 36,
+            "7": 8,
+            "8": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 25454,
+          "sum": 47579,
+          "median": 1,
+          "p95": 5,
+          "maximum": 45,
+          "histogram": {
+            "1": 17837,
+            "2": 3993,
+            "3": 1733,
+            "4": 336,
+            "5": 614,
+            "6": 160,
+            "7": 72,
+            "8": 117,
+            "9": 21,
+            "10": 126,
+            "11": 84,
+            "12": 9,
+            "13": 56,
+            "14": 10,
+            "15": 48,
+            "16": 8,
+            "17": 16,
+            "18": 48,
+            "19": 8,
+            "20": 16,
+            "21": 16,
+            "23": 36,
+            "27": 36,
+            "28": 4,
+            "29": 8,
+            "30": 4,
+            "33": 24,
+            "36": 4,
+            "39": 8,
+            "45": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 25454,
+          "sum": 8646,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 22984,
+            "1": 1347,
+            "2": 408,
+            "3": 15,
+            "4": 195,
+            "5": 92,
+            "6": 69,
+            "8": 78,
+            "9": 32,
+            "10": 8,
+            "11": 16,
+            "12": 52,
+            "13": 16,
+            "15": 36,
+            "16": 16,
+            "18": 8,
+            "20": 44,
+            "24": 24,
+            "25": 4,
+            "28": 8,
+            "32": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 610896,
+          "sum": 643772,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 590780,
+            "2": 13013,
+            "3": 3742,
+            "4": 1665,
+            "5": 1184,
+            "6": 424,
+            "7": 88
+          }
+        },
+        "query_branches": {
+          "calls": 610896,
+          "sum": 32876,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 590780,
+            "1": 13013,
+            "2": 3742,
+            "3": 1665,
+            "4": 1184,
+            "5": 424,
+            "6": 88
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 390802,
+          "sum": 390802,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 390802
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 25454,
+        "infeasible": 0,
+        "direct_queries": 610896,
+        "supported_queries": 220094,
+        "witnesses": 281925,
+        "supported_literals": 220094,
+        "gac_unsupported_survivors": 2556,
+        "audit_contexts": 811493,
+        "audited_prunes": 6117490,
+        "audited_deletions": 6694698,
+        "audited_contradictions": 399426,
+        "audited_factor_ids": 6514360,
+        "fixed_calls": 0,
+        "decompositions": 5984,
+        "component_solves": 14344,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 25454,
+          "sum": 30434,
+          "median": 1,
+          "p95": 2,
+          "maximum": 13,
+          "histogram": {
+            "1": 22984,
+            "2": 1726,
+            "3": 334,
+            "5": 106,
+            "6": 72,
+            "7": 54,
+            "8": 60,
+            "9": 48,
+            "10": 36,
+            "11": 25,
+            "12": 8,
+            "13": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 25454,
+          "sum": 3982,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 22984,
+            "1": 1726,
+            "2": 394,
+            "3": 104,
+            "4": 132,
+            "5": 68,
+            "6": 36,
+            "7": 8,
+            "8": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 25454,
+          "sum": 50725,
+          "median": 1,
+          "p95": 5,
+          "maximum": 61,
+          "histogram": {
+            "1": 17837,
+            "2": 3993,
+            "3": 1733,
+            "4": 336,
+            "5": 614,
+            "6": 160,
+            "7": 44,
+            "8": 117,
+            "9": 49,
+            "10": 110,
+            "11": 60,
+            "12": 9,
+            "13": 24,
+            "14": 26,
+            "15": 42,
+            "17": 14,
+            "19": 20,
+            "22": 40,
+            "23": 16,
+            "25": 4,
+            "27": 48,
+            "28": 16,
+            "29": 4,
+            "31": 8,
+            "32": 24,
+            "37": 32,
+            "38": 4,
+            "43": 32,
+            "46": 4,
+            "49": 24,
+            "55": 9,
+            "61": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 25454,
+          "sum": 8646,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 22984,
+            "1": 1347,
+            "2": 408,
+            "3": 15,
+            "4": 195,
+            "5": 92,
+            "6": 69,
+            "8": 78,
+            "9": 32,
+            "10": 8,
+            "11": 16,
+            "12": 52,
+            "13": 16,
+            "15": 36,
+            "16": 16,
+            "18": 8,
+            "20": 44,
+            "24": 24,
+            "25": 4,
+            "28": 8,
+            "32": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 610896,
+          "sum": 653972,
+          "median": 1,
+          "p95": 1,
+          "maximum": 10,
+          "histogram": {
+            "1": 590780,
+            "2": 13013,
+            "3": 2542,
+            "4": 1,
+            "5": 1416,
+            "6": 1216,
+            "7": 744,
+            "8": 760,
+            "9": 368,
+            "10": 56
+          }
+        },
+        "query_branches": {
+          "calls": 610896,
+          "sum": 32876,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 590780,
+            "1": 13013,
+            "2": 3742,
+            "3": 1665,
+            "4": 1184,
+            "5": 424,
+            "6": 88
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 390802,
+          "sum": 390802,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 390802
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 25454,
+        "infeasible": 0,
+        "direct_queries": 610896,
+        "supported_queries": 220094,
+        "witnesses": 283855,
+        "supported_literals": 220094,
+        "gac_unsupported_survivors": 2556,
+        "audit_contexts": 798492,
+        "audited_prunes": 6091709,
+        "audited_deletions": 6672255,
+        "audited_contradictions": 402630,
+        "audited_factor_ids": 6491783,
+        "fixed_calls": 19178,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 35645,
+        "fixed_hit_rejections": 16467,
+        "decision_nodes": {
+          "calls": 25454,
+          "sum": 27747,
+          "median": 1,
+          "p95": 2,
+          "maximum": 9,
+          "histogram": {
+            "1": 24129,
+            "2": 725,
+            "3": 434,
+            "4": 16,
+            "5": 124,
+            "6": 4,
+            "7": 20,
+            "9": 2
+          }
+        },
+        "decision_branches": {
+          "calls": 25454,
+          "sum": 2293,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 24129,
+            "1": 725,
+            "2": 434,
+            "3": 16,
+            "4": 124,
+            "5": 4,
+            "6": 20,
+            "8": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 25454,
+          "sum": 46954,
+          "median": 1,
+          "p95": 4,
+          "maximum": 45,
+          "histogram": {
+            "1": 17837,
+            "2": 3993,
+            "3": 1951,
+            "4": 430,
+            "5": 320,
+            "6": 164,
+            "7": 102,
+            "8": 45,
+            "9": 58,
+            "10": 180,
+            "11": 64,
+            "12": 32,
+            "15": 48,
+            "17": 16,
+            "18": 48,
+            "19": 4,
+            "22": 32,
+            "23": 4,
+            "24": 32,
+            "25": 32,
+            "28": 4,
+            "31": 16,
+            "35": 24,
+            "40": 8,
+            "42": 8,
+            "45": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 25454,
+          "sum": 6091,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 24129,
+            "1": 621,
+            "2": 105,
+            "3": 28,
+            "4": 269,
+            "6": 24,
+            "8": 52,
+            "10": 64,
+            "12": 32,
+            "14": 32,
+            "15": 4,
+            "16": 32,
+            "18": 4,
+            "20": 16,
+            "24": 24,
+            "28": 8,
+            "30": 8,
+            "32": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 610896,
+          "sum": 628251,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 601176,
+            "2": 4493,
+            "3": 4043,
+            "4": 160,
+            "5": 912,
+            "6": 24,
+            "7": 88
+          }
+        },
+        "query_branches": {
+          "calls": 610896,
+          "sum": 17355,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 601176,
+            "1": 4493,
+            "2": 4043,
+            "3": 160,
+            "4": 912,
+            "5": 24,
+            "6": 88
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 390802,
+          "sum": 390802,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 390802
+          }
+        }
+      },
+      "both": {
+        "cases": 25454,
+        "infeasible": 0,
+        "direct_queries": 610896,
+        "supported_queries": 220094,
+        "witnesses": 283855,
+        "supported_literals": 220094,
+        "gac_unsupported_survivors": 2556,
+        "audit_contexts": 810868,
+        "audited_prunes": 6091709,
+        "audited_deletions": 6672255,
+        "audited_contradictions": 402630,
+        "audited_factor_ids": 6491783,
+        "fixed_calls": 20746,
+        "decompositions": 4476,
+        "component_solves": 10808,
+        "fixed_hit_checks": 41689,
+        "fixed_hit_rejections": 20943,
+        "decision_nodes": {
+          "calls": 25454,
+          "sum": 28505,
+          "median": 1,
+          "p95": 2,
+          "maximum": 13,
+          "histogram": {
+            "1": 24129,
+            "2": 709,
+            "3": 294,
+            "4": 16,
+            "5": 106,
+            "6": 64,
+            "7": 62,
+            "8": 28,
+            "9": 32,
+            "10": 4,
+            "11": 9,
+            "13": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 25454,
+          "sum": 2293,
+          "median": 0,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "0": 24129,
+            "1": 725,
+            "2": 434,
+            "3": 16,
+            "4": 124,
+            "5": 4,
+            "6": 20,
+            "8": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 25454,
+          "sum": 50004,
+          "median": 1,
+          "p95": 4,
+          "maximum": 61,
+          "histogram": {
+            "1": 17837,
+            "2": 3993,
+            "3": 1951,
+            "4": 430,
+            "5": 320,
+            "6": 164,
+            "7": 82,
+            "8": 45,
+            "9": 78,
+            "10": 180,
+            "11": 64,
+            "12": 8,
+            "14": 24,
+            "15": 42,
+            "17": 6,
+            "19": 4,
+            "25": 16,
+            "28": 32,
+            "29": 52,
+            "31": 8,
+            "36": 24,
+            "37": 4,
+            "45": 16,
+            "46": 32,
+            "52": 8,
+            "55": 1,
+            "57": 24,
+            "61": 9
+          }
+        },
+        "projection_branches": {
+          "calls": 25454,
+          "sum": 6091,
+          "median": 0,
+          "p95": 1,
+          "maximum": 32,
+          "histogram": {
+            "0": 24129,
+            "1": 621,
+            "2": 105,
+            "3": 28,
+            "4": 269,
+            "6": 24,
+            "8": 52,
+            "10": 64,
+            "12": 32,
+            "14": 32,
+            "15": 4,
+            "16": 32,
+            "18": 4,
+            "20": 16,
+            "24": 24,
+            "28": 8,
+            "30": 8,
+            "32": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 610896,
+          "sum": 635251,
+          "median": 1,
+          "p95": 1,
+          "maximum": 10,
+          "histogram": {
+            "1": 601176,
+            "2": 4269,
+            "3": 2267,
+            "4": 224,
+            "5": 1320,
+            "6": 832,
+            "7": 360,
+            "8": 360,
+            "9": 32,
+            "10": 56
+          }
+        },
+        "query_branches": {
+          "calls": 610896,
+          "sum": 17355,
+          "median": 0,
+          "p95": 0,
+          "maximum": 6,
+          "histogram": {
+            "0": 601176,
+            "1": 4493,
+            "2": 4043,
+            "3": 160,
+            "4": 912,
+            "5": 24,
+            "6": 88
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 390802,
+          "sum": 390802,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 390802
+          }
+        }
+      }
+    },
+    "restricted_camera": {
+      "search": {
+        "cases": 1024,
+        "infeasible": 835,
+        "direct_queries": 24576,
+        "supported_queries": 1854,
+        "witnesses": 2462,
+        "supported_literals": 1854,
+        "gac_unsupported_survivors": 26,
+        "audit_contexts": 29595,
+        "audited_prunes": 42227,
+        "audited_deletions": 46546,
+        "audited_contradictions": 25332,
+        "audited_factor_ids": 57365,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1137,
+          "median": 1,
+          "p95": 2,
+          "maximum": 5,
+          "histogram": {
+            "1": 953,
+            "2": 39,
+            "3": 23,
+            "4": 8,
+            "5": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 113,
+          "median": 0,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "0": 953,
+            "1": 39,
+            "2": 23,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 715,
+          "median": 0,
+          "p95": 5,
+          "maximum": 19,
+          "histogram": {
+            "0": 835,
+            "1": 64,
+            "2": 35,
+            "3": 33,
+            "4": 4,
+            "5": 11,
+            "6": 4,
+            "7": 12,
+            "8": 3,
+            "9": 2,
+            "10": 8,
+            "11": 3,
+            "12": 1,
+            "13": 5,
+            "15": 1,
+            "18": 1,
+            "19": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 270,
+          "median": 0,
+          "p95": 2,
+          "maximum": 12,
+          "histogram": {
+            "0": 953,
+            "1": 18,
+            "2": 15,
+            "3": 6,
+            "4": 11,
+            "6": 12,
+            "8": 2,
+            "9": 4,
+            "12": 3
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25506,
+          "median": 1,
+          "p95": 1,
+          "maximum": 5,
+          "histogram": {
+            "1": 23908,
+            "2": 443,
+            "3": 190,
+            "4": 33,
+            "5": 2
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 930,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 23908,
+            "1": 443,
+            "2": 190,
+            "3": 33,
+            "4": 2
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22722,
+          "sum": 22722,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22722
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 1024,
+        "infeasible": 835,
+        "direct_queries": 24576,
+        "supported_queries": 1854,
+        "witnesses": 2462,
+        "supported_literals": 1854,
+        "gac_unsupported_survivors": 26,
+        "audit_contexts": 30191,
+        "audited_prunes": 42227,
+        "audited_deletions": 46546,
+        "audited_contradictions": 25332,
+        "audited_factor_ids": 57365,
+        "fixed_calls": 0,
+        "decompositions": 284,
+        "component_solves": 596,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1201,
+          "median": 1,
+          "p95": 2,
+          "maximum": 8,
+          "histogram": {
+            "1": 953,
+            "2": 39,
+            "3": 3,
+            "5": 20,
+            "6": 3,
+            "7": 5,
+            "8": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 113,
+          "median": 0,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "0": 953,
+            "1": 39,
+            "2": 23,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 849,
+          "median": 0,
+          "p95": 5,
+          "maximum": 31,
+          "histogram": {
+            "0": 835,
+            "1": 64,
+            "2": 35,
+            "3": 33,
+            "4": 4,
+            "5": 11,
+            "6": 4,
+            "7": 5,
+            "8": 1,
+            "9": 9,
+            "10": 2,
+            "12": 1,
+            "13": 2,
+            "14": 8,
+            "15": 1,
+            "19": 3,
+            "22": 3,
+            "27": 1,
+            "31": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 270,
+          "median": 0,
+          "p95": 2,
+          "maximum": 12,
+          "histogram": {
+            "0": 953,
+            "1": 18,
+            "2": 15,
+            "3": 6,
+            "4": 11,
+            "6": 12,
+            "8": 2,
+            "9": 4,
+            "12": 3
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25904,
+          "median": 1,
+          "p95": 1,
+          "maximum": 8,
+          "histogram": {
+            "1": 23908,
+            "2": 443,
+            "3": 33,
+            "5": 157,
+            "6": 21,
+            "7": 12,
+            "8": 2
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 930,
+          "median": 0,
+          "p95": 0,
+          "maximum": 4,
+          "histogram": {
+            "0": 23908,
+            "1": 443,
+            "2": 190,
+            "3": 33,
+            "4": 2
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22722,
+          "sum": 22722,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22722
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 1024,
+        "infeasible": 835,
+        "direct_queries": 24576,
+        "supported_queries": 1854,
+        "witnesses": 2516,
+        "supported_literals": 1854,
+        "gac_unsupported_survivors": 26,
+        "audit_contexts": 29533,
+        "audited_prunes": 41478,
+        "audited_deletions": 45807,
+        "audited_contradictions": 25336,
+        "audited_factor_ids": 56620,
+        "fixed_calls": 746,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 1114,
+        "fixed_hit_rejections": 368,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1060,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1000,
+            "2": 14,
+            "3": 8,
+            "4": 2
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 36,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1000,
+            "1": 14,
+            "2": 8,
+            "3": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 607,
+          "median": 0,
+          "p95": 3,
+          "maximum": 19,
+          "histogram": {
+            "0": 835,
+            "1": 64,
+            "2": 35,
+            "3": 45,
+            "4": 9,
+            "5": 7,
+            "6": 9,
+            "7": 5,
+            "8": 4,
+            "9": 2,
+            "11": 1,
+            "12": 4,
+            "13": 1,
+            "18": 1,
+            "19": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 108,
+          "median": 0,
+          "p95": 0,
+          "maximum": 12,
+          "histogram": {
+            "0": 1000,
+            "1": 3,
+            "2": 4,
+            "3": 6,
+            "4": 2,
+            "5": 1,
+            "6": 4,
+            "8": 1,
+            "10": 1,
+            "12": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24883,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24367,
+            "2": 117,
+            "3": 86,
+            "4": 6
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 307,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24367,
+            "1": 117,
+            "2": 86,
+            "3": 6
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22722,
+          "sum": 22722,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22722
+          }
+        }
+      },
+      "both": {
+        "cases": 1024,
+        "infeasible": 835,
+        "direct_queries": 24576,
+        "supported_queries": 1854,
+        "witnesses": 2517,
+        "supported_literals": 1854,
+        "gac_unsupported_survivors": 26,
+        "audit_contexts": 29879,
+        "audited_prunes": 41480,
+        "audited_deletions": 45811,
+        "audited_contradictions": 25337,
+        "audited_factor_ids": 56623,
+        "fixed_calls": 755,
+        "decompositions": 155,
+        "component_solves": 334,
+        "fixed_hit_checks": 1279,
+        "fixed_hit_rejections": 524,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1093,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 1000,
+            "2": 7,
+            "3": 3,
+            "4": 6,
+            "5": 4,
+            "6": 2,
+            "7": 2
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 36,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1000,
+            "1": 14,
+            "2": 8,
+            "3": 2
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 689,
+          "median": 0,
+          "p95": 3,
+          "maximum": 31,
+          "histogram": {
+            "0": 835,
+            "1": 64,
+            "2": 35,
+            "3": 45,
+            "4": 9,
+            "5": 7,
+            "6": 9,
+            "7": 3,
+            "8": 1,
+            "9": 3,
+            "10": 3,
+            "12": 1,
+            "13": 1,
+            "14": 2,
+            "19": 1,
+            "22": 1,
+            "24": 1,
+            "29": 1,
+            "31": 2
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 110,
+          "median": 0,
+          "p95": 0,
+          "maximum": 12,
+          "histogram": {
+            "0": 1000,
+            "1": 3,
+            "2": 4,
+            "3": 6,
+            "4": 2,
+            "5": 1,
+            "6": 3,
+            "8": 2,
+            "10": 1,
+            "12": 2
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 25105,
+          "median": 1,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "1": 24367,
+            "2": 71,
+            "3": 33,
+            "4": 44,
+            "5": 51,
+            "6": 4,
+            "7": 6
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 307,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24367,
+            "1": 117,
+            "2": 86,
+            "3": 6
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 22722,
+          "sum": 22722,
+          "median": 1,
+          "p95": 1,
+          "maximum": 1,
+          "histogram": {
+            "1": 22722
+          }
+        }
+      }
+    },
+    "physical_restrictions": {
+      "search": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "decomposition": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 0,
+        "fixed_hit_rejections": 0,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "fixed_hit": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 112,
+        "fixed_hit_rejections": 112,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      },
+      "both": {
+        "cases": 1024,
+        "infeasible": 904,
+        "direct_queries": 24576,
+        "supported_queries": 984,
+        "witnesses": 1232,
+        "supported_literals": 984,
+        "gac_unsupported_survivors": 112,
+        "audit_contexts": 28098,
+        "audited_prunes": 8622,
+        "audited_deletions": 11457,
+        "audited_contradictions": 26378,
+        "audited_factor_ids": 16356,
+        "fixed_calls": 0,
+        "decompositions": 0,
+        "component_solves": 0,
+        "fixed_hit_checks": 112,
+        "fixed_hit_rejections": 112,
+        "decision_nodes": {
+          "calls": 1024,
+          "sum": 1050,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 1008,
+            "2": 7,
+            "3": 8,
+            "4": 1
+          }
+        },
+        "decision_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "projection_nodes": {
+          "calls": 1024,
+          "sum": 174,
+          "median": 0,
+          "p95": 1,
+          "maximum": 7,
+          "histogram": {
+            "0": 896,
+            "1": 112,
+            "3": 8,
+            "4": 4,
+            "5": 3,
+            "7": 1
+          }
+        },
+        "projection_branches": {
+          "calls": 1024,
+          "sum": 26,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 1008,
+            "1": 7,
+            "2": 8,
+            "3": 1
+          }
+        },
+        "query_nodes": {
+          "calls": 24576,
+          "sum": 24706,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 24496,
+            "2": 35,
+            "3": 40,
+            "4": 5
+          }
+        },
+        "query_branches": {
+          "calls": 24576,
+          "sum": 130,
+          "median": 0,
+          "p95": 0,
+          "maximum": 3,
+          "histogram": {
+            "0": 24496,
+            "1": 35,
+            "2": 40,
+            "3": 5
+          }
+        },
+        "unsat_query_nodes": {
+          "calls": 23592,
+          "sum": 23677,
+          "median": 1,
+          "p95": 1,
+          "maximum": 4,
+          "histogram": {
+            "1": 23552,
+            "3": 35,
+            "4": 5
+          }
+        }
+      }
+    }
+  }
+}

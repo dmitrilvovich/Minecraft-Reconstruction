@@ -1,0 +1,110 @@
+{
+  "reason": "Resume interrupted gate without regenerating eight successful Python fixture setups. All 25 native tests will run with -O1 ASan/UBSan.",
+  "files": {
+    "build/sanitize/oracle/rays.txt": {
+      "bytes": 14546,
+      "sha256": "ef99e173093f27b7b0ab606b1fe74323dfef959f75e54af8fba93ba0d7c372cd"
+    },
+    "build/sanitize/oracle/images.bin": {
+      "bytes": 3359232,
+      "sha256": "5e8eb2d9420d83cd119c003406e15cc0457c1b65b59b2a7b9d8bb61fd50d8a86"
+    },
+    "build/sanitize/oracle/cases.bin": {
+      "bytes": 3905222,
+      "sha256": "2551bbd775591b16cd34ddfac955ae2d478dfed9f3aa37716e50a0ae460b1612"
+    },
+    "build/sanitize/oracle_a1/acceptance_cases.bin": {
+      "bytes": 32902417,
+      "sha256": "44d96bd735875da137f8776f9ba6dc430061a8c14dc6a1591a79f1fec19c5076"
+    },
+    "build/sanitize/oracle_a1/propagation.bin": {
+      "bytes": 49164,
+      "sha256": "290e9fa3cca329463c0d94be3f16a711ec61e5745c02b12e58bc4531dbbbd9d8"
+    },
+    "build/sanitize/oracle_a1/feasibility.bin": {
+      "bytes": 40512,
+      "sha256": "2f394b4ee785f19aabac1c7cfd2e6b23f1a0287981acf77dafcc18c90bac2383"
+    },
+    "build/sanitize/oracle_a1/support_query.bin": {
+      "bytes": 259212,
+      "sha256": "9823f23f1cdc0f24958ef75fa611b93db9ba0224be258b265e55ce1d93469a5d"
+    },
+    "build/sanitize/oracle_a1/projection.bin": {
+      "bytes": 40512,
+      "sha256": "955c1e3cfdd811f0f2b7d88f25caf26f326dd60a7a5168d1866cda7ea97a29f8"
+    },
+    "build/sanitize/oracle_a1/local_supports.bin": {
+      "bytes": 393228,
+      "sha256": "7874e298bb19ab57d23312f4c27481e3b5929421e6edee1d68f891014442ff5b"
+    },
+    "build/sanitize/oracle_a1/images.bin": {
+      "bytes": 33554432,
+      "sha256": "efaaf73cc9112b3a5f459b8f44b056c1ff6f6225e6129f173ab7a8ab3ceaa545"
+    },
+    "build/sanitize/oracle_a1/rays.txt": {
+      "bytes": 14547,
+      "sha256": "b87d4deb289b9f977af8690d7ef7c82db417cadbf8ed95679da88d814b1c4aea"
+    },
+    "build/oracle_a2/split_cases.bin": {
+      "bytes": 1379776,
+      "sha256": "45d966080bc6de1ed2b03dab98bba0bf7f4c578d7ddcc4221001ee27617177a7"
+    },
+    "build/oracle_a2/split_images.bin": {
+      "bytes": 3359232,
+      "sha256": "339634cf64e09fef56ff7287793c97b9dc674b2ecfce73a14ef804c84887d396"
+    },
+    "build/oracle_a2/same_cases.bin": {
+      "bytes": 1158426,
+      "sha256": "8c49e2bc2c6ff34500ee705a138a02ba439b509e9f22316163deeebbf751fe12"
+    },
+    "build/oracle_a2/same_images.bin": {
+      "bytes": 3359232,
+      "sha256": "8c830741de389cfb491ec8835a86bafc88f2b22c259cf9142309ef2046f22d88"
+    },
+    "build/oracle_a2/boundaries.txt": {
+      "bytes": 300403,
+      "sha256": "50527c8ab190bf6692f4b9d038898303e2b4b81d716a9e81000056e6134b54ac"
+    },
+    "build/oracle_a2/local_supports.bin": {
+      "bytes": 786444,
+      "sha256": "119650210caa9409b532d50846720f9240526a2c9d323bf14ce271bdde3116f8"
+    }
+  },
+  "reused_setup_entries": [
+    "python_oracle_export",
+    "python_a1_oracle_export",
+    "python_a1_propagation_export",
+    "python_a1_feasibility_export",
+    "python_a1_support_query_export",
+    "python_a1_projection_export",
+    "python_a1_acceptance_export",
+    "python_a2_acceptance_export"
+  ],
+  "native_entries_in_resumed_gate": [
+    "a1_benchmark_smoke",
+    "geometry_tests",
+    "render_tests",
+    "a1_render_tests",
+    "a1_geometry_tests",
+    "a2_geometry_tests",
+    "a2_inference_tests",
+    "constraint_tests",
+    "a1_constraint_tests",
+    "a1_propagation_tests",
+    "a1_feasibility_tests",
+    "a1_support_query_tests",
+    "a1_projection_tests",
+    "inference_tests",
+    "adversarial_tests",
+    "python_render_agreement",
+    "a0_acceptance",
+    "python_a1_render_agreement",
+    "python_a1_constraint_agreement",
+    "python_a1_propagation_agreement",
+    "python_a1_feasibility_agreement",
+    "python_a1_support_query_agreement",
+    "python_a1_projection_agreement",
+    "a1_acceptance",
+    "a2_acceptance"
+  ]
+}

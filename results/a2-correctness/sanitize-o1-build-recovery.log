@@ -1,0 +1,17 @@
+[1/17] Linking CXX executable a1_render_tests
+[2/17] Linking CXX executable a1_geometry_tests
+[3/17] Linking CXX executable a2_geometry_tests
+[4/17] Linking CXX executable a2_inference_tests
+[5/17] Linking CXX executable constraint_tests
+[6/17] Linking CXX executable a1_constraint_tests
+[7/17] Linking CXX executable a1_propagation_tests
+[8/17] Linking CXX executable a1_feasibility_tests
+[9/17] Linking CXX executable a1_support_query_tests
+[10/17] Linking CXX executable a1_projection_tests
+[11/17] Linking CXX executable inference_tests
+[12/17] Linking CXX executable adversarial_tests
+[13/17] Linking CXX executable a0_acceptance
+[14/17] Linking CXX executable a1_acceptance
+[15/17] Linking CXX executable a2_acceptance
+[16/17] Building CXX object CMakeFiles/render_tests.dir/tests/render_tests.cpp.o
+[17/17] Linking CXX executable render_tests

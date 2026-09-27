@@ -1,0 +1,57 @@
+[1/66] Building CXX object CMakeFiles/mcr.dir/src/geometry/aabb.cpp.o
+[2/66] Building CXX object CMakeFiles/mcr.dir/src/math/rational.cpp.o
+[3/66] Building CXX object CMakeFiles/mcr.dir/src/grid/grid.cpp.o
+[4/66] Building CXX object CMakeFiles/mcr.dir/src/camera/pinhole.cpp.o
+[5/66] Building CXX object CMakeFiles/mcr.dir/src/grid/traversal.cpp.o
+[6/66] Building CXX object CMakeFiles/mcr.dir/src/model/a0.cpp.o
+[7/66] Building CXX object CMakeFiles/mcr.dir/src/model/a1.cpp.o
+[8/66] Building CXX object CMakeFiles/mcr.dir/src/model/a2.cpp.o
+[9/66] Building CXX object CMakeFiles/mcr.dir/src/render/a0.cpp.o
+[10/66] Building CXX object CMakeFiles/mcr.dir/src/render/a1.cpp.o
+[11/66] Building CXX object CMakeFiles/mcr.dir/src/render/a2.cpp.o
+[12/66] Building CXX object CMakeFiles/mcr.dir/src/inference/automaton.cpp.o
+[13/66] Building CXX object CMakeFiles/mcr.dir/src/inference/constraint.cpp.o
+[14/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_problem.cpp.o
+[15/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_constraint.cpp.o
+[16/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_gac.cpp.o
+[17/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_support_query.cpp.o
+[18/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_feasibility.cpp.o
+[19/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a1_supports.cpp.o
+[20/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a2_problem.cpp.o
+[21/66] Building CXX object CMakeFiles/mcr.dir/src/inference/gac.cpp.o
+[22/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a0_solver.cpp.o
+[23/66] Building CXX object CMakeFiles/mcr_experiments.dir/src/experiments/cameras.cpp.o
+[24/66] Building CXX object CMakeFiles/mcr.dir/src/inference/a2_solver.cpp.o
+[25/66] Linking CXX static library libmcr.a
+[26/66] Building CXX object CMakeFiles/mcr_experiments.dir/src/experiments/a0.cpp.o
+[27/66] Building CXX object CMakeFiles/mcr_experiments.dir/src/experiments/a1.cpp.o
+[28/66] Linking CXX static library libmcr_experiments.a
+[29/66] Building CXX object CMakeFiles/mcr_a0_benchmark.dir/experiments/a0_benchmark.cpp.o
+[30/66] Building CXX object CMakeFiles/geometry_tests.dir/tests/geometry_tests.cpp.o
+[31/66] Building CXX object CMakeFiles/mcr_a1_benchmark.dir/experiments/a1_benchmark.cpp.o
+[32/66] Building CXX object CMakeFiles/render_tests.dir/tests/render_tests.cpp.o
+[33/66] Building CXX object CMakeFiles/a1_render_tests.dir/tests/a1_render_tests.cpp.o
+[34/66] Building CXX object CMakeFiles/a1_geometry_tests.dir/tests/a1_geometry_tests.cpp.o
+[35/66] Building CXX object CMakeFiles/a2_geometry_tests.dir/tests/a2_geometry_tests.cpp.o
+[36/66] Building CXX object CMakeFiles/constraint_tests.dir/tests/constraint_tests.cpp.o
+[37/66] Building CXX object CMakeFiles/a1_constraint_tests.dir/tests/a1_constraint_tests.cpp.o
+[38/66] Building CXX object CMakeFiles/a2_inference_tests.dir/tests/a2_inference_tests.cpp.o
+[39/66] Building CXX object CMakeFiles/a1_propagation_tests.dir/tests/a1_propagation_tests.cpp.o
+[40/66] Building CXX object CMakeFiles/a1_feasibility_tests.dir/tests/a1_feasibility_tests.cpp.o
+[41/66] Building CXX object CMakeFiles/a1_support_query_tests.dir/tests/a1_support_query_tests.cpp.o
+[42/66] Building CXX object CMakeFiles/inference_tests.dir/tests/inference_tests.cpp.o
+[43/66] Building CXX object CMakeFiles/a1_projection_tests.dir/tests/a1_projection_tests.cpp.o
+[44/66] Building CXX object CMakeFiles/adversarial_tests.dir/tests/adversarial_tests.cpp.o
+[45/66] Building CXX object CMakeFiles/a0_acceptance.dir/tests/a0_acceptance.cpp.o
+[46/66] Building CXX object CMakeFiles/a1_acceptance.dir/tests/a1_acceptance.cpp.o
+[47/66] Linking CXX executable mcr_a0_benchmark
+[48/66] Linking CXX executable mcr_a1_benchmark
+[49/66] Linking CXX executable geometry_tests
+[50/66] Linking CXX executable render_tests
+FAILED: [code=1] render_tests
+: && /usr/bin/c++ -O1 -g -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/render_tests.dir/link.d CMakeFiles/render_tests.dir/tests/render_tests.cpp.o -o render_tests  libmcr_experiments.a  libmcr.a && :
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+[51/66] Building CXX object CMakeFiles/a2_acceptance.dir/tests/a2_acceptance.cpp.o
+ninja: build stopped: subcommand failed.

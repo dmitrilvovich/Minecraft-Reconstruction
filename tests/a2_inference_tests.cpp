@@ -51,7 +51,7 @@ void check_witness(const A2Problem& problem,const A2Domains& domains,const std::
     CHECK(std::find(family.begin(),family.end(),w)!=family.end());
     ++witnesses;
 }
-void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<A2World>& family,A2SearchOptions options={}) {
+void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<A2World>& family,A2SearchOptions options) {
     std::vector<A2World> conditioned;
     for(const auto& w:family) if(contains(domains,w)) conditioned.push_back(w);
     const auto expected=supports(conditioned,domains.size());
@@ -81,6 +81,10 @@ void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<
     // Keep A1-specific counters honest; this solver never invokes its envelope.
     CHECK(stats.envelope_calls==0 && stats.envelope_advances==0);
     ++cases;
+}
+void verify(const A2Problem& problem,const A2Domains& domains,const std::vector<A2World>& family) {
+    for(unsigned mode=0;mode<4;++mode)
+        verify(problem,domains,family,{(mode & 1U)!=0,(mode & 2U)!=0});
 }
 std::vector<A2World> physical_family(const test::A2Fixture& fixture) {
     std::vector<A2AabbReferenceRay> reference;
@@ -168,6 +172,9 @@ void edge_cases() {
     verify(A2Problem(0,{{{},PixelLabel::background}}),{},{{}});
     verify(A2Problem(3,{}),A2Domains(3),abstract_family(A2Problem(3,{})));
     verify(A2Problem(1,{}),{A2Domain(0)},abstract_family(A2Problem(1,{})));
+    // Frozen Python solve([2,0], [cell-0 oak ray]) overlooks the isolated empty
+    // domain. The C++ scene contract must reject it in every optimization mode.
+    verify(A2Problem(2,{{{{0,true,true}},PixelLabel::oak}}),{A2Domain(2),A2Domain(0)},{});
     const A2Problem contradiction(1,{{{{0,true,false}},PixelLabel::oak},{{{0,false,true}},PixelLabel::stone}});
     verify(contradiction,A2Domains(1),{});
     const A2Problem same(1,{{{{0,true,true}},PixelLabel::oak,A2Palette::same_material}},A2Palette::same_material);

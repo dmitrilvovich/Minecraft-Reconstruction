@@ -1,0 +1,45 @@
+[
+  {
+    "test": "python_a1_render_agreement",
+    "command": [
+      "build/sanitize/a1_render_tests",
+      "build/sanitize/oracle_a1"
+    ],
+    "exit_code": 0,
+    "seconds": 102.89534946499998
+  },
+  {
+    "test": "a1_feasibility_tests",
+    "command": [
+      "build/sanitize/a1_feasibility_tests"
+    ],
+    "exit_code": 0,
+    "seconds": 8.623130737999873
+  },
+  {
+    "test": "a1_geometry_tests",
+    "command": [
+      "build/sanitize/a1_geometry_tests"
+    ],
+    "exit_code": 0,
+    "seconds": 0.11306850200003282
+  },
+  {
+    "test": "a2_inference_tests",
+    "command": [
+      "build/sanitize/a2_inference_tests"
+    ],
+    "exit_code": 0,
+    "seconds": 10.141757949999828
+  },
+  {
+    "test": "python_a2_acceptance_export",
+    "command": [
+      "python",
+      "tests/oracle/export_a2_acceptance.py",
+      "build/oracle_a2"
+    ],
+    "exit_code": 0,
+    "seconds": 0.574253206000094
+  }
+]

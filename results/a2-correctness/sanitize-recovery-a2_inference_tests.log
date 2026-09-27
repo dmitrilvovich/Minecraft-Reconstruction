@@ -1,0 +1,28 @@
+split material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+split material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+same material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+same material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+split: fixed-hit ray branches [baseline, decomposition, fixed-hit, both] = [1, 1, 0, 0]; optimized nodes=1, splits=0, component solves=0, fixed calls=1
+split: two paths branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: path plus triangle branches [baseline, decomposition, fixed-hit, both] = [9, 5, 9, 5]; optimized nodes=8, splits=1, component solves=2, fixed calls=0
+split: triangle before path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 3, 3]; optimized nodes=5, splits=1, component solves=1, fixed calls=0
+split: fixed region plus path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=1
+split: shared invariant context branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: non-entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=5, splits=0, component solves=0, fixed calls=0
+split: conditional guard branches [baseline, decomposition, fixed-hit, both] = [7, 7, 6, 6]; optimized nodes=9, splits=1, component solves=2, fixed calls=0
+split: nested component split branches [baseline, decomposition, fixed-hit, both] = [8, 8, 8, 8]; optimized nodes=13, splits=2, component solves=4, fixed calls=0
+same: fixed-hit ray branches [baseline, decomposition, fixed-hit, both] = [1, 1, 0, 0]; optimized nodes=1, splits=0, component solves=0, fixed calls=1
+same: two paths branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: path plus triangle branches [baseline, decomposition, fixed-hit, both] = [9, 5, 9, 5]; optimized nodes=8, splits=1, component solves=2, fixed calls=0
+same: triangle before path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 3, 3]; optimized nodes=5, splits=1, component solves=1, fixed calls=0
+same: fixed region plus path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=1
+same: shared invariant context branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: non-entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=5, splits=0, component solves=0, fixed calls=0
+same: conditional guard branches [baseline, decomposition, fixed-hit, both] = [7, 7, 6, 6]; optimized nodes=9, splits=1, component solves=2, fixed calls=0
+same: nested component split branches [baseline, decomposition, fixed-hit, both] = [8, 8, 8, 8]; optimized nodes=13, splits=2, component solves=4, fixed calls=0
+split: guaranteed hit hides bridge branches [baseline, decomposition, fixed-hit, both] = [3, 2, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=0
+split: optional hit preserves bridge branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=3, splits=0, component solves=0, fixed calls=0
+9620 exact projection/feasibility cases; 214152 direct support queries; 15416 verified witnesses; 75949 audited reductions; 222544 audited propagation contradictions
+PASS

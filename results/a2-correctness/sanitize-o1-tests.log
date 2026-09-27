@@ -1,0 +1,509 @@
+Start testing: Sep 27 13:19 EDT
+----------------------------------------------------------
+2/25 Testing: geometry_tests
+2/25 Test: geometry_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/geometry_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"geometry_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+8,918 boundary rays and 512 camera rays checked
+PASS
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"geometry_tests" end time: Sep 27 13:19 EDT
+"geometry_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+1/25 Testing: a1_benchmark_smoke
+1/25 Test: a1_benchmark_smoke
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/mcr_a1_benchmark" "--output" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_benchmark_smoke" "--repetitions" "1" "--limit-per-suite" "2" "--csv-rows-per-file" "1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_benchmark_smoke" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+axis_1: 2 observation families measured
+axis_2: 2 observation families measured
+axis_3: 2 observation families measured
+axis_4: 2 observation families measured
+axis_5: 2 observation families measured
+axis_6: 2 observation families measured
+oblique_1: 2 observation families measured
+oblique_2: 2 observation families measured
+<end of output>
+Test time =   2.55 sec
+----------------------------------------------------------
+Test Passed.
+"a1_benchmark_smoke" end time: Sep 27 13:19 EDT
+"a1_benchmark_smoke" time elapsed: 00:00:02
+----------------------------------------------------------
+
+3/25 Testing: render_tests
+3/25 Test: render_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/render_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"render_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+6561 worlds, 3359232 ray/world comparisons
+PASS
+<end of output>
+Test time =   2.47 sec
+----------------------------------------------------------
+Test Passed.
+"render_tests" end time: Sep 27 13:19 EDT
+"render_tests" time elapsed: 00:00:02
+----------------------------------------------------------
+
+5/25 Testing: a1_geometry_tests
+5/25 Test: a1_geometry_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_geometry_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_geometry_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+153 named A1 geometry samples checked in both renderers; exact intervals and traversal order checked
+PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"a1_geometry_tests" end time: Sep 27 13:19 EDT
+"a1_geometry_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/25 Testing: a2_geometry_tests
+6/25 Test: a2_geometry_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a2_geometry_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a2_geometry_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+870 named half-slab samples; 32768 sampled camera ray/world comparisons; both palettes and A1 bottom-slab compatibility
+PASS
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"a2_geometry_tests" end time: Sep 27 13:19 EDT
+"a2_geometry_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/25 Testing: a2_inference_tests
+7/25 Test: a2_inference_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a2_inference_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a2_inference_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+split material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+split material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+same material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+same material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+split: fixed-hit ray branches [baseline, decomposition, fixed-hit, both] = [1, 1, 0, 0]; optimized nodes=1, splits=0, component solves=0, fixed calls=1
+split: two paths branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: path plus triangle branches [baseline, decomposition, fixed-hit, both] = [9, 5, 9, 5]; optimized nodes=8, splits=1, component solves=2, fixed calls=0
+split: triangle before path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 3, 3]; optimized nodes=5, splits=1, component solves=1, fixed calls=0
+split: fixed region plus path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=1
+split: shared invariant context branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: non-entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=5, splits=0, component solves=0, fixed calls=0
+split: conditional guard branches [baseline, decomposition, fixed-hit, both] = [7, 7, 6, 6]; optimized nodes=9, splits=1, component solves=2, fixed calls=0
+split: nested component split branches [baseline, decomposition, fixed-hit, both] = [8, 8, 8, 8]; optimized nodes=13, splits=2, component solves=4, fixed calls=0
+same: fixed-hit ray branches [baseline, decomposition, fixed-hit, both] = [1, 1, 0, 0]; optimized nodes=1, splits=0, component solves=0, fixed calls=1
+same: two paths branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: path plus triangle branches [baseline, decomposition, fixed-hit, both] = [9, 5, 9, 5]; optimized nodes=8, splits=1, component solves=2, fixed calls=0
+same: triangle before path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 3, 3]; optimized nodes=5, splits=1, component solves=1, fixed calls=0
+same: fixed region plus path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=1
+same: shared invariant context branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+same: non-entailed bridge branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=5, splits=0, component solves=0, fixed calls=0
+same: conditional guard branches [baseline, decomposition, fixed-hit, both] = [7, 7, 6, 6]; optimized nodes=9, splits=1, component solves=2, fixed calls=0
+same: nested component split branches [baseline, decomposition, fixed-hit, both] = [8, 8, 8, 8]; optimized nodes=13, splits=2, component solves=4, fixed calls=0
+split: guaranteed hit hides bridge branches [baseline, decomposition, fixed-hit, both] = [3, 2, 2, 2]; optimized nodes=5, splits=1, component solves=2, fixed calls=0
+split: optional hit preserves bridge branches [baseline, decomposition, fixed-hit, both] = [3, 3, 2, 2]; optimized nodes=3, splits=0, component solves=0, fixed calls=0
+9620 exact projection/feasibility cases; 214152 direct support queries; 15416 verified witnesses; 75949 audited reductions; 222544 audited propagation contradictions
+PASS
+<end of output>
+Test time =   1.44 sec
+----------------------------------------------------------
+Test Passed.
+"a2_inference_tests" end time: Sep 27 13:19 EDT
+"a2_inference_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+8/25 Testing: constraint_tests
+8/25 Test: constraint_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/constraint_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"constraint_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+7,203 exhaustive four-cell local support cases checked
+PASS
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Passed.
+"constraint_tests" end time: Sep 27 13:19 EDT
+"constraint_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/25 Testing: a1_constraint_tests
+9/25 Test: a1_constraint_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_constraint_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_constraint_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+98304 exhaustive A1 local-support cases; restricted/empty domains, contradictions and ambiguity checked
+PASS
+<end of output>
+Test time =   1.29 sec
+----------------------------------------------------------
+Test Passed.
+"a1_constraint_tests" end time: Sep 27 13:19 EDT
+"a1_constraint_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+10/25 Testing: a1_propagation_tests
+10/25 Test: a1_propagation_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_propagation_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_propagation_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
+<end of output>
+Test time =   2.29 sec
+----------------------------------------------------------
+Test Passed.
+"a1_propagation_tests" end time: Sep 27 13:19 EDT
+"a1_propagation_tests" time elapsed: 00:00:02
+----------------------------------------------------------
+
+11/25 Testing: a1_feasibility_tests
+11/25 Test: a1_feasibility_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_feasibility_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_feasibility_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+cascade: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+cycle: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+slab_occlusion: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+physical_worlds=65536 physical_observations=729 physical_feasible_observations=450 physical_domain_variants=2
+feasibility_calls=75747 feasible=16584 infeasible=59163 verified_witnesses=16584 audited_reductions=120459 deleted_states=145441 factor_updates=227843 envelope_advances=71696 branches=0 search_nodes=0 support_queries=0
+PASS
+<end of output>
+Test time =   1.10 sec
+----------------------------------------------------------
+Test Passed.
+"a1_feasibility_tests" end time: Sep 27 13:19 EDT
+"a1_feasibility_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+12/25 Testing: a1_support_query_tests
+12/25 Test: a1_support_query_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_support_query_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_support_query_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS
+<end of output>
+Test time =   2.33 sec
+----------------------------------------------------------
+Test Passed.
+"a1_support_query_tests" end time: Sep 27 13:19 EDT
+"a1_support_query_tests" time elapsed: 00:00:02
+----------------------------------------------------------
+
+13/25 Testing: a1_projection_tests
+13/25 Test: a1_projection_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_projection_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_projection_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+cascade: exact projection and witness coverage for all 4096 domain triples
+cycle: exact projection and witness coverage for all 4096 domain triples
+slab_occlusion: exact projection and witness coverage for all 4096 domain triples
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_projections=1458
+audited_projections=13760 feasible=3113 infeasible=10647 verified_witnesses=8602 witnessed_literals=17498 single_query_checks=194192 kernel_prunes=31575 kernel_deletions=40524 projection_prunes=4290 projection_deletions=5270 literal_queries=10759 infeasible_queries=5270 envelope_calls=24519 branches=0 search_nodes=0
+PASS
+<end of output>
+Test time =   1.11 sec
+----------------------------------------------------------
+Test Passed.
+"a1_projection_tests" end time: Sep 27 13:19 EDT
+"a1_projection_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+14/25 Testing: inference_tests
+14/25 Test: inference_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/inference_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"inference_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"inference_tests" end time: Sep 27 13:19 EDT
+"inference_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/25 Testing: adversarial_tests
+15/25 Test: adversarial_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/adversarial_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"adversarial_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+24 named adversarial scenes across eight view suites, duplicates and order reversal checked
+PASS
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"adversarial_tests" end time: Sep 27 13:19 EDT
+"adversarial_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/25 Testing: python_render_agreement
+16/25 Test: python_render_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/render_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/oracle"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_render_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+6561 worlds, 3359232 ray/world comparisons, exact Python rays and image labels
+PASS
+<end of output>
+Test time =   2.02 sec
+----------------------------------------------------------
+Test Passed.
+"python_render_agreement" end time: Sep 27 13:19 EDT
+"python_render_agreement" time elapsed: 00:00:02
+----------------------------------------------------------
+
+4/25 Testing: a1_render_tests
+4/25 Test: a1_render_tests
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_render_tests"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_render_tests" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+14352384 exact A1 automaton decisions checked
+PASS
+<end of output>
+Test time =  13.29 sec
+----------------------------------------------------------
+Test Passed.
+"a1_render_tests" end time: Sep 27 13:19 EDT
+"a1_render_tests" time elapsed: 00:00:13
+----------------------------------------------------------
+
+18/25 Testing: python_a1_render_agreement
+18/25 Test: python_a1_render_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_render_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_render_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+14352384 exact A1 automaton decisions checked
+PASS
+<end of output>
+Test time =  12.53 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_render_agreement" end time: Sep 27 13:19 EDT
+"python_a1_render_agreement" time elapsed: 00:00:12
+----------------------------------------------------------
+
+17/25 Testing: a0_acceptance
+17/25 Test: a0_acceptance
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a0_acceptance" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/oracle" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a0_acceptance.json"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a0_acceptance" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+axis_1: 81 complete feasible families checked
+axis_2: 1225 complete feasible families checked
+axis_3: 3239 complete feasible families checked
+axis_4: 4157 complete feasible families checked
+axis_5: 4929 complete feasible families checked
+axis_6: 5453 complete feasible families checked
+oblique_1: 3601 complete feasible families checked
+oblique_2: 6347 complete feasible families checked
+29032 classes, 512 conditioned queries, 694321 audited reductions; zero mismatches
+PASS
+<end of output>
+Test time =  13.70 sec
+----------------------------------------------------------
+Test Passed.
+"a0_acceptance" end time: Sep 27 13:19 EDT
+"a0_acceptance" time elapsed: 00:00:13
+----------------------------------------------------------
+
+20/25 Testing: python_a1_propagation_agreement
+20/25 Test: python_a1_propagation_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_propagation_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_propagation_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+12288 multi-ray cases agree with frozen Python GAC
+PASS
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_propagation_agreement" end time: Sep 27 13:19 EDT
+"python_a1_propagation_agreement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/25 Testing: python_a1_feasibility_agreement
+21/25 Test: python_a1_feasibility_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_feasibility_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_feasibility_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+10125 decisions and deterministic witnesses agree with frozen Python; zero search
+PASS
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_feasibility_agreement" end time: Sep 27 13:19 EDT
+"python_a1_feasibility_agreement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/25 Testing: python_a1_support_query_agreement
+22/25 Test: python_a1_support_query_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_support_query_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_support_query_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+python_queries=64800 supported=9856 unsupported=54944; exact decisions and witnesses agree; zero search
+PASS
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_support_query_agreement" end time: Sep 27 13:19 EDT
+"python_a1_support_query_agreement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/25 Testing: python_a1_constraint_agreement
+19/25 Test: python_a1_constraint_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_constraint_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_constraint_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+98304 exhaustive A1 local-support cases; restricted/empty domains, contradictions and ambiguity checked
+PASS
+<end of output>
+Test time =   1.08 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_constraint_agreement" end time: Sep 27 13:19 EDT
+"python_a1_constraint_agreement" time elapsed: 00:00:01
+----------------------------------------------------------
+
+23/25 Testing: python_a1_projection_agreement
+23/25 Test: python_a1_projection_agreement
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_projection_tests" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"python_a1_projection_agreement" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+python_projections=10125 feasible=2624 infeasible=7501 supported_literals=9856; exact masks agree; zero search
+PASS
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"python_a1_projection_agreement" end time: Sep 27 13:19 EDT
+"python_a1_projection_agreement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/25 Testing: a1_acceptance
+24/25 Test: a1_acceptance
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_acceptance" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/sanitize/oracle_a1" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a1_acceptance.json"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a1_acceptance" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+axis_1: 625 complete A1 families checked
+axis_2: 5625 complete A1 families checked
+axis_3: 24705 complete A1 families checked
+axis_4: 32738 complete A1 families checked
+axis_5: 38514 complete A1 families checked
+axis_6: 45270 complete A1 families checked
+oblique_1: 11353 complete A1 families checked
+oblique_2: 36790 complete A1 families checked
+195620 A1 families; 10909842 audited reductions; zero search and zero mismatches
+PASS
+<end of output>
+Test time =  77.68 sec
+----------------------------------------------------------
+Test Passed.
+"a1_acceptance" end time: Sep 27 13:21 EDT
+"a1_acceptance" time elapsed: 00:01:17
+----------------------------------------------------------
+
+25/25 Testing: a2_acceptance
+25/25 Test: a2_acceptance
+Command: "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a2_acceptance" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/oracle_a2" "/workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize/a2_acceptance.json"
+Directory: /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/a2-sanitize
+"a2_acceptance" start time: Sep 27 13:19 EDT
+Output:
+----------------------------------------------------------
+split axis_1: 256 complete families x four modes
+split axis_2: 2025 complete families x four modes
+split axis_3: 4913 complete families x four modes
+split axis_4: 4913 complete families x four modes
+split axis_5: 5453 complete families x four modes
+split axis_6: 5453 complete families x four modes
+split oblique_1: 3600 complete families x four modes
+split oblique_2: 6483 complete families x four modes
+same axis_1: 256 complete families x four modes
+same axis_2: 1024 complete families x four modes
+same axis_3: 4400 complete families x four modes
+same axis_4: 4400 complete families x four modes
+same axis_5: 4400 complete families x four modes
+same axis_6: 4400 complete families x four modes
+same oblique_1: 2154 complete families x four modes
+same oblique_2: 4420 complete families x four modes
+Both palettes: exhaustive rendering/families, all queries, masks, conditioned audits and witnesses agree in all four modes
+PASS
+<end of output>
+Test time = 521.92 sec
+----------------------------------------------------------
+Test Passed.
+"a2_acceptance" end time: Sep 27 13:28 EDT
+"a2_acceptance" time elapsed: 00:08:41
+----------------------------------------------------------
+
+End testing: Sep 27 13:28 EDT

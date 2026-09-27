@@ -2,8 +2,9 @@
   "version": 2,
   "configurePresets": [
     {"name": "release", "generator": "Ninja", "binaryDir": "${sourceDir}/build/release", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release", "BUILD_TESTING": "ON"}},
-    {"name": "sanitize", "inherits": "release", "binaryDir": "${sourceDir}/build/sanitize", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug", "MCR_ENABLE_SANITIZERS": "ON"}}
+    {"name": "sanitize", "inherits": "release", "binaryDir": "${sourceDir}/build/sanitize", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug", "MCR_ENABLE_SANITIZERS": "ON"}},
+    {"name": "a2-sanitize", "inherits": "sanitize", "binaryDir": "${sourceDir}/build/a2-sanitize", "cacheVariables": {"CMAKE_CXX_FLAGS_DEBUG": "-O1 -g"}}
   ],
-  "buildPresets": [{"name": "release", "configurePreset": "release"}, {"name": "sanitize", "configurePreset": "sanitize"}],
-  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}, {"name": "sanitize", "configurePreset": "sanitize", "output": {"outputOnFailure": true}}]
+  "buildPresets": [{"name": "release", "configurePreset": "release"}, {"name": "sanitize", "configurePreset": "sanitize"}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize"}],
+  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}, {"name": "sanitize", "configurePreset": "sanitize", "output": {"outputOnFailure": true}}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize", "output": {"outputOnFailure": true}}]
 }

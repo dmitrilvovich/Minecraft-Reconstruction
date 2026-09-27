@@ -1,0 +1,73 @@
+Test project /workspace/scratch/6ba1826515f8/mcr-milestone-2a/build/release
+      Start 26: python_a1_support_query_export
+      Start 30: python_a1_acceptance_export
+ 1/31 Test #30: python_a1_acceptance_export .........   Passed    0.79 sec
+      Start 16: python_oracle_export
+ 2/31 Test #26: python_a1_support_query_export ......   Passed    1.25 sec
+      Start 19: python_a1_oracle_export
+ 3/31 Test #19: python_a1_oracle_export .............   Passed    3.09 sec
+      Start 28: python_a1_projection_export
+ 4/31 Test #28: python_a1_projection_export .........   Passed    0.47 sec
+      Start 22: python_a1_propagation_export
+ 5/31 Test #22: python_a1_propagation_export ........   Passed    0.74 sec
+      Start 24: python_a1_feasibility_export
+ 6/31 Test #24: python_a1_feasibility_export ........   Passed    0.69 sec
+      Start 31: a1_acceptance
+ 7/31 Test #16: python_oracle_export ................   Passed   18.29 sec
+      Start 20: python_a1_render_agreement
+ 8/31 Test #31: a1_acceptance .......................   Passed   15.13 sec
+      Start  4: a1_render_tests
+ 9/31 Test #20: python_a1_render_agreement ..........   Passed    2.49 sec
+      Start 18: a0_acceptance
+10/31 Test #18: a0_acceptance .......................   Passed    2.01 sec
+      Start  1: a1_benchmark_smoke
+11/31 Test  #4: a1_render_tests .....................   Passed    2.37 sec
+      Start 17: python_render_agreement
+12/31 Test #17: python_render_agreement .............   Passed    0.32 sec
+      Start  3: render_tests
+13/31 Test  #1: a1_benchmark_smoke ..................   Passed    0.63 sec
+      Start 21: python_a1_constraint_agreement
+14/31 Test #21: python_a1_constraint_agreement ......***Failed    0.11 sec
+/workspace/scratch/6ba1826515f8/mcr-milestone-2a/tests/a1_constraint_tests.cpp:10: b!=std::char_traits<char>::eof()
+
+      Start 12: a1_support_query_tests
+15/31 Test  #3: render_tests ........................   Passed    0.29 sec
+      Start  9: a1_constraint_tests
+16/31 Test  #9: a1_constraint_tests .................   Passed    0.17 sec
+      Start 13: a1_projection_tests
+17/31 Test #12: a1_support_query_tests ..............   Passed    0.33 sec
+      Start 27: python_a1_support_query_agreement
+18/31 Test #13: a1_projection_tests .................   Passed    0.17 sec
+      Start 10: a1_propagation_tests
+19/31 Test #27: python_a1_support_query_agreement ...   Passed    0.05 sec
+      Start 29: python_a1_projection_agreement
+20/31 Test #29: python_a1_projection_agreement ......   Passed    0.03 sec
+      Start 15: adversarial_tests
+21/31 Test #15: adversarial_tests ...................   Passed    0.09 sec
+      Start  2: geometry_tests
+22/31 Test  #2: geometry_tests ......................   Passed    0.18 sec
+      Start 11: a1_feasibility_tests
+23/31 Test #10: a1_propagation_tests ................   Passed    0.35 sec
+      Start  8: constraint_tests
+24/31 Test  #8: constraint_tests ....................   Passed    0.05 sec
+      Start 23: python_a1_propagation_agreement
+25/31 Test #23: python_a1_propagation_agreement .....   Passed    0.03 sec
+      Start 25: python_a1_feasibility_agreement
+26/31 Test #25: python_a1_feasibility_agreement .....   Passed    0.02 sec
+      Start 14: inference_tests
+27/31 Test #11: a1_feasibility_tests ................   Passed    0.18 sec
+      Start  5: a1_geometry_tests
+28/31 Test #14: inference_tests .....................   Passed    0.08 sec
+      Start  6: a2_geometry_tests
+29/31 Test  #5: a1_geometry_tests ...................   Passed    0.03 sec
+      Start  7: a2_inference_tests
+30/31 Test  #6: a2_geometry_tests ...................   Passed    0.16 sec
+31/31 Test  #7: a2_inference_tests ..................   Passed    0.17 sec
+
+97% tests passed, 1 tests failed out of 31
+
+Total Test time (real) =  25.44 sec
+
+The following tests FAILED:
+	 21 - python_a1_constraint_agreement (Failed)
+Errors while running CTest

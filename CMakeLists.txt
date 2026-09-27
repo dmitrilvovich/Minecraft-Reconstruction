@@ -148,5 +148,15 @@ if(BUILD_TESTING)
         add_test(NAME a1_acceptance COMMAND a1_acceptance "${MCR_A1_ORACLE_DIR}"
                  "${CMAKE_CURRENT_BINARY_DIR}/a1_acceptance.json")
         set_tests_properties(a1_acceptance PROPERTIES FIXTURES_REQUIRED python_a1_acceptance)
+        set(MCR_A2_ORACLE_DIR "${CMAKE_CURRENT_BINARY_DIR}/oracle_a2" CACHE PATH "A2 oracle fixture directory")
+        add_test(NAME python_a2_acceptance_export COMMAND "${Python3_EXECUTABLE}"
+                 "${CMAKE_CURRENT_SOURCE_DIR}/tests/oracle/export_a2_acceptance.py" "${MCR_A2_ORACLE_DIR}")
+        set_tests_properties(python_a2_acceptance_export PROPERTIES FIXTURES_SETUP python_a2_acceptance)
+        add_executable(a2_acceptance tests/a2_acceptance.cpp)
+        target_include_directories(a2_acceptance PRIVATE tests)
+        target_link_libraries(a2_acceptance PRIVATE mcr_experiments)
+        add_test(NAME a2_acceptance COMMAND a2_acceptance "${MCR_A2_ORACLE_DIR}"
+                 "${CMAKE_CURRENT_BINARY_DIR}/a2_acceptance.json")
+        set_tests_properties(a2_acceptance PROPERTIES FIXTURES_REQUIRED python_a2_acceptance)
     endif()
 endif()
