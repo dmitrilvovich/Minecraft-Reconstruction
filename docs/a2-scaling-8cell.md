@@ -1,248 +1,332 @@
-# A2: fixed eight-cell scaling checkpoint
+# A2 eight-cell scaling: final report
 
-**Preserved preliminary account — superseded for interpretation by the
-[scientific review](a2-scaling-review.md).** Its numerical tables reproduced
-within saved rounding; the review qualifies weighting, causal language and
-optimization/runtime claims. The original discussion and charts below remain
-preserved and are not the final scaling report. The
-[adoption and reconciliation record](a2-scaling-adoption.md) establishes this
-run as the canonical reconstructed exploratory 8-cell A2 dataset and governs
-its identity and caveats. The existing measurements, summaries, charts, and
-scientific discussion below are preserved as the preliminary record; neither
-publication nor review establishes equivalence to the lost run.
+**The fixed eight-cell exploratory scaling experiment is complete.** This report
+synthesizes the [scientific review](a2-scaling-review.md) published at
+`5025ac42b62bd5d3469b858021ad8801d3e65654`. It introduces no new measurements,
+calculations, tables derived from data, or charts; the numerical results below
+are reproduced from that review.
 
-This is a **replacement collection after failed workspace recovery**, using the
-accepted solver at `e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1`. The interrupted
-run's source, masks, seeds, measurements, and analysis were not accessible from
-this branch. Its reported 410,953 cases are not the dataset published here.
-The [recovery record](a2-scaling-recovery.md) explains what survived and what was
-reconstructed. No accepted solver, frozen reference, or correctness evidence
-changed, and no full correctness/sanitizer gate or larger-volume experiment ran.
+> The canonical 491,199-case dataset is a reconstructed exploratory 8-cell A2
+> scaling dataset. It is not the recovered original 410,953-case run, is not
+> proven equivalent to that run, and is not a verified correction or superset
+> of it. Its protocol was explicitly reconstructed after the original artifacts
+> were lost. Its exact protocol and provenance are preserved. No claim depends
+> on reproducing the historical 410,953-case count.
 
-## Population and measurement
+The [adoption record](a2-scaling-adoption.md) and
+[recovery history](a2-scaling-recovery.md) document this distinction. The original
+mask values, exact suite selection, seeds, perturbation recipe, timing/query
+sampling and aggregation policy remain unavailable. The reconstructed design
+is not original preregistration, nor proof that its choices were uninfluenced
+by knowledge of earlier results. There is no defensible matching 410,953-case
+subset, and no justification for a new run solely to recover that count.
 
-The grid remains 2 x 2 x 2. At k selected cells, domains allow air, oak bottom
-slab, and a top slab; the other cells allow only air or oak bottom slab. Top
-slabs are stone in `split` and oak in `same`. The palettes share every placement,
-truth geometry, camera, restriction seed, and solver setting. This controls the
-additional visibility information supplied by material labels.
+## Research question and scope
 
-There are 30 masks: the unique masks at k=0 and k=8, and four at each intervening
-k. Each placement enumerates all `3^k * 2^(8-k)` legal truth worlds. Observations
-are grouped into complete image families. The six suites are axis 1, 2, 3, 6,
-and one/two oblique cameras from the established rig. Every mask uses 8 x 8
-sampling. All six placements at k=0,4,8 also use 16 x 16 sampling. These are
-explicit replacement choices; the unavailable original mask/sampling manifest
-cannot be inferred from its aggregate case count.
+> On a fixed eight-cell known-camera problem, how does exact inference behave
+> as incomparable block geometry is introduced, and what factors besides
+> incomparable-cell count affect search?
 
-The [protocol](../results/a2-scaling-8cell/protocol.json) was saved before
-collection and includes every mask and job, literal seeds, ordering, perturbation
-rules, query sampling, repetitions, and budgets. There are 72 camera jobs and
-two structured-control jobs. Each camera job adds eight seeded
-restriction/observation cases per suite. The structured controls reuse the
-physical path and triangle and the existing abstract two-path, path-plus-triangle,
-fixed-hit, and fixed-hit-plus-path cases, with unused cells fixed to air.
+The reconstructed corpus shows that search depends on more than the number of
+cells admitting incomparable shapes. Arrangement, visibility, ambiguity, material
+information and the sampled occupancy distribution all matter to the observed
+work. Fixed-hit substantially reduces aggregate branches, while decomposition
+demonstrates its benefit in a targeted disconnected control. Neither result
+establishes a general runtime improvement or useful scaling to larger volumes.
 
-All four existing settings retain GAC: `search`, `decomposition`, `fixed_hit`,
-and `both`. Feasibility and full supported-domain projection are timed separately
-three times per family/mode. The mode order rotates with case and repetition;
-palette order alternates across placements. Every 97th camera family and all
-additional cases receive all 24 direct literal queries, once per mode. No solver
-jobs run concurrently. Oracle construction, witness verification, root graph
-measurement, and output are outside each timed API call.
+This is a controlled exploratory experiment on a **2×2×2 volume** with known,
+exact cameras and synthetic first-hit observations. It is not evidence of
+practical Minecraft-scale performance.
 
-Each call has a budget of 1,000,000 search-node entries or 60 seconds. Observer
-checks and a post-return deadline check map exhaustion to **UNRESOLVED**. The
-node statistic can include the extra attempted entry at which the observer
-aborts, before that node propagates. A contradiction established at the root of
-projection may legitimately use zero search entries. Zero-time, zero-node, and
-root-contradiction boundary checks passed. Budget observer and diagnostics costs
-are included in reported latency; these are not uninstrumented solver timings.
+The progression from A0 to A2 explains why search is being studied. A0 uses fixed
+occupied geometry. A1 introduces nested geometry and admits a complete
+zero-search envelope method under the established model assumptions. A2 adds
+bottom and top slabs, neither containing the other; their union need not be a
+legal state. The A1 completeness argument therefore stops applying. Generalized
+arc consistency (GAC) remains useful but is no longer complete, and the accepted
+A2 implementation uses exact residual search where propagation and shortcuts
+do not settle the problem. The physical path and triangle fixtures demonstrate
+this gap in both palettes; they do not prove that exponential search is inherent.
+See the [A1 acceptance report](milestone-2.md) and
+[A2 foundation](a2-foundation.md) for the underlying arguments.
 
-## Completed coverage and integrity
+## Corpus and measurement
 
-| Saved quantity | Count |
+The canonical reconstructed dataset, published at
+`69032371f396802ddc5880f4cc65d8805eb60585`, contains:
+
+| Category | Cases |
 | --- | ---: |
-| Distinct camera families across declared strata | 487,731 |
+| 8×8 camera-family cases | 374,771 |
+| 16×16 camera-family cases | 112,960 |
 | Restricted/perturbed cases | 3,456 |
-| Structured cases | 12 |
-| **Total cases** | **491,199** |
-| Camera truth/placement/suite/palette memberships | 818,808 |
-| Case/configuration combinations | 1,964,796 |
-| Timed feasibility and projection calls, including repeats | 11,788,776 |
-| Timed direct support queries | 836,064 |
-| **Total timed calls** | **12,624,840** |
-| Independently checked witness returns, including repeats | 13,962,316 |
-| **Unresolved calls / semantic disagreements** | **0 / 0** |
+| Structured controls | 12 |
+| **Total** | **491,199** |
 
-The 8 x 8 jobs contain 377,651 cases, the 16 x 16 jobs 113,536, and the two
-structured jobs 12. These counts overlap the accepted tiny model and are not
-additional unique worlds. The collection, including enumeration, validation,
-and compression, took about 227 seconds on the recorded host.
+These are cases across declared strata, not globally distinct geometries. At k
+selected cells, domains allow air, oak bottom slab and a top slab; other cells
+allow air or oak bottom slab. The top slab is stone in the mixed palette and
+oak in the same-material palette. The 30 masks comprise the unique k=0 and k=8
+masks and four arrangements at each intermediate k. Every placement enumerates
+its legal truths and groups identical complete observations into image families.
 
-Both palettes and all four modes matched the independent AABB/exhaustive
-families on feasibility and exact masks. Every returned witness was checked
-against its family and original domains, and independently against the ray
-constraints. Projection witnesses collectively cover exactly the supported
-literals. Direct queries include excluded states. Repeated calls have identical
-work counters. The 8 x 8 rendering reuses the surviving, hash-verified frozen
-Python images; the 16 x 16 controls compare independent AABB and traversal
-rendering. Reference families are never passed to the solver.
+Six suites use one, two, three or six axis cameras, or one or two oblique cameras.
+All masks use 8×8 sampling; 16×16 controls cover the six placements at k=0,4,8.
+All four solver settings retain GAC: search, decomposition, fixed-hit and both.
+Feasibility asks whether any complete world satisfies the observations; full
+projection returns every supported cell/state literal. Marginal supports are
+not independent choices of complete worlds.
 
-The targeted frozen-Python comparison passed **876 cases, 21,024 literal
-queries, 5,563 Python witness checks, and 94,134 audited prunes**. It uses the
-accepted adapter guard for empty domains: 6,364 calls were rejected before
-entering the frozen solver. The previously documented out-of-ray empty-domain
-limitation remains a reference limitation; the frozen file is unchanged. This
-spot check is separate from the full accepted correctness gate and does not
-claim to repeat it.
+The primary analysis keeps two weightings separate:
 
-Outputs were closed in memory-backed storage and validated before publication.
-Checks include complete family probability mass for every stratum, all expected
-case/API keys, row counts, statuses, repeat consistency, witness totals, and
-compressed/uncompressed SHA-256. Every job has a completion manifest; partial
-jobs cannot masquerade as complete ones.
+- **Truth-weighted:** weight each image family by its number of legal truths,
+  equivalent to uniform sampling over legal worlds within a placement/suite.
+- **Observation-family-weighted:** give each distinct image family one vote
+  within that placement/suite.
 
-For efficient transport, all 148 raw CSV tables are stored losslessly as typed
-columns, with exact CSV-byte reconstruction checked against the original hashes.
-The split archive also includes all job manifests, logs, and Python spot inputs.
-Its parts and complete tar stream have SHA-256 checks. The unpacker restores the
-original CSV gzip files and verifies their original hashes. No trial, family,
-query, timing sample, or work counter is discarded.
+Both then give placements and suites equal weight at fixed k. Any overall
+primary comparison cited below additionally weights k and palette equally.
+The pooled optimization totals instead count every saved camera family once
+across strata; they are a separate descriptive population.
 
-A later workspace reread found six truncated temporary unpacked copies. All
-original measurement shards and transport parts remained hash-correct. Those
-temporary copies were repaired without rerunning measurements, and archive
-bytes read from the Git index were checked against the manifest. Exact affected
-filenames and sizes are recorded in `validation.json`.
+Feasibility and projection timings use each case's median of three saved calls
+per configuration; reported means average those medians. Direct support queries
+time each of the 24 cell/state literals once per configuration on every 97th
+camera family and all controls. This deterministic query sample is selected
+separately per palette and is not a
+truth- or family-population estimator. Query UNSAT means an unsupported literal,
+not necessarily an infeasible scene.
 
-## Results and weighting (preserved preliminary discussion)
+Oracle/reference construction, witness audits, root diagnostics and output are
+outside solver timing; propagation/search, counters and budget checks are inside.
+Whole-process memory includes oracle/reference data and is not solver-only
+memory. The preserved [protocol](../results/a2-scaling-8cell/protocol.json),
+[provenance](../results/a2-scaling-8cell/provenance.json) and
+[artifact index](../results/a2-scaling-8cell/README.md) specify the exact collection.
 
-The main summaries keep three different averages separate. Each first weights
-families within one placement/suite, then gives placements and suites equal
-weight at fixed k:
+## Incomparable-cell count and arrangement
 
-- **Truth:** family size is its weight, equivalent to a uniform legal truth.
-- **Family:** each distinct image family gets one vote. This is a different
-  population in the two palettes because equal materials merge images.
-- **Occupancy-balanced:** a secondary reweighting sets independent occupancy
-  to 1/2 at every cell and chooses each slab half with probability 1/2 conditional
-  on occupancy at incomparable cells. It changes no observations or solver calls.
+The measured **primary truth-weighted 8×8 full-projection branch means with
+both optimizations** are:
 
-Uniform legal truths raise expected occupancy from 4 cells at k=0 to 5 1/3 at
-k=8. The balanced average holds expected occupancy at 4. For a family, the exact
-balanced numerator is the sum of `2^(k - occupied_incomparable_cells)` across
-its truths, with denominator `2^(8+k)`. The saved masses sum to that denominator
-for every camera stratum.
+| k | Mixed material | Same material |
+| ---: | ---: | ---: |
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 2 | 0.001736 | 0.010055 |
+| 3 | 0.093750 | 0.162375 |
+| 4 | 0.004630 | 0.036458 |
+| 5 | 0.479681 | 0.686686 |
+| 6 | 0.770576 | 1.128587 |
+| 7 | 1.297258 | 1.960086 |
+| 8 | 1.919753 | 2.986105 |
 
-Mean full-projection branches at **k=8, 8 x 8**, with both optimizations:
+Work rises overall toward k=8 but is **not monotone in k**. At k=3, masks 7, 25,
+44 and 224 have mixed-palette means of 0, 0.375, 0 and 0; same-material means
+are 0, 0.613812, 0.025656 and 0.010031. The k=4 dip persists under both primary
+weightings. Thus arrangement changes difficulty at fixed k, and the chosen masks
+do not provide a complete nested comparison between adjacent k values.
 
-| Palette | Uniform truth | Distinct family | Occupancy-balanced |
+The observation-family-weighted k=8 projection means are 1.691413 mixed and
+2.029430 same-material. They answer a different weighting question from the
+truth-weighted means above. All k values and configurations remain in the
+[primary evidence table](../results/a2-scaling-review/by-k-primary.csv).
+
+Configuration also matters at low k. Search-only projection averages 2.378255
+truth-weighted branches at k=0 in both palettes, whereas fixed-hit/both require
+none. The zero-branch entries above are not claims about every solver setting.
+
+At k=8, full projection costs more than finding one feasible world in the
+reviewed summaries. With both optimizations and primary truth weights:
+
+| Palette and API | Mean µs | Median µs | p95 µs | Mean nodes | Mean branches |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Mixed feasibility | 6.833 | 6.791 | 9.905 | 1.830 | 0.400 |
+| Same feasibility | 7.883 | 7.551 | 12.529 | 2.183 | 0.657 |
+| Mixed projection | 16.144 | 12.408 | 48.714 | 7.102 | 1.920 |
+| Same projection | 23.241 | 17.266 | 56.956 | 9.689 | 2.986 |
+
+## Occupancy: a secondary sensitivity analysis
+
+Uniform legal truths change the expected scene density as k increases: selected
+cells have occupancy probability 2/3, other cells 1/2. Primary expected occupancy
+is **4+k/6**, rising from **4 to 5⅓ cells**. Consequently the primary k trend is
+not a clean isolated effect of incomparable-cell count.
+
+The already-reviewed occupancy-balanced sensitivity analysis holds expected
+occupancy at four cells by assigning occupancy probability 1/2 at every cell,
+with equal slab-half probabilities conditional on occupancy at selected cells.
+It is purely a **secondary post-hoc reweighting of existing measurements**, with
+no additional cases or solver execution.
+
+At k=8, its projection branch means with both optimizations are **0.940908 mixed**
+and **1.392619 same-material**, retaining **49.0% and 46.6%** of the corresponding
+primary means. Branch growth above the optimized k=0 baseline survives, as does
+the k=4 dip. This supports sensitivity to the occupancy distribution and shows
+that balancing does not remove the observed pattern. It does **not** establish
+that occupancy causally explains the removed fraction, or isolate k's causal
+effect. These secondary numbers are not substituted into the primary conclusions.
+The [sensitivity evidence](../results/a2-scaling-review/by-k-occupancy-sensitivity.csv)
+remains separate.
+
+## Geometry, material information and image families
+
+The same-material control removes the stone/oak distinction while preserving
+the incomparable slab geometry, legal truth population, masks and cameras.
+The physical path retains correlated shape choices and globally unsupported
+values after local propagation; the triangle remains globally infeasible despite
+nonempty GAC domains. Both occur with identical oak labels. Incomparable geometry
+therefore creates genuine global coupling without requiring material-color
+differences; the accepted solver's residual search addresses that incompleteness.
+
+Material labels nevertheless supply useful information. For example, at k=8
+under primary truth weights and both optimizations, axis_2 projection means are
+1.404664 branches mixed versus 6.980643 same-material. With one axis view, both
+palettes instead average 10.074074 branches. The label benefit depends on what
+the cameras reveal, and does not eliminate geometric coupling.
+
+Relabeling stone as oak merges image families: the 8×8 corpus has **207,278 mixed**
+families versus **167,493 same-material** families. Truth-weighted comparisons
+refer to the matched legal-world population; raw family-weighted comparisons
+refer to different populations of images. That distinction must accompany any
+cross-palette family average.
+
+Restricted/perturbed cases are separate robustness controls. In particular,
+observation-label cycling can introduce impossible stone observations into the
+oak-only palette. Those cases are excluded from clean palette comparisons and
+primary camera summaries.
+
+## Visibility and ambiguity are central to search behavior
+
+All **24,002 tested 16×16 six-axis families at k=0,4,8** are singleton families.
+Feasibility and projection use one node and zero branches in every configuration;
+all **24,384 sampled direct support calls** for those scenes are also branch-free.
+These are stronger observations of the same eight-cell volume, not larger scenes.
+
+With both optimizations, all **285,880 singleton 8×8 families** are branch-free.
+Only **9,851 of 88,891 ambiguous families** require branching, so most ambiguous
+families also require none. Ambiguity is therefore not sufficient to force
+search. Conversely, stronger visibility can eliminate search entirely in the
+tested six-axis 16×16 scenes, even when every cell admits incomparable geometry.
+
+More observations need not reduce runtime. At k=8, the same-material axis_3 and
+axis_6 summaries have identical ambiguity and branch work, but mean projection
+times of 11.170 and 18.128 µs. Root residual-component size also does not alone
+predict work: some roots reach eight cells, while the worst projection has four
+two-cell components. Root diagnostics are not full descendant search traces.
+
+The supported interpretation is that visibility, arrangement and observation
+ambiguity are essential explanatory variables alongside k. Their causal ranking
+is unresolved. Nothing here implies that increasing image resolution alone will
+solve larger reconstruction problems.
+
+## Fixed-hit and decomposition
+
+Across the **374,771 pooled 8×8 camera families**, each counted once across
+strata, the reviewed full-projection totals are:
+
+| Configuration | Branches | Nodes | Sum of case-median runtimes, s |
 | --- | ---: | ---: | ---: |
-| Mixed material | 1.919753 | 1.691413 | 0.940908 |
-| Same material | 2.986105 | 2.029430 | 1.392619 |
+| Search | 97,453 | 616,443 | 3.963700 |
+| Decomposition | 97,453 | 656,931 | 3.951813 |
+| Fixed-hit | 47,739 | 596,314 | 3.946784 |
+| Both | 47,883 | 621,866 | 3.952743 |
 
-The growth survives occupancy balancing, but k alone does not predict work.
-The selected k=4 placements have less search than k=3; visibility, spatial
-arrangement, and residual constraints matter. Equal materials can remove useful
-label information even when the legal shape population is identical.
+Fixed-hit removes **51.0%** of pooled projection branches; both removes **50.9%**.
+The corresponding sums of case-median runtimes decrease only **0.43% and 0.28%**,
+both less than 0.5%. In the overall primary comparison with k and palette equally
+weighted, both versus search reduces branches/time by 70.7%/5.1% under truth
+weights and 57.2%/1.6% under family weights. Weighting affects the magnitude;
+the recorded timing differences remain modest relative to branch reductions.
 
-Across the **374,771 camera families at 8 x 8**, counting each family once and
-summing across strata, projection branch totals are:
+**Fixed-hit is effective at reducing search work in this corpus, but a reliable
+general wall-clock speedup is not established.** Its benefit is aggregate, not
+universal: fixed-hit increases projection branches in 1,120 camera families.
+The option also changes branch-variable eligibility, so its measured effect is
+not an isolated evaluation of the shortcut routine alone. Three interleaved
+trials on one recorded host/run do not provide independent timing replication.
 
-| Setting | Branches | Sum of per-family median latency |
-| --- | ---: | ---: |
-| Search | 97,453 | 3.963700 s |
-| Decomposition | 97,453 | 3.951813 s |
-| Fixed-hit | 47,739 | 3.946784 s |
-| Both | 47,883 | 3.952743 s |
+Decomposition alone saves **no branches case by case** in the measured camera
+corpus or sampled camera queries at either resolution. Its added 8×8 projection
+nodes equal its 40,488 component solves. Both options together can have more
+nodes than search alone despite fewer branches; projection includes component
+entries and several support searches with witness reuse.
 
-Thus fixed-hit removes **51.0%** of these branches; both removes **50.9%**.
-The corresponding latency differences are only about **0.43%** and **0.28%**.
-These totals give one vote to each saved family across all strata, unlike the
-equal-placement/suite averages above. The latter, additionally averaging k and
-palette equally, give about 70.7% fewer branches and 5.1% lower measured latency
-for both versus search. The weighting changes the conclusion's magnitude.
-Neither calculation establishes a reliable general runtime speedup: timings
-are short, observer costs are included, and this is one host/run with three
-interleaved trials, no dedicated CPU isolation, and no independent run replicates.
+The intentionally disconnected path-plus-triangle UNSAT control demonstrates
+decomposition's mechanism: in both palettes, feasibility falls from **10 nodes /
+9 branches** to **8 nodes / 5 branches**, with lower saved case-median times.
+Two satisfiable paths retain four branches and incur node/time overhead instead.
+Decomposition is therefore demonstrated on targeted separable cases, not accepted
+as a generally beneficial optimization. Branch reduction, node reduction and
+wall-clock improvement are distinct outcomes.
 
-The compiler was GCC 13.3.0 with `-std=c++20 -O3 -DNDEBUG`; the host reports
-AMD EPYC 9V74. At k=8, truth-weighted projection latency with both options is
-16.14 microseconds for mixed materials and 23.24 microseconds for the control.
-These are means of per-family medians across the six suites. Full within-stratum
-median, p95, maximum, and all individual trials are saved. Whole-process peak
-RSS is recorded per job and includes exhaustive/reference data; it is not
-solver-only memory.
+## Worst cases, status and budgets
 
-Decomposition alone saves no camera-corpus branches. It can add component-entry
-nodes, while changing witness reuse can slightly increase projection work with
-both options compared with fixed-hit alone. Its targeted benefit remains clear:
+The worst observed full projection reaches **61 nodes / 32 branches**, with
+both optimizations at **k=8, mask 255, one-axis view** in both palettes. The
+representative truth is 3320; the family has 16 worlds, 16 supported literals
+and four two-cell residual components. The branch count aggregates several
+support searches rather than one irreducible eight-cell search.
 
-| Feasibility control, both palettes | Search branches | Both branches |
-| --- | ---: | ---: |
-| Fixed-hit ray | 1 | 0 |
-| Two satisfiable paths | 4 | 4 |
-| Path plus independent triangle | 9 | 5 |
-| Fixed-hit region plus path | 3 | 2 |
+The slowest individual saved call is **8.136 ms**, in a different, branch-free
+case: mixed-material search-only projection at k=4, mask 90, oblique_2. Its
+three-trial median is 11.667 µs. The highest-search call and slowest call being
+different is another reason not to treat branches as a direct runtime proxy;
+the precise cause of the timing tail was not measured.
 
-The physical path still has two worlds, three unsupported air values after GAC,
-and feasibility work of 3 nodes / 2 branches. The physical triangle still has
-no worlds despite nonempty local GAC domains, with 4 nodes / 3 branches.
+There are **0 UNRESOLVED outcomes in 12,624,840 saved calls**. Each call had a
+limit of **1,000,000 search-node entries or 60 seconds**, with exhaustion
+represented explicitly as `UNRESOLVED`, never as infeasible. Observer and
+post-return deadline checks are not a hard process kill; the attempted entry
+that triggers an abort can be counted. The observed calls remain far below
+the limits and do not characterize behavior near exhaustion.
 
-At 8 x 8, maximum camera feasibility work is 9 nodes / 8 branches without
-decomposition and 13 / 8 with it. Projection reaches 45 / 32 or 61 / 32.
-The worst optimized projection is the k=8 one-axis family represented by truth
-ID 3320: 16 feasible worlds, four residual components of two cells each, and
-32 aggregate projection branches. This is work across several conditioned
-queries, not 32 branches in one irreducible eight-cell component. Root component
-sizes are measured before timing; they bound descendant component sizes because
-conditioning only removes the recorded dependencies, but are not a search trace.
+Camera families are SAT by construction. Of the restricted/perturbed cases,
+1,039 are SAT and 2,417 UNSAT; all those UNSAT cases are rejected by root GAC.
+The structured controls contain eight SAT and four UNSAT cases, with the latter
+retaining nonempty local domains. Hard UNSAT behavior is therefore represented
+only by targeted tiny controls, not a broad camera-derived UNSAT population.
 
-All tested **16 x 16 six-axis** families at k=0,4,8 are singletons and use zero
-branches in every mode. At k=8 and 8 x 8, six-axis cell identifiability is 93.87%
-for mixed materials and 83.63% for the same-material control. Sampling resolution
-and material information therefore strongly affect the observed ambiguity.
+## What the experiment establishes
 
-![Eight-cell scaling results](../results/a2-scaling-8cell/scaling.png)
+**Directly measured:** branch, node and time distributions on the declared
+reconstructed eight-cell corpus; palette differences under explicit weights;
+optimization work counts; visibility/resolution controls; the separate
+occupancy-balanced sensitivity results; and zero unresolved calls. The
+[detailed review and evidence](../results/a2-scaling-review/README.md) retain
+the full distributions, query qualifications and integrity records.
 
-## Reproduction and limits
+**Supported interpretations:** incomparable geometry can leave global coupling
+after GAC; material information can reduce ambiguity and search; the occupancy
+distribution affects the weighted k trend without eliminating its growth under
+balancing; arrangement and visibility materially affect observed search; and
+fixed-hit substantially reduces aggregate search work in this corpus. The
+occupancy sensitivity is not a causal decomposition, and none of these statements
+ranks the factors' causal importance.
 
-To restore the existing dataset without running any solver:
+**Still unresolved:** this experiment does not establish exponential complexity,
+practical Minecraft-scale performance, useful scaling beyond eight cells, a clean
+causal effect of k, a reliable general runtime benefit from fixed-hit, general
+usefulness of decomposition, or which factor ultimately dominates at larger
+volumes. Four masks per intermediate k, six synthetic suites, finite perturbations
+and one host/run cannot answer those questions. The model assumes exact known
+cameras/grid and opaque synthetic first-hit observations; it does not test noise,
+lighting, textures, transparency or unknown cameras.
 
-```bash
-python experiments/pack_a2_scaling.py unpack results/a2-scaling-8cell/raw build/a2-scaling-restored
-```
+These conclusions belong solely to the canonical **reconstructed exploratory
+dataset**. They neither validate the lost original protocol nor recover its
+reported population. The scientific review reproduced the preserved numerical
+tables within saved rounding without numerical corrections; this final report
+only synthesizes that completed review. Production code, tests, frozen Python,
+raw evidence, analysis tables and charts remain unchanged. No solver execution,
+benchmark, analysis rerun, correctness gate or sanitizer ran for this report.
 
-The following commands are recorded for separate, deliberate work. The first
-regenerates analysis and charts; the second reruns the frozen Python solver.
-Neither is performed by the adoption/publication checkpoint:
+## Next experiment
 
-```bash
-python experiments/analyze_a2_scaling.py build/a2-scaling-restored build/a2-scaling-analysis
-python experiments/check_a2_scaling_python.py build/a2-scaling-restored build/a2-scaling-python.json
-```
-
-NumPy, pandas, and Matplotlib are used by the packaging/analysis scripts. The
-Python spot check uses NumPy and the frozen file already in this repository.
-To reproduce measurement intentionally, use `bash experiments/build_a2_scaling.sh`
-or the CMake `mcr_a2_scaling` target, then `python experiments/run_a2_scaling.py
---output build/a2-scaling-raw`. The driver verifies existing complete jobs before
-reusing them. The documented accepted image fixtures are expected at
-`build/oracle_a2`; the existing oracle exporter can create them on a new machine.
-No existing result should be overwritten to disguise a different compiler,
-protocol, or executable: provenance mismatches stop resumption.
-
-This checkpoint is about a fixed eight-cell controlled model, not volume
-scalability. It establishes neither polynomial behavior for arbitrary A2 scenes
-nor exponential lower bounds. Four masks per intermediate k are not every mask;
-the finite perturbations are not every restriction or contradictory observation.
-The model assumes known exact cameras/grid, opaque first-hit labels, exact
-synthetic rendering, and no model mismatch. Marginal supported states do not
-form a Cartesian family of solutions; complete freedom is separately checked
-by substitution within the entire feasible family. These observations do not
-extend to lighting, textures, transparency, unknown cameras, or real screenshots.
-
-The original interrupted measurements remain unavailable. The published protocol
-and raw data make this replacement independently inspectable. Larger-volume
-scaling remains unstarted.
+The next study should increase volume modestly while controlling separately for
+occupancy, incomparable-cell count, spatial arrangement/connectivity,
+visibility/view count, palette/material information, and SAT versus UNSAT
+structure. It should include connected and disconnected structured cases and
+independent timing repetitions, with explicit budgets and unresolved accounting
+and oracle costs kept separate. The protocol should be declared before collection.
+That larger-volume experiment has not been designed in detail or begun here.
