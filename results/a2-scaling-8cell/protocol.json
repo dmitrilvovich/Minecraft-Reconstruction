@@ -1,0 +1,857 @@
+{
+  "schema": "MCRA2SCALING-RECONSTRUCTED-1",
+  "accepted_commit": "e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1",
+  "recovery": "No interrupted scaling workspace or raw data accessible from this branch. This is a replacement run, not the historical 410953-case dataset.",
+  "placements": [
+    {
+      "k": 0,
+      "arrangement": 0,
+      "mask": 0
+    },
+    {
+      "k": 1,
+      "arrangement": 0,
+      "mask": 1
+    },
+    {
+      "k": 1,
+      "arrangement": 1,
+      "mask": 128
+    },
+    {
+      "k": 1,
+      "arrangement": 2,
+      "mask": 2
+    },
+    {
+      "k": 1,
+      "arrangement": 3,
+      "mask": 4
+    },
+    {
+      "k": 2,
+      "arrangement": 0,
+      "mask": 3
+    },
+    {
+      "k": 2,
+      "arrangement": 1,
+      "mask": 192
+    },
+    {
+      "k": 2,
+      "arrangement": 2,
+      "mask": 24
+    },
+    {
+      "k": 2,
+      "arrangement": 3,
+      "mask": 36
+    },
+    {
+      "k": 3,
+      "arrangement": 0,
+      "mask": 7
+    },
+    {
+      "k": 3,
+      "arrangement": 1,
+      "mask": 224
+    },
+    {
+      "k": 3,
+      "arrangement": 2,
+      "mask": 25
+    },
+    {
+      "k": 3,
+      "arrangement": 3,
+      "mask": 44
+    },
+    {
+      "k": 4,
+      "arrangement": 0,
+      "mask": 15
+    },
+    {
+      "k": 4,
+      "arrangement": 1,
+      "mask": 240
+    },
+    {
+      "k": 4,
+      "arrangement": 2,
+      "mask": 60
+    },
+    {
+      "k": 4,
+      "arrangement": 3,
+      "mask": 90
+    },
+    {
+      "k": 5,
+      "arrangement": 0,
+      "mask": 31
+    },
+    {
+      "k": 5,
+      "arrangement": 1,
+      "mask": 248
+    },
+    {
+      "k": 5,
+      "arrangement": 2,
+      "mask": 103
+    },
+    {
+      "k": 5,
+      "arrangement": 3,
+      "mask": 173
+    },
+    {
+      "k": 6,
+      "arrangement": 0,
+      "mask": 63
+    },
+    {
+      "k": 6,
+      "arrangement": 1,
+      "mask": 252
+    },
+    {
+      "k": 6,
+      "arrangement": 2,
+      "mask": 219
+    },
+    {
+      "k": 6,
+      "arrangement": 3,
+      "mask": 231
+    },
+    {
+      "k": 7,
+      "arrangement": 0,
+      "mask": 127
+    },
+    {
+      "k": 7,
+      "arrangement": 1,
+      "mask": 254
+    },
+    {
+      "k": 7,
+      "arrangement": 2,
+      "mask": 191
+    },
+    {
+      "k": 7,
+      "arrangement": 3,
+      "mask": 223
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255
+    }
+  ],
+  "suites": [
+    "axis_1",
+    "axis_2",
+    "axis_3",
+    "axis_6",
+    "oblique_1",
+    "oblique_2"
+  ],
+  "jobs": [
+    {
+      "k": 0,
+      "arrangement": 0,
+      "mask": 0,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m000_split",
+      "controls": false
+    },
+    {
+      "k": 0,
+      "arrangement": 0,
+      "mask": 0,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m000_same",
+      "controls": false
+    },
+    {
+      "k": 0,
+      "arrangement": 0,
+      "mask": 0,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m000_split",
+      "controls": false
+    },
+    {
+      "k": 0,
+      "arrangement": 0,
+      "mask": 0,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m000_same",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 0,
+      "mask": 1,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m001_same",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 0,
+      "mask": 1,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m001_split",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 1,
+      "mask": 128,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m128_split",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 1,
+      "mask": 128,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m128_same",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 2,
+      "mask": 2,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m002_same",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 2,
+      "mask": 2,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m002_split",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 3,
+      "mask": 4,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m004_split",
+      "controls": false
+    },
+    {
+      "k": 1,
+      "arrangement": 3,
+      "mask": 4,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m004_same",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 0,
+      "mask": 3,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m003_same",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 0,
+      "mask": 3,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m003_split",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 1,
+      "mask": 192,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m192_split",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 1,
+      "mask": 192,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m192_same",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 2,
+      "mask": 24,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m024_same",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 2,
+      "mask": 24,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m024_split",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 3,
+      "mask": 36,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m036_split",
+      "controls": false
+    },
+    {
+      "k": 2,
+      "arrangement": 3,
+      "mask": 36,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m036_same",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 0,
+      "mask": 7,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m007_same",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 0,
+      "mask": 7,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m007_split",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 1,
+      "mask": 224,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m224_split",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 1,
+      "mask": 224,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m224_same",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 2,
+      "mask": 25,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m025_same",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 2,
+      "mask": 25,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m025_split",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 3,
+      "mask": 44,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m044_split",
+      "controls": false
+    },
+    {
+      "k": 3,
+      "arrangement": 3,
+      "mask": 44,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m044_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 0,
+      "mask": 15,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m015_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 0,
+      "mask": 15,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m015_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 0,
+      "mask": 15,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m015_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 0,
+      "mask": 15,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m015_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 1,
+      "mask": 240,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m240_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 1,
+      "mask": 240,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m240_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 1,
+      "mask": 240,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m240_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 1,
+      "mask": 240,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m240_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 2,
+      "mask": 60,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m060_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 2,
+      "mask": 60,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m060_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 2,
+      "mask": 60,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m060_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 2,
+      "mask": 60,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m060_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 3,
+      "mask": 90,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m090_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 3,
+      "mask": 90,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m090_same",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 3,
+      "mask": 90,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m090_split",
+      "controls": false
+    },
+    {
+      "k": 4,
+      "arrangement": 3,
+      "mask": 90,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m090_same",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 0,
+      "mask": 31,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m031_same",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 0,
+      "mask": 31,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m031_split",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 1,
+      "mask": 248,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m248_split",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 1,
+      "mask": 248,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m248_same",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 2,
+      "mask": 103,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m103_same",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 2,
+      "mask": 103,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m103_split",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 3,
+      "mask": 173,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m173_split",
+      "controls": false
+    },
+    {
+      "k": 5,
+      "arrangement": 3,
+      "mask": 173,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m173_same",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 0,
+      "mask": 63,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m063_same",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 0,
+      "mask": 63,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m063_split",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 1,
+      "mask": 252,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m252_split",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 1,
+      "mask": 252,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m252_same",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 2,
+      "mask": 219,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m219_same",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 2,
+      "mask": 219,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m219_split",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 3,
+      "mask": 231,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m231_split",
+      "controls": false
+    },
+    {
+      "k": 6,
+      "arrangement": 3,
+      "mask": 231,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m231_same",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 0,
+      "mask": 127,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m127_same",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 0,
+      "mask": 127,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m127_split",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 1,
+      "mask": 254,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m254_split",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 1,
+      "mask": 254,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m254_same",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 2,
+      "mask": 191,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m191_same",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 2,
+      "mask": 191,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m191_split",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 3,
+      "mask": 223,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m223_split",
+      "controls": false
+    },
+    {
+      "k": 7,
+      "arrangement": 3,
+      "mask": 223,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m223_same",
+      "controls": false
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 8,
+      "palette": "same",
+      "name": "r8_m255_same",
+      "controls": false
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 8,
+      "palette": "split",
+      "name": "r8_m255_split",
+      "controls": false
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 16,
+      "palette": "same",
+      "name": "r16_m255_same",
+      "controls": false
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 16,
+      "palette": "split",
+      "name": "r16_m255_split",
+      "controls": false
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 8,
+      "palette": "split",
+      "name": "structured_split",
+      "controls": true
+    },
+    {
+      "k": 8,
+      "arrangement": 0,
+      "mask": 255,
+      "resolution": 8,
+      "palette": "same",
+      "name": "structured_same",
+      "controls": true
+    }
+  ],
+  "repetitions": 3,
+  "node_budget": 1000000,
+  "seconds_budget": 60,
+  "raw_camera_rays": {
+    "8": 512,
+    "16": 2048
+  },
+  "domain_rule": "mask bit set: air/bottom/top (7); unset: air/bottom (3)",
+  "seed": "mt19937(20260929 + mask*1009 + resolution*97 + suite_index); palette independent",
+  "population": "Every legal truth, grouped by complete distinct image family for each suite",
+  "resolution_controls": "All six suites at every k=0,4,8 placement, both palettes",
+  "perturbations": "Eight per suite/job: 2 truth-preserving restrictions, 2 arbitrary restrictions, altered observation, contradictory duplicate, empty domain, excluded truth state",
+  "structured": "physical path, physical triangle, two paths, path plus triangle, fixed-hit, fixed-hit plus path; both palettes; all on <=8 cells",
+  "direct_queries": "All 24 literals in every 97th lexicographic camera family (starting with first), and every perturbation/control; once per mode",
+  "python_spots": "First camera family per suite/job, perturbation j=(suite_index+mask)%8, all structured controls",
+  "weighting": {
+    "truth": "family size / number of legal truths; equal placements and suites within k",
+    "family": "one vote per distinct image family within each placement/suite; equal placements and suites within k",
+    "occupancy_balanced": "secondary sensitivity analysis: independent P(occupied)=1/2 at every cell; at incomparable cells P(bottom|occupied)=P(top|occupied)=1/2. Exact family numerator sum(2^(k - occupied_incomparable_cells)), denominator 2^(8+k)."
+  },
+  "clock": "steady_clock; solver APIs only, including budget observer and diagnostic counters; oracle, validation, residual analysis, I/O excluded",
+  "order": "serial jobs; palette order alternates by placement; modes rotate by case/repetition; no concurrent solver jobs",
+  "unresolved": "Budget exhaustion yields UNRESOLVED, never UNSAT; a post-return deadline check also rejects late results. Node counter can include one aborted attempted entry.",
+  "memory": "Whole-process RSS includes the oracle. No solver-only memory claim."
+}

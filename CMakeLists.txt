@@ -55,6 +55,8 @@ target_compile_definitions(mcr_a0_benchmark PRIVATE
     MCR_BUILD_TYPE="$<CONFIG>")
 add_executable(mcr_a1_benchmark experiments/a1_benchmark.cpp)
 target_link_libraries(mcr_a1_benchmark PRIVATE mcr_experiments)
+add_executable(mcr_a2_scaling experiments/a2_scaling.cpp)
+target_link_libraries(mcr_a2_scaling PRIVATE mcr_experiments)
 target_compile_definitions(mcr_a1_benchmark PRIVATE
     MCR_COMPILER="${CMAKE_CXX_COMPILER_ID}-${CMAKE_CXX_COMPILER_VERSION}"
     MCR_BUILD_TYPE="$<CONFIG>")
