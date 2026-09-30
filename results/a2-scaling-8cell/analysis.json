@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "camera_families": 487731,
+    "perturbations": 3456,
+    "structured": 12,
+    "camera_truth_memberships": 818808
+  },
+  "method": "Per-family median of three timed calls; weighted within placement/suite, then equal placement and suite weights at k. Quantiles only in by-placement-suite.csv. All direct-query rows are saved; query summary is the deterministic sample, not a population estimate.",
+  "expected_occupied_cells_uniform": {
+    "0": 4.0,
+    "1": 4.166666666666667,
+    "2": 4.333333333333333,
+    "3": 4.5,
+    "4": 4.666666666666667,
+    "5": 4.833333333333333,
+    "6": 5.0,
+    "7": 5.166666666666667,
+    "8": 5.333333333333333
+  },
+  "expected_occupied_cells_balanced": 4,
+  "unresolved": 0
+}

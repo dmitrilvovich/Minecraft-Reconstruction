@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "accepted_commit": "e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1",
+  "unchanged_trees": {
+    "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+    "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+    "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+    "results/a2-correctness": "c8bc01ee1ae11fc6384a8326a8dfa7a17334b8c5"
+  },
+  "exact_original_files_restored": 373,
+  "exact_csv_byte_roundtrips": 148,
+  "archive_parts": 15,
+  "archive_sha256": "f388eb8902c24eecc46f87de0004daac697b5ce4b89becda93bbe3b315b0cc9a",
+  "full_correctness_gate_rerun": false,
+  "sanitizer_gate_rerun": false,
+  "larger_volume_runs": 0,
+  "all_six_axis_16x16_cases_unique_and_zero_search": true,
+  "k0_fixed_hit_zero_search": true,
+  "later_temporary_copy_repairs": [
+    {
+      "file": "r16_m240_split.runs.csv.gz",
+      "observed_bytes": 200056,
+      "expected_bytes": 980739
+    },
+    {
+      "file": "r16_m255_same.runs.csv.gz",
+      "observed_bytes": 3141407,
+      "expected_bytes": 4364687
+    },
+    {
+      "file": "r8_m036_same.runs.csv.gz",
+      "observed_bytes": 190164,
+      "expected_bytes": 314293
+    },
+    {
+      "file": "r8_m219_split.runs.csv.gz",
+      "observed_bytes": 1265415,
+      "expected_bytes": 1666579
+    },
+    {
+      "file": "r8_m223_split.runs.csv.gz",
+      "observed_bytes": 1049733,
+      "expected_bytes": 2345888
+    },
+    {
+      "file": "r8_m231_split.runs.csv.gz",
+      "observed_bytes": 1465301,
+      "expected_bytes": 1652755
+    }
+  ],
+  "original_shards_and_transport_parts_all_hash_verified": true,
+  "excluded_temporary_fragments": [
+    "r8_m127_split.runs.csv.gz.tmp",
+    "r8_m223_same.runs.csv.gz.tmp",
+    "r8_m223_split.runs.csv.gz.tmp",
+    "r8_m254_split.runs.csv.gz.tmp",
+    "r8_m255_same.runs.csv.gz.tmp"
+  ]
+}

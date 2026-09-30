@@ -1,0 +1,22 @@
+{
+  "by-placement-suite.csv": {
+    "rows": 10368,
+    "sha256": "5d7ebc5fc918d8a28c98b7dcecfb927abec7e2eea9bb4265725aa116b7c8b982"
+  },
+  "by-k.csv": {
+    "rows": 576,
+    "sha256": "f4ce268d2816995ba5968514beeb6a08a59a0cc2d2330cf7a3ccc1e5cfc50eac"
+  },
+  "sampled-queries.csv": {
+    "rows": 296,
+    "sha256": "3884703c3c9f7491105d5b7c1aa49b11c193b12843d31054c45cbaae58489ae0"
+  },
+  "structured.csv": {
+    "rows": 96,
+    "sha256": "6d2cef898273380210933987418f1e2461dc8ece025a8d672ca0f9d38c637c5b"
+  },
+  "worst-cases.csv": {
+    "rows": 576,
+    "sha256": "6f10a50b440a0b4a2d3860f17efe20ca5e5e23cd1ce11cc1db40c28b5e06c82f"
+  }
+}

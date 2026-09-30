@@ -1,0 +1,13 @@
+{
+  "executable_sha256": "92581491e3b1f31b9e9d06c73845961f15fdfc9840ad446308fe74c581087134",
+  "protocol_sha256": "b3e34150cdc1f9cc22c935ba79326bdad07a85cadc9c27db200784b503ae6900",
+  "source_sha256": {
+    "experiments/a2_scaling.cpp": "cddd06569e13c924693b2cd3d4d94f82dadceac09f274049f4d7c167f3a14369",
+    "experiments/run_a2_scaling.py": "92ec9d84e65703d995f92b3e3d39188340ef12d3d849116156da5118824233db"
+  },
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "accepted_commit": "e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1"
+}

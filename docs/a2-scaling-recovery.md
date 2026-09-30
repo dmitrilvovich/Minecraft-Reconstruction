@@ -33,6 +33,19 @@ them to compare SHA-256, and atomically publishes each archive and finally its
 completion manifest. Resuming verifies both compressed and uncompressed hashes.
 Only absent jobs are run. The final collection marker requires every declared job.
 
+The completed replacement contains 491,199 cases. Final transport uses lossless
+columnar encoding of the 148 CSV tables, with every reconstructed CSV compared
+byte-for-byte by SHA-256, then a hash-checked split tar archive. The complete
+unpacker was run and restored the original compressed CSV hashes as well. This
+storage conversion performs no inference and drops no measurements.
+
+A later reread found six truncated files in the temporary unpacked copy after
+the unpacker had passed its in-process checks. Every original compressed shard
+and transport part still matched its recorded hash. Only those temporary copies
+were restored from the verified originals; no solver work was repeated. The
+transport parts were staged immediately and their Git-index bytes checked
+against the manifest. `validation.json` records the affected filenames and sizes.
+
 No accepted source, frozen Python, or prior correctness evidence is modified.
 No full correctness/sanitizer gate or larger-volume study is rerun. The initial
 CMake configure attempt could not run because CMake is absent in this branch's

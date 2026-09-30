@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "counts": {
+    "cases": 876,
+    "direct_queries": 21024,
+    "witnesses": 5563,
+    "audited_prunes": 94134,
+    "empty_domain_guards": 6364
+  },
+  "seconds": 4.2100946269999895,
+  "scope": "Targeted collected camera, perturbation, and structured cases; no full acceptance rerun"
+}

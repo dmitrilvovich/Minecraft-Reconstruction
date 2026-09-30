@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "jobs": 74,
+  "totals": {
+    "cases": 491199,
+    "runs": 12624840,
+    "direct_queries": 836064,
+    "verified_witnesses": 13962316,
+    "unresolved": 0
+  },
+  "protocol_sha256": "b3e34150cdc1f9cc22c935ba79326bdad07a85cadc9c27db200784b503ae6900",
+  "provenance_sha256": "f06724c9a077c7ab19677dd0022482b3850717d684a928e2c3e1682a60655de1"
+}
