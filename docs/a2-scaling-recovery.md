@@ -1,5 +1,12 @@
 # A2 eight-cell scaling recovery
 
+**Adoption status:** the surviving 491,199-case run is now the canonical
+reconstructed exploratory dataset. It is not the recovered original, is not
+proven equivalent, and is not a verified correction or superset. The
+[adoption record](a2-scaling-adoption.md) governs dataset identity, reconciliation
+caveats, and the **not yet scientifically reviewed** status of existing analysis.
+The account below preserves the earlier recovery and reconstruction history.
+
 The September 29 branch resumed from accepted commit
 `e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1`. Recovery checked the accessible
 workspace and temporary directories, worktrees, index, reflogs, unreachable Git
@@ -13,8 +20,10 @@ reported 410,953 cases, 16,660,932 verified witnesses, and no unresolved calls.
 Those are **unrecovered historical claims**, not counts established by this
 replacement collection. Historical timings and exact population cannot be
 recreated from commentary. In particular the old 30 mask values, six suite names,
-sampling seeds, and trial policy were unavailable. No result was chosen to make
-the replacement counts or measurements match the lost run.
+sampling seeds, perturbation recipe, timing/query sampling, and aggregation
+policy were unavailable. The replacement collector does not filter cases to
+match the historical count; the unavailable original protocol prevents a claim
+of equivalence or original preregistration.
 
 The replacement stays within the declared scope: eight cells, 30 placements
 over k=0..8, paired palettes, six suites, 16x16 controls at k=0,4,8,

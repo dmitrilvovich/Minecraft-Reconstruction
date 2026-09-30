@@ -1,5 +1,12 @@
 # A2: fixed eight-cell scaling checkpoint
 
+**Preserved preliminary account — NOT YET SCIENTIFICALLY REVIEWED.** The
+[adoption and reconciliation record](a2-scaling-adoption.md) establishes this
+run as the canonical reconstructed exploratory 8-cell A2 dataset and governs
+its identity and caveats. The existing measurements, summaries, charts, and
+scientific discussion below are preserved for separate review; this publication
+does not accept their interpretations or establish equivalence to the lost run.
+
 This is a **replacement collection after failed workspace recovery**, using the
 accepted solver at `e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1`. The interrupted
 run's source, masks, seeds, measurements, and analysis were not accessible from
@@ -105,7 +112,7 @@ temporary copies were repaired without rerunning measurements, and archive
 bytes read from the Git index were checked against the manifest. Exact affected
 filenames and sizes are recorded in `validation.json`.
 
-## Results and weighting
+## Results and weighting (not yet scientifically reviewed)
 
 The main summaries keep three different averages separate. Each first weights
 families within one placement/suite, then gives placements and suites equal
@@ -197,10 +204,17 @@ and material information therefore strongly affect the observed ambiguity.
 
 ## Reproduction and limits
 
-To inspect/reanalyze the existing dataset without running any solver:
+To restore the existing dataset without running any solver:
 
 ```bash
 python experiments/pack_a2_scaling.py unpack results/a2-scaling-8cell/raw build/a2-scaling-restored
+```
+
+The following commands are recorded for separate, deliberate work. The first
+regenerates analysis and charts; the second reruns the frozen Python solver.
+Neither is performed by the adoption/publication checkpoint:
+
+```bash
 python experiments/analyze_a2_scaling.py build/a2-scaling-restored build/a2-scaling-analysis
 python experiments/check_a2_scaling_python.py build/a2-scaling-restored build/a2-scaling-python.json
 ```
