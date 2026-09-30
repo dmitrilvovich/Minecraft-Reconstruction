@@ -1,11 +1,15 @@
 # A2: fixed eight-cell scaling checkpoint
 
-**Preserved preliminary account — NOT YET SCIENTIFICALLY REVIEWED.** The
+**Preserved preliminary account — superseded for interpretation by the
+[scientific review](a2-scaling-review.md).** Its numerical tables reproduced
+within saved rounding; the review qualifies weighting, causal language and
+optimization/runtime claims. The original discussion and charts below remain
+preserved and are not the final scaling report. The
 [adoption and reconciliation record](a2-scaling-adoption.md) establishes this
 run as the canonical reconstructed exploratory 8-cell A2 dataset and governs
 its identity and caveats. The existing measurements, summaries, charts, and
-scientific discussion below are preserved for separate review; this publication
-does not accept their interpretations or establish equivalence to the lost run.
+scientific discussion below are preserved as the preliminary record; neither
+publication nor review establishes equivalence to the lost run.
 
 This is a **replacement collection after failed workspace recovery**, using the
 accepted solver at `e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1`. The interrupted
@@ -112,7 +116,7 @@ temporary copies were repaired without rerunning measurements, and archive
 bytes read from the Git index were checked against the manifest. Exact affected
 filenames and sizes are recorded in `validation.json`.
 
-## Results and weighting (not yet scientifically reviewed)
+## Results and weighting (preserved preliminary discussion)
 
 The main summaries keep three different averages separate. Each first weights
 families within one placement/suite, then gives placements and suites equal

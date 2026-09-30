@@ -29,14 +29,17 @@ depends on reproducing the historical count. See the authoritative
 Population: 374,771 8x8 camera-family cases, 112,960 16x16 camera-family cases,
 3,456 restricted/perturbed cases, and 12 structured controls: **491,199 cases**.
 
-## Existing analysis: NOT YET SCIENTIFICALLY REVIEWED
+## Existing analysis: preserved, with a separate scientific review
 
 `analysis.json`, `analysis.log`, `by-k.csv`, `by-placement-suite.csv`,
 `sampled-queries.csv`, `structured.csv`, `worst-cases.csv`, `scaling.png`, and
 `scaling.svg` are retained exactly as they existed before adoption. Their
-preservation and hash verification do not endorse their scientific
-interpretations. The preliminary narrative in `../../docs/a2-scaling-8cell.md`
-has the same review status. Review belongs to a separate checkpoint.
+preservation and hash verification alone do not endorse their scientific
+interpretations. The [scientific review](../../docs/a2-scaling-review.md) now
+reproduces the numerical tables within saved rounding and qualifies their
+interpretation. Its [evidence tables](../a2-scaling-review/README.md) keep primary
+truth/family results separate from secondary occupancy sensitivity. The original
+charts and preliminary narrative remain historical outputs, not a final report.
 
 Occupancy-balanced summaries only reweight existing measurements. Observation
 perturbations can add impossible stone labels to the oak-only palette and remain
@@ -47,4 +50,4 @@ To restore the saved files without inference, use `pack_a2_scaling.py unpack` as
 documented in the preliminary note. `check_a2_scaling_python.py` **does invoke
 the frozen solver**; it is a deliberate validation rerun, not a read-only
 inspection command. `run_a2_scaling.py` runs measurements. Neither script is
-executed for this publication.
+executed for adoption or the data-only scientific review.

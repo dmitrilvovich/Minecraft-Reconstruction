@@ -1,0 +1,832 @@
+{
+  "status": "PASS",
+  "dataset_commit": "69032371f396802ddc5880f4cc65d8805eb60585",
+  "dataset_tree": "cc80882392543fbb0874164d8bfe0968bcede161",
+  "manifest_sha256": "ba5e49707eed130fe60b93a7e9417d8abff8e25980b69bbdf2fd05c956c9c7e6",
+  "archive_sha256": "f388eb8902c24eecc46f87de0004daac697b5ce4b89becda93bbe3b315b0cc9a",
+  "parts": 15,
+  "archived_files": 373,
+  "jobs": 74,
+  "counts": {
+    "cases": 491199,
+    "runs": 12624840,
+    "direct_queries": 836064,
+    "verified_witnesses": 13962316,
+    "unresolved": 0,
+    "case_camera": 487731,
+    "case_perturbation": 3456,
+    "camera_truth_memberships": 818808,
+    "camera_8": 374771,
+    "camera_16": 112960,
+    "six_axis_16_query_calls_zero_branch": 24384,
+    "case_structured": 12
+  },
+  "previous_summary_comparisons": [
+    {
+      "table": "by-placement-suite.csv",
+      "rows": 10368,
+      "numeric_cells_checked": 279936,
+      "tolerance": "rtol=6e-9, atol=1e-8; original CSVs use 9 significant digits",
+      "max_absolute_rounding_difference": 4.999999987376214e-07,
+      "mismatches": []
+    },
+    {
+      "table": "by-k.csv",
+      "rows": 576,
+      "numeric_cells_checked": 10944,
+      "tolerance": "rtol=6e-9, atol=1e-8; original CSVs use 9 significant digits",
+      "max_absolute_rounding_difference": 4.983723869145251e-07,
+      "mismatches": []
+    },
+    {
+      "table": "sampled-queries.csv",
+      "rows": 296,
+      "numeric_cells_checked": 2368,
+      "tolerance": "rtol=6e-9, atol=1e-8; original CSVs use 9 significant digits",
+      "max_absolute_rounding_difference": 4.9857553641174945e-09,
+      "mismatches": []
+    },
+    {
+      "table": "structured.csv",
+      "rows": 96,
+      "numeric_cells_checked": 864,
+      "tolerance": "rtol=6e-9, atol=1e-8; original CSVs use 9 significant digits",
+      "max_absolute_rounding_difference": 0.0,
+      "mismatches": []
+    },
+    {
+      "table": "worst-cases.csv",
+      "rows": 576,
+      "numeric_cells_checked": 6336,
+      "tolerance": "rtol=6e-9, atol=1e-8; original CSVs use 9 significant digits",
+      "max_absolute_rounding_difference": 0.0,
+      "mismatches": []
+    }
+  ],
+  "primary_weightings": [
+    "truth",
+    "family"
+  ],
+  "secondary_weighting": "occupancy_balanced",
+  "balanced_formula": "family sum of 2^(k-occupied_incomparable_cells); denominator 2^(8+k)",
+  "expected_occupancy_primary": {
+    "0": 4.0,
+    "1": 4.166666666666667,
+    "2": 4.333333333333333,
+    "3": 4.5,
+    "4": 4.666666666666667,
+    "5": 4.833333333333333,
+    "6": 5.0,
+    "7": 5.166666666666667,
+    "8": 5.333333333333333
+  },
+  "expected_occupancy_balanced": 4,
+  "balanced_mass_verified_for_every_camera_stratum": true,
+  "all_work_counters_identical_across_repeats": true,
+  "solver_cases_run": 0,
+  "benchmarks_run": 0,
+  "correctness_gates_run": 0,
+  "sanitizer_gates_run": 0,
+  "data_sources": "Committed NPZ measurement columns only; no inference or rendering imports",
+  "analysis_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "six_axis_16_verification": [
+    {
+      "job": "r16_m000_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m000_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 256,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m015_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m240_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m060_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m090_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 1296,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "search",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_same",
+      "mode": "both",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "search",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "search",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "decomposition",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "decomposition",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "fixed_hit",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "fixed_hit",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "both",
+      "operation": "feasibility",
+      "families": 6561,
+      "max_nodes": 1
+    },
+    {
+      "job": "r16_m255_split",
+      "mode": "both",
+      "operation": "projection",
+      "families": 6561,
+      "max_nodes": 1
+    }
+  ],
+  "methods": {
+    "by_k": "Normalize truth/family weights within placement/suite; then equal strata. Percentiles use the resulting mixture, never averaged percentiles.",
+    "runtime": "F/P case time is median of 3 saved calls; mean_trial_us separately includes all 3 trials; max_raw_us is maximum individual call.",
+    "pooled": "Unweighted family-case or sampled-literal descriptors across saved strata; not primary equal-stratum weighting.",
+    "query": "A query UNSAT means unsupported literal; case_sat records whole-scene feasibility. Deterministic sample is not a population estimator.",
+    "ambiguity": "Descriptive counts/sums by job/suite and family-size band; only mode both. Not causal inference."
+  },
+  "script_sha256": "04cd5e67121327793e814a64718d9e71f6f89c283efc526f43caf5a8c90d6624",
+  "outputs": {
+    "ambiguity.csv": {
+      "bytes": 121084,
+      "sha256": "f9059e392edeb6b11e6b68cd3ba8d6d2351016a047ebe95cc50cf6de38e89b60"
+    },
+    "arrangements.csv": {
+      "bytes": 66325,
+      "sha256": "ab8dc43dc1afc1438f65e64c68be7da08a2e32e6bd2ad15436cfaf7dcad576ea"
+    },
+    "by-k-occupancy-sensitivity.csv": {
+      "bytes": 68735,
+      "sha256": "c7a724526c1b7e078c74e72e4dc9fe3e73d350469c338fdf77219696627ad8f1"
+    },
+    "by-k-primary.csv": {
+      "bytes": 133157,
+      "sha256": "a1754899d71ea60c880e4a6318a9bec1a80e3fbb3e0b8f556b5c263983ac6bdd"
+    },
+    "configuration-pairs.csv": {
+      "bytes": 451651,
+      "sha256": "7e35ccb7c9682068c38838776c0d690ed507e1b71b98f6ada152d3b654fb4750"
+    },
+    "control-populations.csv": {
+      "bytes": 25139,
+      "sha256": "480884df8e9e1e761966714d9b4106eb8d0ed8fc161194e1964283ec302d594f"
+    },
+    "pooled-operation-status.csv": {
+      "bytes": 81473,
+      "sha256": "a2892d8744fab146ee5d741a135bcc6a318f0c9413a79035669d248577a26e57"
+    },
+    "query-input-exclusions.csv": {
+      "bytes": 12291,
+      "sha256": "7b12933fcccfbc3dda83a6286fd13b37cd5305bcd8ad7a0eb8e2a713172b709e"
+    },
+    "sampled-queries-by-k.csv": {
+      "bytes": 109935,
+      "sha256": "dbd42e5b598d8aa558c3d2c51c2dc29e018006e940aec20d17b5c3f8f6a95a47"
+    },
+    "structured.csv": {
+      "bytes": 6231,
+      "sha256": "64cc19a1f89fa74dd56f46f134d087b2e7284db96768dd1f6ad9f885baf2b75a"
+    },
+    "visibility.csv": {
+      "bytes": 196784,
+      "sha256": "b7617a91bcc59fb338d036f9ea9dd5e12b0beb38063999fd4f64af3f14c7b4ac"
+    },
+    "whole-process-memory.csv": {
+      "bytes": 1486,
+      "sha256": "70b3155441049f0214e4be5b6cf02dd11c223c0365a8bbe2c82cb2630f499203"
+    },
+    "worst-per-job.csv": {
+      "bytes": 388713,
+      "sha256": "2f7d9f56797bb43f55b48e43a860489ebf5beb83675cc0d616a5e83aead5329f"
+    }
+  }
+}
