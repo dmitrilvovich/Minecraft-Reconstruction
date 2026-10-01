@@ -1,0 +1,263 @@
+{
+  "schema": "MCR-A2-LARGER-PROTOCOL-1",
+  "status": "preregistered_design_only",
+  "collector_implemented": false,
+  "inputs_generated": false,
+  "collection_started": false,
+  "execution_requires_later_checkpoint": true,
+  "document": "docs/a2-scaling-larger-protocol.md",
+  "baseline_commit": "81c3f38e07d59e981ce9273d287d3cc225cb47b0",
+  "prior_review_commit": "5025ac42b62bd5d3469b858021ad8801d3e65654",
+  "legacy_dataset_commit": "69032371f396802ddc5880f4cc65d8805eb60585",
+  "legacy_identity": "Canonical reconstructed exploratory 491199-case eight-cell dataset; not recovered original, not proven equivalent, not a verified correction or superset of the lost 410953-case run.",
+  "freeze": {
+    "solver_acceptance_commit": "e73b710a42bca1cd0c7a69b9b9c37db2595a1cb1",
+    "git_subtrees": {
+      "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+      "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+      "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+      "tests": "f14050860d8b0a27687ba9c5cfa6082d6d1f210c"
+    },
+    "branching": "Minimum domain; maximum residual active-factor degree; lowest CellId; values air,bottom,top. Existing fixed_hit shape-variable eligibility and component traversal stay unchanged.",
+    "configurations": [
+      {"id": "search", "decompose": false, "fixed_hit": false},
+      {"id": "decomposition", "decompose": true, "fixed_hit": false},
+      {"id": "fixed_hit", "decompose": false, "fixed_hit": true},
+      {"id": "both", "decompose": true, "fixed_hit": true}
+    ],
+    "additional_solver_baseline": null,
+    "build": "GCC C++20, -std=c++20 -O3 -DNDEBUG; no PGO, LTO, -march=native or fast-math. Freeze compiler version/binary, build command and host before timing, unchanged across volumes/configurations.",
+    "production_or_frozen_reference_edits": false,
+    "new_collector_requirements": "Variable-length per-cell state/domain arrays, no eight-cell packed unsigned masks; exact input serialization; independent references; external budget guards. Do not alter the old collector or evidence."
+  },
+  "geometries": [
+    {"id": "ladder04", "shape_xyz": [2,2,1], "n": 4, "role": "primary", "k": [0,2,4], "mask_recipe_slots": 6},
+    {"id": "ladder06", "shape_xyz": [3,2,1], "n": 6, "role": "primary", "k": [0,2,3,6], "mask_recipe_slots": 10},
+    {"id": "ladder08", "shape_xyz": [4,2,1], "n": 8, "role": "primary", "k": [0,2,4,8], "mask_recipe_slots": 10},
+    {"id": "compact08", "shape_xyz": [2,2,2], "n": 8, "role": "aspect_control", "k": [0,2,4,8], "mask_recipe_slots": 10},
+    {"id": "ladder10", "shape_xyz": [5,2,1], "n": 10, "role": "primary", "k": [0,2,5,10], "mask_recipe_slots": 10},
+    {"id": "ladder12", "shape_xyz": [6,2,1], "n": 12, "role": "primary", "k": [0,2,6,12], "mask_recipe_slots": 10},
+    {"id": "compact12", "shape_xyz": [3,2,2], "n": 12, "role": "aspect_control", "k": [0,2,6,12], "mask_recipe_slots": 10}
+  ],
+  "deferred_stress": {
+    "shape_xyz": [3,3,3],
+    "n": 27,
+    "in_v1_counts": false,
+    "requires_separate_prospective_protocol": true,
+    "proposed_nodes": 1000000,
+    "proposed_seconds": 60,
+    "substantial_failure_rule": "At least 10 percent unresolved projections in the extension's predeclared moderate-visibility both-mode operating cohort triggers architecture review; define population and cost before any 27-cell call."
+  },
+  "determinism": {
+    "master_seed": "mcr-a2-larger-v1-20261001",
+    "hash": "SHA-256",
+    "H": "Unsigned big-endian integer digest of ASCII JSON array [master_seed,label,...arguments], compact separators comma/colon, no whitespace/newline; strings restricted to ASCII, integers decimal, no floats. Rank ascending by (H,CellId); non-cell ranks break ties by canonical ID.",
+    "cell_id": "(x*ny+y)*nz+z, matching Grid::id",
+    "state_bits": {"air":1,"bottom":2,"top":4},
+    "no_rng_library_dependency": true,
+    "no_outcome_dependent_rejection_sampling": true,
+    "mask_orders": {
+      "compact": "Anchor minimizes H('mask_anchor',geometry_id,cell). Breadth-first traversal of six face-neighbors inside the grid, neighbors ascending CellId, enqueue once. Prefix k is connected.",
+      "spread": "Same anchor as compact. Repeatedly choose unselected cell maximizing its minimum Manhattan distance to selected cells; ties choose smallest CellId. Use prefixes; this is greedy spread, not an optimal-dispersion claim.",
+      "random0": "Sort cells by H('mask_random',geometry_id,0,cell).",
+      "random1": "Sort cells by H('mask_random',geometry_id,1,cell)."
+    },
+    "intermediate_mask_recipes": ["compact","spread","random0","random1"],
+    "endpoint_mask_recipe": "endpoint",
+    "endpoint_rule": "k=0 empty mask, k=N full mask, one recipe each. Equal masks from intermediate recipes remain separate design slots; never replace collisions.",
+    "occupancy_rank": "Sort cells by H('occupancy',geometry_id,draw_index,cell). Reuse this order for all densities, k, recipes, palettes, views and resolutions.",
+    "latent_top_bit": "H('shape',geometry_id,draw_index,cell) modulo 2; reuse across density, k, recipe, palette, view and resolution.",
+    "query_cells": "First two cells ordered by H('query_cell',geometry_or_structured_case_id,cell); structured_case_id excludes palette and factor order. Reuse across configurations and epochs.",
+    "case_id": "Use the ID arrays below as nested JSON values in hash arguments, not JSON-encoded strings. Store full case ID as compact ASCII JSON of [slot_id,palette]; palette uses split_material or same_material. Membership aliases are not part of IDs. Epoch indices are 0..4. Never encode outcomes in IDs.",
+    "slot_ids": {
+      "camera_and_robustness": "[category,geometry_id,k,mask_recipe,density_id,draw,actual_R,suite_id]; category is camera, restricted or contradictory. Only actual_R occurs, never regime aliases.",
+      "structured": "[\"structured\",N,recipe_id,permutation_id,factor_order_id]",
+      "physical_anchor": "[\"anchor\",fixture_name]; fixture_name is path or triangle",
+      "query_identity": "Camera/robustness: geometry_id string; structured: [N,recipe_id,permutation_id] array; anchor: fixture_name string"
+    },
+    "job_ids": "Camera/robustness: [category,geometry_id,actual_R,suite_id]; structured: [\"structured\",N,recipe_id]; anchors: [\"anchor\",8]. Within each volume/epoch, hash these arrays as nested values. Canonical-ID ties use lexicographic compact ASCII JSON. Geometry order in the manifest is the declared geometries array; timing job order is hashed."
+  },
+  "camera_truths": {
+    "draw_indices": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "occupancy_targets": [{"id":"low","a":1,"b":4},{"id":"half","a":1,"b":2},{"id":"high","a":3,"b":4}],
+    "exact_q": "For target a/b and draw i: q=floor(N*a/b)+1 if i modulo b < (N*a modulo b), otherwise floor(N*a/b). The 16 planned q values have exact arithmetic mean N*a/b.",
+    "world": "First q cells of occupancy_rank are occupied. Selected occupied cells use latent_top_bit (0 bottom,1 top); unselected occupied cells use bottom; all other cells air.",
+    "input_domains": "Selected cells [air,bottom,top], others [air,bottom]. Do not supply true occupancy, occupied positions, truth labels or reference supports to inference beyond the observations.",
+    "palettes": ["split_material","same_material"],
+    "pairing": "Identical states, domains, cameras and memberships; only top material changes stone to oak. Do not pair by image-family ordinal.",
+    "sampling_population": "Uniform occupied-position subsets conditional on q, then independent equiprobable slab halves at occupied selected cells; this is not uniform over all legal worlds.",
+    "with_replacement": true,
+    "repeated_inputs": "Retain every draw/recipe timing slot. Oracle/factor caches may reuse immutable data, never another draw's timings. Report unique signatures and multiplicities."
+  },
+  "cameras": {
+    "implementation": "src/experiments/cameras.cpp:phase_a_cameras",
+    "target": "(nx/2,ny/2,nz/2)",
+    "L": "max(nx,ny,nz)",
+    "distance": "3*L",
+    "intrinsics": "width=height=R; fx=fy=3*R/2; cx=cy=R/2; existing half-pixel rational rays",
+    "basis_order": ["minus_x","minus_y","plus_z","plus_x","plus_y","minus_z","oblique","opposite_oblique"],
+    "suites": [
+      {"id":"axis_1","camera_indices":[0]},
+      {"id":"axis_2","camera_indices":[0,1]},
+      {"id":"axis_3","camera_indices":[0,1,2]},
+      {"id":"axis_6","camera_indices":[0,1,2,3,4,5]},
+      {"id":"oblique_1","camera_indices":[6]},
+      {"id":"oblique_2","camera_indices":[6,7]}
+    ],
+    "resolution_regimes": [
+      {"id":"nominal_density","R":"8*L","draws":"all16","suites":"all6","role":"primary"},
+      {"id":"fixed_image","R":"16","draws":"all16","suites":"all6","role":"control"},
+      {"id":"double_density","R":"16*L","draws":[0,1,2,3],"suites":["axis_1","axis_6"],"role":"control"}
+    ],
+    "duplicate_resolution_rule": "If actual R and all other slot keys coincide, execute once and attach all regime memberships. No other timing-slot deduplication.",
+    "factor_order": "For clean inputs, unique ordered A2RayCell vectors sorted lexicographically by (cell,bottom_hit,top_hit), independent of labels/palette; retain complete pixel-to-factor mapping and raw observations. Identical steps must have consistent clean labels."
+  },
+  "robustness": {
+    "selection": "Each geometry/k/mask-recipe/density, draw 0, nominal_density, axis_1 and axis_6, both palettes; two extra slots per selected base.",
+    "restriction": "Choose floor(N/2) cells with lowest H('restriction_cell',geometry_id,cell). For each, list nonempty subsets of its original domain containing the truth state in increasing bitmask order and select index H('restriction_domain',geometry_id,k,recipe,density_id,cell) modulo list length. Share domains across palette/view/resolution; no-op restrictions remain, never resample.",
+    "contradictory_duplicate": "Select first nonempty clean factor in canonical geometric order. Append a copy with target oak if original background, otherwise background. Keep the original. If no nonempty ray exists, generation fails rather than replacing the slot. This is proof-known UNSAT and never introduces stone into oak-only observations.",
+    "clean_palette_population": false
+  },
+  "structured": {
+    "cell_counts": [6,8,10,12],
+    "physical_camera_claim": false,
+    "vertex_order": "0,...,N-1 before permutation",
+    "edge_factor": "For edge a<b append bottom-only ray [(a,true,false),(b,true,false)] target oak, then top-only ray [(a,false,true),(b,false,true)] target material(top,palette). This imposes opposite slab halves jointly.",
+    "shape_domains": "[air,bottom,top] on graph vertices",
+    "fixed_region": "Domains [air,bottom]; one factor listing its cells ascending, each (bottom_hit=true,top_hit=true), target oak. At least one region cell is occupied; occupancy is not fixed to that of graph cases.",
+    "recipes": [
+      {"id":"path","edges":"(i,i+1), i=0..N-2","expected":"SAT; two orientations; all vertices occupied"},
+      {"id":"even_cycle","edges":"path edges plus (0,N-1)","expected":"SAT; two orientations; all vertices occupied"},
+      {"id":"odd_cycle_leaf","edges":"cycle on 0..N-2 plus (N-2,N-1)","expected":"UNSAT; connected odd cycle; no truth occupancy assigned"},
+      {"id":"repeated_edges","edges":"(2i,2i+1), i=0..N/2-1","expected":"SAT; N/2 disjoint components, two orientations each; all vertices occupied"},
+      {"id":"two_paths","edges":"paths on 0..N/2-1 and N/2..N-1","expected":"SAT; two components, two orientations each; all vertices occupied"},
+      {"id":"path_triangle","edges":"path on 0..N-4, triangle on N-3..N-1","expected":"UNSAT; a satisfiable path separate from odd cycle; no truth occupancy assigned"},
+      {"id":"fixed_hit","fixed_vertices":"all N","expected":"SAT; binary first-hit region"},
+      {"id":"fixed_plus_path","edges":"path on 0..N/2-1","fixed_vertices":"N/2..N-1","expected":"SAT; shape path and separate fixed-hit region"},
+      {"id":"anchored_path","edges":"path edges","additional_factor":"unary bottom-only ray at vertex 0, target oak; initial domains unchanged","expected":"SAT; unique orientation; all vertices occupied"}
+    ],
+    "permutations": ["identity","reverse","hash0","hash1"],
+    "permutation_rule": "Map original vertex i to the ith element of [0..N-1], its reverse, or vertices sorted by H('structured_vertex',N,hash_index,cell). For permuted rays preserve the original step order; do not sort endpoints after relabeling.",
+    "canonical_order": "Base undirected edges sorted by original endpoint tuple, lower ray then upper ray, followed by fixed-region factor then unary anchor if present. Apply vertex permutation without changing this order.",
+    "factor_orders": ["canonical","hashed"],
+    "hashed_factor_order": "Sort original factor ordinals by H('structured_factor',N,recipe,permutation_id,factor_ordinal); ties ordinal. Share across palettes.",
+    "initial_k": "Record count of input domains containing both bottom and top, separate from N and root surviving shape variables; do not pool fixed and graph populations.",
+    "legacy_physical_anchors": "Unchanged test::a2_fixture(false/true,palette), two palettes, N=8, four extra slots, no camera-suite/resolution memberships. Preserve raw physical rays and active cell IDs."
+  },
+  "execution": {
+    "epochs": 5,
+    "volume_order": "Ascending N; legacy physical anchors first, then declared camera/structured slots at each N. Complete all five epochs of a volume before the next, unless a predeclared stop pauses the study.",
+    "workers": "Fresh process per epoch/geometry/actual-R/suite/category job; structured jobs use N/recipe/category. Include both palettes and all modes in each job. One pinned CPU, serial workers, no oracle corpus in inference worker.",
+    "job_order": "Within volume/epoch, sort jobs by H('job_order',epoch,canonical_job_id).",
+    "case_order": "Within job, sort palette-independent slot IDs by H('case_order',epoch,slot_id). Let j be this zero-based order index.",
+    "palette_order": "split,same if H('palette_order',epoch,slot_id) modulo 2 is zero, otherwise same,split.",
+    "mode_order": "Rotate [search,decomposition,fixed_hit,both] left by (j+epoch) modulo 4; same mode order for both palettes of the slot.",
+    "api_order": "feasibility,projection if (j+epoch) even, otherwise projection,feasibility; selected direct queries follow, ordered cell then air,bottom,top. Fresh initial domains/stats per call; no reuse of inferred domains or witnesses between APIs/configurations.",
+    "warmup_solver_calls": 0,
+    "timing": "steady_clock around the API plus budget/diagnostic observation and post-return deadline check. Setup/render/reference/audit/root-GAC/I/O outside timer and costed separately. Keep all epochs and outliers.",
+    "resume": "Bind protocol, input, executable and environment hashes. Preserve interrupted/invalid records and missing slots. No automatic timing reruns or replacements; a reviewed amendment documents any recovery."
+  },
+  "queries": {
+    "camera_selection": "draw 0, nominal_density, axis_1/axis_6, all masks/densities/geometries/palettes",
+    "other_selection": "Every robustness, structured and physical-anchor slot",
+    "literals": "All three states at the two deterministically selected cells; six literal calls per selected slot/mode/epoch, including states excluded by initial domains.",
+    "population_estimator": false,
+    "pairing": "Cell selection excludes palette, configuration, epoch and factor order. For camera slots use geometry_id; for structured use tuple (N,recipe,permutation); for anchors use fixture name."
+  },
+  "references": {
+    "small": "Every selected input N<=8: enumerate all domain-legal worlds, not just the true occupancy slice; independent feasibility, exact supports and family size. Caches may reuse identical reference problems, not timings.",
+    "intermediate_camera_selection": "For each N=10/12 geometry, every k and density target: endpoint recipe at k=0,N, compact otherwise; draw 0; nominal_density. Use axis_1 for low, axis_6 for half, oblique_2 for high. Both palettes: 12 pairs per geometry. Additionally the restricted pair at k=N/2, compact, half, draw 0, nominal_density, axis_6. Selection fixed before outcomes.",
+    "structured": "Independent bipartiteness/orientation enumeration per component, exact fixed-region binary first-hit supports, and scalar first-hit witness validation for every structured case. Brute-force every N<=8 instance and identity/canonical instances of every recipe/palette at N=10/12. Verify predicted supports as well as status.",
+    "camera_renderer": "Independent exact primitive-AABB intersections from serialized raw rays; a new adapter may call unchanged frozen phase_a.reference_ray. Explicitly translate material names/codes. Compare every generating truth with both existing C++ render paths; no solver outcome feeds generation.",
+    "all_returned_witnesses": "Check original input domains and original rays/factors independently of propagation/search. Projection witness union must equal returned supports, but this alone cannot prove omitted literals unsupported.",
+    "cross_configuration": "Compare every resolved answer/support mask; UNRESOLVED versus resolved is not a contradiction. Agreement is not independent proof.",
+    "uncovered_negatives": "Mark unsupported literals and UNSAT claims without exact external references as solver-certified only. Camera truth witnesses certify SAT ground truth but do not certify complete projection.",
+    "mandatory_audit_seconds": 300,
+    "audit_exhaustion": "Pause; never silently discard mandatory checks or mark them passed.",
+    "frozen_reference_edits": false
+  },
+  "measurements": {
+    "apis": ["feasibility","projection","sampled_query"],
+    "work": ["search_nodes","branches","gac_calls","factor_updates","deletions","literal_queries","infeasible_queries","witness_count","decompositions","component_solves","fixed_hit_checks","fixed_hit_rejections","fixed_calls"],
+    "root_diagnostics": "One untimed GAC/root-residual diagnostic per design slot in a separate preprocessing process after the input manifest is frozen; save components, sizes, variables, shape variables, factors and root consistency. Do not supply propagated domains to measured calls.",
+    "ambiguity": "Supported literals and singleton status from complete projection; independent family size/ambiguity when an exact reference exists. Unknown remains unknown. Structured analytic counts remain a separate population.",
+    "first_witness": "Standalone feasibility work/time versus full projection work/time and query counts; no claimed exact internal phase split or subtraction of separate timings.",
+    "memory": "Inference-worker peak RSS/input bytes by job, with external 4 GiB guard; no solver-only allocation claim and no oracle memory in inference worker.",
+    "coverage": ["planned_slot","attempted","completed","budget_reason","technical_error","reference_type","reference_complete","witness_checked","cohort_memberships"],
+    "non_solver_costs": ["rendering","reference_enumeration","reference_checks","witness_audits","root_diagnostics","io","process_setup"]
+  },
+  "budgets": {
+    "per_api_search_node_entries": 1000000,
+    "per_api_seconds": 60,
+    "external_watchdog_seconds_after_api_start": 65,
+    "inference_worker_memory_bytes": 4294967296,
+    "outcomes": ["SAT","UNSAT","UNRESOLVED"],
+    "exhaustion": "UNRESOLVED with reason node/time/watchdog/memory; never UNSAT. Projection budget covers all internal work. Post-return deadline check rejects late completion. Aborting attempted node can yield 1000001 entries; killed counters stay null if unavailable.",
+    "technical_errors": "Separate invalid-run flags and immediate integrity pause; not scientific UNSAT or an ordinary budget outcome.",
+    "administrative_timed_solver_hours": 48,
+    "administrative_preparation_reference_audit_wall_hours": 12,
+    "storage_reserve_gib": 20,
+    "administrative_stop": "Stop scheduling when the cap is met, after the current call closes or watchdog fires. Keep all unfinished manifest slots as unattempted; never count them as solver UNRESOLVED. No budget escalation or result-dependent subset replacement."
+  },
+  "analysis": {
+    "primary_population": "Equal truth-draw weights within geometry/k/mask-recipe/density/actual-resolution/suite/palette, then equal recipe weights at fixed other factors. Preserve multiplicities. Headline volume comparison: half occupancy, nominal_density; other factor levels separate.",
+    "family_sensitivity": "Within identical mask/domain/design stratum and palette, group equal complete image signatures, average their draw measurements, then equal weight observed families. This is observed-family weighting only, not an estimate of the full family population. Collapse equal recipe masks for this auxiliary summary and disclose the mapping.",
+    "runtime_summary": "Per-slot median of five completed epochs; nearest-rank weighted median/p95, mean, maximum, all epoch values, between-epoch variation, and largest individual trial. Incomplete slots excluded only from explicitly labeled resolved-only timing summaries, never from outcome/coverage denominators.",
+    "censoring": "Retain exhaustion bounds and reasons; no zero or completed-60-second imputation. Show resolved fraction and reference coverage alongside work/time distributions. No readiness pass where needed percentiles or coverage are censored/unknown.",
+    "comparisons": "Paired truth/draw contrasts for palette, k, visibility and resolution; separate geometry roles and SAT/UNSAT classes. No grand mean across all volumes or control categories, no causal ranking of measured residual/ambiguity bins, no exponential-fit claim.",
+    "old_dataset": "Read-only historical anchor with its original truth/family weights and reconstructed identity; never merge old timings into new epochs."
+  },
+  "decision_rules": {
+    "status": "Prospective engineering policies, not decisions already reached",
+    "operating_cohort": "Primary ladder geometry, half occupancy, k=N/2 or N, axis_2 or axis_3, nominal_density, both configuration. Evaluate each N/k/suite/palette separately, pooling recipes equally and their 16 draws equally.",
+    "rate": "A design slot is unresolved if any of its scheduled epochs exhausts. Denominator all slots in the stratum; readiness requires complete scheduled coverage. First-epoch screening uses that epoch only and is labeled preliminary.",
+    "api_scope": "Quantitative work/time/rate warning thresholds apply to feasibility and projection separately. Sampled queries are reported separately; any unresolved sampled query in an operating cohort prevents a readiness pass. Maximum-node readiness includes those sampled calls.",
+    "integrity_stop": "Any invalid witness, exact-reference mismatch, contradictory resolved configuration outputs or completed-repeat integer-work mismatch pauses the whole study.",
+    "architecture_review": {
+      "unresolved_rate_at_least": 0.05,
+      "p95_projection_seconds_above": 5,
+      "p95_feasibility_seconds_above": 1,
+      "p95_nodes_at_least": 100000,
+      "matched_12_vs_8_growth_ratio_above": 8,
+      "node_growth_minimum_p95_at_12": 10000,
+      "node_ratio_denominator_floor": 1,
+      "time_growth_minimum_p95_projection_seconds_at_12": 1,
+      "time_growth_minimum_p95_feasibility_seconds_at_12": 0.1,
+      "growth_matching": "ladder12 versus ladder08 at the same k fraction, occupancy target, suite, palette, nominal_density and API; never mix fixed k=2 with fractional k. Runtime denominators use positive recorded nanoseconds; report any censoring instead of inventing a ratio."
+    },
+    "memory_review": {
+      "worker_peak_bytes_above": 2147483648,
+      "matched_12_vs_8_ratio_above": 4,
+      "larger_peak_bytes_minimum": 536870912,
+      "matching": "Same camera suite, nominal_density regime and worker category; compare the maximum peak across corresponding epochs of ladder12 versus ladder08. Worker contains both palettes/all k and densities for that job, so this is a worker-level resource comparison, not a per-case solver-memory statistic."
+    },
+    "timing_of_review": "After a whole first epoch at each N, unresolved/absolute-node/absolute-time/absolute-memory triggers pause all remaining epochs and volumes, not just difficult cases. All growth ratios and final readiness require five epochs. Administrative/integrity caps apply immediately.",
+    "sample_scope": "Sixteen truth draws per recipe support finite-design screening, not precise population failure-rate estimates. Zero observed failures does not exclude rare difficult worlds.",
+    "candidate_camera_recovery_readiness": "At both 10 and 12: complete mandatory audits and operating cohorts, zero unresolved including their sampled queries, p95 feasibility<=0.1s, p95 projection<=1s, maximum nodes<100000, worker peak<=512MiB, no growth flags; all declared structured cases resolved and verified with both. Only supports considering a bounded camera/lattice-recovery prototype at a separate checkpoint, not general large-scene readiness.",
+    "grey_zone": "Neither automatic expansion nor rejection; publish complete evidence and review before new work.",
+    "stress_only_failure": "Weak-view or abstract-stress failures are reported separately and restrict claims; do not conflate them with the operating-cohort rate. Resource/integrity caps can still pause the full collection."
+  },
+  "planned_counts": {
+    "interpretation": "Design/timing slots including repeated draw or mask-recipe inputs; not measured results or guaranteed distinct cases. Shared actual resolutions are counted once.",
+    "mask_recipe_slots_across_geometries": 66,
+    "camera_base_slots": 66816,
+    "camera_high_resolution_slots": 3168,
+    "robustness_slots": 1584,
+    "abstract_structured_slots": 576,
+    "physical_anchor_slots": 4,
+    "total_slots": 72148,
+    "feasibility_projection_timed_calls": 2885920,
+    "sampled_query_timed_calls": 354720,
+    "total_timed_api_calls": 3240640,
+    "untimed_root_diagnostics_maximum": 72148,
+    "cost_scenarios": "At 1/10/100 ms average per timed call: approximately 0.9/9/90 solver-hours, plus preparation/audits/process overhead. This arithmetic is not a benchmark prediction; 48-hour scheduling cap governs incomplete collection."
+  },
+  "publication": {
+    "later_evidence_directory": "results/a2-scaling-larger-v1/",
+    "before_any_solver_including_gac": "Implement/review the collector and independent references; validate guards at a separately authorized implementation checkpoint; freeze source/executable/compiler/host identities and commit a complete deterministic input manifest with exact rays/factors/domains/truth IDs, membership mappings and hashes before evaluating those inputs.",
+    "artifacts": ["protocol and protocol hash","full input manifest","collector/reference source and executable hashes","environment and compiler flags","all attempted raw calls and missing slots","reference coverage and validation records","job logs","closed-file size/SHA-256 manifests","atomic completion markers"],
+    "amendment_rule": "Any population, budget, heuristic, reference-coverage or analysis change requires a new version published before affected collection, disclosing all already observed results. Never overwrite v1 to hide drift.",
+    "open_preflight_items": ["Implement generic collector and independent reference adapter without changing accepted source","Record and verify available CPU/compiler/OS watchdog and memory enforcement before timing; failure blocks start rather than weakening controls","Confirm mandatory reference work fits administrative cap; exhaustion pauses without dropping audits","Preregister any later 27-cell extension separately"],
+    "this_checkpoint_runs": "No solver, benchmark, case generator, reference enumeration, correctness gate, sanitizer or camera recovery. Only source inspection, protocol writing and static protocol checks."
+  }
+}
