@@ -1,0 +1,318 @@
+{
+  "additional_launch_observation": {
+    "action": "Entry point was not invoked. No filtering, monkeypatching, source change, or substitute launcher was introduced.",
+    "file": "experiments/a2_larger/run.py",
+    "issue": "The frozen collect entry point unconditionally schedules N=8 physical anchors, then all N=4,6,8,10,12 stages, and has no volume-selection CLI option. It cannot be invoked as written for the requested N=4/6-only batch."
+  },
+  "architecture_or_runtime_threshold_evaluated": false,
+  "checked_at_utc": "2026-10-02T18:15:16.782674+00:00",
+  "collection_output_archives": 0,
+  "execution": {
+    "SAT": 0,
+    "UNRESOLVED": 0,
+    "UNSAT": 0,
+    "collector_invoked": false,
+    "completed_epochs": 0,
+    "completed_timed_calls": 0,
+    "experimental_design_slots_attempted": 0,
+    "inference_worker_peak_rss_bytes": null,
+    "reference_audit_checks_executed": 0,
+    "reference_audit_seconds": 0.0,
+    "reference_coverage": "NOT_STARTED",
+    "rerun_cases": 0,
+    "root_diagnostic_calls": 0,
+    "scientific_analysis_performed": false,
+    "solver_seconds": 0.0,
+    "status_count_note": "No calls were attempted. Unattempted coverage is not UNRESOLVED.",
+    "timed_calls_attempted": 0,
+    "witness_checks_executed": 0
+  },
+  "frozen_host": {
+    "allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+    "build_flags": "-std=c++20 -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Iinclude",
+    "cgroup_cpu_max": "800000 100000",
+    "cgroup_memory_max": "8589934592",
+    "compiler": "/usr/bin/x86_64-linux-gnu-g++-13",
+    "compiler_sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73",
+    "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "kernel": {
+      "machine": "x86_64",
+      "node": "ad6b63c043ba",
+      "processor": "x86_64",
+      "release": "6.18.44",
+      "system": "Linux",
+      "version": "#1 SMP Sat Sep 26 20:02:31 UTC 2026"
+    },
+    "memory_enforcement": "Kernel RLIMIT_AS=4 GiB, caught bad_alloc, plus supervisor RSS polling; peak RSS is worker-level, not solver-only",
+    "pinned_cpu": 0,
+    "python": "3.12.14",
+    "source_subtrees": {
+      "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+      "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+      "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+      "tests": "f14050860d8b0a27687ba9c5cfa6082d6d1f210c"
+    },
+    "timing_clock": "Linux CLOCK_MONOTONIC via steady_clock; API-start timestamp in shared mmap"
+  },
+  "host_identity_differences": {
+    "cpu_model": {
+      "current": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "frozen": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "kernel": {
+      "current": {
+        "machine": "x86_64",
+        "node": "8984c830f591",
+        "processor": "x86_64",
+        "release": "6.18.44",
+        "system": "Linux",
+        "version": "#1 SMP Sat Sep 26 20:02:31 UTC 2026"
+      },
+      "frozen": {
+        "machine": "x86_64",
+        "node": "ad6b63c043ba",
+        "processor": "x86_64",
+        "release": "6.18.44",
+        "system": "Linux",
+        "version": "#1 SMP Sat Sep 26 20:02:31 UTC 2026"
+      }
+    }
+  },
+  "integrity_stop_fired": false,
+  "launch_checks": {
+    "binary_matches": true,
+    "binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+    "collector_reference_hashes_match": true,
+    "compiler_identity_matches": true,
+    "cpu_affinity_cpu0_set_and_restored": true,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "zlib_compile": "1.3.2",
+      "zlib_runtime": "1.3.2"
+    },
+    "host_matches": false,
+    "input_archives_size_compressed_and_uncompressed_hashes_match": true,
+    "input_manifest_matches": true,
+    "input_manifest_sha256": "1cf1881337a649de17ab244fb70dd8f5fc421467e1e8a4efb433412d30e0378b",
+    "protocol_matches": true,
+    "protocol_sha256": "1daf5007289e1aef8cf6f59724cc974402ec654384d3f076903d6ab99ff6bf05",
+    "required_input_archives_verified": [
+      {
+        "bytes": 228275,
+        "path": "cases/ladder04-r16.jsonl.gz",
+        "raw_sha256": "b14e2006ab15e65591e24c1de763f8431db9ac9ee94aaca49681d77fd2ba424f",
+        "records": 3600,
+        "sha256": "f1424799b4e26f641c9bfe7b89d6ee849738a13a6d6db657aee48b61dceca3b4"
+      },
+      {
+        "bytes": 21247,
+        "path": "cases/ladder04-r32.jsonl.gz",
+        "raw_sha256": "b72eda3f216e4823c2822939f8398149b9e694f978618b46ac46699953fac4cf",
+        "records": 288,
+        "sha256": "10b4e51c785444a6d0b0a7fd9b76c9b981795390d9d2426e27d31cffa7830888"
+      },
+      {
+        "bytes": 375560,
+        "path": "cases/ladder06-r16.jsonl.gz",
+        "raw_sha256": "f17d76acf116513c111abbddc1df4bf4ef746dab299982a3b55cfe52671b5fd6",
+        "records": 5760,
+        "sha256": "d52da53a6f98ba16168ab9098e553b15f1f15f2d4bd2e859f0a8fe80d059e09c"
+      },
+      {
+        "bytes": 400031,
+        "path": "cases/ladder06-r24.jsonl.gz",
+        "raw_sha256": "0d11cd5c745c1078f07acb6097c16b5fbaa1623f23d236cdaeb2d63e988ace1e",
+        "records": 6000,
+        "sha256": "8837b8577f4723419cebb05e603a500306e1643682dfa2b14fe1d9f14a6792ae"
+      },
+      {
+        "bytes": 35840,
+        "path": "cases/ladder06-r48.jsonl.gz",
+        "raw_sha256": "6dd4ad15803cbc2d91a807dc47df95e1a6bf520b8bc86477daa1078a611c0e99",
+        "records": 480,
+        "sha256": "eef7aedb212f5982a0cf7b95150f9b93c7f9de7a0d3590c534584a50753c5b1b"
+      },
+      {
+        "bytes": 46617,
+        "path": "cases/structured.jsonl.gz",
+        "raw_sha256": "e20e4e01cd5384c76fb05e10fd30b8f88ce583c47bce8d289ed3b535efadbb18",
+        "records": 576,
+        "sha256": "56dd5d65040a819803d5ba1a426ca4feb3e2551312aa1f6198acd1314ea08336"
+      },
+      {
+        "bytes": 13465,
+        "path": "rigs/ladder04-r16.jsonl.gz",
+        "raw_sha256": "cf851b990de3cdf40c4dad70257cfef143521265577a66a166d89e84b91d6278",
+        "records": 2049,
+        "sha256": "3154962d7b42c5ac3ed284d82e5eddfeed7e5dcc8f3dfb371a21746734c2aeca"
+      },
+      {
+        "bytes": 49175,
+        "path": "rigs/ladder04-r32.jsonl.gz",
+        "raw_sha256": "2cac5c04bd563762e57f333617c944833f8cf78166b3fb4380f77b46921c179c",
+        "records": 8193,
+        "sha256": "4751efe3ebcb924c597bd2b54087fd36f1cb269b0aaedcecf69dca720666b131"
+      },
+      {
+        "bytes": 13466,
+        "path": "rigs/ladder06-r16.jsonl.gz",
+        "raw_sha256": "1134170b7ef67c3aa98e8034860aecbe33a865b6294f7a698bc4c5246b93d2fd",
+        "records": 2049,
+        "sha256": "4554fc8b51f5ed2b9b066d7fb92561ddc1fb9ad8ad9360da14975f58f7ec0a3f"
+      },
+      {
+        "bytes": 29027,
+        "path": "rigs/ladder06-r24.jsonl.gz",
+        "raw_sha256": "db820db75cf195e7a67059b93e4437b7043275ed4f5b1a9d1e737998cb9baca7",
+        "records": 4609,
+        "sha256": "aca64ae653e17cf90ddacf05568537421b2954427ca2d3c182f16f5f2babf714"
+      },
+      {
+        "bytes": 106920,
+        "path": "rigs/ladder06-r48.jsonl.gz",
+        "raw_sha256": "c57051a6b4f7938abed8fb8a049df2a213c133911854529607f1d360a6480960",
+        "records": 18433,
+        "sha256": "71e170619968e3e6a85ed31e5d2fb5e21899f1f4207233b879389a27ddceedc6"
+      }
+    ],
+    "source_files": {
+      "experiments/a2_larger/build.sh": "c60dcf9cd4ea5a1ae2dfaf8f29fa73c1ba74692a331c6d27b80b549f151a99fb",
+      "experiments/a2_larger/common.py": "e047c61a6bb422d04e6cb94bf227511cd75750c1e347c62845afe76c45459a7f",
+      "experiments/a2_larger/generate.py": "b751998ccf790468c0db8752defa4a4103d9b9eb9c6d1dc8a3eb59bac9d96a76",
+      "experiments/a2_larger/preflight-plan.json": "b6f0e781275a4027c6797a2c91ced12385023ba60c7efe4f4f117bc74361dbd6",
+      "experiments/a2_larger/preflight.py": "594966e962428492ea9123f4a7a1e93aaa15a7cf5a0f113cd720a3b7b321a8ac",
+      "experiments/a2_larger/reference.py": "e0787fc5cf1da0e8b27c7e2f9886a47032364f8ee0bcf62ccc1056a7a0246913",
+      "experiments/a2_larger/run.py": "5f620aa028a72dc2af1daa2d7a449b9316c5c9ba5b4bd7abaa347dc7b648375e",
+      "experiments/a2_larger/worker.cpp": "b65d6c2c8e193512e2a2d3e8e7ed2f1d90609ab1635a818524772c1bcbf0d11a"
+    }
+  },
+  "launch_identity_stop_fired": true,
+  "launch_integrity_check_wall_seconds": 1.0450553439999908,
+  "local_commit": "8bc728ad1894dc5925d3e6472f0bdc8819c67930",
+  "local_provenance_note": "Local mirror commit differs from the API-published commit; the complete tree matches the published checkpoint. No checkout or history was changed.",
+  "local_tree": "b9994bfe51b5a2a96386326a4e473b24b2cfb5ab",
+  "observed_host": {
+    "allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+    "build_flags": "-std=c++20 -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Iinclude",
+    "cgroup_cpu_max": "800000 100000",
+    "cgroup_memory_max": "8589934592",
+    "compiler": "/usr/bin/x86_64-linux-gnu-g++-13",
+    "compiler_sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73",
+    "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "kernel": {
+      "machine": "x86_64",
+      "node": "8984c830f591",
+      "processor": "x86_64",
+      "release": "6.18.44",
+      "system": "Linux",
+      "version": "#1 SMP Sat Sep 26 20:02:31 UTC 2026"
+    },
+    "memory_enforcement": "Kernel RLIMIT_AS=4 GiB, caught bad_alloc, plus supervisor RSS polling; peak RSS is worker-level, not solver-only",
+    "pinned_cpu": 0,
+    "python": "3.12.14",
+    "source_subtrees": {
+      "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+      "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+      "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+      "tests": "f14050860d8b0a27687ba9c5cfa6082d6d1f210c"
+    },
+    "timing_clock": "Linux CLOCK_MONOTONIC via steady_clock; API-start timestamp in shared mmap"
+  },
+  "published_base_commit": "f8f055a8491828154d4654ef6f9a1caa611bef51",
+  "published_base_tree": "b9994bfe51b5a2a96386326a4e473b24b2cfb5ab",
+  "ready_for_N8": false,
+  "required_next_action": "Restore the frozen timing host; resolve how to schedule only N=4/6 without changing the frozen experiment or invoking N=8 anchors. A different timing host would require an explicit prospective re-freeze, not silent substitution.",
+  "resources_at_launch": {
+    "cgroup_available_headroom_bytes": 6822502400,
+    "cgroup_memory_bytes": {
+      "memory.current": 1767432192,
+      "memory.max": 8589934592,
+      "memory.peak": 1767432192
+    },
+    "disk_bytes": {
+      "free": 30540496896,
+      "total": 33770192896,
+      "used": 1494933504
+    },
+    "host_memory_bytes": {
+      "MemAvailable": 9701781504,
+      "MemTotal": 10451460096
+    },
+    "inference_worker_limit_bytes": 4294967296,
+    "note": "These are launch-environment readings, not inference-worker maxima or scientific measurements.",
+    "storage_reserve_required_bytes": 21474836480,
+    "storage_reserve_satisfied": true
+  },
+  "schema": "a2-larger-launch-check-v1",
+  "scope": {
+    "by_volume": {
+      "4": {
+        "category_counts": {
+          "camera": 3744,
+          "contradictory": 72,
+          "restricted": 72
+        },
+        "design_slots": 3888,
+        "jobs_per_epoch": 12,
+        "planned_timed_calls_five_epochs": 181440,
+        "timed_calls_per_epoch": 36288
+      },
+      "6": {
+        "category_counts": {
+          "camera": 12000,
+          "contradictory": 120,
+          "restricted": 120,
+          "structured": 144
+        },
+        "design_slots": 12384,
+        "jobs_per_epoch": 27,
+        "planned_timed_calls_five_epochs": 555840,
+        "timed_calls_per_epoch": 111168
+      }
+    },
+    "count_basis": "Frozen manifest job inventory, cross-checked against selected input records; no input generation or solver execution",
+    "design_slots": 16272,
+    "excluded_volumes": [
+      8,
+      10,
+      12,
+      27
+    ],
+    "planned_timed_calls": 737280,
+    "requested_volumes": [
+      4,
+      6
+    ],
+    "timed_calls_per_epoch": 147456,
+    "timing_epochs": 5
+  },
+  "status": "BLOCKED_BEFORE_EXPERIMENTAL_EXECUTION",
+  "stop_reasons": [
+    "Material timing-host mismatch: frozen AMD EPYC 9V74 host ad6b63c043ba; current Intel Xeon Platinum 8573C host 8984c830f591."
+  ],
+  "working_tree_clean": true
+}
