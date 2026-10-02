@@ -1,0 +1,22 @@
+{
+  "purpose": "Infrastructure validation only; no experimental epochs or scientific performance estimates",
+  "maximum_worker_requests": 400,
+  "maximum_aggregate_solver_seconds": 60,
+  "camera_pairs": [
+    ["ladder04",4,"endpoint","low",0,16,"axis_1"],
+    ["ladder06",3,"compact","half",0,24,"axis_1"],
+    ["ladder08",4,"compact","half",0,32,"axis_6"],
+    ["compact08",4,"compact","half",0,16,"axis_6"],
+    ["ladder10",10,"endpoint","low",0,40,"axis_1"],
+    ["ladder12",12,"endpoint","low",0,48,"axis_1"],
+    ["compact12",12,"endpoint","low",0,24,"axis_1"]
+  ],
+  "robustness_pairs": [["restricted","ladder04",4,"endpoint","low",0,16,"axis_1"],["contradictory","ladder04",4,"endpoint","low",0,16,"axis_1"]],
+  "structured_pairs_identity_canonical": [[6,"path"],[6,"even_cycle"],[6,"repeated_edges"],[6,"two_paths"],[6,"anchored_path"],[8,"path_triangle"],[10,"fixed_hit"],[10,"fixed_plus_path"],[12,"odd_cycle_leaf"]],
+  "physical_anchors": ["path","triangle"],
+  "normal_calls": "Feasibility and projection in all four modes on every listed palette-paired case; six sampled queries per mode only on the two clean ladder04 cases",
+  "root_diagnostics": "The two clean ladder04 cases, separate fresh workers",
+  "fault_injection": "One clean ladder04 input: F/P with node limit 0, F/P with seconds 0; non-solver hang with 0.2-second external watchdog, allocation against 128 MiB RLIMIT_AS, and simulated process crash. These limits are preflight-only and forbidden on collection workers.",
+  "storage_tests": "Closed-job hash resume without executing a generator; sealed-orphan recovery; corrupt compressed bytes rejection; interrupted partial preservation; mismatched identity rejection; deterministic compression",
+  "timing_epochs_executed": 0
+}
