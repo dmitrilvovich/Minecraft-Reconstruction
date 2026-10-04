@@ -1,0 +1,37 @@
+{
+  "schema": "a2-larger-stable-host-deployment-v1",
+  "base_checkpoint": "57a1a1a8a057b19812f801ed55775da6ee405c2a",
+  "scientific_protocol_sha256": "1daf5007289e1aef8cf6f59724cc974402ec654384d3f076903d6ab99ff6bf05",
+  "master_input_manifest_sha256": "1cf1881337a649de17ab244fb70dd8f5fc421467e1e8a4efb433412d30e0378b",
+  "binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+  "binary_archive_sha256": "16d1a63782f272789e3c33d0ea04729efa1dc2a1a033f0e4af58be32f36a0a21",
+  "build_compiler_sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73",
+  "anchor_selection": "results/a2-scaling-larger-stable-host/anchors",
+  "python_major_minor": [3, 12],
+  "numpy_version": "2.3.5",
+  "platform": "Linux x86_64, glibc ELF loader, unified cgroup v2, procfs and sysfs",
+  "binary_metadata": {
+    "isa": "x86-64-baseline",
+    "elf_class": "ELF64",
+    "interpreter": "/lib64/ld-linux-x86-64.so.2",
+    "highest_required_glibc_version": "GLIBC_2.38",
+    "highest_required_glibcxx_version": "GLIBCXX_3.4.32",
+    "highest_required_cxxabi_version": "CXXABI_1.3.9",
+    "direct_libraries": ["libstdc++.so.6", "libgcc_s.so.1", "libc.so.6"]
+  },
+  "deployment_changes": [
+    "Restore the existing gzip-packaged ELF byte-for-byte when absent; never rebuild or overwrite a mismatching binary.",
+    "Inspect machine/topology, runtime library hashes, effective cgroup limits and resource availability prospectively.",
+    "Use a separately versioned scoped collector with the stronger environment guard; original collector and launcher sources are preserved.",
+    "Record changing free RAM/disk and timestamps as observations, not exact-equality identity fields; recheck their thresholds before workers.",
+    "Retain exact compiler/binary identities and all scientific, ordering, timing and budget rules."
+  ],
+  "collection_sequence": [
+    "Select stable reserved host; prepare, publish and verify its collection identity before experimental calls.",
+    "Separately authorize and execute only the physical anchor stage.",
+    "Publish and verify complete anchor evidence before authorizing N=4/6.",
+    "Execute N=4/6 under the same frozen environment and shared study output/ledger.",
+    "Publish each batch; later volumes require the same identity and all protocol prerequisites."
+  ],
+  "experimental_execution_authorized": false
+}
