@@ -1,0 +1,36 @@
+{
+  "schema": "a2-larger-launch-amendment-1",
+  "kind": "prospective_pre_collection_infrastructure_and_host_policy_amendment",
+  "base_checkpoint": "059699cf442676af77f920defd5000096f4b2049",
+  "original_protocol_sha256": "1daf5007289e1aef8cf6f59724cc974402ec654384d3f076903d6ab99ff6bf05",
+  "master_input_manifest_sha256": "1cf1881337a649de17ab244fb70dd8f5fc421467e1e8a4efb433412d30e0378b",
+  "original_binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+  "experimental_calls_before_amendment": 0,
+  "experimental_calls_authorized_by_amendment": 0,
+  "scientific_population_version": "a2-scaling-larger-v1 (unchanged)",
+  "host_policy": {
+    "preflight_host": "Recorded separately; not required to be the collection host. Preflight timings never enter scientific timing comparisons.",
+    "collection_host": "Choose, record and publish one stable collection timing environment before any experimental worker invocation, including GAC/root diagnostics. The environment must remain unchanged across all volumes, batches, configurations and five epochs.",
+    "freeze": ["stable reserved hardware/VM asset identity and reservation evidence", "host/node identity and CPU model", "kernel/OS, affinity set and selected CPU", "compiler path, version, hash and build flags", "unchanged frozen binary hash", "Python executable and version, NumPy and zlib versions", "resource limits and timing-relevant environment variables", "original and revised experiment-layer source hashes"],
+    "on_change": "Pause before further worker calls. Do not pool heterogeneous-host timings or normalize them afterward. Any restart or new timing cohort requires a separately published prospective decision.",
+    "acceptable_execution_strategy": ["reserved_physical_host", "dedicated_non_migrating_vm"],
+    "current_environment_status": "unselected; workspace has moved between node identities and CPU models; no stable reservation has been established"
+  },
+  "selection_policy": {
+    "unit": "Complete declared volume stages or the explicitly declared physical-anchor stage; whole frozen jobs and palette pairs only.",
+    "source": "Read the original 72,148-ID manifest and archives. Preserve every record, ID, query, membership and byte; selection index stores archive path, data-record ordinal and original raw-record SHA-256.",
+    "volume_ownership": "Use each frozen record's n and its matching manifest job n. Structured recipes retain their declared N. All four physical anchors are N=8 and remain a distinct anchors stage.",
+    "volume_selector_8": "Includes both the N=8 anchor stage and ordinary N=8 volume stage. The stage selector may select the anchors stage separately without assigning it to N=4 or N=6.",
+    "ordering": "Preserve v1 anchors-first stage order, five epochs per stage, H job/case order, palette order, mode rotation, API/query order and fresh process rules. A subset may read already sealed prerequisite stages but must never execute them implicitly.",
+    "resume": "One shared study identity, administrative cost ledger, reference cache, agreement index and raw job directory across batches. Verify prior and selected job hashes/context/call IDs; reject missing prerequisites, changed scopes, foreign records and interrupted artifacts. No automatic reruns.",
+    "scientific_changes": "None: cases, seeds, masks, truths, observations, cameras, configurations, budgets, weighting, references, solver binary and branching policy are unchanged."
+  },
+  "unresolved_stage_order_conflict": {
+    "original_rule": "Ascending N; legacy physical anchors first, then declared camera/structured slots at each N. Complete all five epochs of a volume before the next, unless a predeclared stop pauses the study.",
+    "requested_first_batch": [4, 6],
+    "anchor_n": 8,
+    "resolution_in_this_checkpoint": "Do not amend stage order or reassign anchors. The N=4/6-only scoped launch rejects absent anchor prerequisites before any worker starts.",
+    "minimum_next_decision": "On a stable frozen timing environment, separately authorize the original four-anchor stage first, or explicitly preregister deferral of that stage before the first timing call. This checkpoint authorizes neither."
+  },
+  "launch_clearance": false
+}
