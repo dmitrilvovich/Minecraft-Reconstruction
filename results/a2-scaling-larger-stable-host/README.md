@@ -11,6 +11,9 @@ See [the deployment guide](../../docs/a2-scaling-larger-stable-host.md).
   including explicit rejection of non-anchor N=8 designs and unsafe resume.
 - `workspace-host-check.json`: bootstrap/dependency/capability check on the
   current ephemeral workspace, not a stable-host freeze or collection authority.
+- `validation-implementation-commit.txt`: exact local commit bytes for the
+  checkout used by that check; its complete tree matches the published
+  implementation commit, as recorded in the integrity manifest.
 - `checkpoint-integrity.json`: file sizes, SHA-256 hashes and Git blob identities
   for this checkpoint, excluding that manifest itself.
 

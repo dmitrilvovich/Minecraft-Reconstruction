@@ -1,0 +1,8 @@
+tree 34de313061ea483b3fefcd844727aec950ad1a69
+parent 57a1a1a8a057b19812f801ed55775da6ee405c2a
+author Dmitri Lvovich <dmitri.lvovich@yahoo.ca> 1791128951 -0400
+committer Dmitri Lvovich <dmitri.lvovich@yahoo.ca> 1791128951 -0400
+
+Prepare portable A2 host checks and exact physical-anchor scope [skip ci]
+
+Preserve the original scientific protocol, frozen inputs, binary and collectors. Add a separate stable-host deployment layer with prospective machine/runtime identity and resource checks, plus the exact four-anchor selector output and nonexperimental validation. No experimental solver, oracle or timing execution.

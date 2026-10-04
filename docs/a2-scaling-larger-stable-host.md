@@ -217,6 +217,17 @@ not a stable reservation or clearance to collect here. The collector's stage-loo
 AST matches the preserved scoped collector: solver APIs, references, budget
 handling, timing order and engineering stop logic are unchanged.
 
+The bootstrap report names local validation commit
+`22521e8df02855260a106cbf1062cf8e05848205`. The published implementation commit
+`28c5666fc7db2cfe9e64e77101bf4c422c75200c` has the **identical complete tree**,
+`34de313061ea483b3fefcd844727aec950ad1a69`. Publication used the connected
+repository service after command-line push authentication was unavailable; the
+commit identities therefore differ. The
+[raw local commit record](../results/a2-scaling-larger-stable-host/validation-implementation-commit.txt)
+preserves that validation provenance. No source, input or check result was
+changed to obtain this correspondence. Use the final published deployment
+checkpoint for a new host check, not the local validation commit.
+
 No new C++ binary, input generator output, correctness gate, benchmark, scientific
 analysis, bounded preflight rerun or experimental timing data was produced.
 Before anchors can be authorized, the user must establish the actual stable
