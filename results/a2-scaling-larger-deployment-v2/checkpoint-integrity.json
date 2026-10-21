@@ -1,0 +1,81 @@
+{
+  "schema": "a2-larger-deployment-v2-checkpoint-integrity",
+  "base_checkpoint": "e97883ab3a982292af98e5e3ed2a3b1fe5258f54",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 8326,
+      "sha256": "54c103be883fec0e51a3887ca7620fcc574382a7d60554add9f930b0d47444b1"
+    },
+    {
+      "path": "docs/a2-scaling-larger-deployment-amendment-2.md",
+      "bytes": 10595,
+      "sha256": "91588a755491a2bbb06461409012fef0d2fb1dae977c9e7624fb13dbb7f7c01e"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/README.md",
+      "bytes": 1988,
+      "sha256": "7c40eb6a5d15f22aeab89cef354a38581c095a7bb10de3bb6c49a3507c23992f"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/collect.py",
+      "bytes": 11481,
+      "sha256": "f01e64add771e0ff779bff9bf27c034b01d2c17e6f7e63556c26d6d3cc6aa5c1"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/host.py",
+      "bytes": 10889,
+      "sha256": "7d305b13337438b49e4a308c0c123468f228768b879f54d739f623199b7af274"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/pre_collection.py",
+      "bytes": 8088,
+      "sha256": "c77e829af3568c6f0a37ac14eb1a7d9ab04c09fd868f00ba14aacbcdc33d3f4c"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/spec.json",
+      "bytes": 2807,
+      "sha256": "5c0f0e00f9d394e250940bb20e1108ce14d51905967b84eb3399bc1ded52cbea"
+    },
+    {
+      "path": "experiments/a2_larger_deploy_v2/validate.py",
+      "bytes": 13702,
+      "sha256": "6dcd1421d6170909db4536958312617b9fd76535ee226b3c787325bd9ed36005"
+    },
+    {
+      "path": "results/a2-scaling-larger-deployment-v2/README.md",
+      "bytes": 1062,
+      "sha256": "564b78906290af675310feeb0fc781f8b501efcb71cd1881c30240b8c22b239a"
+    },
+    {
+      "path": "results/a2-scaling-larger-deployment-v2/reported-wsl-blocker.json",
+      "bytes": 1167,
+      "sha256": "df1a4232972866b8985d50724c57f78b1ab953a993f99a10c7bf80d85a25da35"
+    },
+    {
+      "path": "results/a2-scaling-larger-deployment-v2/validation.json",
+      "bytes": 12636,
+      "sha256": "26e80d35e0db5597110f3be3b687ddaaf34fc6e0c3dd5e1727abeaa0d07610ea"
+    }
+  ],
+  "self_excluded": true,
+  "prior_tracked_blobs_preserved_except_readme": 529,
+  "prior_preserved_inventory_sha256": "1650a7a8f3559bcdeab4e420f1f6bf65bc90f0320309e689de0d10e73161cf05",
+  "protected_git_subtrees": {
+    "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+    "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+    "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+    "tests": "f14050860d8b0a27687ba9c5cfa6082d6d1f210c"
+  },
+  "design_slots_unchanged": 72148,
+  "anchor_slots_unchanged": 4,
+  "input_archives_unchanged": 40,
+  "validation_checks": 48,
+  "experimental_solver_calls": 0,
+  "reference_jobs": 0,
+  "timing_epochs": 0,
+  "preflight_reruns": 0,
+  "collection_host_selected": false,
+  "compiler_policy": "Original build SHA retained; optional installed execution compiler frozen separately",
+  "timing_clearance": "BLOCKED until a stable host with reviewed physical placement is established; WSL has no override in deployment v2"
+}

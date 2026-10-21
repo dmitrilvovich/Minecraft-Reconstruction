@@ -1,0 +1,27 @@
+{
+  "schema": "a2-larger-stable-host-deployment-v2",
+  "kind": "prospective_pre_collection_build_execution_identity_amendment",
+  "base_checkpoint": "e97883ab3a982292af98e5e3ed2a3b1fe5258f54",
+  "supersedes_for_future_launches": "experiments/a2_larger_deploy/spec.json",
+  "scientific_population_version": "a2-scaling-larger-v1 (unchanged)",
+  "scientific_protocol_sha256": "1daf5007289e1aef8cf6f59724cc974402ec654384d3f076903d6ab99ff6bf05",
+  "master_input_manifest_sha256": "1cf1881337a649de17ab244fb70dd8f5fc421467e1e8a4efb433412d30e0378b",
+  "build_identity_sha256": "aebef728ba64fb9ad8f6d26d4b7fc3677603e048f4f84b298474cedbfa8f4b22",
+  "build_compiler_sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73",
+  "binary_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+  "anchor_selection": "results/a2-scaling-larger-stable-host/anchors",
+  "compiler_policy": {
+    "build": "Original compiler, flags, sources and binary identities remain immutable provenance. No compilation or replacement binary is permitted.",
+    "execution": "Record g++ path/version/SHA-256 if installed, otherwise record its absence. It need not match the build compiler. A present but unreadable or unidentifiable compiler blocks inspection.",
+    "after_freeze": "The actual execution compiler identity, including presence/absence, joins exact runtime/software identity comparison. Any change stops before further worker calls. Do not update the frozen record to accept drift."
+  },
+  "timing_host_policy": {
+    "wsl": "Inspection only. This revision cannot establish a fixed physical-core mapping for WSL virtual CPUs; host preparation and collection are blocked. No override flag is provided.",
+    "physical_placement": "Before preparing a host record, document the selected Linux CPU's physical host/core identity and core type, mapping evidence, sibling-load and power/thermal controls. A dedicated VM additionally requires host-side pinning and non-migration evidence. Operator evidence must be reviewed and published before collection; guest affinity alone is insufficient.",
+    "same_environment": "Retain exact machine, topology, selected CPU, kernel, libraries, interpreter, source and runtime environment across batches; stop on identity change. No heterogeneous timing normalization."
+  },
+  "unchanged": ["scientific inputs and their bytes", "all 72148 design IDs", "anchor-first stage order", "seeds, masks, truths and cameras", "four solver configurations and branching policy", "five epochs and call ordering", "reference obligations", "node/time/watchdog/memory limits", "resource thresholds", "weighting and stop criteria"],
+  "experimental_calls_before_amendment": 0,
+  "experimental_calls_authorized_by_amendment": 0,
+  "collection_host_selected": false
+}

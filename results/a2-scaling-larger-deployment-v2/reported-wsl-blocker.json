@@ -1,0 +1,22 @@
+{
+  "schema": "a2-larger-user-reported-pre-collection-blocker",
+  "evidence_origin": "User report supplied for this checkpoint; not a locally observed laptop run or recovered raw inspection log",
+  "base_checkpoint": "e97883ab3a982292af98e5e3ed2a3b1fe5258f54",
+  "host": {
+    "platform": "Windows 11 / Ubuntu 24.04.5 WSL2",
+    "cpu_model": "Intel Core i7-13700H",
+    "exposed_logical_cpus": 20,
+    "ram_total_gib_approx": 7.6,
+    "ram_available_gib_approx": 7.1,
+    "linux_disk_available_gib_approx": 954,
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "compiler_package_revision": "13.3.0-6ubuntu2~24.04.1",
+    "installed_compiler_sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769"
+  },
+  "reported_inspection_status": "BLOCKED",
+  "reported_error": "Original compiler identity unavailable; do not rebuild or silently substitute it",
+  "reported_preceding_checks": "Repository, frozen binary and all 40 original input archives passed",
+  "experimental_solver_calls": 0,
+  "resolution": "Deployment v2 separates compiler roles. WSL physical-core placement remains unqualified for timing; no host freeze or collection authorized."
+}
