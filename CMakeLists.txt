@@ -84,6 +84,11 @@ if(BUILD_TESTING)
             --examples "${CMAKE_CURRENT_SOURCE_DIR}/examples/a2-png"
             --evidence "${CMAKE_CURRENT_BINARY_DIR}/png-demo-validation.json")
         set_tests_properties(png_reconstruct_e2e PROPERTIES LABELS "png-demo" TIMEOUT 120)
+        add_test(NAME minecraft_capture_compatibility COMMAND "${Python3_EXECUTABLE}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/tests/capture/test_capture.py"
+            --binary "$<TARGET_FILE:mcr_reconstruct>"
+            --evidence "${CMAKE_CURRENT_BINARY_DIR}/capture-validation.json")
+        set_tests_properties(minecraft_capture_compatibility PROPERTIES LABELS "capture" TIMEOUT 180)
     endif()
     function(mcr_test name source)
         add_executable(${name} ${source})

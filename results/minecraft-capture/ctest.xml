@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="16"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="32"
+	timestamp="2026-10-22T19:09:56"
+	>
+	<testcase name="png_reconstruct_e2e" classname="png_reconstruct_e2e" time="4.17227" status="run">
+		<properties>
+			<property name="cmake_labels" value="png-demo"/>
+		</properties>
+		<system-out>{"result": "PASS", "checks": 141, "cli_invocations": 70, "exhaustive_image_cases": 7}
+</system-out>
+	</testcase>
+	<testcase name="minecraft_capture_compatibility" classname="minecraft_capture_compatibility" time="29.0799" status="run">
+		<properties>
+			<property name="cmake_labels" value="capture"/>
+		</properties>
+		<system-out>PASS: 87 checks; 4 diagnostic CLI calls; 2 synthetic reconstruction calls; no Minecraft capture.
+</system-out>
+	</testcase>
+	<testcase name="geometry_tests" classname="geometry_tests" time="0.0937156" status="run">
+		<properties/>
+		<system-out>8,918 boundary rays and 512 camera rays checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="render_tests" classname="render_tests" time="0.259724" status="run">
+		<properties/>
+		<system-out>6561 worlds, 3359232 ray/world comparisons
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_render_tests" classname="a1_render_tests" time="2.03478" status="run">
+		<properties/>
+		<system-out>65536 A1 worlds, 33554432 ray/world comparisons, 8918 boundary rays; A0 compatibility checked
+14352384 exact A1 automaton decisions checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_geometry_tests" classname="a1_geometry_tests" time="0.00519515" status="run">
+		<properties/>
+		<system-out>153 named A1 geometry samples checked in both renderers; exact intervals and traversal order checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a2_geometry_tests" classname="a2_geometry_tests" time="0.0814585" status="run">
+		<properties/>
+		<system-out>870 named half-slab samples; 32768 sampled camera ray/world comparisons; both palettes and A1 bottom-slab compatibility
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a2_inference_tests" classname="a2_inference_tests" time="0.131611" status="run">
+		<properties/>
+		<system-out>split material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+split material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+same material path: 2 worlds, 3 nodes / 2 branches; GAC retains all three active domains
+same material triangle: 0 worlds, 4 nodes / 3 branches; GAC retains all three active domains
+split: fixed-hit ray branches [baseline, decomposition, fixed-hit, both] = [1, 1, 0, 0]; optimized nodes=1, splits=0, component solves=0, fixed calls=1
+split: two paths branches [baseline, decomposition, fixed-hit, both] = [4, 4, 4, 4]; optimized nodes=7, splits=1, component solves=2, fixed calls=0
+split: path plus triangle branches [baseline, decomposition, fixed-hit, both] = [9, 5, 9, 5]; optimized nodes=8, splits=1, component solves=2, fixed calls=0
+split: triangle before path branches [baseline, decomposition, fixed-hit, both] = [3, 3, 3, 3]; optimized nodes=5, splits=1, component solves=1, fixed calls=0
+split: fixed region plus path branches [ba...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="constraint_tests" classname="constraint_tests" time="0.0512407" status="run">
+		<properties/>
+		<system-out>7,203 exhaustive four-cell local support cases checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_constraint_tests" classname="a1_constraint_tests" time="0.157696" status="run">
+		<properties/>
+		<system-out>98304 exhaustive A1 local-support cases; restricted/empty domains, contradictions and ambiguity checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_propagation_tests" classname="a1_propagation_tests" time="0.272339" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples and all 6 factor orders audited
+cycle: all 4096 domain triples and all 6 factor orders audited
+slab_occlusion: all 4096 domain triples and all 6 factor orders audited
+scene_cases=12554 audited_runs=90322 reductions=78340 deleted_states=108702 detected_contradictions=58180
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_feasibility_tests" classname="a1_feasibility_tests" time="0.119766" status="run">
+		<properties/>
+		<system-out>cascade: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+cycle: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+slab_occlusion: exhaustive feasibility, pruning and witnesses for all 4096 masks and 6 orders
+physical_worlds=65536 physical_observations=729 physical_feasible_observations=450 physical_domain_variants=2
+feasibility_calls=75747 feasible=16584 infeasible=59163 verified_witnesses=16584 audited_reductions=120459 deleted_states=145441 factor_updates=227843 envelope_advances=71696 branches=0 search_nodes=0 support_queries=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_support_query_tests" classname="a1_support_query_tests" time="0.272558" status="run">
+		<properties/>
+		<system-out>cascade: all 4096 domain triples, 3 cells and 4 requested states
+cycle: all 4096 domain triples, 3 cells and 4 requested states
+slab_occlusion: all 4096 domain triples, 3 cells and 4 requested states
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_queries=46656
+audited_queries=194134 supported=17482 unsupported=176652 verified_witnesses=17482 excluded_by_input=84422 audited_reductions=256074 deleted_states=368030 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="a1_projection_tests" classname="a1_projection_tests" time="0.134166" status="run">
+		<properties/>
+		<system-out>cascade: exact projection and witness coverage for all 4096 domain triples
+cycle: exact projection and witness coverage for all 4096 domain triples
+slab_occlusion: exact projection and witness coverage for all 4096 domain triples
+physical_worlds=65536 observation_vectors=729 domain_variants=2 physical_projections=1458
+audited_projections=13760 feasible=3113 infeasible=10647 verified_witnesses=8602 witnessed_literals=17498 single_query_checks=194192 kernel_prunes=31575 kernel_deletions=40524 projection_prunes=4290 projection_deletions=5270 literal_queries=10759 infeasible_queries=5270 envelope_calls=24519 branches=0 search_nodes=0
+PASS
+</system-out>
+	</testcase>
+	<testcase name="inference_tests" classname="inference_tests" time="0.0476775" status="run">
+		<properties/>
+		<system-out>A0 feasibility, every literal, restricted domains, contradictions and audit fault injection checked
+PASS
+</system-out>
+	</testcase>
+	<testcase name="adversarial_tests" classname="adversarial_tests" time="0.0579623" status="run">
+		<properties/>
+		<system-out>24 named adversarial scenes across eight view suites, duplicates and order reversal checked
+PASS
+</system-out>
+	</testcase>
+</testsuite>

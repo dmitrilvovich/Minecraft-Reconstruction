@@ -1,0 +1,12 @@
+# Reference for a dedicated Java 1.21.1 profile; do not overwrite an existing options.txt.
+# Set FOV in the UI to 90; saved normalized fov = (90-70)/40 = 0.5.
+fov:0.5
+fovEffectScale:0.0
+bobView:false
+ao:false
+entityShadows:false
+mipmapLevels:0
+renderClouds:false
+gamma:1.0
+# Launcher resolution 640 x 480; verify the actual saved PNG, not GUI scale.
+# First person, no shaders/mods, F1 hide HUD; F2 screenshot.

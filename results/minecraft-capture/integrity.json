@@ -1,0 +1,33 @@
+{
+  "schema": "mcr-capture-checkpoint-integrity-v1",
+  "base_commit": "d6c35873f207440a2535062b7532a1df5647f33c",
+  "protected_prior_files_preserved": 573,
+  "prior_files_changed": [
+    "CMakeLists.txt",
+    "README.md"
+  ],
+  "protected_subtrees": {
+    "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+    "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+    "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea",
+    "apps": "a07efdaf1357739c1d56b2123ac10817907d8668"
+  },
+  "png_binary_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b",
+  "original_published_png_binary_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b",
+  "source_sha256": {
+    "tools/capture_common.py": "1de4010f80e59bfcedc4a5ff689ed747636df8e11df661251d3288e8187768ce",
+    "tools/capture_diagnostic.py": "41a6139260b41031343bc31dc845addf8c1fd6989bbbd47878bbbaabe71d083c",
+    "tools/build_minecraft_capture_kit.py": "156970b762b42ce7558f3666156e8fdc99e8506eb133e969b365924e770b9175",
+    "tests/capture/fixtures.py": "7e137b6b31faa59cc2153d7e5bb5e5abb91029e44b4040cb59b122bd77e246ae",
+    "tests/capture/test_capture.py": "102900bdd5bc8e1235dae31fd70faa9206b777e7253319fe65a1c16bdec99d07"
+  },
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "test_count": 16,
+  "test_failures": 0,
+  "capture_checks": 87,
+  "actual_minecraft_screenshot_tested": false,
+  "scaling_experiment_executed": false,
+  "solver_behavior_changed": false,
+  "frozen_reference_changed": false
+}

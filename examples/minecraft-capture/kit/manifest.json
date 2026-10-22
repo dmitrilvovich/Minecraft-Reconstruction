@@ -1,0 +1,95 @@
+{
+  "schema": "mcr-capture-kit-v1",
+  "minecraft_version": "Java Edition 1.21.1",
+  "actual_game_validation": false,
+  "files": {
+    "blocks.json": {
+      "bytes": 1282,
+      "sha256": "047dfa86a8974bb63cb029ab08094c126d02e685eb304ea61d81f779e36b4e7d"
+    },
+    "camera-same-material.json": {
+      "bytes": 594,
+      "sha256": "f49a64df74e7e9a5f918b0041419076e44d23710d2526d644b2bb1e54dec27da"
+    },
+    "camera.json": {
+      "bytes": 595,
+      "sha256": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd"
+    },
+    "capture.json": {
+      "bytes": 482,
+      "sha256": "81caf215fe651bd4864ae759253be13a2e4516ca8750a41e123b6bf80008724d"
+    },
+    "data-pack/data/mcr/function/camera_off.mcfunction": {
+      "bytes": 26,
+      "sha256": "951cccefa7388f2d8b6bb197e96c46592c9b5feb33378b89e360bbc64caa3819"
+    },
+    "data-pack/data/mcr/function/camera_on.mcfunction": {
+      "bytes": 52,
+      "sha256": "b3b2a408a152ee9d23892a4cba5999f6bc155a5fc4871a55b3d28a36eec33736"
+    },
+    "data-pack/data/mcr/function/setup_mixed.mcfunction": {
+      "bytes": 693,
+      "sha256": "fb8d620f111c66100ac1ea84736bcb0283366532cc230634a91116432bd95557"
+    },
+    "data-pack/data/mcr/function/setup_same.mcfunction": {
+      "bytes": 687,
+      "sha256": "63a6d8539e0d3c6fec597c165bd2246dcc08a377f66420b13507498672969ad1"
+    },
+    "data-pack/data/mcr/function/tick.mcfunction": {
+      "bytes": 64,
+      "sha256": "b463ab76aba16c9e3efb0fad4cfaf7c67030401bbf0a16efe9dddd5bb6a8bcff"
+    },
+    "data-pack/data/minecraft/tags/function/tick.json": {
+      "bytes": 37,
+      "sha256": "8e1b9cf03a838ddf57bddc2506eef8bee97a13d3466cb1ff14c03d4e39e33cb8"
+    },
+    "data-pack/pack.mcmeta": {
+      "bytes": 117,
+      "sha256": "ede3c155e181026fff67aa0671bf0cf7b6c3ad7476485d3f37006b0329542a8c"
+    },
+    "mcr-capture-scene-1.21.1.zip": {
+      "bytes": 1864,
+      "sha256": "25d90952b81a7283bdf657add4f217b8241d31432387f455b962bd0eb253a3c0"
+    },
+    "mcr-flat-slabs-1.21.1.zip": {
+      "bytes": 2182,
+      "sha256": "3c4034dfe98e37d8e17f146faeff8010e13f3aaf500f7851200d4052ae243105"
+    },
+    "options-reference.txt": {
+      "bytes": 411,
+      "sha256": "008b15f08d39b3f6563366fc1e5288f3f2f48dad840e5612f32b85b64a6673d2"
+    },
+    "resource-pack/assets/mcr/textures/block/oak.png": {
+      "bytes": 79,
+      "sha256": "ec31381001b043ee89c496831e4d3a89859bb02f22ccdef792d8574f1433f75e"
+    },
+    "resource-pack/assets/mcr/textures/block/stone.png": {
+      "bytes": 77,
+      "sha256": "4cedc8370ea0546c87be0ca28be58c2c78bf279625d2580b637ae6b931ca3f2f"
+    },
+    "resource-pack/assets/minecraft/models/block/oak_slab.json": {
+      "bytes": 1200,
+      "sha256": "49bcbad6ffb5422335463a75f5f5a1e5a294e51e048535afeeb6f3425810eb9b"
+    },
+    "resource-pack/assets/minecraft/models/block/oak_slab_top.json": {
+      "bytes": 1201,
+      "sha256": "34ebb871a46e43ab29c0012bb23ee154e1e055d158e0cb0ea63dc36c23664c41"
+    },
+    "resource-pack/assets/minecraft/models/block/stone_slab.json": {
+      "bytes": 1204,
+      "sha256": "0c16c15e96f3948b2fc0f36cdfbc4e5d8f9b89af34ccb54359cedaf039b959b3"
+    },
+    "resource-pack/assets/minecraft/models/block/stone_slab_top.json": {
+      "bytes": 1205,
+      "sha256": "762ca94c1c4530a65fa4e49de96ae4be536c376b329c387efb9d653dcf8b455f"
+    },
+    "resource-pack/pack.mcmeta": {
+      "bytes": 129,
+      "sha256": "b82df24a449f38b0c176301659fa0c3d2d5e6c7756dbd9e490a3466de751ff0b"
+    },
+    "truth.json": {
+      "bytes": 314,
+      "sha256": "62c7fbc9437f24f4771aa14e36da4b51a5b9e565cf922de4545c73c3e3c59484"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+Test project /workspace/scratch/a0047ede67b7/a2-stable-host/build/png-demo
+      Start  5: a1_render_tests
+      Start  1: png_reconstruct_e2e
+ 1/16 Test  #5: a1_render_tests ...................   Passed    2.03 sec
+      Start  4: render_tests
+ 2/16 Test  #4: render_tests ......................   Passed    0.26 sec
+      Start 11: a1_propagation_tests
+ 3/16 Test #11: a1_propagation_tests ..............   Passed    0.27 sec
+      Start 13: a1_support_query_tests
+ 4/16 Test #13: a1_support_query_tests ............   Passed    0.27 sec
+      Start 10: a1_constraint_tests
+ 5/16 Test #10: a1_constraint_tests ...............   Passed    0.16 sec
+      Start  8: a2_inference_tests
+ 6/16 Test  #8: a2_inference_tests ................   Passed    0.13 sec
+      Start 14: a1_projection_tests
+ 7/16 Test #14: a1_projection_tests ...............   Passed    0.13 sec
+      Start 12: a1_feasibility_tests
+ 8/16 Test #12: a1_feasibility_tests ..............   Passed    0.12 sec
+      Start 16: adversarial_tests
+ 9/16 Test #16: adversarial_tests .................   Passed    0.06 sec
+      Start  3: geometry_tests
+10/16 Test  #3: geometry_tests ....................   Passed    0.09 sec
+      Start  7: a2_geometry_tests
+11/16 Test  #7: a2_geometry_tests .................   Passed    0.08 sec
+      Start 15: inference_tests
+12/16 Test #15: inference_tests ...................   Passed    0.05 sec
+      Start  9: constraint_tests
+13/16 Test  #9: constraint_tests ..................   Passed    0.05 sec
+      Start  6: a1_geometry_tests
+14/16 Test  #6: a1_geometry_tests .................   Passed    0.01 sec
+      Start  2: minecraft_capture_compatibility
+15/16 Test  #1: png_reconstruct_e2e ...............   Passed    4.17 sec
+16/16 Test  #2: minecraft_capture_compatibility ...   Passed   29.08 sec
+
+100% tests passed out of 16
+
+Label Time Summary:
+capture     =  29.08 sec*proc (1 test)
+png-demo    =   4.17 sec*proc (1 test)
+
+Total Test time (real) =  32.81 sec

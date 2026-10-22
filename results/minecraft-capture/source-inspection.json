@@ -1,0 +1,64 @@
+{
+  "schema": "mcr-capture-source-inspection-v1",
+  "version": "Java Edition 1.21.1",
+  "official_downloads": {
+    "client": {
+      "sha1": "30c73b1c5da787909b2f73340419fdf13b9def88",
+      "size": 26836906,
+      "url": "https://piston-data.mojang.com/v1/objects/30c73b1c5da787909b2f73340419fdf13b9def88/client.jar"
+    },
+    "client_mappings": {
+      "sha1": "2244b6f072256667bcd9a73df124d6c58de77992",
+      "size": 9598610,
+      "url": "https://piston-data.mojang.com/v1/objects/2244b6f072256667bcd9a73df124d6c58de77992/client.txt"
+    }
+  },
+  "version_manifest_url": "https://piston-meta.mojang.com/v1/packages/1757c8b1fbfc6b638504e1f6cceb05893f7389d5/1.21.1.json",
+  "version_manifest_sha256": "597f17a6cdad8761982d8c307d3aae2c224c821de02046cf10bc29870e2c7dfe",
+  "client_entries_sha256": {
+    "version.json": "1dfc39c0408d868c95741e492dc19fca28d67268e4585b2c35430a9ee20c7299",
+    "assets/minecraft/models/block/slab.json": "bd869ebe3ba380d46349e5c6e988b9b1ccf1ab25212ab1de66e2fdcc067edc1d",
+    "assets/minecraft/models/block/slab_top.json": "c02e81cd0b59698040db7a682d32d08ddeb0de64756e309d62ecfbda4af804f9",
+    "assets/minecraft/models/block/oak_slab.json": "fe614903df2f4b54c3545beaebc34441b2f2631501fbd6a11573e3eb464838af",
+    "assets/minecraft/models/block/oak_slab_top.json": "467eb662586124528c28751df0f84162f068eec0f8fb524593f0a473c646d6b9",
+    "assets/minecraft/models/block/stone_slab.json": "c697ca0609da3ebcea82583e5baeb9e6d14fe4566136ab6e539e03bc827b2415",
+    "assets/minecraft/models/block/stone_slab_top.json": "cf1f07b9c9955881f1b88ef9d7b49ce6115ed6d26f5e63bc41e22d2a994b3ef3",
+    "assets/minecraft/blockstates/oak_slab.json": "9d4c7d7d03f65734ef9846a8cf270290354cdd62cbb5e8c3ab1428a6b44d84ad",
+    "assets/minecraft/shaders/core/rendertype_solid.vsh": "e5ff19e08740d63b03e02b0bfa2ef970f53e47ad44c4ee1c390c670b8edadfa7",
+    "assets/minecraft/shaders/core/rendertype_solid.fsh": "fb2caedf67f76f7ee6b6a140209e5a10d6f3c409e5dbea39333f0ca462ec64a9",
+    "ffy.class": "c43535d4485ce2bf988ae163a24898db189aa29acd6999bb0799a0d61ab6f8bb",
+    "ges.class": "6d06ac777222679cec672db3eccbcbe8815bcd357f98920c6892e16a850d0076",
+    "fgs.class": "fa084acad16ac8e2d64f35da933cee11270bb897f342d0632490470d86ef37ce",
+    "cmx.class": "cf857b1a2a716131f78eadec2ee5be22167e3dcf648ee42e2036edc1935edab5",
+    "fgb.class": "44ef7eaf8382ba6c1278987e9e5f894ba175b71918ee9a36576b7c55b076b57b"
+  },
+  "methods_inspected": [
+    "Camera (ffy): static vectors and setRotation a(FF)V",
+    "GameRenderer (ges): getProjectionMatrix a(D)Lorg/joml/Matrix4f;",
+    "Options (fgs): setting keys",
+    "Player (cmx): DEFAULT_EYE_HEIGHT constant",
+    "CloudStatus (fgb): serialized labels"
+  ],
+  "findings": [
+    "Official version.json: resource format 34, data format 48, Java 21 required.",
+    "Vanilla slab extents: bottom [0,0,0]..[16,8,16], top [0,8,0]..[16,16,16].",
+    "Vanilla bottom/top oak and stone model names match the authored replacements.",
+    "GameRenderer calls JOML perspective(fov radians, framebuffer width/height, near, far); vertical FOV convention.",
+    "Camera rotates base -Z forward and +Y up by rotationYXZ(pi-yaw, -pitch, 0); yaw180/pitch0 yields -Z forward, +X screen right.",
+    "Player nominal eye height stored as float: 1.6200000047683716.",
+    "Solid rendering multiplies texture samples by vertex color, lightmap and color modulator, then applies fog.",
+    "Option key is renderClouds; CloudStatus labels are false, fast and true."
+  ],
+  "game_executed": false,
+  "actual_minecraft_screenshot_tested": false,
+  "inspection_only_dependencies": "Transient Python jawa bytecode reader; not required by kit/diagnostic and not distributed.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "java": "openjdk version \"17.0.20\" 2026-07-21\nOpenJDK Runtime Environment (build 17.0.20+8-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20+8-1-24.04-Ubuntu, mixed mode, sharing)",
+    "display_present": false,
+    "configured_minecraft_installation": false
+  },
+  "remaining_gate": "One real version/settings-recorded F2 capture evaluated by the diagnostic; no claim of game-runtime or command execution validation."
+}

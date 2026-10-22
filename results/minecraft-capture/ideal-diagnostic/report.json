@@ -1,0 +1,96 @@
+{
+  "alignment": {
+    "exact_label_disagreement_count": 0,
+    "expected_foreground_bbox_inclusive": [
+      12,
+      12,
+      51,
+      51
+    ],
+    "interior_exact_label_disagreement_count": 0,
+    "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+    "observed_exact_foreground_bbox_inclusive": [
+      12,
+      12,
+      51,
+      51
+    ]
+  },
+  "all_pixels_match_declared_truth": true,
+  "appearance": {
+    "distinct_unexpected_colors": 0,
+    "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+    "most_frequent_unexpected_colors": [],
+    "unexpected_pixel_count": 0
+  },
+  "boundary": {
+    "count": 770,
+    "disagreement_count": 0,
+    "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+    "radius_pixels": 1,
+    "unexpected_color_count": 0
+  },
+  "claim": "Comparison against declared calibration and known truth only; not proof of Minecraft compatibility or calibration.",
+  "counts": {
+    "boundary_exact_match": 770,
+    "foreground_background_disagreement": 0,
+    "material_disagreement": 0,
+    "stable_exact_match": 3326,
+    "unexpected_color": 0
+  },
+  "crop": [
+    288,
+    208,
+    64,
+    64
+  ],
+  "framebuffer": [
+    640,
+    480
+  ],
+  "input_sha256": {
+    "camera": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd",
+    "capture": "81caf215fe651bd4864ae759253be13a2e4516ca8750a41e123b6bf80008724d",
+    "image": "98bd886e1359945f950994bc6d53f99e04a9c667005e9cdba9678c9fdaf31974",
+    "truth": "62c7fbc9437f24f4771aa14e36da4b51a5b9e565cf922de4545c73c3e3c59484"
+  },
+  "known_observation_candidate_count": 3326,
+  "known_observation_semantics": "Only exact-palette matches away from the warning band, conditional on the declared calibration and scene being correct. Not an inference input or an independent calibration proof.",
+  "minecraft_version": "Java Edition 1.21.1",
+  "overlay_legend": {
+    "boundary_exact_match": [
+      255,
+      210,
+      0
+    ],
+    "foreground_background_disagreement": [
+      240,
+      40,
+      40
+    ],
+    "material_disagreement": [
+      230,
+      40,
+      200
+    ],
+    "stable_exact_match": [
+      35,
+      180,
+      80
+    ],
+    "unexpected_color": [
+      40,
+      110,
+      255
+    ]
+  },
+  "per_pixel_evidence": "pixels.tsv",
+  "pixels_recolored": 0,
+  "pixels_resampled": 0,
+  "production_handoff": "raw-crop.png and camera.json contain no truth, labels or masks. The current solver requires EVERY pixel, including background and edges, to be exact. Do not discard unknown pixels or infer them from truth.",
+  "schema": "mcr-capture-diagnostic-v1",
+  "solver_calls": 0,
+  "status": "EXACT_MODEL_MATCH",
+  "strict_rgb_input_compatible": true,
+  "truth_used_for_solver": false
+}

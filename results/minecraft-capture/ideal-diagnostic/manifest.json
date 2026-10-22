@@ -1,0 +1,10 @@
+{
+  "boundary-mask.png": "e889a2492fcee1267a078571f11ba1bf1f8ed2f76e21faed9280366a3be3a22d",
+  "camera.json": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd",
+  "comparison.png": "47520feb466516ee08020096938e445c0f16109afe4973232fe9b901cb34a79d",
+  "expected-from-truth.png": "755c67cb1ec2864fff9d7e05f5f11431e95460b6b6cdaefa4d56fba3d7edc147",
+  "overlay.png": "eaaed29bc38cdad67325c6bceafc69b509bc127f4d4eeb7785aa2e6a90c4f3d7",
+  "pixels.tsv": "0b93f0954f038941c4740003e1a4efcef6db89a8fc9713742f3b9da2702d1889",
+  "raw-crop.png": "755c67cb1ec2864fff9d7e05f5f11431e95460b6b6cdaefa4d56fba3d7edc147",
+  "report.json": "704011a2da949d92038124614f74fe29f90dbd8cf91ecc95ff7af31e4705797e"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "mcr-controlled-capture-v1",
+  "minecraft_version": "Java Edition 1.21.1",
+  "source_width": 640,
+  "source_height": 480,
+  "crop": [
+    288,
+    208,
+    64,
+    64
+  ],
+  "world_to_model": {
+    "x": "2-X",
+    "y": "Y-80",
+    "z": "Z"
+  },
+  "camera_setup": {
+    "world_eye": [
+      1,
+      81,
+      14
+    ],
+    "nominal_feet": [
+      1,
+      "3969/50",
+      14
+    ],
+    "yaw_degrees": 180,
+    "pitch_degrees": 0,
+    "vertical_fov_degrees": 90
+  }
+}

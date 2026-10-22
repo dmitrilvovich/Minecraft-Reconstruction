@@ -1,0 +1,114 @@
+[
+  {
+    "id": 0,
+    "model_position": [
+      0,
+      0,
+      0
+    ],
+    "game_position": [
+      1,
+      80,
+      0
+    ],
+    "state": "bottom_slab"
+  },
+  {
+    "id": 1,
+    "model_position": [
+      0,
+      0,
+      1
+    ],
+    "game_position": [
+      1,
+      80,
+      1
+    ],
+    "state": "top_slab"
+  },
+  {
+    "id": 2,
+    "model_position": [
+      0,
+      1,
+      0
+    ],
+    "game_position": [
+      1,
+      81,
+      0
+    ],
+    "state": "top_slab"
+  },
+  {
+    "id": 3,
+    "model_position": [
+      0,
+      1,
+      1
+    ],
+    "game_position": [
+      1,
+      81,
+      1
+    ],
+    "state": "air"
+  },
+  {
+    "id": 4,
+    "model_position": [
+      1,
+      0,
+      0
+    ],
+    "game_position": [
+      0,
+      80,
+      0
+    ],
+    "state": "air"
+  },
+  {
+    "id": 5,
+    "model_position": [
+      1,
+      0,
+      1
+    ],
+    "game_position": [
+      0,
+      80,
+      1
+    ],
+    "state": "bottom_slab"
+  },
+  {
+    "id": 6,
+    "model_position": [
+      1,
+      1,
+      0
+    ],
+    "game_position": [
+      0,
+      81,
+      0
+    ],
+    "state": "bottom_slab"
+  },
+  {
+    "id": 7,
+    "model_position": [
+      1,
+      1,
+      1
+    ],
+    "game_position": [
+      0,
+      81,
+      1
+    ],
+    "state": "top_slab"
+  }
+]

@@ -1,0 +1,724 @@
+{
+  "actual_minecraft_screenshot_tested": false,
+  "cases": {
+    "blend": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          13,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 2,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [
+          {
+            "count": 20,
+            "rgb": [
+              131,
+              167,
+              181
+            ]
+          },
+          {
+            "count": 20,
+            "rgb": [
+              147,
+              159,
+              149
+            ]
+          }
+        ],
+        "unexpected_pixel_count": 40
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 40
+      },
+      "counts": {
+        "boundary_exact_match": 730,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 3326,
+        "unexpected_color": 40
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": false
+    },
+    "ideal": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": true,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 770,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 3326,
+        "unexpected_color": 0
+      },
+      "status": "EXACT_MODEL_MATCH",
+      "strict_rgb_input_compatible": true
+    },
+    "material_swap": {
+      "alignment": {
+        "exact_label_disagreement_count": 1106,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 574,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 532,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 238,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 1106,
+        "stable_exact_match": 2752,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "mirror": {
+      "alignment": {
+        "exact_label_disagreement_count": 950,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 526,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 424,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 346,
+        "foreground_background_disagreement": 912,
+        "material_disagreement": 38,
+        "stable_exact_match": 2800,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "missing_foreground": {
+      "alignment": {
+        "exact_label_disagreement_count": 1106,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 574,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": null
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 532,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 238,
+        "foreground_background_disagreement": 1106,
+        "material_disagreement": 0,
+        "stable_exact_match": 2752,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "same_material": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": true,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 770,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 3326,
+        "unexpected_color": 0
+      },
+      "independent_feasible_worlds": 2,
+      "status": "EXACT_MODEL_MATCH",
+      "strict_rgb_input_compatible": true
+    },
+    "shaded": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": null
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 2,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [
+          {
+            "count": 581,
+            "rgb": [
+              102,
+              102,
+              102
+            ]
+          },
+          {
+            "count": 525,
+            "rgb": [
+              128,
+              89,
+              51
+            ]
+          }
+        ],
+        "unexpected_pixel_count": 1106
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 532
+      },
+      "counts": {
+        "boundary_exact_match": 238,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 2752,
+        "unexpected_color": 1106
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": false
+    },
+    "shifted": {
+      "alignment": {
+        "exact_label_disagreement_count": 243,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 91,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          15,
+          12,
+          54,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 152,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 618,
+        "foreground_background_disagreement": 240,
+        "material_disagreement": 3,
+        "stable_exact_match": 3235,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "sky": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 1,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [
+          {
+            "count": 2990,
+            "rgb": [
+              100,
+              160,
+              220
+            ]
+          }
+        ],
+        "unexpected_pixel_count": 2990
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 238
+      },
+      "counts": {
+        "boundary_exact_match": 532,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 574,
+        "unexpected_color": 2990
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": false
+    },
+    "split_material": {
+      "alignment": {
+        "exact_label_disagreement_count": 0,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 0,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": true,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 0,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 770,
+        "foreground_background_disagreement": 0,
+        "material_disagreement": 0,
+        "stable_exact_match": 3326,
+        "unexpected_color": 0
+      },
+      "independent_feasible_worlds": 2,
+      "status": "EXACT_MODEL_MATCH",
+      "strict_rgb_input_compatible": true
+    },
+    "wrong_crop": {
+      "alignment": {
+        "exact_label_disagreement_count": 243,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 99,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          9,
+          12,
+          48,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 144,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 626,
+        "foreground_background_disagreement": 240,
+        "material_disagreement": 3,
+        "stable_exact_match": 3227,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "wrong_eye": {
+      "alignment": {
+        "exact_label_disagreement_count": 366,
+        "expected_foreground_bbox_inclusive": [
+          12,
+          14,
+          51,
+          53
+        ],
+        "interior_exact_label_disagreement_count": 88,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 788,
+        "disagreement_count": 278,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 510,
+        "foreground_background_disagreement": 294,
+        "material_disagreement": 72,
+        "stable_exact_match": 3220,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "wrong_focal": {
+      "alignment": {
+        "exact_label_disagreement_count": 90,
+        "expected_foreground_bbox_inclusive": [
+          14,
+          12,
+          49,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 30,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 705,
+        "disagreement_count": 60,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 645,
+        "foreground_background_disagreement": 90,
+        "material_disagreement": 0,
+        "stable_exact_match": 3361,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    },
+    "wrong_principal": {
+      "alignment": {
+        "exact_label_disagreement_count": 243,
+        "expected_foreground_bbox_inclusive": [
+          15,
+          12,
+          54,
+          51
+        ],
+        "interior_exact_label_disagreement_count": 99,
+        "interpretation": "Recognized-label spatial disagreement can indicate camera/crop/grid/scene mismatch; it does not identify a unique cause. Unknown colors cannot establish background or foreground.",
+        "observed_exact_foreground_bbox_inclusive": [
+          12,
+          12,
+          51,
+          51
+        ]
+      },
+      "all_pixels_match_declared_truth": false,
+      "appearance": {
+        "distinct_unexpected_colors": 0,
+        "interpretation": "Possible lighting, shading, filtering, sky, texture, gamma or postprocessing; no color fitting or substitution is performed.",
+        "most_frequent_unexpected_colors": [],
+        "unexpected_pixel_count": 0
+      },
+      "boundary": {
+        "count": 770,
+        "disagreement_count": 144,
+        "method": "All projected truth-box edges including hidden edges; conservative warning band, not a complete rasterization error bound.",
+        "radius_pixels": 1,
+        "unexpected_color_count": 0
+      },
+      "counts": {
+        "boundary_exact_match": 626,
+        "foreground_background_disagreement": 240,
+        "material_disagreement": 3,
+        "stable_exact_match": 3227,
+        "unexpected_color": 0
+      },
+      "status": "REQUIRES_INTERPRETATION",
+      "strict_rgb_input_compatible": true
+    }
+  },
+  "checks": [
+    "committed fixture reproducible by independent world-space triangle rasterizer",
+    "all kit files including ZIPs reproduce byte-for-byte",
+    "kit manifest hashes",
+    "mcr-flat-slabs-1.21.1.zip archive CRC and safe paths",
+    "mcr-capture-scene-1.21.1.zip archive CRC and safe paths",
+    "world-cell reflection 0",
+    "world-cell reflection 1",
+    "world-cell reflection 2",
+    "world-cell reflection 3",
+    "world-cell reflection 4",
+    "world-cell reflection 5",
+    "world-cell reflection 6",
+    "world-cell reflection 7",
+    "mixed command contains only supported dry slab syntax 0",
+    "mixed command contains only supported dry slab syntax 1",
+    "mixed command contains only supported dry slab syntax 2",
+    "mixed command contains only supported dry slab syntax 3",
+    "mixed command contains only supported dry slab syntax 4",
+    "mixed command contains only supported dry slab syntax 5",
+    "mixed commands match truth positions/materials",
+    "same command contains only supported dry slab syntax 0",
+    "same command contains only supported dry slab syntax 1",
+    "same command contains only supported dry slab syntax 2",
+    "same command contains only supported dry slab syntax 3",
+    "same command contains only supported dry slab syntax 4",
+    "same command contains only supported dry slab syntax 5",
+    "same commands match truth positions/materials",
+    "correct 1.21 singular function paths and camera lock",
+    "oak unchanged slab shape with shade/AO disabled",
+    "oak_top unchanged slab shape with shade/AO disabled",
+    "stone unchanged slab shape with shade/AO disabled",
+    "stone_top unchanged slab shape with shade/AO disabled",
+    "ideal calls no solver and changes no pixels",
+    "ideal full 4096-pixel agreement",
+    "conservative edge warning retains exact input",
+    "unscaled crop exact byte samples",
+    "camera handoff unchanged",
+    "source-crop ray mapping analytically preserves pixel centers",
+    "diagnostic hashes",
+    "split_material calls no solver and changes no pixels",
+    "split_material actual C++ file reconstruction succeeds",
+    "split_material exact supports match all 6561 worlds",
+    "split_material simultaneous witness independently valid",
+    "same_material calls no solver and changes no pixels",
+    "same_material actual C++ file reconstruction succeeds",
+    "same_material exact supports match all 6561 worlds",
+    "same_material simultaneous witness independently valid",
+    "shaded calls no solver and changes no pixels",
+    "shading detected without geometric accusations",
+    "shifted calls no solver and changes no pixels",
+    "three-pixel shift creates interior alignment disagreements",
+    "mirror calls no solver and changes no pixels",
+    "mirror detected",
+    "sky calls no solver and changes no pixels",
+    "sky detected",
+    "sky not silently treated as background",
+    "material_swap calls no solver and changes no pixels",
+    "material_swap detected",
+    "material information mismatch isolated",
+    "missing_foreground calls no solver and changes no pixels",
+    "missing_foreground detected",
+    "blend calls no solver and changes no pixels",
+    "blend detected",
+    "blended edges identified",
+    "wrong_focal calls no solver and changes no pixels",
+    "wrong_focal camera discrepancy detected",
+    "wrong_principal calls no solver and changes no pixels",
+    "wrong_principal camera discrepancy detected",
+    "wrong_eye calls no solver and changes no pixels",
+    "wrong_eye camera discrepancy detected",
+    "wrong_crop calls no solver and changes no pixels",
+    "crop offset mismatch detected",
+    "opaque RGBA and all PNG predictors decode",
+    "truncated rejected",
+    "crc rejected",
+    "transparent rejected",
+    "wrong_dimensions rejected",
+    "wrong_handedness rejected",
+    "duplicate_metadata rejected",
+    "rounded_camera rejected",
+    "unsupported_truth rejected",
+    "ideal rejected",
+    "cli1 exit status",
+    "cli2 exit status",
+    "cli_shift exit status",
+    "cli_bad exit status",
+    "deterministic diagnostic files"
+  ],
+  "checks_passed": 87,
+  "diagnostic_cli_calls": 4,
+  "exhaustive_reference_worlds_per_palette": 6561,
+  "fixture_origin": "Independent world-space forward triangle rasterization; explicitly synthetic.",
+  "result": "PASS",
+  "schema": "mcr-capture-validation-v1",
+  "synthetic_reconstruction_calls": 2
+}

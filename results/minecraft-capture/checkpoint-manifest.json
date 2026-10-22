@@ -1,0 +1,251 @@
+{
+  "schema": "mcr-capture-publication-manifest-v1",
+  "base_commit": "d6c35873f207440a2535062b7532a1df5647f33c",
+  "self_excluded": true,
+  "files": {
+    "CMakeLists.txt": {
+      "bytes": 11927,
+      "sha256": "dc54909ed46a12f5c8c0648a9ae6aa790fe0dd8437517d433ef7e4efa95f4dd9"
+    },
+    "README.md": {
+      "bytes": 9542,
+      "sha256": "bc8d4d932e4c0b6be8c0585795ef4bf939fa01cc5c6b85bad8cddac9e3c19f70"
+    },
+    "docs/minecraft-capture-compatibility.md": {
+      "bytes": 15101,
+      "sha256": "cddc36309bc3821988001d76fad0695cfa7e866c4d3ab7cc95dcd74a4596ef91"
+    },
+    "examples/minecraft-capture/README.md": {
+      "bytes": 2123,
+      "sha256": "b63f1471b6552d3fd423cff3149221ead14bc48e438ae7fc11727801866fd49c"
+    },
+    "examples/minecraft-capture/fixtures/ideal-synthetic.png": {
+      "bytes": 1689,
+      "sha256": "98bd886e1359945f950994bc6d53f99e04a9c667005e9cdba9678c9fdaf31974"
+    },
+    "examples/minecraft-capture/fixtures/shaded-synthetic.png": {
+      "bytes": 1689,
+      "sha256": "b8f770da0c9f43b4a69d603f33c10df150ca5d4f6a148a165234f8aa08f81f97"
+    },
+    "examples/minecraft-capture/fixtures/shifted-synthetic.png": {
+      "bytes": 1688,
+      "sha256": "295b8efd2b0d65ecba8b6fc5c9e11beb86a105b43ab19cf18a03139300ebf0d0"
+    },
+    "examples/minecraft-capture/kit/blocks.json": {
+      "bytes": 1282,
+      "sha256": "047dfa86a8974bb63cb029ab08094c126d02e685eb304ea61d81f779e36b4e7d"
+    },
+    "examples/minecraft-capture/kit/camera-same-material.json": {
+      "bytes": 594,
+      "sha256": "f49a64df74e7e9a5f918b0041419076e44d23710d2526d644b2bb1e54dec27da"
+    },
+    "examples/minecraft-capture/kit/camera.json": {
+      "bytes": 595,
+      "sha256": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd"
+    },
+    "examples/minecraft-capture/kit/capture.json": {
+      "bytes": 482,
+      "sha256": "81caf215fe651bd4864ae759253be13a2e4516ca8750a41e123b6bf80008724d"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/mcr/function/camera_off.mcfunction": {
+      "bytes": 26,
+      "sha256": "951cccefa7388f2d8b6bb197e96c46592c9b5feb33378b89e360bbc64caa3819"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/mcr/function/camera_on.mcfunction": {
+      "bytes": 52,
+      "sha256": "b3b2a408a152ee9d23892a4cba5999f6bc155a5fc4871a55b3d28a36eec33736"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/mcr/function/setup_mixed.mcfunction": {
+      "bytes": 693,
+      "sha256": "fb8d620f111c66100ac1ea84736bcb0283366532cc230634a91116432bd95557"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/mcr/function/setup_same.mcfunction": {
+      "bytes": 687,
+      "sha256": "63a6d8539e0d3c6fec597c165bd2246dcc08a377f66420b13507498672969ad1"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/mcr/function/tick.mcfunction": {
+      "bytes": 64,
+      "sha256": "b463ab76aba16c9e3efb0fad4cfaf7c67030401bbf0a16efe9dddd5bb6a8bcff"
+    },
+    "examples/minecraft-capture/kit/data-pack/data/minecraft/tags/function/tick.json": {
+      "bytes": 37,
+      "sha256": "8e1b9cf03a838ddf57bddc2506eef8bee97a13d3466cb1ff14c03d4e39e33cb8"
+    },
+    "examples/minecraft-capture/kit/data-pack/pack.mcmeta": {
+      "bytes": 117,
+      "sha256": "ede3c155e181026fff67aa0671bf0cf7b6c3ad7476485d3f37006b0329542a8c"
+    },
+    "examples/minecraft-capture/kit/manifest.json": {
+      "bytes": 3588,
+      "sha256": "622b602ac1f2771dd926f4911b373a4a06389698f20b917e15ab766004bacef9"
+    },
+    "examples/minecraft-capture/kit/mcr-capture-scene-1.21.1.zip": {
+      "bytes": 1864,
+      "sha256": "25d90952b81a7283bdf657add4f217b8241d31432387f455b962bd0eb253a3c0"
+    },
+    "examples/minecraft-capture/kit/mcr-flat-slabs-1.21.1.zip": {
+      "bytes": 2182,
+      "sha256": "3c4034dfe98e37d8e17f146faeff8010e13f3aaf500f7851200d4052ae243105"
+    },
+    "examples/minecraft-capture/kit/options-reference.txt": {
+      "bytes": 411,
+      "sha256": "008b15f08d39b3f6563366fc1e5288f3f2f48dad840e5612f32b85b64a6673d2"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/mcr/textures/block/oak.png": {
+      "bytes": 79,
+      "sha256": "ec31381001b043ee89c496831e4d3a89859bb02f22ccdef792d8574f1433f75e"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/mcr/textures/block/stone.png": {
+      "bytes": 77,
+      "sha256": "4cedc8370ea0546c87be0ca28be58c2c78bf279625d2580b637ae6b931ca3f2f"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/minecraft/models/block/oak_slab.json": {
+      "bytes": 1200,
+      "sha256": "49bcbad6ffb5422335463a75f5f5a1e5a294e51e048535afeeb6f3425810eb9b"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/minecraft/models/block/oak_slab_top.json": {
+      "bytes": 1201,
+      "sha256": "34ebb871a46e43ab29c0012bb23ee154e1e055d158e0cb0ea63dc36c23664c41"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/minecraft/models/block/stone_slab.json": {
+      "bytes": 1204,
+      "sha256": "0c16c15e96f3948b2fc0f36cdfbc4e5d8f9b89af34ccb54359cedaf039b959b3"
+    },
+    "examples/minecraft-capture/kit/resource-pack/assets/minecraft/models/block/stone_slab_top.json": {
+      "bytes": 1205,
+      "sha256": "762ca94c1c4530a65fa4e49de96ae4be536c376b329c387efb9d653dcf8b455f"
+    },
+    "examples/minecraft-capture/kit/resource-pack/pack.mcmeta": {
+      "bytes": 129,
+      "sha256": "b82df24a449f38b0c176301659fa0c3d2d5e6c7756dbd9e490a3466de751ff0b"
+    },
+    "examples/minecraft-capture/kit/truth.json": {
+      "bytes": 314,
+      "sha256": "62c7fbc9437f24f4771aa14e36da4b51a5b9e565cf922de4545c73c3e3c59484"
+    },
+    "results/minecraft-capture/README.md": {
+      "bytes": 3221,
+      "sha256": "cace2517e4695c679c8c27ac29b7ef9d3cd87dbde0ec3dfe8731bb375531bae7"
+    },
+    "results/minecraft-capture/build.log": {
+      "bytes": 22,
+      "sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794"
+    },
+    "results/minecraft-capture/configure.log": {
+      "bytes": 152,
+      "sha256": "57cdafc31bc7fa36deaea906aadcf91c8af113bdba7759fe4bf89538ef03b1db"
+    },
+    "results/minecraft-capture/ctest.log": {
+      "bytes": 1971,
+      "sha256": "4b292d2485a2ea38c2d3a31bc2889c4b39ff8e9601e4b1b8eccefca542618e2f"
+    },
+    "results/minecraft-capture/ctest.xml": {
+      "bytes": 6989,
+      "sha256": "1fe49220c77058ae4b09e82da919eebf43fec7e601b7089f9177add350abc3a5"
+    },
+    "results/minecraft-capture/ideal-diagnostic/boundary-mask.png": {
+      "bytes": 165,
+      "sha256": "e889a2492fcee1267a078571f11ba1bf1f8ed2f76e21faed9280366a3be3a22d"
+    },
+    "results/minecraft-capture/ideal-diagnostic/camera.json": {
+      "bytes": 595,
+      "sha256": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd"
+    },
+    "results/minecraft-capture/ideal-diagnostic/comparison.png": {
+      "bytes": 394,
+      "sha256": "47520feb466516ee08020096938e445c0f16109afe4973232fe9b901cb34a79d"
+    },
+    "results/minecraft-capture/ideal-diagnostic/expected-from-truth.png": {
+      "bytes": 188,
+      "sha256": "755c67cb1ec2864fff9d7e05f5f11431e95460b6b6cdaefa4d56fba3d7edc147"
+    },
+    "results/minecraft-capture/ideal-diagnostic/manifest.json": {
+      "bytes": 704,
+      "sha256": "7d259807186cd38522b4e9a3a69dd59645b54fccacb711129680c001cf5cb2e2"
+    },
+    "results/minecraft-capture/ideal-diagnostic/overlay.png": {
+      "bytes": 194,
+      "sha256": "eaaed29bc38cdad67325c6bceafc69b509bc127f4d4eeb7785aa2e6a90c4f3d7"
+    },
+    "results/minecraft-capture/ideal-diagnostic/pixels.tsv": {
+      "bytes": 280473,
+      "sha256": "0b93f0954f038941c4740003e1a4efcef6db89a8fc9713742f3b9da2702d1889"
+    },
+    "results/minecraft-capture/ideal-diagnostic/raw-crop.png": {
+      "bytes": 188,
+      "sha256": "755c67cb1ec2864fff9d7e05f5f11431e95460b6b6cdaefa4d56fba3d7edc147"
+    },
+    "results/minecraft-capture/ideal-diagnostic/report.json": {
+      "bytes": 3023,
+      "sha256": "704011a2da949d92038124614f74fe29f90dbd8cf91ecc95ff7af31e4705797e"
+    },
+    "results/minecraft-capture/integrity.json": {
+      "bytes": 1536,
+      "sha256": "6db8c1d8689edd541c279b65628f0eff8e4395b181e69f27be356d5b4560e5aa"
+    },
+    "results/minecraft-capture/shifted-diagnostic/boundary-mask.png": {
+      "bytes": 165,
+      "sha256": "e889a2492fcee1267a078571f11ba1bf1f8ed2f76e21faed9280366a3be3a22d"
+    },
+    "results/minecraft-capture/shifted-diagnostic/camera.json": {
+      "bytes": 595,
+      "sha256": "7af6b3dbe6cd608899f92c4f064204afe23cb4daf0e6b5cb798c7b5f920e70fd"
+    },
+    "results/minecraft-capture/shifted-diagnostic/comparison.png": {
+      "bytes": 447,
+      "sha256": "4a62c8bf8348683c461fccd9be98c016a649aab901ee57335c81b0d03cb0a4b6"
+    },
+    "results/minecraft-capture/shifted-diagnostic/expected-from-truth.png": {
+      "bytes": 188,
+      "sha256": "755c67cb1ec2864fff9d7e05f5f11431e95460b6b6cdaefa4d56fba3d7edc147"
+    },
+    "results/minecraft-capture/shifted-diagnostic/manifest.json": {
+      "bytes": 704,
+      "sha256": "43cc5f117f39f2b4a4290428c13f425b2a84aa2657b8af7b7d5749e76415d7ec"
+    },
+    "results/minecraft-capture/shifted-diagnostic/overlay.png": {
+      "bytes": 250,
+      "sha256": "d4bbe43730b20472fcae81e5aeadc6585bf862edf9ba9d4da3ece4469c5e5199"
+    },
+    "results/minecraft-capture/shifted-diagnostic/pixels.tsv": {
+      "bytes": 284018,
+      "sha256": "a32e72221c435fcefb9768074b4fc27894cc4638aa1ced852047c2f0e9d33094"
+    },
+    "results/minecraft-capture/shifted-diagnostic/raw-crop.png": {
+      "bytes": 189,
+      "sha256": "4f73a9683a9103a9395743b455f89fcdc1c03ea9f36d18ff8ff1dad270322e2e"
+    },
+    "results/minecraft-capture/shifted-diagnostic/report.json": {
+      "bytes": 3037,
+      "sha256": "cf4c219de42ed690cf4cef774ee41489ab5974f79190ec7d28ac9f220a40f1bc"
+    },
+    "results/minecraft-capture/source-inspection.json": {
+      "bytes": 4246,
+      "sha256": "4957171a8177128de0ddc57c9ac271746218aaef526cfeaf864ff6763c41980f"
+    },
+    "results/minecraft-capture/validation.json": {
+      "bytes": 26876,
+      "sha256": "b284cb472b8b42452fba8cf18579909d79c79d5a65011171d067664d9281c1ce"
+    },
+    "tests/capture/fixtures.py": {
+      "bytes": 2232,
+      "sha256": "7e137b6b31faa59cc2153d7e5bb5e5abb91029e44b4040cb59b122bd77e246ae"
+    },
+    "tests/capture/test_capture.py": {
+      "bytes": 12296,
+      "sha256": "102900bdd5bc8e1235dae31fd70faa9206b777e7253319fe65a1c16bdec99d07"
+    },
+    "tools/build_minecraft_capture_kit.py": {
+      "bytes": 5762,
+      "sha256": "156970b762b42ce7558f3666156e8fdc99e8506eb133e969b365924e770b9175"
+    },
+    "tools/capture_common.py": {
+      "bytes": 10264,
+      "sha256": "1de4010f80e59bfcedc4a5ff689ed747636df8e11df661251d3288e8187768ce"
+    },
+    "tools/capture_diagnostic.py": {
+      "bytes": 8666,
+      "sha256": "41a6139260b41031343bc31dc845addf8c1fd6989bbbd47878bbbaabe71d083c"
+    }
+  }
+}

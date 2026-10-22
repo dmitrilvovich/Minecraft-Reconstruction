@@ -14,6 +14,8 @@ This is still early-stage work, so it is not an end-to-end screenshot-to-schemat
 
 A **working PNG-to-scene demonstration** is now available: an exact-color PNG plus known camera/grid metadata produces a legal A2 scene witness and exact supported block states. The [demo guide](docs/png-reconstruction-demo.md) includes a one-command invocation, committed examples and end-to-end validation. It distinguishes uniquely recovered cells from hidden or ambiguous states.
 
+A [controlled Minecraft Java 1.21.1 capture kit and diagnostic](docs/minecraft-capture-compatibility.md) now prepare the bridge to real screenshots: exact scene commands, flat slab resource pack, known camera/crop metadata and pixel-level discrepancy reports. The tools are validated with independent synthetic fixtures and injected errors. **A genuine Minecraft-generated capture has not yet been tested**; lighting, sky and rasterization compatibility remain explicit open checks.
+
 Right now I'm building the reconstruction side under known cameras first. The idea is to get the geometry, visibility, ambiguity handling, and solver behavior right in small controlled cases before adding camera recovery and real Minecraft screenshots on top.
 
 The first C++ milestone is complete. It uses a tiny 2 x 2 x 2 world where each cell can be air, a stone cube, or an oak cube. The point of the milestone was to build a reconstruction core that I can actually check exhaustively rather than immediately scaling up something I don't fully trust.
