@@ -1,0 +1,23 @@
+{
+  "schema": "mcr-vendored-dependencies-v1",
+  "files": [
+    {
+      "path": "third_party/lodepng/lodepng.cpp",
+      "upstream_commit": "e584a8490db1b76b81bf298c11c09d3b55d9c270",
+      "sha256": "6aec876971ec860527859458d3095220fc5ee1258ec37eb59e1e7dd9cf136a81",
+      "bytes": 312689
+    },
+    {
+      "path": "third_party/lodepng/lodepng.h",
+      "upstream_commit": "e584a8490db1b76b81bf298c11c09d3b55d9c270",
+      "sha256": "9a1fca0238c38333bdc8545336961b73fd0b76957bbacf033186991be9d7cf85",
+      "bytes": 108843
+    },
+    {
+      "path": "third_party/picojson/picojson.h",
+      "upstream_commit": "111c9be5188f7350c2eac9ddaedd8cca3d7bf394",
+      "sha256": "eecfb89d1a72ab38a20322e4f959210c432167350fc84956856d94dfe6e4a526",
+      "bytes": 34027
+    }
+  ]
+}

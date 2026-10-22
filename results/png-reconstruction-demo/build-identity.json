@@ -1,0 +1,78 @@
+{
+  "schema": "mcr-png-demo-build-v1",
+  "base_checkpoint": "79e44b3ffcb001e79a0fa7e18dbf2162f0eea647",
+  "host": {
+    "system": "Linux",
+    "node": "bc4c7a78c0fd",
+    "release": "6.18.55",
+    "version": "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.3 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "compiler": "/usr/bin/x86_64-linux-gnu-g++-13",
+  "compiler_sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73",
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "cmake_version": "cmake version 4.4.4\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+  "ninja_version": "1.13.2.git.kitware.jobserver-pipe-1",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "build_type": "Release",
+  "cpp_standard": 20,
+  "preset": "png-demo",
+  "binary_path": "build/png-demo/mcr_reconstruct",
+  "binary_bytes": 541424,
+  "binary_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b",
+  "runtime_dependencies": "linux-vdso.so.1 (0x00007f44ffa9f000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f44ff79d000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f44ff6b4000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f44ff686000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f44ff474000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f44ffaa1000)",
+  "required_elf_symbol_versions": "Version symbols section '.gnu.version' contains 157 entries:\n Addr: 0x0000000000002884  Offset: 0x00002884  Link: 6 (.dynsym)\n  000:   0 (*local*)       2 (GLIBC_2.2.5)   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)\n  004:   4 (GLIBCXX_3.4.21)    3 (GLIBCXX_3.4)   4 (GLIBCXX_3.4.21)    3 (GLIBCXX_3.4)\n  008:   6 (GLIBCXX_3.4.26)    3 (GLIBCXX_3.4)   6 (GLIBCXX_3.4.26)    6 (GLIBCXX_3.4.26) \n  00c:   3 (GLIBCXX_3.4)   5 (GLIBCXX_3.4.15)    3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)\n  010:   2 (GLIBC_2.2.5)   7 (GLIBCXX_3.4.14)    6 (GLIBCXX_3.4.26)    4 (GLIBCXX_3.4.21) \n  014:   8 (CXXABI_1.3)    6 (GLIBCXX_3.4.26)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)\n  018:   4 (GLIBCXX_3.4.21)    6 (GLIBCXX_3.4.26)    2 (GLIBC_2.2.5)   8 (CXXABI_1.3) \n  01c:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)\n  020:   9 (GLIBC_2.3.4)   6 (GLIBCXX_3.4.26)    3 (GLIBCXX_3.4)   8 (CXXABI_1.3) \n  024:   8 (CXXABI_1.3)    2 (GLIBC_2.2.5)   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)\n  028:   8 (CXXABI_1.3)    3 (GLIBCXX_3.4)   8 (CXXABI_1.3)    a (GLIBC_2.34) \n  02c:   2 (GLIBC_2.2.5)   b (GLIBCXX_3.4.29)    6 (GLIBCXX_3.4.26)    6 (GLIBCXX_3.4.26) \n  030:   c (GLIBC_2.14)    6 (GLIBCXX_3.4.26)    2 (GLIBC_2.2.5)   3 (GLIBCXX_3.4)\n  034:   6 (GLIBCXX_3.4.26)    d (GLIBCXX_3.4.9)   3 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)\n  038:   3 (GLIBCXX_3.4)   e (CXXABI_1.3.9)   3 (GLIBCXX_3.4)   d (GLIBCXX_3.4.9)\n  03c:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   5 (GLIBCXX_3.4.15)    3 (GLIBCXX_3.4)\n  040:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   f (GLIBC_2.4)     8 (CXXABI_1.3) \n  044:   d (GLIBCXX_3.4.9)  10 (GLIBCXX_3.4.11)    3 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)\n  048:   2 (GLIBC_2.2.5)   3 (GLIBCXX_3.4)  11 (GCC_3.4)       3 (GLIBCXX_3.4)\n  04c:   3 (GLIBCXX_3.4)   8 (CXXABI_1.3)    4 (GLIBCXX_3.4.21)    2 (GLIBC_2.2.5)\n  050:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)  13 (GLIBCXX_3.4.31)    2 (GLIBC_2.2.5)\n  054:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   4 (GLIBCXX_3.4.21)    3 (GLIBCXX_3.4)\n  058:   8 (CXXABI_1.3)    3 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)  14 (GLIBCXX_3.4.20) \n  05c:   3 (GLIBCXX_3.4)  15 (GLIBCXX_3.4.32)    4 (GLIBCXX_3.4.21)    2 (GLIBC_2.2.5)\n  060:   8 (CXXABI_1.3)    2 (GLIBC_2.2.5)   8 (CXXABI_1.3)    3 (GLIBCXX_3.4)\n  064:   3 (GLIBCXX_3.4)   8 (CXXABI_1.3)    4 (GLIBCXX_3.4.21)    1 (*global*)   \n  068:  16 (GCC_3.0)      17 (GLIBC_2.2.5)   8 (CXXABI_1.3)    3 (GLIBCXX_3.4)\n  06c:   3 (GLIBCXX_3.4)   4 (GLIBCXX_3.4.21)    1 (*global*)      4 (GLIBCXX_3.4.21) \n  070:   1 (*global*)      2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   6 (GLIBCXX_3.4.26) \n  074:   6 (GLIBCXX_3.4.26)    3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)\n  078:   1 (*global*)      3 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)   \n  07c:   1 (*global*)      1 (*global*)      3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)\n  080:   5 (GLIBCXX_3.4.15)    3 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)   \n  084:   1 (*global*)      1 (*global*)      4 (GLIBCXX_3.4.21)    3 (GLIBCXX_3.4)\n  088:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   4 (GLIBCXX_3.4.21)    4 (GLIBCXX_3.4.21) \n  08c:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   5 (GLIBCXX_3.4.15)    3 (GLIBCXX_3.4)\n  090:   3 (GLIBCXX_3.4)  12 (GLIBC_2.32)    4 (GLIBCXX_3.4.21)    1 (*global*)   \n  094:   1 (*global*)      3 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)   \n  098:   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   3 (GLIBCXX_3.4)   1 (*global*)   \n  09c:   3 (GLIBCXX_3.4)\n\nVersion needs section '.gnu.version_r' contains 4 entries:\n Addr: 0x00000000000029c0  Offset: 0x000029c0  Link: 7 (.dynstr)\n  000000: Version: 1  File: libm.so.6  Cnt: 1\n  0x0010:   Name: GLIBC_2.2.5  Flags: none  Version: 23\n  0x0020: Version: 1  File: libgcc_s.so.1  Cnt: 2\n  0x0030:   Name: GCC_3.0  Flags: none  Version: 22\n  0x0040:   Name: GCC_3.4  Flags: none  Version: 17\n  0x0050: Version: 1  File: libstdc++.so.6  Cnt: 13\n  0x0060:   Name: GLIBCXX_3.4.32  Flags: none  Version: 21\n  0x0070:   Name: GLIBCXX_3.4.20  Flags: none  Version: 20\n  0x0080:   Name: GLIBCXX_3.4.31  Flags: none  Version: 19\n  0x0090:   Name: GLIBCXX_3.4.11  Flags: none  Version: 16\n  0x00a0:   Name: CXXABI_1.3.9  Flags: none  Version: 14\n  0x00b0:   Name: GLIBCXX_3.4.9  Flags: none  Version: 13\n  0x00c0:   Name: GLIBCXX_3.4.29  Flags: none  Version: 11\n  0x00d0:   Name: CXXABI_1.3  Flags: none  Version: 8\n  0x00e0:   Name: GLIBCXX_3.4.14  Flags: none  Version: 7\n  0x00f0:   Name: GLIBCXX_3.4.26  Flags: none  Version: 6\n  0x0100:   Name: GLIBCXX_3.4.15  Flags: none  Version: 5\n  0x0110:   Name: GLIBCXX_3.4.21  Flags: none  Version: 4\n  0x0120:   Name: GLIBCXX_3.4  Flags: none  Version: 3\n  0x0130: Version: 1  File: libc.so.6  Cnt: 6\n  0x0140:   Name: GLIBC_2.32  Flags: none  Version: 18\n  0x0150:   Name: GLIBC_2.4  Flags: none  Version: 15\n  0x0160:   Name: GLIBC_2.14  Flags: none  Version: 12\n  0x0170:   Name: GLIBC_2.34  Flags: none  Version: 10\n  0x0180:   Name: GLIBC_2.3.4  Flags: none  Version: 9\n  0x0190:   Name: GLIBC_2.2.5  Flags: none  Version: 2",
+  "source_sha256": {
+    "CMakeLists.txt": "ff61a46bde4e557d2aacda8add695e25c3d2360bfd3ddfbb7203a8b52a92f4ec",
+    "CMakePresets.json": "d7d0b8ea6f95b743273c343e79a6917162a2c3b2c2eb6c03af1aa45c347ca4ea",
+    "apps/reconstruct/input.cpp": "0b338c921064db6d32de9bbd080513f600194e63c68ae7ca72db33c1e697a1c7",
+    "apps/reconstruct/input.hpp": "42c0edbcf24b097fb32324d563c30a82a0faa2b0cc01e49ef000608883f6cf90",
+    "apps/reconstruct/main.cpp": "9c9d6c3a8107f0774fb0aa31a4aecf88750374d40d0285d1d80e8e974a10ff3e",
+    "apps/reconstruct/reconstruct.cpp": "67553cebbafeb2a034b4916bb4e8a4558c46b5e93657230fc3ff0fa2c7594c83",
+    "tests/png_demo/end_to_end.py": "f5610f9a42c20cebb31b35967cb3f82ab3fe3050cb84b7d489bb0690728c3ae1",
+    "tests/png_demo/oracle.py": "5230083e37e2f82d18a14e55ff5ac52713bc8b6e36e5485f81eaf23aa7393440",
+    "third_party/lodepng/lodepng.cpp": "6aec876971ec860527859458d3095220fc5ee1258ec37eb59e1e7dd9cf136a81",
+    "third_party/lodepng/lodepng.h": "9a1fca0238c38333bdc8545336961b73fd0b76957bbacf033186991be9d7cf85",
+    "third_party/manifest.json": "bb66df907134098eb7f113ed74959c92fde472c7187d976544b5101735f76766",
+    "third_party/picojson/picojson.h": "eecfb89d1a72ab38a20322e4f959210c432167350fc84956856d94dfe6e4a526",
+    "tools/generate_png_examples.py": "595830635c31fd3ee03f6969d4f8eb83108fc70defd10cd8bf46e0c6bd8e6ad3",
+    "tools/package_png_demo.py": "f3e124a27f9b3bcd16602c2b4c0c953fd77b3e20002c35e4c641b3edaba8c262"
+  },
+  "protected_subtrees": {
+    "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+    "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+    "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea"
+  },
+  "original_scaling_worker_sha256": "882d5025cc9f1334e78a5c39cfdd46b80aa255fa97704d4e71abbd53234daf1f",
+  "packaged_executable": {
+    "path": "results/png-reconstruction-demo/mcr_reconstruct-linux-x86_64.tar.gz",
+    "bytes": 237501,
+    "sha256": "53df9713cc3d46f8308d1d4dc8693e87ed7b4cddbfe88d268098a0afe9c380d5",
+    "members": [
+      {
+        "path": "LICENSES/LodePNG.txt",
+        "bytes": 913,
+        "sha256": "955216ac420f8a44c1b4360737ad345214d4ac98b75a82dfe4419c9ffedafcf0"
+      },
+      {
+        "path": "LICENSES/PicoJSON.txt",
+        "bytes": 1414,
+        "sha256": "52a7da16781b4b899382c9ddfcf059235cdee73e2f45cfd7402c2ae9a2e9d28d"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 411,
+        "sha256": "20d7b49b0868e220e0ecb064ff1417e4d5e5629da629d362cfeef5eaca03dc23"
+      },
+      {
+        "path": "mcr_reconstruct",
+        "bytes": 541424,
+        "sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b"
+      }
+    ]
+  },
+  "timing_study": false,
+  "larger_volume_collection": false
+}

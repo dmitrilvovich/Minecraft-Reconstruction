@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Linux-c++"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="bc4c7a78c0fd"
+	time="3"
+	timestamp="2026-10-21T19:30:15"
+	>
+	<testcase name="png_reconstruct_e2e" classname="png_reconstruct_e2e" time="3.3096" status="run">
+		<properties>
+			<property name="cmake_labels" value="png-demo"/>
+		</properties>
+		<system-out>{"result": "PASS", "checks": 141, "cli_invocations": 70, "exhaustive_image_cases": 7}
+</system-out>
+	</testcase>
+</testsuite>

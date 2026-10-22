@@ -1,0 +1,195 @@
+{
+  "cell_order": "id = (x * 2 + y) * 2 + z; y is vertical",
+  "cells": [
+    {
+      "id": 0,
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "supported_states": [
+        "bottom_slab"
+      ],
+      "unique_state": "bottom_slab"
+    },
+    {
+      "id": 1,
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 2,
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 3,
+      "position": [
+        0,
+        1,
+        1
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 4,
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 5,
+      "position": [
+        1,
+        0,
+        1
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 6,
+      "position": [
+        1,
+        1,
+        0
+      ],
+      "supported_states": [
+        "air"
+      ],
+      "unique_state": "air"
+    },
+    {
+      "id": 7,
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "supported_states": [
+        "top_slab"
+      ],
+      "unique_state": "top_slab"
+    }
+  ],
+  "feasibility": "SAT",
+  "joint_solution_unique": true,
+  "metadata": {
+    "camera": {
+      "center": [
+        -3,
+        5,
+        3
+      ],
+      "cx": "31\/2",
+      "cy": "33\/2",
+      "forward": [
+        "2\/3",
+        "-2\/3",
+        "-1\/3"
+      ],
+      "fx": 48,
+      "fy": 40,
+      "right": [
+        "1\/3",
+        "2\/3",
+        "-2\/3"
+      ],
+      "up": [
+        "2\/3",
+        "1\/3",
+        "2\/3"
+      ]
+    },
+    "grid": {
+      "cell_size": 1,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ]
+    },
+    "image": {
+      "height": 32,
+      "origin": "top_left",
+      "width": 32
+    },
+    "palette": "split_material",
+    "pixel_encoding": "mcr-a2-first-hit-rgb-v1",
+    "schema": "mcr-a2-camera-v1"
+  },
+  "observations": {
+    "background": 901,
+    "oak": 58,
+    "pixels": 1024,
+    "stone": 65
+  },
+  "projection_complete": true,
+  "schema": "mcr-reconstruction-v1",
+  "state_catalog": {
+    "air": {
+      "block": "minecraft:air",
+      "properties": {}
+    },
+    "bottom_slab": {
+      "block": "minecraft:oak_slab",
+      "properties": {
+        "type": "bottom",
+        "waterlogged": "false"
+      }
+    },
+    "top_slab": {
+      "block": "minecraft:stone_slab",
+      "properties": {
+        "type": "top",
+        "waterlogged": "false"
+      }
+    }
+  },
+  "support_semantics": "exact per-cell marginals; arbitrary combinations need not form a feasible scene",
+  "witness": {
+    "states": [
+      "bottom_slab",
+      "air",
+      "air",
+      "air",
+      "air",
+      "air",
+      "air",
+      "top_slab"
+    ],
+    "validated_against_input_pixels": true
+  },
+  "witness_semantics": "one simultaneous solution; not a claim of recovered ground truth"
+}

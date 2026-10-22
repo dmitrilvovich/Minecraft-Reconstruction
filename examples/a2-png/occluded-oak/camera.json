@@ -1,0 +1,12 @@
+{
+  "schema": "mcr-a2-camera-v1",
+  "grid": {"shape": [2,2,2], "origin": [0,0,0], "cell_size": 1},
+  "palette": "same_material",
+  "pixel_encoding": "mcr-a2-first-hit-rgb-v1",
+  "image": {"width": 32, "height": 32, "origin": "top_left"},
+  "camera": {
+    "center": [1,7,1], "forward": [0,-1,0],
+    "right": [1,0,0], "up": [0,0,1],
+    "fx": 48, "fy": 48, "cx": 16, "cy": 16
+  }
+}

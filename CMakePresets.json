@@ -3,8 +3,11 @@
   "configurePresets": [
     {"name": "release", "generator": "Ninja", "binaryDir": "${sourceDir}/build/release", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release", "BUILD_TESTING": "ON"}},
     {"name": "sanitize", "inherits": "release", "binaryDir": "${sourceDir}/build/sanitize", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug", "MCR_ENABLE_SANITIZERS": "ON"}},
-    {"name": "a2-sanitize", "inherits": "sanitize", "binaryDir": "${sourceDir}/build/a2-sanitize", "cacheVariables": {"CMAKE_CXX_FLAGS_DEBUG": "-O1 -g"}}
+    {"name": "a2-sanitize", "inherits": "sanitize", "binaryDir": "${sourceDir}/build/a2-sanitize", "cacheVariables": {"CMAKE_CXX_FLAGS_DEBUG": "-O1 -g"}},
+    {"name": "png-demo", "inherits": "release", "binaryDir": "${sourceDir}/build/png-demo", "cacheVariables": {"MCR_ENABLE_PYTHON_ORACLE": "OFF", "MCR_BUILD_RECONSTRUCT": "ON"}}
   ],
-  "buildPresets": [{"name": "release", "configurePreset": "release"}, {"name": "sanitize", "configurePreset": "sanitize"}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize"}],
-  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}, {"name": "sanitize", "configurePreset": "sanitize", "output": {"outputOnFailure": true}}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize", "output": {"outputOnFailure": true}}]
+  "buildPresets": [{"name": "release", "configurePreset": "release"}, {"name": "sanitize", "configurePreset": "sanitize"}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize"},
+    {"name": "png-demo", "configurePreset": "png-demo", "targets": ["mcr_reconstruct", "geometry_tests", "render_tests", "a1_render_tests", "a1_geometry_tests", "a2_geometry_tests", "a2_inference_tests", "constraint_tests", "a1_constraint_tests", "a1_propagation_tests", "a1_feasibility_tests", "a1_support_query_tests", "a1_projection_tests", "inference_tests", "adversarial_tests"]}],
+  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}, {"name": "sanitize", "configurePreset": "sanitize", "output": {"outputOnFailure": true}}, {"name": "a2-sanitize", "configurePreset": "a2-sanitize", "output": {"outputOnFailure": true}},
+    {"name": "png-demo", "configurePreset": "png-demo", "filter": {"exclude": {"name": "^a1_benchmark_smoke$"}}, "output": {"outputOnFailure": true}}]
 }

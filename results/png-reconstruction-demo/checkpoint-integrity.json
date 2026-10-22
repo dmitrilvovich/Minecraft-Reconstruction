@@ -1,0 +1,209 @@
+{
+  "schema": "mcr-png-demo-checkpoint-integrity-v1",
+  "base_checkpoint": "79e44b3ffcb001e79a0fa7e18dbf2162f0eea647",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 11535,
+      "sha256": "ff61a46bde4e557d2aacda8add695e25c3d2360bfd3ddfbb7203a8b52a92f4ec"
+    },
+    {
+      "path": "CMakePresets.json",
+      "bytes": 1731,
+      "sha256": "d7d0b8ea6f95b743273c343e79a6917162a2c3b2c2eb6c03af1aa45c347ca4ea"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9058,
+      "sha256": "b5ebf6dd44fe1b08033b51d9e1b48325308f303aa93bc22a28dc4ca1490aa9fd"
+    },
+    {
+      "path": "apps/reconstruct/input.cpp",
+      "bytes": 11909,
+      "sha256": "0b338c921064db6d32de9bbd080513f600194e63c68ae7ca72db33c1e697a1c7"
+    },
+    {
+      "path": "apps/reconstruct/input.hpp",
+      "bytes": 892,
+      "sha256": "42c0edbcf24b097fb32324d563c30a82a0faa2b0cc01e49ef000608883f6cf90"
+    },
+    {
+      "path": "apps/reconstruct/main.cpp",
+      "bytes": 2279,
+      "sha256": "9c9d6c3a8107f0774fb0aa31a4aecf88750374d40d0285d1d80e8e974a10ff3e"
+    },
+    {
+      "path": "apps/reconstruct/reconstruct.cpp",
+      "bytes": 5493,
+      "sha256": "67553cebbafeb2a034b4916bb4e8a4558c46b5e93657230fc3ff0fa2c7594c83"
+    },
+    {
+      "path": "docs/png-reconstruction-demo.md",
+      "bytes": 10845,
+      "sha256": "5a40245c8536f7069a4797c643316d00c9bedc61515aa8e8a51d7b5c7a610698"
+    },
+    {
+      "path": "examples/a2-png/README.md",
+      "bytes": 1987,
+      "sha256": "6e5ed95a37b6f6fb88ed91aad3678d80339f6ef67359b8b2d620a741ff94db77"
+    },
+    {
+      "path": "examples/a2-png/occluded-oak/camera.json",
+      "bytes": 382,
+      "sha256": "0e75954470760070ddde61660b6aaec65bc85ce7ec406f506a7565a7d6f90049"
+    },
+    {
+      "path": "examples/a2-png/occluded-oak/image.png",
+      "bytes": 108,
+      "sha256": "ba1eb0ec033bc2c26d4713b1661e3b0af4e0dfc302b6d6a5706a91cce9b1ba22"
+    },
+    {
+      "path": "examples/a2-png/occluded-oak/reconstruction.json",
+      "bytes": 3397,
+      "sha256": "6f0c674f19ea99bab4946cad70cb93149e2855c5b7fccd0aa06dd9b512ea1191"
+    },
+    {
+      "path": "examples/a2-png/occluded-oak/scene.json",
+      "bytes": 312,
+      "sha256": "41f71b5d0c6879d789222d956687797bffcfc9c83eabace0b5886fa39ee41687"
+    },
+    {
+      "path": "examples/a2-png/visible-mixed/camera.json",
+      "bytes": 438,
+      "sha256": "62c98c973ce0bbcd481a4790d90c57c34a1ad47222d9374f37016ca9275034b1"
+    },
+    {
+      "path": "examples/a2-png/visible-mixed/image.png",
+      "bytes": 171,
+      "sha256": "c374e1bf1af88fd25fc664b7af8767332766611ceaa8acd073d6d30ea710277d"
+    },
+    {
+      "path": "examples/a2-png/visible-mixed/reconstruction.json",
+      "bytes": 3232,
+      "sha256": "d8adf62b0e55b305bad4e6180418b12f10e56883da0cc7dead3a342165deee59"
+    },
+    {
+      "path": "examples/a2-png/visible-mixed/scene.json",
+      "bytes": 258,
+      "sha256": "b4040db3297f48315bdc39db7da26f685130dc452dd30d76241d6b0057eadf2d"
+    },
+    {
+      "path": "results/png-reconstruction-demo/README.md",
+      "bytes": 2518,
+      "sha256": "e827a4a010b1f7d777aceb225417cfb09b1d7ab5b1593f5d3d8e5b80e561c133"
+    },
+    {
+      "path": "results/png-reconstruction-demo/application-build.log",
+      "bytes": 137,
+      "sha256": "7b36f86f023b81fea212bc3d15009872f037b9e8b7ce8e3962de8bc6fe630d3f"
+    },
+    {
+      "path": "results/png-reconstruction-demo/build-identity.json",
+      "bytes": 9815,
+      "sha256": "7425ae204eca2bc0f5d83798359f3065f16f5d5587f4565fda4771275b3d67e8"
+    },
+    {
+      "path": "results/png-reconstruction-demo/demo-execution.json",
+      "bytes": 1199,
+      "sha256": "050d2c0c9d63fcc03658f09cc4428dbb5f0a32c7c3294b9aabd58a9cdc24a364"
+    },
+    {
+      "path": "results/png-reconstruction-demo/end-to-end-validation.json",
+      "bytes": 17885,
+      "sha256": "e77099d395a4191437bef34d5a4445b7b080c25f38cd9eaefb5108bfcee6456d"
+    },
+    {
+      "path": "results/png-reconstruction-demo/end-to-end.log",
+      "bytes": 302,
+      "sha256": "4879c62f208e3a156443b00d7ccf988d261f585f458bce3f932d942dc648ca8b"
+    },
+    {
+      "path": "results/png-reconstruction-demo/end-to-end.xml",
+      "bytes": 511,
+      "sha256": "746323c055f29077113ce75c6ae01d14a070f88fdf9718e1936b152ea7ca2722"
+    },
+    {
+      "path": "results/png-reconstruction-demo/mcr_reconstruct-linux-x86_64.tar.gz",
+      "bytes": 237501,
+      "sha256": "53df9713cc3d46f8308d1d4dc8693e87ed7b4cddbfe88d268098a0afe9c380d5"
+    },
+    {
+      "path": "results/png-reconstruction-demo/regressions.log",
+      "bytes": 1628,
+      "sha256": "f057c6dcd6e259df8449219568ec7bbac1a27332b7f57df1f93ac46d42c7c0a7"
+    },
+    {
+      "path": "results/png-reconstruction-demo/regressions.xml",
+      "bytes": 6353,
+      "sha256": "8a92179b19b1c36a16aeb3126ccb159ddd853464b1520231a226106686330f1b"
+    },
+    {
+      "path": "tests/png_demo/end_to_end.py",
+      "bytes": 15737,
+      "sha256": "f5610f9a42c20cebb31b35967cb3f82ab3fe3050cb84b7d489bb0690728c3ae1"
+    },
+    {
+      "path": "tests/png_demo/oracle.py",
+      "bytes": 5845,
+      "sha256": "5230083e37e2f82d18a14e55ff5ac52713bc8b6e36e5485f81eaf23aa7393440"
+    },
+    {
+      "path": "third_party/README.md",
+      "bytes": 1309,
+      "sha256": "4931d0c781cd1deffe2a7fa33ae7dfc331985c30f77f3d325ba3504521253f1e"
+    },
+    {
+      "path": "third_party/lodepng/lodepng.cpp",
+      "bytes": 312689,
+      "sha256": "6aec876971ec860527859458d3095220fc5ee1258ec37eb59e1e7dd9cf136a81"
+    },
+    {
+      "path": "third_party/lodepng/lodepng.h",
+      "bytes": 108843,
+      "sha256": "9a1fca0238c38333bdc8545336961b73fd0b76957bbacf033186991be9d7cf85"
+    },
+    {
+      "path": "third_party/manifest.json",
+      "bytes": 772,
+      "sha256": "bb66df907134098eb7f113ed74959c92fde472c7187d976544b5101735f76766"
+    },
+    {
+      "path": "third_party/picojson/picojson.h",
+      "bytes": 34027,
+      "sha256": "eecfb89d1a72ab38a20322e4f959210c432167350fc84956856d94dfe6e4a526"
+    },
+    {
+      "path": "tools/generate_png_examples.py",
+      "bytes": 1439,
+      "sha256": "595830635c31fd3ee03f6969d4f8eb83108fc70defd10cd8bf46e0c6bd8e6ad3"
+    },
+    {
+      "path": "tools/package_png_demo.py",
+      "bytes": 1794,
+      "sha256": "f3e124a27f9b3bcd16602c2b4c0c953fd77b3e20002c35e4c641b3edaba8c262"
+    }
+  ],
+  "self_excluded": true,
+  "prior_tracked_files_preserved": 538,
+  "prior_file_changes": [
+    "CMakeLists.txt",
+    "CMakePresets.json",
+    "README.md"
+  ],
+  "preserved_inventory_sha256": "efe210002fdc3b3ef0297e3cf9bafd7f5fa73ad153bf0562701cd6c84e15cc1a",
+  "protected_subtrees": {
+    "src": "f9dc155da1e5c7bf37fb81ccd4089019398ba77e",
+    "include": "58c2186c4b8196c381358b1d6a247af046ebe07e",
+    "reference": "21d6348d62ebd88c7a2d8edacf61da4eb85e7fea"
+  },
+  "prior_tests_and_experiments": "Every pre-existing tracked file under tests, experiments and results retains its original Git blob; only new files are added there.",
+  "scaling_status": "suspended_indefinitely",
+  "frozen_design_slots_preserved": 72148,
+  "larger_volume_calls_this_checkpoint": 0,
+  "regression_tests_passed": 14,
+  "end_to_end_checks_passed": 141,
+  "end_to_end_cli_invocations": 70,
+  "separate_documented_demo_invocations": 2,
+  "new_production_solver_algorithm": false,
+  "prototype_binary_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b"
+}

@@ -12,6 +12,8 @@ The main implementation is in C++20.
 
 This is still early-stage work, so it is not an end-to-end screenshot-to-schematic tool yet.
 
+A **working PNG-to-scene demonstration** is now available: an exact-color PNG plus known camera/grid metadata produces a legal A2 scene witness and exact supported block states. The [demo guide](docs/png-reconstruction-demo.md) includes a one-command invocation, committed examples and end-to-end validation. It distinguishes uniquely recovered cells from hidden or ambiguous states.
+
 Right now I'm building the reconstruction side under known cameras first. The idea is to get the geometry, visibility, ambiguity handling, and solver behavior right in small controlled cases before adding camera recovery and real Minecraft screenshots on top.
 
 The first C++ milestone is complete. It uses a tiny 2 x 2 x 2 world where each cell can be air, a stone cube, or an oak cube. The point of the milestone was to build a reconstruction core that I can actually check exhaustively rather than immediately scaling up something I don't fully trust.
@@ -28,7 +30,7 @@ With six axis views at 8 x 8 pixels, 87.06% of cells are identifiable when avera
 
 The [A2 development foundation](docs/a2-foundation.md) adds incomparable bottom/top slab geometry, both the original oak/stone palette and a same-material oak control, and exact branch-and-propagate inference. The solver now separates independent residual components and checks actual ray hit patterns before using a fixed-hit shortcut. Physical path and triangle fixtures retain the gap between local consistency and global feasibility in both palettes. The [A2 correctness gate](docs/a2-correctness.md) is complete for both palettes: every tiny-world camera family, all four optimization configurations, exact supports and witnesses, and Release/ASan/UBSan coverage.
 
-The **fixed eight-cell A2 scaling experiment is complete**, with a [final report](docs/a2-scaling-8cell.md) synthesizing the preserved [scientific review](docs/a2-scaling-review.md) and [review evidence](results/a2-scaling-review/README.md). The [adoption record](docs/a2-scaling-adoption.md) establishes the canonical **491,199-case reconstructed exploratory 8-cell A2 scaling dataset**. It is not the recovered original 410,953-case run, is not proven equivalent, and is not a verified correction or superset. Its protocol was explicitly reconstructed after the original artifacts were lost; its exact protocol and provenance are preserved in the [artifact index](results/a2-scaling-8cell/README.md). No scientific claim depends on reproducing the historical count. Search in this tiny corpus depends on arrangement, visibility and material information as well as incomparable-cell count; the report separates occupancy sensitivity and branch reductions from causal or general runtime claims. Larger-volume scaling is next and has not started.
+The **fixed eight-cell A2 scaling experiment is complete**, with a [final report](docs/a2-scaling-8cell.md) synthesizing the preserved [scientific review](docs/a2-scaling-review.md) and [review evidence](results/a2-scaling-review/README.md). The [adoption record](docs/a2-scaling-adoption.md) establishes the canonical **491,199-case reconstructed exploratory 8-cell A2 scaling dataset**. It is not the recovered original 410,953-case run, is not proven equivalent, and is not a verified correction or superset. Its protocol was explicitly reconstructed after the original artifacts were lost; its exact protocol and provenance are preserved in the [artifact index](results/a2-scaling-8cell/README.md). No scientific claim depends on reproducing the historical count. Search in this tiny corpus depends on arrangement, visibility and material information as well as incomparable-cell count; the report separates occupancy sensitivity and branch reductions from causal or general runtime claims. **Larger-volume scaling is suspended indefinitely; collection has not started.**
 
 The Python code under [reference/](reference/) is intentionally kept around as a frozen research/reference implementation. New solver work is happening in C++.
 
@@ -38,7 +40,19 @@ The reconstruction is being treated as a discrete inverse-rendering problem: the
 
 A screenshot gives evidence about which block states could be present along each camera ray. Foreground blocks can hide deeper blocks, so the constraints are coupled through visibility rather than being independent per voxel. When the images don't determine something, I'd rather keep that part of the reconstruction ambiguous than make up a block just to force a single answer.
 
-I'm currently working through the problem in stages: full cubes first, then partial/nested geometry such as slabs, then block shapes whose geometry can compete in more complicated ways. After that I want to measure how the exact solver scales before moving on to recovering the camera and Minecraft lattice directly from images.
+The exact core now supports incomparable slab geometry. The current priority is connecting images to that core through a usable reconstruction pipeline, starting with synthetic first-hit colors and known cameras. Controlled real Minecraft captures are the next practical step; automatic camera/lattice recovery remains future work.
+
+## Try the PNG demo
+
+```sh
+cmake --preset png-demo
+cmake --build --preset png-demo --parallel 2
+ctest --preset png-demo --parallel 2
+./build/png-demo/mcr_reconstruct --image examples/a2-png/visible-mixed/image.png \
+  --camera examples/a2-png/visible-mixed/camera.json --output reconstruction.json
+```
+
+This preset uses vendored PNG/JSON code and Python's standard library for tests. It runs the focused regressions and PNG end-to-end tests without historical acceptance-corpus generation or benchmarks. The [two examples](examples/a2-png/README.md) demonstrate complete recovery and genuine occlusion ambiguity; [validation evidence](results/png-reconstruction-demo/README.md) was produced in the development environment.
 
 ## Build and test
 
@@ -63,12 +77,13 @@ ctest --preset a2-sanitize --parallel 2
 ## Repository layout
 
 - `include/mcr/` and `src/` — C++ geometry, cameras, grid traversal, rendering, and inference
+- `apps/reconstruct/` — PNG/camera adapter and `mcr_reconstruct` executable
+- `examples/a2-png/` — real PNG inputs, known scenes/cameras and reconstruction results
+- `third_party/` — pinned, licensed PNG and JSON dependencies
 - `tests/` — unit, adversarial, and cross-language correctness tests
 - `experiments/` and `src/experiments/` — experiment and benchmark code
 - `reference/python/` — frozen Python research implementation
 - `docs/` — design notes and milestone acceptance records
 - `results/` — recorded experiment/benchmark evidence
 
-The reconstructed eight-cell A2 scaling milestone is documented in the [final report](docs/a2-scaling-8cell.md). The next study has a [preregistered larger-volume protocol](docs/a2-scaling-larger-protocol.md) and [machine-readable specification](experiments/protocols/a2-scaling-larger-v1.json): 4–12 cells, separate occupancy, geometry, visibility and palette controls, structured SAT/UNSAT cases, and independent timing repetitions. The [collector/reference preflight is complete](docs/a2-scaling-larger-preflight.md), with [72,148 frozen input slots](results/a2-scaling-larger-v1/inputs/input-manifest.json). The declared collection is next and requires a separate checkpoint. Larger-volume performance remains unestablished; no timing epoch or camera recovery has begun.
-
-For the frozen larger-volume study, use the [deployment v2 host inspection and prospective amendment](docs/a2-scaling-larger-deployment-amendment-2.md). The original build compiler remains provenance; the unchanged binary's execution host may have a different compiler or none. Runtime identities must then remain frozen. WSL2 is not qualified for this study's timing collection without verified physical-core placement; collection has not started.
+The suspended larger-volume study retains its [preregistered protocol](docs/a2-scaling-larger-protocol.md), [machine-readable specification](experiments/protocols/a2-scaling-larger-v1.json), [collector/reference preflight](docs/a2-scaling-larger-preflight.md), [72,148 frozen input slots](results/a2-scaling-larger-v1/inputs/input-manifest.json) and [deployment evidence](docs/a2-scaling-larger-deployment-amendment-2.md). These artifacts are preserved for provenance. No further benchmark infrastructure work or collection is planned; larger-volume performance remains unestablished.

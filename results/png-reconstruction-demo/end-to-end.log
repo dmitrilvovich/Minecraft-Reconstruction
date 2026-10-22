@@ -1,0 +1,10 @@
+Test project /workspace/scratch/a0047ede67b7/a2-stable-host/build/png-demo
+    Start 1: png_reconstruct_e2e
+1/1 Test #1: png_reconstruct_e2e ..............   Passed    3.31 sec
+
+100% tests passed out of 1
+
+Label Time Summary:
+png-demo    =   3.31 sec*proc (1 test)
+
+Total Test time (real) =   3.31 sec

@@ -1,0 +1,801 @@
+{
+  "schema": "mcr-png-demo-validation-v1",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "visible-mixed: committed PNG is the independent rendering of committed truth",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: actual file-based CLI succeeds",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: committed reconstruction reproduced exactly",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: identical inputs give byte-identical output",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: simultaneous witness is an enumerated solution",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: witness satisfies every original image pixel independently",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: original truth belongs to feasible family",
+      "result": "PASS"
+    },
+    {
+      "check": "asymmetric oblique view uniquely recovers both materials",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed: opposite palette runs from PNG bytes",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: simultaneous witness is an enumerated solution",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: witness satisfies every original image pixel independently",
+      "result": "PASS"
+    },
+    {
+      "check": "visible-mixed-other-palette: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: committed PNG is the independent rendering of committed truth",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: actual file-based CLI succeeds",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: committed reconstruction reproduced exactly",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: identical inputs give byte-identical output",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: simultaneous witness is an enumerated solution",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: witness satisfies every original image pixel independently",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: original truth belongs to feasible family",
+      "result": "PASS"
+    },
+    {
+      "check": "occlusion ambiguity remains explicit: 81 scenes, four hidden cells",
+      "result": "PASS"
+    },
+    {
+      "check": "chosen occluded witness differs from generating truth without claiming recovery",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak: opposite palette runs from PNG bytes",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: simultaneous witness is an enumerated solution",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: witness satisfies every original image pixel independently",
+      "result": "PASS"
+    },
+    {
+      "check": "occluded-oak-other-palette: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "all five PNG row filters",
+      "result": "PASS"
+    },
+    {
+      "check": "opaque RGBA",
+      "result": "PASS"
+    },
+    {
+      "check": "gamma metadata leaves exact sample labels unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "consecutive split IDAT chunks decode identically",
+      "result": "PASS"
+    },
+    {
+      "check": "valid color on an escaping ray returns explicit UNSAT",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: infeasibility has no substituted scene",
+      "result": "PASS"
+    },
+    {
+      "check": "impossible-foreground: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "stone observation in oak-only palette is UNSAT, not a substituted scene",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: infeasibility has no substituted scene",
+      "result": "PASS"
+    },
+    {
+      "check": "stone-in-oak-palette: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "analytical central-ray case executes",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: complete SAT/UNSAT matches exhaustive oracle",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: exact marginals equal exhaustive world union",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: coordinates and uniqueness semantics",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: joint uniqueness correct",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: complete original metadata preserved",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: every PNG sample mapped to correct label",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: simultaneous witness is an enumerated solution",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: witness satisfies every original image pixel independently",
+      "result": "PASS"
+    },
+    {
+      "check": "coupled-single-ray: legal Minecraft palette mapping",
+      "result": "PASS"
+    },
+    {
+      "check": "marginals are not a Cartesian-product scene",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG signature rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "truncated PNG rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG without IEND rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG trailing bytes rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG CRC corruption rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "duplicate IHDR rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG chunk length overrun rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "nonconsecutive IDAT rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "APNG rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unknown critical chunk rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "invalid PNG chunk name rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "oversized input file rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unsupported RGB value rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "transparent RGBA rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "bad deflate stream rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "invalid PNG row filter rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "dimensions rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "16-bit samples rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "indexed samples rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "interlace rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "huge dimensions rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unknown schema rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unsupported palette rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unsupported grid rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unsupported origin rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unsupported cell size rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "image too large rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "zero dimensions rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "wrong origin convention rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "negative focal length rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "noninteger numeric parameter rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "zero rational denominator rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "huge rational rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "nonorthonormal basis rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "left-handed basis rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "wrong vector length rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "boolean integer rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "wrong encoding rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unknown truth field rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "missing camera rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON duplicate root key rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON duplicate nested key rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON leading zero rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "decimal rounding cannot silently alter camera",
+      "result": "PASS"
+    },
+    {
+      "check": "exponent underflow cannot silently alter camera",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON malformed rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON trailing data rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON excessive nesting rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON oversized file rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON non-ASCII rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "JSON raw control character rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "duplicate CLI option rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "unknown CLI option rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "output cannot overwrite input image",
+      "result": "PASS"
+    },
+    {
+      "check": "output cannot overwrite metadata",
+      "result": "PASS"
+    },
+    {
+      "check": "missing image explicitly rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "output I/O failure is nonzero, not infeasibility",
+      "result": "PASS"
+    }
+  ],
+  "executable_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b",
+  "cli_invocations": 70,
+  "exhaustive_cases": [
+    {
+      "case": "visible-mixed",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 1,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "case": "visible-mixed-other-palette",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 1,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "case": "occluded-oak",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 81,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "case": "occluded-oak-other-palette",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 81,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "case": "impossible-foreground",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 0,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "case": "stone-in-oak-palette",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 0,
+      "input_pixels": 1024,
+      "supported_state_codes": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "case": "coupled-single-ray",
+      "worlds_enumerated": 6561,
+      "feasible_worlds": 3645,
+      "input_pixels": 1,
+      "supported_state_codes": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "oracle": "Independent Python Fraction camera rays, primitive AABB intersections, all 6561 legal worlds per case",
+  "historical_experiments_run": false,
+  "larger_volume_collection_run": false
+}

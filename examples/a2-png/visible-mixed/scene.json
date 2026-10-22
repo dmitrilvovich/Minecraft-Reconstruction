@@ -1,0 +1,6 @@
+{
+  "schema": "mcr-a2-example-truth-v1",
+  "cell_order": "id = (x * 2 + y) * 2 + z; y is vertical",
+  "states": ["bottom_slab","air","air","air","air","air","air","top_slab"],
+  "purpose": "Known rendering truth only; this file is not an inference input."
+}

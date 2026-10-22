@@ -1,0 +1,39 @@
+{
+  "schema": "mcr-png-demo-execution-v1",
+  "binary_sha256": "78c12f83722bb5a83aa435d456e8673268750dd839f1a939e0fc61d22649ba7b",
+  "runs": [
+    {
+      "example": "visible-mixed",
+      "command": [
+        "./build/png-demo/mcr_reconstruct",
+        "--image",
+        "examples/a2-png/visible-mixed/image.png",
+        "--camera",
+        "examples/a2-png/visible-mixed/camera.json",
+        "--output",
+        "build/png-demo/visible-mixed-demonstration.json"
+      ],
+      "exit_code": 0,
+      "stdout": "SAT\n",
+      "output_sha256": "d8adf62b0e55b305bad4e6180418b12f10e56883da0cc7dead3a342165deee59",
+      "matches_committed_result": true
+    },
+    {
+      "example": "occluded-oak",
+      "command": [
+        "./build/png-demo/mcr_reconstruct",
+        "--image",
+        "examples/a2-png/occluded-oak/image.png",
+        "--camera",
+        "examples/a2-png/occluded-oak/camera.json",
+        "--output",
+        "build/png-demo/occluded-oak-demonstration.json"
+      ],
+      "exit_code": 0,
+      "stdout": "SAT\n",
+      "output_sha256": "6f0c674f19ea99bab4946cad70cb93149e2855c5b7fccd0aa06dd9b512ea1191",
+      "matches_committed_result": true
+    }
+  ],
+  "benchmark": false
+}

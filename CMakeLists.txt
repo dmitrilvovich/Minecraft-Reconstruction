@@ -46,6 +46,20 @@ if(MCR_ENABLE_SANITIZERS)
     target_link_options(mcr PUBLIC -fsanitize=address,undefined)
 endif()
 
+option(MCR_BUILD_RECONSTRUCT "Build the small PNG-to-scene command-line application" ON)
+if(MCR_BUILD_RECONSTRUCT)
+    add_library(mcr_png STATIC third_party/lodepng/lodepng.cpp)
+    target_include_directories(mcr_png SYSTEM PUBLIC third_party/lodepng)
+    add_executable(mcr_reconstruct apps/reconstruct/main.cpp apps/reconstruct/input.cpp apps/reconstruct/reconstruct.cpp)
+    target_include_directories(mcr_reconstruct SYSTEM PRIVATE third_party/picojson)
+    target_link_libraries(mcr_reconstruct PRIVATE mcr mcr_png)
+    if(MSVC)
+        target_compile_options(mcr_reconstruct PRIVATE /W4 /permissive-)
+    else()
+        target_compile_options(mcr_reconstruct PRIVATE -Wall -Wextra -Wpedantic -Wconversion -Wshadow)
+    endif()
+endif()
+
 add_library(mcr_experiments src/experiments/cameras.cpp src/experiments/a0.cpp src/experiments/a1.cpp)
 target_link_libraries(mcr_experiments PUBLIC mcr)
 add_executable(mcr_a0_benchmark experiments/a0_benchmark.cpp)
@@ -62,6 +76,15 @@ target_compile_definitions(mcr_a1_benchmark PRIVATE
     MCR_BUILD_TYPE="$<CONFIG>")
 
 if(BUILD_TESTING)
+    if(MCR_BUILD_RECONSTRUCT)
+        find_package(Python3 3.10 COMPONENTS Interpreter REQUIRED)
+        add_test(NAME png_reconstruct_e2e COMMAND "${Python3_EXECUTABLE}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/tests/png_demo/end_to_end.py"
+            --binary "$<TARGET_FILE:mcr_reconstruct>"
+            --examples "${CMAKE_CURRENT_SOURCE_DIR}/examples/a2-png"
+            --evidence "${CMAKE_CURRENT_BINARY_DIR}/png-demo-validation.json")
+        set_tests_properties(png_reconstruct_e2e PROPERTIES LABELS "png-demo" TIMEOUT 120)
+    endif()
     function(mcr_test name source)
         add_executable(${name} ${source})
         target_include_directories(${name} PRIVATE tests)
